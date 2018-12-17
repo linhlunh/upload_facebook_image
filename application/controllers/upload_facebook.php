@@ -46,12 +46,12 @@ class Upload_Facebook extends CI_Controller {
             //echo('<pre>');print_r($fileImage);echo('</pre>');exit();
             //echo('<pre>');print_r($fileImage);echo('</pre>');exit();
             $post_array = array(
-            		"access_token" => 'EAACB1msX7F0BAIVTyTHkzWsDE0ymK0QQImOKVJNVftIaZAiXgx8zPYkpF8j04cru439MSlF4gJgZCbvlRz1n4FwG2buRILevZBxRQUrBUQdvOUaPTmQW58ZAulwsH1IrmdaoUZBMiXogNgDDIK0EybQWaiHPnq0g9Uc1PkDSGc3LCp0etUdHVZCQiOoHOmYhgZD',
+            		"access_token" => 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD',
             		"source" => new CurlFile($fileImage['tmp_name']),//"@".$fileImage['tmp_name'],
             		"message"=>"Upload Test",
             );
             //echo('<pre>');print_r($post_array);echo('</pre>');exit();
-            $url = "https://graph.facebook.com/1484768821744334/photos";
+            $url = "https://graph.facebook.com/2235410473159646/photos";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
             
@@ -114,7 +114,7 @@ class Upload_Facebook extends CI_Controller {
                     echo 'Graph returned an error: ' . $e->getMessage();
                     exit;
                     } catch(Facebook\Exceptions\FacebookSDKException $e) {
-                    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+                    echo 'Facebook SDK returned an errorour: ' . $e->getMessage();
                     exit;
                     }
         }
