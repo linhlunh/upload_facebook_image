@@ -36,4 +36,25 @@ class Upload_Model extends CI_Model {
 		
 		return false;
     }
+    
+   public function getFullname()
+   {
+       $this->db->select('full_name');
+
+       $query = $this->db->get('oauth_users');
+
+       $img = $query->result_array();
+
+       return $img;
+      
+   }
+
+   function search($keyword)
+    {
+        $this->db->like('full_name',$keyword);
+
+        $query  =  $this->db->get('oauth_users');
+
+        return $query->result_array();
+    }
 }
