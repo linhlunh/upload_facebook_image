@@ -63,6 +63,21 @@ class Upload extends CI_Controller{
         
         $img['list_img'] = $this->Upload_Model->getPictureByid(1);
         
+        
+
+        $keyword = $this->input->post('keyword');
+
+        if (!empty($keyword)) {
+
+            $data['results'] = $this->Upload_Model->search($keyword);
+            
+            $img['list_img'] = $data['results']; 
+        } else {
+            
+            $img['list_img'] = $this->Upload_Model->getPictureByid(1);
+        }
         $this->load->view('upload/list_img', $img);
     }
+
+    
 }
