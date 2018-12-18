@@ -13,6 +13,25 @@ class Upload_Model extends CI_Model {
         
     }
     
+    public function isSetImageName($nameImg)
+    {
+        $this->db->select('*');
+
+        $this->db->where('picture',$nameImg);
+
+        $query = $this->db->get('oauth_users');
+
+        $result = $query->result_array();
+
+        if(!empty($result))
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
     public function create_img($img)
     {
         
