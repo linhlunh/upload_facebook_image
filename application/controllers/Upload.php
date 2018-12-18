@@ -82,13 +82,6 @@ class Upload extends CI_Controller{
                     {
                         $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_link['message']);    
                     }
-                    $post_array = array(
-                        "access_token" => $accessToken, 
-                        "id" => $pictureId, 
-                        'fields' => 'link');
-                        
-                    $urlImage = $this->GetLinkImage($dataSubmit['facebook_picture_id']);
-
                 }else{
                     $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_id['message']);  
                 }
@@ -179,11 +172,17 @@ class Upload extends CI_Controller{
             }
     }
     
-    function GetLinkImage($pictureId,$post_array = array("access_token" => $accessToken, "id" => $pictureId, 'fields' => 'link'))
+    function GetLinkImage($pictureId)
     {
         $pictureId = $pictureId;
 
         $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+
+        $post_array = array(
+            "access_token" => $accessToken,
+            "id" => $pictureId,
+            'fields' => 'link',
+        );
 
         $url = "https://graph.facebook.com/".$pictureId;
 
