@@ -50,7 +50,7 @@ class Upload extends CI_Controller{
                 {
                     $nameImg = $this->_generate_random_code().'.'.str_replace('image/','',$_FILES['picture']['type']);
                 }
-                $dataSubmit['picture'] = $nameImg;
+                
 
                 $facebook_picture_id = $this->PostImageUseCurl($dataSubmit['description']);
 
@@ -68,7 +68,14 @@ class Upload extends CI_Controller{
     
                         $InsertedId = $this->Upload_Model->create_img($dataSubmit);
                         
-                        $dataSubmit['id'] = $InsertedId;
+                        $dataSubmit['event_code'] = 'BP'.str_pad($InsertedId,4,'0',STR_PAD_LEFT);
+
+                        $nameImg = $dataSubmit['event_code'].'_'.$nameImg;
+
+                        $dataSubmit['picture'] = $nameImg;
+
+
+                        $this->Upload_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
 
                         $post_array = array(
                             "access_token" => 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD',
@@ -79,7 +86,7 @@ class Upload extends CI_Controller{
                 
                         $urlImage = $this->GetLinkImage($dataSubmit['facebook_picture_id'], $post_array, $url);
 
-                        $dataSubmit['urlImage'] = $urlImage->images[7]->source;
+                        $dataSubmit['urlImage'] = reset($urlImage->images)->source;
                         
                         $emailContentHtml = $this->load->view('upload/email_template',$dataSubmit,true);
     
@@ -318,9 +325,9 @@ class Upload extends CI_Controller{
 	    $this->email->initialize($config);
 
 	    if(ENVIRONMENT == 'production'){
-	    	$this->email->from($from, $subject);
+	    	$this->email->from($from, 'BEST PRICE');
 	    }else{  // 'testing', 'development'
-	    	$this->email->from($from, $subject);
+	    	$this->email->from($from, 'BEST PRICE');
 	    }
 
 	    if (!empty($reply_to)) {

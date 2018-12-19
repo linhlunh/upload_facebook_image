@@ -42,6 +42,17 @@ class Upload_Model extends CI_Model {
         return $id;
     }
 
+    public function UpdateEventCodeOauthUsers($id,$oauthUsers)
+    {
+        $this->db->set('event_code',$oauthUsers['event_code']);
+
+        $this->db->set('picture',$oauthUsers['picture']);
+
+        $this->db->where('id',$id);
+
+        $this->db->update('oauth_users');
+    }
+
     public function getPictureByid($id)
     {
         $query = $this->db->get('oauth_users');
