@@ -27,7 +27,7 @@
             <b>Ngày tháng năm sinh: </b><?=!empty($birthday) ? date('d-m-Y',strtotime($birthday)) : '' ?><br/>
             <b>Diện thoại: </b><?=!empty($phone) ? $phone : '' ?><br/>
             <b>Email: </b><?=!empty($email) ? $email : '' ?><br/>
-            <b>Ảnh tham dự thi: </b><img src='<?=!empty($picture) ? $picture : '' ?>'/><br/>
+            <b>Ảnh tham dự thi: </b><img src='<?=!empty($urlImage) ? $urlImage : '' ?>'/><br/>
             <b>Hình ảnh của đã được đăng lên Album dự thi của chương trình tại: </b><?=!empty($facebook_picture_link) ? $facebook_picture_link : '' ?> .<br/>
             <iframe src="https://www.facebook.com/plugins/share_button.php?href=https://www.facebook.com/1148101135223924/photos/a.2235410473159646/2240941975939829/?type=3&layout=button_count&size=small&mobile_iframe=true&appId=416607848685709&width=78&height=20" width="78" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe><br/>
             <div>Hãy nhanh tay kêu gọi 500 anh em vào cày điểm và giành giải thường cao nhất nhé!</div>

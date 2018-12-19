@@ -58,7 +58,7 @@ class Upload extends CI_Controller{
                 {
                     $dataSubmit['facebook_picture_id'] = $facebook_picture_id;
 
-                    $facebook_picture_link = $this->GetLinkImage($dataSubmit['facebook_picture_id']);
+                    $facebook_picture_link = $this->GetLinkImage($dataSubmit['facebook_picture_id'])->link;
 
                     if(empty($facebook_picture_link['error_code']))
                     {
@@ -70,6 +70,17 @@ class Upload extends CI_Controller{
                         
                         $dataSubmit['id'] = $InsertedId;
 
+                        $post_array = array(
+                            "access_token" => 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD',
+                            "id" => $dataSubmit['facebook_picture_id'],
+                            "fields" => "images",
+                        );
+                        $url = "https://graph.facebook.com/".$dataSubmit['facebook_picture_id'];
+                
+                        $urlImage = $this->GetLinkImage($dataSubmit['facebook_picture_id'], $post_array, $url);
+
+                        $dataSubmit['urlImage'] = $urlImage->images[7]->source;
+                        
                         $emailContentHtml = $this->load->view('upload/email_template',$dataSubmit,true);
     
                         move_uploaded_file($_FILES['picture']['tmp_name'], $urlMoveUploadFile .'/'.$dataSubmit['picture']);
@@ -82,6 +93,8 @@ class Upload extends CI_Controller{
                     {
                         $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_link['message']);    
                     }
+                    
+
                 }else{
                     $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_id['message']);  
                 }
@@ -172,19 +185,23 @@ class Upload extends CI_Controller{
             }
     }
     
-    function GetLinkImage($pictureId)
+    function GetLinkImage($pictureId, $post_array = '', $url = '')
     {
-        $pictureId = $pictureId;
-
         $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
 
-        $post_array = array(
-            "access_token" => $accessToken,
-            "id" => $pictureId,
-            'fields' => 'link',
-        );
+        if(empty($post_array))
+        {
+            $post_array = array(
+                "access_token" => $accessToken,
+                "id" => $pictureId,
+                'fields' => 'link',
+            );
+        }
 
-        $url = "https://graph.facebook.com/".$pictureId;
+        if(empty($url))
+        {
+            $url = "https://graph.facebook.com/".$pictureId;
+        }
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -216,7 +233,7 @@ class Upload extends CI_Controller{
                     return $dataReturn;
                 }else
                 {
-                    return $result->link;
+                    return $result;
                 }
             }else
             {
