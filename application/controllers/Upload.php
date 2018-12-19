@@ -117,6 +117,12 @@ class Upload extends CI_Controller{
         $this->load->view('upload/upload',$data);
     }
 
+
+    public function delete($id)
+    {
+        
+    }
+
     public function show()
     {
     
@@ -327,9 +333,9 @@ class Upload extends CI_Controller{
 	    $this->email->initialize($config);
 
 	    if(ENVIRONMENT == 'production'){
-	    	$this->email->from($from, $subject);
+	    	$this->email->from($from, 'BEST PRICE');
 	    }else{  // 'testing', 'development'
-	    	$this->email->from($from, $subject);
+	    	$this->email->from($from, 'BEST PRICE');
 	    }
 
 	    if (!empty($reply_to)) {

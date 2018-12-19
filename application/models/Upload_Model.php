@@ -79,6 +79,8 @@ class Upload_Model extends CI_Model {
     {
         $this->db->like('full_name',$keyword);
 
+        $this->db->or_like('event_code',$keyword);
+
         $query  =  $this->db->get('oauth_users');
 
         return $query->result_array();
