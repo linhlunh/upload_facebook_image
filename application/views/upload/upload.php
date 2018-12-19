@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link rel="stylesheet" href="../../assets/css/upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -74,10 +75,20 @@
                             </div>
 
                             <div class="send-img" style="text-align: center">
-                                <input type="submit" value="GỬI ẢNH" id="id-upload" style="border: 1px solid #999; border-radius: 0px; padding: 5px 3px 0px 3px; font-weight: bold; background-color: #fff; width: 221px; height: 49px; font-size: 20px; margin-top: 10px" name="action">
+                                <button type="submit" value="" id="id_upload" style="color: #000;border: 1px solid #999; border-radius: 0px; padding: 5px 3px 0px 3px; font-weight: bold; background-color: #fff; width: 221px; height: 49px; font-size: 20px; margin-top: 10px" name="action">
+                                    <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
+                                    <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
+                                </button>
                             </div>
 
                         </form>
+                        <script type="text/javascript">
+                            $('#id_upload').click(function(){
+                                $('#btn_default').hide();
+                                $('#btn_loading').show();
+                            });
+                        </script>
+                       
                     </div>
                 </div>
 
@@ -166,7 +177,6 @@
                 </div>
             </div>
         </div>
-
     </body>
 
 </html>
