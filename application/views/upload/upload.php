@@ -2,51 +2,39 @@
 <html lang="en">
 
 <head>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    
-
     <link rel="stylesheet" href="../../assets/css/upload.css">
 </head>
 
 <body>
 
-    <div class="bpt">
-        <div class="container">
-            <div class="font" style="position: relative;">
-                <img src="../../../assets/img-facebook/BG.png" alt="">
-            </div>
+    <body>
 
-            <div class="content">
-                <img src="../../../assets/img-facebook/giai thuong.png" alt="" style="position: absolute; margin-top: -2020px; margin-left: -46px;">
-            </div>
+        <div class="bpt-container">
+            <div class="content-bpt" style="margin-top: 500px;">
+                <div class="container-all" style="width: 1100px;">
+                    <div class="img-prize" style="padding-top: 220px; position: relative">
+                        <img src="../../../assets/img-facebook/giai thuong.png" alt="" style="margin-left: -48px">
+                    </div>
 
-            <div class="rules">
-                <img src="../../../assets/img-facebook/the le.png" alt="" style="position: absolute; margin-top: -600px;">
-            </div>
-            <div class="information" style=" margin-top: -2230px; position: absolute; width: 82%">
-                <div class="content-bpt">
-                    <div class="container-all">
+                    <div class="fill-content" style="position: absolute; margin-top: -560px">
                         <form action="" method="POST" enctype="multipart/form-data">
                             <div class="input field">
 
                                 <div class="row">
 
                                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <input type="text" name="full_name" id="" placeholder="Họ tên" style="padding-left: 5px; font-size: 17px; width: 92%; margin-left: 50px; height: 44px">
+                                        <input type="text" name="full_name" id="" placeholder="Họ tên" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px">
                                         <?php echo form_error('full_name'); ?>
                                     </div>
 
                                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right">
-                                        <input type="text" name="birthday" id="" placeholder="Ngày sinh" style="padding-left: 5px; font-size: 17px; width: 92%; margin-right: 50px; height: 44px">
+                                        <input type="text" name="birthday" id="" placeholder="Ngày sinh" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px">
                                         <?php echo form_error('birthday'); ?>
                                     </div>
 
@@ -55,18 +43,21 @@
                                 <div class="row" style="margin-top: 25px">
 
                                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <input type="text" name="phone" id="" placeholder="Số điện thoại" style="padding-left: 5px; font-size: 17px; width: 92%; margin-left: 50px; height: 44px">
+                                        <input type="text" name="phone" id="" placeholder="Số điện thoại" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px">
                                         <?php echo form_error('phone'); ?>
                                     </div>
 
                                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right">
-                                        <input type="text" name="email" id="" placeholder="Email" style="padding-left: 5px; font-size: 17px; width: 92%; margin-right: 50px; height: 44px">
+                                        <input type="text" name="email" id="" placeholder="Email" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px">
                                         <?php echo form_error('email'); ?>
                                     </div>
 
                                 </div>
 
-                                <input type="file" name="picture" id="file_info" class="custom-file-input" style="margin-top: 25px; margin-left: 240px;"><p style="color: red"><?=!empty($errors)?$errors:''?></p>
+                                <input type="file" name="picture" id="file_info" class="custom-file-input" style="margin-top: 25px; margin-left: 240px;">
+                                <p style="color: red">
+                                    <?=!empty($errors)?$errors:''?>
+                                </p>
 
                             </div>
 
@@ -76,7 +67,8 @@
                             </div>
 
                             <div class="comment" style="text-align: center">
-                                <textarea name="description" id="note" cols="30" rows="10" style="resize: none; overflow: hidden; min-height: auto; width: 35%; height:154px;" onkeydown="auto_grow(this)"></textarea><?php echo form_error('description'); ?>
+                                <textarea name="description" id="note" cols="30" rows="10" style="resize: none; overflow: hidden; min-height: auto; width: 391px; height:154px;" onkeydown="auto_grow(this)"></textarea>
+                                <?php echo form_error('description'); ?>
                                 <script>
                                     function auto_grow(element) {
                                         element.style.height = "5px";
@@ -86,13 +78,13 @@
                             </div>
 
                             <div class="send-img" style="text-align: center">
-                                <input type="submit" value="GỬI ẢNH" id="id-upload" style="border: 1px solid #999; border-radius: 0px; padding: 5px 3px 0px 3px; font-weight: bold; background-color: #fff; width: 20%; height: 49px; font-size: 20px; margin-top: 10px" name="action">
+                                <input type="submit" value="GỬI ẢNH" id="id-upload" style="border: 1px solid #999; border-radius: 0px; padding: 5px 3px 0px 3px; font-weight: bold; background-color: #fff; width: 221px; height: 49px; font-size: 20px; margin-top: 10px" name="action">
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div class="prize" style="margin-top: 65px">
+                <div class="prize" style="width: 1100px">
                     <div class="container" style="width: 100%;">
 
                         <div class="row">
@@ -147,12 +139,14 @@
                             </div>
 
                         </div>
-
-
                     </div>
                 </div>
 
-                <div class="how-to-play" style="margin-top: 5px">
+                <div class="rules">
+                    <img src="../../../assets/img-facebook/the le.png" alt="">
+                </div>
+
+                <div class="how-to-play" style="margin-top: 5px; width: 1100px">
                     <div class="container" style="width: 100%; color: #fff">
                         <h3 style="font-weight: bold;">Cách chơi:</h3>
                         <a style="text-decoration: none; color: #fff; font-size: 19px">Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
@@ -161,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="scoring">
+                <div class="scoring" style="width: 1100px">
                     <div class="container a" style="width: 100%; color: #fff">
                         <h3 style="font-weight: bold;">Cách thức tính điểm:</h3>
                         <a style="text-decoration: none; color: #fff; font-size: 19px"><span style="color: #f9d202">1 like</span> hoặc <span style="color: #f9d202">1 tim</span> = <span style="color: #f9d202">1 điểm</span></a><br/>
@@ -175,8 +169,10 @@
                 </div>
             </div>
         </div>
-    </div>
 
-</body>
+
+
+
+    </body>
 
 </html>
