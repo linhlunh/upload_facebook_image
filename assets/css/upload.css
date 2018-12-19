@@ -13,3 +13,52 @@ body {
     min-height: 2699px;
     width: 1100px;
 }
+
+.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::before {
+    content: 'CHỌN ẢNH';
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 0px;
+    padding: 5px 3px 0px 3px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    background-color: #fff;
+    font-size: 17px;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input:hover::before {
+    border-color: black;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .bpt-container .content-bpt .container-all .fill-content {
+        margin-left: 300px
+    }
+    .bpt-container .content-bpt .container-all .fill-content .field .row .left {
+        margin-left: -300px
+    }
+    .bpt-container .content-bpt .container-all .fill-content .field .row .right {
+        margin-left: 200px
+    }
+    .bpt-container .content-bpt .container-all .fill-content .title {
+        margin-left: -200px
+    }
+    .bpt-container .content-bpt .container-all .fill-content .comment {
+        margin-left: -175px;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .send-img {
+        margin-left: -155px
+    }
+}
