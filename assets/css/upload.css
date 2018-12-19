@@ -49,6 +49,9 @@ body {
     .bpt-container .content-bpt .container-all .fill-content .field .row .left {
         margin-left: -300px
     }
+    .bpt-container .content-bpt .container-all .fill-content .field .choose-img {
+        margin-left: -290px;
+    }
     .bpt-container .content-bpt .container-all .fill-content .field .row .right {
         margin-left: 200px
     }
@@ -60,5 +63,17 @@ body {
     }
     .bpt-container .content-bpt .container-all .fill-content .send-img {
         margin-left: -155px
+    }
+    /*
+    * modal
+    */
+    .bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content {
+        margin-left: 40px !important
+    }
+    .bpt-container .content-bpt .container-all .fill-content .regulations {
+        margin-left: -155px
+    }
+    .bpt-container .content-bpt .container-all .fill-content .margin-top-10 .text-highlight .text-price {
+        margin-left: -150px
     }
 }
