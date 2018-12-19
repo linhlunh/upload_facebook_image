@@ -12,10 +12,7 @@
 </head>
 
 <body>
-
-    <body>
-
-        <div class="bpt-container">
+        <div class="bpt-container" style="margin-top: -20px">
             <div class="content-bpt" style="margin-top: 500px;">
                 <div class="container-all" style="width: 1100px;">
                     <div class="img-prize" style="padding-top: 220px; position: relative">
@@ -28,13 +25,13 @@
 
                                 <div class="row">
 
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <input type="text" name="full_name" id="" placeholder="Họ tên" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
+                                        <input class="abc" type="text" name="full_name" id="" placeholder="Họ tên" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset">
                                         <?php echo form_error('full_name'); ?>
                                     </div>
 
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right">
-                                        <input type="text" name="birthday" id="" placeholder="Ngày sinh" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
+                                        <input class="abc" type="text" name="birthday" id="" placeholder="Ngày sinh" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset">
                                         <?php echo form_error('birthday'); ?>
                                     </div>
 
@@ -42,13 +39,13 @@
 
                                 <div class="row" style="margin-top: 25px">
 
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <input type="text" name="phone" id="" placeholder="Số điện thoại" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
+                                        <input type="text" name="phone" id="" placeholder="Số điện thoại" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset">
                                         <?php echo form_error('phone'); ?>
                                     </div>
 
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right">
-                                        <input type="text" name="email" id="" placeholder="Email" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
+                                        <input type="text" name="email" id="" placeholder="Email" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px;-webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset">
                                         <?php echo form_error('email'); ?>
                                     </div>
 
@@ -67,7 +64,7 @@
                             </div>
 
                             <div class="comment" style="text-align: center">
-                                <textarea name="description" id="note" cols="30" rows="10" style="resize: none; overflow: hidden; min-height: auto; width: 391px; height:154px;" onkeydown="auto_grow(this)"></textarea>
+                                <textarea name="description" id="note" cols="30" rows="10" style="resize: none; overflow: hidden; min-height: auto; width: 391px; height:154px; -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);" onkeydown="auto_grow(this)"></textarea>
                                 <?php echo form_error('description'); ?>
                                 <script>
                                     function auto_grow(element) {
@@ -80,6 +77,7 @@
                             <div class="send-img" style="text-align: center">
                                 <input type="submit" value="GỬI ẢNH" id="id-upload" style="border: 1px solid #999; border-radius: 0px; padding: 5px 3px 0px 3px; font-weight: bold; background-color: #fff; width: 221px; height: 49px; font-size: 20px; margin-top: 10px" name="action">
                             </div>
+
                         </form>
                     </div>
                 </div>
@@ -169,9 +167,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
     </body>
 
