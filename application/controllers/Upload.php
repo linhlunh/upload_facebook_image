@@ -31,7 +31,6 @@ class Upload extends CI_Controller{
         $this->form_validation->set_rules($oauth_users_rules);
         
         $this->form_validation->set_error_delimiters('<span style="color:red">','</span>');
-        
        
         if ($this->form_validation->run() && !empty($_FILES['picture']['name']))
         {
@@ -50,9 +49,27 @@ class Upload extends CI_Controller{
                 {
                     $nameImg = $this->_generate_random_code().'.'.str_replace('image/','',$_FILES['picture']['type']);
                 }
-                
 
-                $facebook_picture_id = $this->PostImageUseCurl($dataSubmit['description']);
+              
+
+                $InsertedId = $this->Upload_Model->create_img($dataSubmit);
+                        
+                $dataSubmit['event_code'] = 'BP'.str_pad($InsertedId,4,'0',STR_PAD_LEFT);
+
+                $nameImg = $dataSubmit['event_code'].'_'.$nameImg;
+
+                $dataSubmit['picture'] = $nameImg;
+
+                $description = '';
+                $description .= $dataSubmit['event_code'].'-'.$dataSubmit['full_name'];
+                $description .= !empty($dataSubmit['description']) ? "\n------------------------------" : "";
+                $description .= !empty($dataSubmit['description']) ? "\n".$dataSubmit['description'] : "";
+
+                $facebook_picture_id = $this->PostImageUseCurl($description);
+
+                $this->Upload_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
+
+                move_uploaded_file($_FILES['picture']['tmp_name'], $urlMoveUploadFile .'/'.$dataSubmit['picture']);
 
                 if(empty($facebook_picture_id['error_code']))
                 {
@@ -63,17 +80,6 @@ class Upload extends CI_Controller{
                     if(empty($facebook_picture_link['error_code']))
                     {
                         $dataSubmit['facebook_picture_link'] =  $facebook_picture_link;
-    
-                        $subjectEmail = 'Xác nhận thông tin dự thi';
-    
-                        $InsertedId = $this->Upload_Model->create_img($dataSubmit);
-                        
-                        $dataSubmit['event_code'] = 'BP'.str_pad($InsertedId,4,'0',STR_PAD_LEFT);
-
-                        $nameImg = $dataSubmit['event_code'].'_'.$nameImg;
-
-                        $dataSubmit['picture'] = $nameImg;
-
 
                         $this->Upload_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
 
@@ -87,10 +93,10 @@ class Upload extends CI_Controller{
                         $urlImage = $this->GetLinkImage($dataSubmit['facebook_picture_id'], $post_array, $url);
 
                         $dataSubmit['urlImage'] = reset($urlImage->images)->source;
-                        
+
                         $emailContentHtml = $this->load->view('upload/email_template',$dataSubmit,true);
-    
-                        move_uploaded_file($_FILES['picture']['tmp_name'], $urlMoveUploadFile .'/'.$dataSubmit['picture']);
+
+                        $subjectEmail = 'Xác nhận thông tin dự thi';
 
                         $this->send_email_by_marketing('cuongld@bestprice.vn',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
     
@@ -100,8 +106,6 @@ class Upload extends CI_Controller{
                     {
                         $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_link['message']);    
                     }
-                    
-
                 }else{
                     $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_id['message']);  
                 }
@@ -119,8 +123,6 @@ class Upload extends CI_Controller{
         
         $img['list_img'] = $this->Upload_Model->getPictureByid(1);
         
-        $img['link_facebook'] = $this->GetLinkImage();
-
         $keyword = $this->input->post('keyword');
 
         if (!empty($keyword)) {
@@ -139,7 +141,7 @@ class Upload extends CI_Controller{
     {
             $fileImage = $_FILES['picture'];
 
-            $albumId = '2235410473159646';
+            $albumId = '2242409652459728';
            
             $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
 
@@ -186,7 +188,7 @@ class Upload extends CI_Controller{
             {
                 $dataReturn['message'] = 'Post image error:<br/>Undifine error';
 
-                $dataReturn['error_code'] = '0';
+                $dataReturn['error_code'] = 'BP';
 
                 return $dataReturn;
             }
@@ -246,7 +248,7 @@ class Upload extends CI_Controller{
             {
                 $dataReturn['message'] = 'Get link picture error:<br/>Undifine error';
 
-                $dataReturn['error_code'] = '0';
+                $dataReturn['error_code'] = 'BP';
 
                 return $dataReturn;
             }
@@ -325,9 +327,9 @@ class Upload extends CI_Controller{
 	    $this->email->initialize($config);
 
 	    if(ENVIRONMENT == 'production'){
-	    	$this->email->from($from, 'BEST PRICE');
+	    	$this->email->from($from, $subject);
 	    }else{  // 'testing', 'development'
-	    	$this->email->from($from, 'BEST PRICE');
+	    	$this->email->from($from, $subject);
 	    }
 
 	    if (!empty($reply_to)) {
