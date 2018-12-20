@@ -79,8 +79,7 @@
                         </div>
 
                         <div class="comment">
-                            <textarea class="description-desktop" name="description" id="note" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
-                            <textarea class="description-mobile"  name="description" data-toggle="modal" data-target="#abc" id="note-1" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
+                            <textarea class="description-desktop" name="description" id="note" cols="30" rows="10"  data-toggle="modal" data-target="#abc" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
                                     element.style.height = "100px";
@@ -375,23 +374,24 @@
 
     <script>
         mobiscroll.settings = {
-            lang: 'en', // Specify language like: lang: 'pl' or omit setting to use default
-            theme: 'ios' // Specify theme like: theme: 'ios' or omit setting to use default
+            lang: 'en', 
+            theme: 'ios'
         };
 
         $(function() {
-
-            // Mobiscroll Date & Time initialization
-            $('#demo-mobile').mobiscroll().date({
-                display: 'bubble' // Specify display mode like: display: 'bottom' or omit setting to use default
-            });
-
-            // Mobiscroll Date & Time initialization
-            $('#birthday').mobiscroll().date({
-                display: 'bubble', // Specify display mode like: display: 'bottom' or omit setting to use default
-                touchUi: false // More info about touchUi: https://docs.mobiscroll.com/4-4-3/datetime#opt-touchUi
-            });
-
+            if ($(window).width() < 767) {
+                $('#birthday').mobiscroll().date({
+                display: 'bubble' 
+                });
+                $('#note').attr('data-toggle','modal');
+            }
+            else {
+                $('#birthday').mobiscroll().date({
+                display: 'bubble', 
+                touchUi: false 
+                });
+                $('#note').attr('data-toggle',' ');
+            }
         });
     </script>
 </body>
