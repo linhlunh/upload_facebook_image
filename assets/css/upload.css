@@ -1,4 +1,4 @@
-/* css world cup */
+/* css langding-page */
 
 body {
     padding: 0;
@@ -6,12 +6,228 @@ body {
     font-family: Arial;
 }
 
+
+/*
+*Desktop
+*/
+
 .bpt-container {
     margin: 0 auto;
     overflow: hidden;
     background: url('../../../assets/img-facebook/BG.png') repeat-y;
     min-height: 2699px;
     width: 1100px;
+    margin-top: -20px
+}
+
+.bpt-container .content-bpt {
+    margin-top: 500px;
+}
+
+.bpt-container .content-bpt .container-all {
+    width: 1100px;
+}
+
+.bpt-container .content-bpt .container-all .img-prize {
+    padding-top: 240px;
+    position: relative
+}
+
+.bpt-container .content-bpt .container-all .img-prize img {
+    margin-left: -48px
+}
+
+.bpt-container .content-bpt .container-all .fill-content {
+    position: absolute;
+    margin-top: -600px
+}
+
+.bpt-container .content-bpt .container-all .fill-content .field .row .left input {
+    padding-left: 5px;
+    font-size: 17px;
+    width: 495px;
+    margin-left: 50px;
+    height: 43px;
+    -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
+    border: unset
+}
+
+.bpt-container .content-bpt .container-all .fill-content .field .row .right input {
+    padding-left: 5px;
+    font-size: 17px;
+    width: 495px;
+    margin-right: 50px;
+    height: 43px;
+    -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
+    border: unset
+}
+
+.bpt-container .content-bpt .container-all .fill-content .field .choose-img input {
+    margin-top: 25px;
+    margin-left: 440px;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .title {
+    text-align: center;
+    color: #fff;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .title h2 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .title h4 {
+    font-style: italic;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .comment {
+    text-align: center
+}
+
+.bpt-container .content-bpt .container-all .fill-content .comment textarea {
+    resize: none;
+    overflow: hidden;
+    min-height: auto;
+    width: 391px;
+    height: 130px;
+    -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);
+}
+
+.bpt-container .content-bpt .container-all .fill-content .regulations {
+    text-align: center;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .regulations a {
+    color: #fff;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content {
+    background-image: url('../../../assets/img-facebook/BGpopup.png');
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
+    margin-left: -193px
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container {
+    width: 100%
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text a span {
+    color: #f9d202
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-2 {
+    margin-top: 15px
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-2 a {
+    color: #f9d202;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-3 {
+    margin-top: 15px;
+    padding-bottom: 15px
+}
+
+.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-3 a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .send-img {
+    text-align: center
+}
+
+.bpt-container .content-bpt .container-all .fill-content .send-img .margin-top-10 {
+    text-align: center;
+}
+
+.bpt-container .content-bpt .container-all .fill-content .send-img .upload button {
+    color: #000;
+    border: 1px solid #999;
+    border-radius: 0px;
+    padding: 5px 3px 0px 3px;
+    font-weight: bold;
+    background-color: #fff;
+    width: 221px;
+    height: 49px;
+    font-size: 20px;
+}
+
+.bpt-container .content-bpt .prize {
+    width: 1100px
+}
+
+.bpt-container .content-bpt .prize .container {
+    width: 100%;
+}
+
+.bpt-container .content-bpt .prize .container .row .right h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 44px
+}
+
+.bpt-container .content-bpt .prize .container .row .right h4 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 33px
+}
+
+.bpt-container .content-bpt .how-to-play {
+    margin-top: 5px;
+    width: 1100px
+}
+
+.bpt-container .content-bpt .how-to-play .container {
+    width: 100%;
+    color: #fff
+}
+
+.bpt-container .content-bpt .how-to-play .container h3 {
+    font-weight: bold;
+}
+
+.bpt-container .content-bpt .how-to-play .container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px
+}
+
+.bpt-container .content-bpt .scoring {
+    width: 1100px
+}
+
+.bpt-container .content-bpt .scoring .container {
+    width: 100%;
+    color: #fff
+}
+
+.bpt-container .content-bpt .scoring .container h3 {
+    font-weight: bold;
+}
+
+.bpt-container .content-bpt .scoring .container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px
+}
+
+.bpt-container .content-bpt .scoring .container a span {
+    color: #f9d202
 }
 
 .bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::before {
@@ -42,27 +258,136 @@ body {
     visibility: hidden;
 }
 
-@media only screen and (max-width: 768px) {
+
+/*
+*Mobile
+*/
+
+@media only screen and (max-width: 767px) {
+    .bpt-container {
+        margin: 0 auto;
+        overflow: hidden;
+        background: url('../../../assets/img-facebook/BG.png') repeat-y;
+        min-height: 2699px;
+        margin-top: -20px;
+    }
     .bpt-container .content-bpt .container-all .fill-content {
-        margin-left: 300px
+        margin-left: 300px;
+        margin-top: -750px;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .field {
+        margin-top: -35px
     }
     .bpt-container .content-bpt .container-all .fill-content .field .row .left {
-        margin-left: -300px
+        margin-left: -30px;
+        width: 100%;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .field .row .left input {
+        padding-left: 5px;
+        font-size: 25px;
+        width: 495px;
+        margin-left: 50px;
+        height: 50px;
+        -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
+        border: unset;
     }
     .bpt-container .content-bpt .container-all .fill-content .field .choose-img {
-        margin-left: -290px;
+        margin-left: -245px;
     }
     .bpt-container .content-bpt .container-all .fill-content .field .row .right {
-        margin-left: 200px
+        margin-left: 10px;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .field .row .right input {
+        padding-left: 5px;
+        font-size: 25px;
+        width: 495px;
+        margin-right: 50px;
+        height: 50px;
+        -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
+        border: unset;
     }
     .bpt-container .content-bpt .container-all .fill-content .title {
-        margin-left: -200px
+        margin-left: -50px
     }
     .bpt-container .content-bpt .container-all .fill-content .comment {
-        margin-left: -175px;
+        margin-left: -20px;
     }
     .bpt-container .content-bpt .container-all .fill-content .send-img {
         margin-left: -155px
+    }
+    .bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 10px 10px 5px 9px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10pt;
+        background-color: #fff;
+        font-size: 20px;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .title h2 {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .title h4 {
+        font-style: italic;
+        font-size: 14px;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .comment textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 391px;
+        height: 90px;
+        -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);
+    }
+    .bpt-container .content-bpt .container-all .img-prize {
+        padding-top: 240px;
+        padding-top: 390px;
+        position: relative
+    }
+    .bpt-container .content-bpt .container-all .fill-content .send-img .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 221px;
+        height: 49px;
+        font-size: 20px;
+        margin-left: 115px;
+        margin-top: 10px
+    }
+    .bpt-container .content-bpt .prize .container .row .right h3 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 34px;
+    }
+    .bpt-container .content-bpt .prize .container .row .img-1 img {
+        height: 270px;
+    }
+    .bpt-container .content-bpt .prize .container .row .img-2 img {
+        height: 340px;
+        margin-top: -150px;
+    }
+    .bpt-container .content-bpt .prize .container .row .img-3 img {
+        margin-top: -40px;
+        margin-left: 15px;
+        height: 240px;
+    }
+    .bpt-container .content-bpt .prize .container .row .img-4 img {
+        height: 240px;
+    }
+    .bpt-container .content-bpt .prize .container .row .right-1 {
+        margin-left: -40px
     }
     /*
     * modal
@@ -71,9 +396,9 @@ body {
         margin-left: 40px !important
     }
     .bpt-container .content-bpt .container-all .fill-content .regulations {
-        margin-left: -155px
+        margin-left: -40px
     }
     .bpt-container .content-bpt .container-all .fill-content .margin-top-10 .text-highlight .text-price {
-        margin-left: -150px
+        margin-left: 105px
     }
 }
