@@ -30,7 +30,7 @@ class Upload extends CI_Controller{
         
         $this->form_validation->set_rules($oauth_users_rules);
         
-        $this->form_validation->set_error_delimiters('<span style="color:red">','</span>');
+        $this->form_validation->set_error_delimiters('<span style="color:white;">','</span>');
        
         if ($this->form_validation->run() && !empty($_FILES['picture']['name']))
         {
