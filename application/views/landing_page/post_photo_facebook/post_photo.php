@@ -38,7 +38,7 @@
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
                                     <input type="text" name="birthday" id="birthday"  placeholder="Ngày sinh"><br/>
-                                    <div style="margin-right:350px">
+                                    <div style="margin-right:340px">
                                         <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
                                     <input type="text" name="email" id="email" placeholder="Email" ><br/>
-                                    <div style="margin-right: 375px">
+                                    <div style="margin-right: 365px">
                                         <span class='error' id='error_email'>Email không được để trống!</span>
                                         <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
                                     </div>
@@ -150,7 +150,6 @@
                                             function myFunction() {
                                             var x = document.getElementById("text").value;
                                             document.getElementById("note-1").innerHTML = x;
-                                                x.close();
                                             }
                                         </script>
                                     </div>

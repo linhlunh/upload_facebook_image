@@ -278,7 +278,7 @@ body {
 *Mobile
 */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .mbsc-fr-w {
         width: 100% !important;
     }
