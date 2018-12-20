@@ -116,7 +116,7 @@ class Post_Photo_Facebook extends CI_Controller{
         {
             $data['errors'] = 'Chua upload file';
         } 
-        $this->load->view('landing_page/post_photo_facebook/upload',$data);
+        $this->load->view('landing_page/post_photo_facebook/post_photo',$data);
     }
 
 
