@@ -85,13 +85,17 @@ body {
     text-align: center
 }
 
-.bpt-container .content-bpt .container-all .fill-content .comment textarea {
+.bpt-container .content-bpt .container-all .fill-content .comment .description-desktop {
     resize: none;
     overflow: hidden;
     min-height: auto;
     width: 391px;
     height: 130px;
     -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);
+}
+
+.bpt-container .content-bpt .container-all .fill-content .comment .description-mobile {
+    display: none;
 }
 
 .bpt-container .content-bpt .container-all .fill-content .regulations {
@@ -353,13 +357,18 @@ body {
         font-style: italic;
         font-size: 14px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .comment textarea {
+    .bpt-container .content-bpt .container-all .fill-content .comment .description-desktop {
+        display: none;
+    }
+    .bpt-container .content-bpt .container-all .fill-content .comment .description-mobile {
         resize: none;
         overflow: hidden;
         min-height: auto;
         width: 391px;
-        height: 90px;
+        height: 130px;
         -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);
+        display: block;
+        margin-left: 95px;
     }
     .bpt-container .content-bpt .container-all .img-prize {
         padding-top: 240px;

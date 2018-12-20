@@ -78,13 +78,14 @@
                         </div>
 
                         <div class="comment">
-                            <textarea name="description" id="note" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
+                            <textarea class="description-desktop" name="description" id="note" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
+                            <textarea class="description-mobile"  name="description" data-toggle="modal" data-target="#abc" id="note-1" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
                                     element.style.height = "100px";
                                     element.style.height = (element.scrollHeight) + "px";
                                 }
-                                var wordLen = 500,
+                                var wordLen = 150,
                                     len;
                                 $('#note').keydown(function(event) {
                                     len = $('#note').val().split(/[\s]+/);
@@ -103,6 +104,61 @@
                                     }
                                 });
                             </script>
+                            <div class="modal fade"  id="abc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document" style="margin-left: 280px;">
+                                    <div class="modal-content" style="width: 500px">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color: #fff; font-size: 30px">Mô Tả</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="text" style=" resize: none;  overflow: hidden; min-height: auto; width: 391px; height: 130px; -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10); margin-left: 55px;" onkeydown="checkWord(this);"></textarea>
+                                        
+                                            <script>
+                                                function checkWord(element) {
+                                                    element.style.height = "100px";
+                                                    element.style.height = (element.scrollHeight) + "px";
+                                                }
+                                                var word = 150,
+                                                    len;
+                                                $('#text').keydown(function(event) {
+                                                    len = $('#text').val().split(/[\s]+/);
+                                                    if (len.length > word) {
+                                                        if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
+                                                            event.preventDefault();
+                                                        }
+                                                    }
+                                                    console.log(len.length + " words are typed out of an available " + word);
+                                                    wordsLeft = (word) - len.length;
+                                                    $('.words-left').html(wordsLeft + ' words left');
+                                                    if (wordsLeft == 0) {
+                                                        $('.words-left').css({
+                                                            'background': 'red'
+                                                        }).prepend('<i class="fa fa-exclamation-triangle"></i>');
+                                                    }
+                                                });
+                                            </script>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer" style="padding-right: 150px;">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000">Đóng</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="myFunction()" style="background-color: #fff; color: #000000">Gửi Mô Tả</button>
+                                        <script>
+                                            function myFunction() {
+                                            var x = document.getElementById("text").value;
+                                            document.getElementById("note-1").innerHTML = x;
+                                                x.close();
+                                            }
+                                        </script>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="regulations">
