@@ -53,5 +53,5 @@ $route['default_controller'] = '';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['vui-xuan'] = 'landing_page/Post_Photo_Facebook';
-$route['show'] = 'Upload/show';
+$route['show'] = 'landing_page/Post_Photo_Facebook/show';
 $route['img'] = 'upload_facebook';

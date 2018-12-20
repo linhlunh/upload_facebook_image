@@ -36,7 +36,7 @@ class Post_Photo_Facebook extends CI_Controller{
         {
             if (!empty($dataSubmit))
             {
-                $urlMoveUploadFile = str_replace('application\controllers','',__DIR__).'assets\img';
+                $urlMoveUploadFile = str_replace('application\controllers\landing_page','',__DIR__).'/images/landing_page/post_photo_facebook';
 
                 $urlMoveUploadFile = str_replace('\\','/',$urlMoveUploadFile);
 
@@ -59,7 +59,7 @@ class Post_Photo_Facebook extends CI_Controller{
                 $nameImg = $dataSubmit['event_code'].'_'.$nameImg;
 
                 $dataSubmit['picture'] = $nameImg;
-
+                
                 $description = '';
                 $description .= $dataSubmit['event_code'].'-'.$dataSubmit['full_name'];
                 $description .= !empty($dataSubmit['description']) ? "\n------------------------------" : "";
@@ -70,6 +70,7 @@ class Post_Photo_Facebook extends CI_Controller{
                 $this->Upload_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
 
                 move_uploaded_file($_FILES['picture']['tmp_name'], $urlMoveUploadFile .'/'.$dataSubmit['picture']);
+
 
                 if(empty($facebook_picture_id['error_code']))
                 {
@@ -114,7 +115,7 @@ class Post_Photo_Facebook extends CI_Controller{
         {
             $data['errors'] = 'Chua upload file';
         } 
-        $this->load->view('upload/upload',$data);
+        $this->load->view('landing_page/post_photo_facebook/upload',$data);
     }
 
 
@@ -140,7 +141,7 @@ class Post_Photo_Facebook extends CI_Controller{
             
             $img['list_img'] = $this->Upload_Model->getPictureByid(1);
         }
-        $this->load->view('upload/list_img', $img);
+        $this->load->view('landing_page/post_photo_facebook/list_img', $img);
     }
 
     function PostImageUseCurl($message = '')

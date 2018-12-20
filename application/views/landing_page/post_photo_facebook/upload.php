@@ -27,12 +27,12 @@
                             <div class="row">
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
-                                    <input class="abc" type="text" name="full_name" id="" value='<?=set_value(' full_name ')?>' placeholder="Họ tên" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
+                                    <input class="abc" type="text" name="full_name" id="" value='<?=set_value('full_name')?>' placeholder="Họ tên" style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
                                     <?=form_error('full_name'); ?>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
-                                    <input class="abc" type="text" name="birthday" id="" value='<?=set_value(' birthday ')?>' placeholder="Ngày sinh" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
+                                    <input class="abc" type="text" name="birthday" id="" value='<?=set_value('birthday')?>' placeholder="Ngày sinh" style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
                                     <?=form_error('birthday'); ?>
                                 </div>
 
@@ -41,12 +41,12 @@
                             <div class="row" style="margin-top: 25px">
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
-                                    <input type="text" name="phone" id="" placeholder="Số điện thoại" value='<?=set_value(' phone ')?>' style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
+                                    <input type="text" name="phone" id="" placeholder="Số điện thoại" value='<?=set_value('phone')?>' style="padding-left: 5px; font-size: 17px; width: 495px; margin-left: 50px; height: 43px; -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
                                     <?=form_error('phone'); ?>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
-                                    <input type="text" name="email" id="" placeholder="Email" value='<?=set_value(' email ')?>' style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px;-webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
+                                    <input type="text" name="email" id="" placeholder="Email" value='<?=set_value('email')?>' style="padding-left: 5px; font-size: 17px; width: 495px; margin-right: 50px; height: 43px;-webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1); border: unset"><br/>
                                     <?=form_error('email'); ?>
                                 </div>
 
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="comment" style="text-align: center">
-                            <textarea name="description" id="note" cols="30" rows="10" value='<?=set_value(' note ')?>' style="resize: none; overflow: hidden; min-height: auto; width: 391px; height:154px; -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);" onkeydown="checkWordLen(this);"></textarea>
+                            <textarea name="description" id="note" cols="30" rows="10" value='<?=set_value('note')?>' style="resize: none; overflow: hidden; min-height: auto; width: 391px; height:154px; -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);" onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
                                     element.style.height = "5px";
