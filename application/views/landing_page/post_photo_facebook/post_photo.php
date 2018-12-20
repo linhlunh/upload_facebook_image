@@ -330,10 +330,11 @@
             }else{
                 $('#error_picture').hide();
 
-                if(fileImg.type == 'image/jpeg' || fileImg.type === 'image/png' || fileImg.type == 'image/jpg'){
+                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg'){
                     $('#error_picture_type').hide();
                 }else{
                     $('#error_picture_type').show();
+                    check = false;
                 }
                 if(fileImg.size >= 2097152 ){
                     $('#error_picture_size').show();
