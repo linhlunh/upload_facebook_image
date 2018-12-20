@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <link rel="stylesheet" href="../../assets/css/upload.css">
+    <link rel="stylesheet" href="../../../assets/css/upload.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -28,12 +28,16 @@
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
                                     <input type="text" name="full_name" id="" value='<?=set_value(' full_name ')?>' placeholder="Họ tên"><br/>
-                                    <div style="margin-left: 50px;"><?=form_error('full_name');?></div>
+                                    <div style="margin-left: 50px;">
+                                        <?=form_error('full_name');?>
+                                    </div>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
-                                    <input  type="date" name="birthday" id="" value='<?=set_value(' birthday ')?>' placeholder="Ngày sinh"><br/>
-                                    <div style="margin-right:350px"><?=form_error('birthday'); ?></div>
+                                    <input type="date" name="birthday" id="" value='<?=set_value(' birthday ')?>' placeholder="Ngày sinh"><br/>
+                                    <div style="margin-right:350px">
+                                        <?=form_error('birthday'); ?>
+                                    </div>
                                 </div>
 
                             </div>
@@ -41,13 +45,17 @@
                             <div class="row" style="margin-top: 25px">
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
-                                    <input type="text" name="phone" id="" placeholder="Số điện thoại" value='<?=set_value(' phone ')?>' ><br/>
-                                    <div style="margin-left: 50px"><?=form_error('phone'); ?></div>
+                                    <input type="text" name="phone" id="" placeholder="Số điện thoại" value='<?=set_value(' phone ')?>'><br/>
+                                    <div style="margin-left: 50px">
+                                        <?=form_error('phone'); ?>
+                                    </div>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
                                     <input type="text" name="email" id="" placeholder="Email" value='<?=set_value(' email ')?>'><br/>
-                                    <div style="margin-right: 375px"><?=form_error('email'); ?></div>
+                                    <div style="margin-right: 375px">
+                                        <?=form_error('email'); ?>
+                                    </div>
                                 </div>
 
                             </div>
@@ -95,7 +103,7 @@
                         </div>
 
                         <div class="regulations">
-                            <a href=""  data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
+                            <a href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
                         </div>
 
                         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -137,31 +145,31 @@
                         </div>
 
                         <div class="send-img">
-                            
+
                             <div class="margin-top-10" id="term_agreement">
-                            <div class="checkbox text-highlight">
-                                <label class="text-price font-size-15" style="color: #fff">
+                                <div class="checkbox text-highlight">
+                                    <label class="text-price font-size-15" style="color: #fff">
                                        Khi gửi ảnh là bạn đã đồng ý quy định của chúng tôi
                                 </label>
-                            </div>
-                            <div class="upload">
-                                <button type="submit" value="" id="id_upload" name="action">
+                                </div>
+                                <div class="upload">
+                                    <button type="submit" value="" id="id_upload" name="action">
                                 <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
                                 <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
                                 </button>
+                                </div>
                             </div>
-                        </div>
 
-                        </form>
-                        <script type="text/javascript">
-                            $('#id_upload').click(function(){
-                                $('#btn_default').hide();
-                                $('#btn_loading').show();
-                            });
-                        </script>
-                       
+                    </form>
+                    <script type="text/javascript">
+                        $('#id_upload').click(function() {
+                            $('#btn_default').hide();
+                            $('#btn_loading').show();
+                        });
+                    </script>
+
                     </div>
-                       
+
 
                     </form>
                 </div>
@@ -251,7 +259,9 @@
             </div>
         </div>
     </div>
-
+<script>
+    
+</script>
 </body>
 
 </html>

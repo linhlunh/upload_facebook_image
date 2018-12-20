@@ -267,7 +267,7 @@ body {
     .bpt-container {
         margin: 0 auto;
         overflow: hidden;
-        background: url('../../../assets/img-facebook/BG.png') repeat-y;
+        background: url('../../../assets/img-facebook/BG.png');
         min-height: 2699px;
         margin-top: -20px;
     }

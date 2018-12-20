@@ -17,6 +17,7 @@ class Post_Photo_Facebook extends CI_Controller{
         $this->lang->load('event_tet_lang','vietnamese');
 
         $this->config->load('oauth_users');
+        
     }
 
 
