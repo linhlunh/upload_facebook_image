@@ -65,9 +65,11 @@
 
                             </div>
                             <div class="choose-img">
-                                <input multiple type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
+                                <input type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff" >
                                 <p style="color: red">
-                                    <?=!empty($errors)?$errors:''?>
+                                    <span class='error' id='error_picture'>Bạn chưa chọn file ảnh!</span>
+                                    <span class='error' id='error_picture_type'>Ảnh bạn chọn chưa đúng định dạng!</span>
+                                    <span class='error' id='error_picture_size'>Ảnh bạn chọn vướt quá kích thước cho phép!</span>
                                 </p>
                             </div>
 
@@ -94,7 +96,6 @@
                                             event.preventDefault();
                                         }
                                     }
-                                    console.log(len.length + " words are typed out of an available " + wordLen);
                                     wordsLeft = (wordLen) - len.length;
                                     $('.words-left').html(wordsLeft + ' words left');
                                     if (wordsLeft == 0) {
@@ -131,7 +132,6 @@
                                                             event.preventDefault();
                                                         }
                                                     }
-                                                    console.log(len.length + " words are typed out of an available " + word);
                                                     wordsLeft = (word) - len.length;
                                                     $('.words-left').html(wordsLeft + ' words left');
                                                     if (wordsLeft == 0) {
@@ -311,14 +311,38 @@
         </div>
     </div>
     <script>
+        var fileImg = '';
+        $('input[type="file"]').change(function(e){
+            fileImg = e.target.files[0];
+            
+        });
         function validateForm() {
             var full_name = $('#full_name').val();
             var email = $('#email').val();
             var phone = $('#phone').val();
             var birthday = $('#birthday').val();
-            var picture = $('#picture').val();
             
             var check = true;
+
+            if(fileImg == ''){
+                $('#error_picture').show();
+                check = false;
+            }else{
+                $('#error_picture').hide();
+
+                if(fileImg.type == 'image/jpeg' || fileImg.type === 'image/png' || fileImg.type == 'image/jpg'){
+                    $('#error_picture_type').hide();
+                }else{
+                    $('#error_picture_type').show();
+                }
+                if(fileImg.size >= 2097152 ){
+                    $('#error_picture_size').show();
+                    check = false;
+                }else{
+                    $('#error_picture_size').hide();
+                }
+            }
+           
 
             if (full_name === '' || full_name === null) {
                 $('#error_full_name').show();
