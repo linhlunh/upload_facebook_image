@@ -8,7 +8,7 @@ class Post_Photo_Facebook extends CI_Controller{
         
         $this->load->database();
 
-        $this->load->model('Upload_Model');
+        $this->load->model('Landing_Page_Model');
 
         $this->load->library('form_validation');
 
@@ -16,7 +16,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
         $this->lang->load('event_tet_lang','vietnamese');
 
-        $this->config->load('oauth_users');
+        $this->config->load('oauth_users_meta');
         
     }
 
@@ -46,14 +46,14 @@ class Post_Photo_Facebook extends CI_Controller{
                 $dataSubmit['created'] = date("Y-m-d H:i:s");
                 $dataSubmit['link'] = "share-photo";
 
-                while(empty($nameImg) || $this->Upload_Model->isSetImageName($nameImg))
+                while(empty($nameImg) || $this->Landing_Page_Model->isSetImageName($nameImg))
                 {
                     $nameImg = $this->_generate_random_code().'.'.str_replace('image/','',$_FILES['picture']['type']);
                 }
 
               
 
-                $InsertedId = $this->Upload_Model->create_img($dataSubmit);
+                $InsertedId = $this->Landing_Page_Model->create_img($dataSubmit);
                         
                 $dataSubmit['event_code'] = 'BP'.str_pad($InsertedId,4,'0',STR_PAD_LEFT);
 
@@ -68,7 +68,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
                 $facebook_picture_id = $this->PostImageUseCurl($description);
 
-                $this->Upload_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
+                $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
 
                 move_uploaded_file($_FILES['picture']['tmp_name'], $urlMoveUploadFile .'/'.$dataSubmit['picture']);
 
@@ -83,7 +83,7 @@ class Post_Photo_Facebook extends CI_Controller{
                     {
                         $dataSubmit['facebook_picture_link'] =  $facebook_picture_link;
 
-                        $this->Upload_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
+                        $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
 
                         $post_array = array(
                             "access_token" => 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD',
@@ -129,18 +129,18 @@ class Post_Photo_Facebook extends CI_Controller{
     {
     
         
-        $img['list_img'] = $this->Upload_Model->getPictureByid(1);
+        $img['list_img'] = $this->Landing_Page_Model->getPictureByid(1);
         
         $keyword = $this->input->post('keyword');
 
         if (!empty($keyword)) {
 
-            $data['results'] = $this->Upload_Model->search($keyword);
+            $data['results'] = $this->Landing_Page_Model->search($keyword);
             
             $img['list_img'] = $data['results']; 
         } else {
             
-            $img['list_img'] = $this->Upload_Model->getPictureByid(1);
+            $img['list_img'] = $this->Landing_Page_Model->getPictureByid(1);
         }
         $this->load->view('landing_page/post_photo_facebook/list_img', $img);
     }

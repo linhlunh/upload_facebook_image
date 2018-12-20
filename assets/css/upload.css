@@ -14,7 +14,7 @@ body {
 .bpt-container {
     margin: 0 auto;
     overflow: hidden;
-    background: url('../../../assets/img-facebook/BG.png') repeat-y;
+    background: url('../../../assets/img/img-facebook/BG.png') repeat-y;
     min-height: 2699px;
     width: 1100px;
     margin-top: -20px
@@ -107,7 +107,7 @@ body {
 }
 
 .bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content {
-    background-image: url('../../../assets/img-facebook/BGpopup.png');
+    background-image: url('../../../assets/img/img-facebook/BGpopup.png');
     margin: 0 auto;
     overflow: hidden;
     width: 1000px;
@@ -285,7 +285,7 @@ body {
     .bpt-container {
         margin: 0 auto;
         overflow: hidden;
-        background: url('../../../assets/img-facebook/BG.png');
+        background: url('../../../assets/img/img-facebook/BG.png');
         min-height: 2699px;
         margin-top: -20px;
     }

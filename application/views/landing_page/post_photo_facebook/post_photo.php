@@ -8,8 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="../../../../assets/usage_datetime/js/mobiscroll.jquery.min.js"></script>
-    <link rel="stylesheet" href="../../../../assets/usage_datetime/css/mobiscroll.jquery.min.css">
+    <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
     <link rel="stylesheet" href="../../../assets/css/upload.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -20,7 +20,7 @@
         <div class="content-bpt">
             <div class="container-all">
                 <div class="img-prize">
-                    <img src="../../../assets/img-facebook/giai thuong.png" alt="">
+                    <img src="../../../assets/img/img-facebook/giai thuong.png" alt="">
                 </div>
 
                 <div class="fill-content">
@@ -166,7 +166,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="content-regulations">
-                                        <img src="../../../assets/img-facebook/quydinh.png" alt="" style="width: 100%">
+                                        <img src="../../../assets/img/img-facebook/quydinh.png" alt="" style="width: 100%">
                                         <div class="container">
                                             <div class="content-text">
                                                 <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span style="color: #f9d202">photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
@@ -232,7 +232,7 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-1">
-                            <img src="../../../assets/img-facebook/giai nhat.png" alt="">
+                            <img src="../../../assets/img/img-facebook/giai nhat.png" alt="">
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="margin-left: -40px; margin-top: 131px;">
@@ -246,7 +246,7 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
-                            <img src="../../../assets/img-facebook/giai nhi.png" alt="" style="margin-top: -150px">
+                            <img src="../../../assets/img/img-facebook/giai nhi.png" alt="" style="margin-top: -150px">
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right-1" style="margin-top: 90px;">
@@ -259,7 +259,7 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-3">
-                            <img src="../../../assets/img-facebook/giai ba.png" alt="" style="margin-top: -40px; margin-left: 15px">
+                            <img src="../../../assets/img/img-facebook/giai ba.png" alt="" style="margin-top: -40px; margin-left: 15px">
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="margin-left: -40px; margin-top: 65px;">
@@ -272,7 +272,7 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-4">
-                            <img src="../../../assets/img-facebook/khieu khich.png" alt="" style="margin-top: -40px; margin-left: 15px">
+                            <img src="../../../assets/img/img-facebook/khieu khich.png" alt="" style="margin-top: -40px; margin-left: 15px">
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="margin-left: -40px; margin-top: 65px;">
@@ -285,7 +285,7 @@
             </div>
 
             <div class="rules">
-                <img src="../../../assets/img-facebook/the le.png" alt="">
+                <img src="../../../assets/img/img-facebook/the le.png" alt="">
             </div>
 
             <div class="how-to-play">

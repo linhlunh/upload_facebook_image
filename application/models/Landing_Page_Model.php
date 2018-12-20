@@ -4,7 +4,7 @@
 * Upload_Model
 */
 
-class Upload_Model extends CI_Model {
+class Landing_Page_Model extends CI_Model {
 
     function __construct()
     {
