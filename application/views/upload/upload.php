@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="choose-img">
-                                <input type="file" name="picture" id="file_info" class="custom-file-input">
+                                <input multiple type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
                                 <p style="color: red">
                                     <?=!empty($errors)?$errors:''?>
                                 </p>
@@ -70,7 +70,7 @@
                             <textarea name="description" id="note" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
-                                    element.style.height = "130px";
+                                    element.style.height = "100px";
                                     element.style.height = (element.scrollHeight) + "px";
                                 }
                                 var wordLen = 500,
