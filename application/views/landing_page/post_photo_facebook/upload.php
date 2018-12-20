@@ -10,12 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <link rel="stylesheet" href="../../../assets/css/upload.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .error{
-            color: #fff;
-            display: none;
-        }
-    </style>
+ 
 </head>
 
 <body>
@@ -33,14 +28,14 @@
                             <div class="row">
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
-                                    <input type="text" name="full_name" id="full_name" value='<?=set_value('full_name')?>' placeholder="Họ tên"><br/>
+                                    <input type="text" name="full_name" id="full_name" value='<?=set_value(' full_name ')?>' placeholder="Họ tên"><br/>
                                     <div style="margin-left: 50px;">
                                         <span class='error' id='error_full_name'>Họ tên không được để trống!</span>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
-                                    <input type="date" name="birthday" id="birthday" value='<?=set_value('birthday')?>' placeholder="Ngày sinh"><br/>
+                                    <input type="date" name="birthday" id="birthday" value='<?=set_value(' birthday ')?>' placeholder="Ngày sinh"><br/>
                                     <div style="margin-right:350px">
                                         <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
                                     </div>
@@ -51,15 +46,15 @@
                             <div class="row" style="margin-top: 25px">
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 left">
-                                    <input type="text" name="phone" id="phone" placeholder="Số điện thoại" value='<?=set_value('phone')?>'><br/>
+                                    <input type="text" name="phone" id="phone" placeholder="Số điện thoại" value='<?=set_value(' phone ')?>'><br/>
                                     <div style="margin-left: 50px">
                                         <span class='error' id='error_phone'>Số điện thoại không được để trống!</span>
-                                        <span class='error' id='error_wrong_phone'>Số điện thoại không đúng!</span>
+	                                    <span class='error' id='error_wrong_phone'>Số điện thoại không đúng!</span>
                                     </div>
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right" style="text-align: right">
-                                    <input type="text" name="email" id="email" placeholder="Email" value='<?=set_value('email')?>'><br/>
+                                    <input type="text" name="email" id="email" placeholder="Email" value='<?=set_value(' email ')?>'><br/>
                                     <div style="margin-right: 375px">
                                         <span class='error' id='error_email'>Email không được để trống!</span>
                                         <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
@@ -69,9 +64,9 @@
                             </div>
 
                             <div class="choose-img">
-                                <input type="file" name="picture" id="picture" class="custom-file-input">
+                                <input multiple type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
                                 <p style="color: red">
-                                    <span class='error' id='error_picture'>Họ tên không được để trống!</span>
+                                    <?=!empty($errors)?$errors:''?>
                                 </p>
                             </div>
 
@@ -83,10 +78,10 @@
                         </div>
 
                         <div class="comment">
-                            <textarea name="description" id="note" cols="30" rows="10" value='<?=set_value('description')?>' onkeydown="checkWordLen(this);"></textarea>
+                            <textarea name="description" id="note" cols="30" rows="10" value='<?=set_value(' note ')?>' onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
-                                    element.style.height = "130px";
+                                    element.style.height = "100px";
                                     element.style.height = (element.scrollHeight) + "px";
                                 }
                                 var wordLen = 500,
@@ -169,6 +164,8 @@
                             </div>
 
                     </form>
+                   
+
                     </div>
 
 
@@ -260,7 +257,7 @@
             </div>
         </div>
     </div>
-<script>
+    <script>
     function validateForm()
     {
         var full_name = $('#full_name').val();

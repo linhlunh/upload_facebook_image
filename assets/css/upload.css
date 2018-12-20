@@ -260,6 +260,11 @@ body {
     visibility: hidden;
 }
 
+.error {
+    color: #fff;
+    display: none;
+}
+
 
 /*
 *Mobile

@@ -96,20 +96,20 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $dataSubmit['urlImage'] = reset($urlImage->images)->source;
 
-                        $emailContentHtml = $this->load->view('upload/email_template',$dataSubmit,true);
+                        $emailContentHtml = $this->load->view('landing_page/post_photo_facebook/email_template',$dataSubmit,true);
 
                         $subjectEmail = 'Xác nhận thông tin dự thi';
 
-                        $this->send_email_by_marketing('cuongld@bestprice.vn',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
+                        $this->send_email_by_marketing('meoconyy123@gmail.com',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
     
-                        $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn',$subjectEmail,$emailContentHtml);
+                        $this->send_email_by_marketing('meoconyy123@gmail.com','meoconyy123@gmail.com',$subjectEmail,$emailContentHtml);
 
                     }else
                     {
-                        $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_link['message']);    
+                        $this->send_email_by_marketing('meoconyy123@gmail.com','meoconyy123@gmail.com','Error event Tết',$facebook_picture_link['message']);    
                     }
                 }else{
-                    $this->send_email_by_marketing('cuongld@bestprice.vn','cuongld@bestprice.vn','Error event Tết',$facebook_picture_id['message']);  
+                    $this->send_email_by_marketing('meoconyy123@gmail.com','meoconyy123@gmail.com','Error event Tết',$facebook_picture_id['message']);  
                 }
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action']))
@@ -311,8 +311,8 @@ class Post_Photo_Facebook extends CI_Controller{
 	    $config['smtp_host'] = 'ssl://smtp.googlemail.com';
 	    $config['smtp_port'] = '465';
 	    $config['smtp_timeout'] = '30';
-	   	$config['smtp_user'] = 'cuongld@bestprice.vn';
-        $config['smtp_pass'] = 'Bpt052010';
+	   	$config['smtp_user'] = 'meoconyy123@gmail.com';
+        $config['smtp_pass'] = 'anhduc123';
         $config['charset'] = 'utf-8';
 
 	    if($count_user['num'] > 350){
