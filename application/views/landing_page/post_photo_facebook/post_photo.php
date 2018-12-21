@@ -316,6 +316,15 @@
             fileImg = e.target.files[0];
             
         });
+
+        $('#birthday').change(function(){
+            var birthday = $(this).val();
+            var result = birthday.split('/');
+            birthday = result[1]+'/'+result[0]+'/'+result[2];
+            $(this).val(birthday);
+            
+        });
+
         function validateForm() {
             var full_name = $('#full_name').val();
             var email = $('#email').val();

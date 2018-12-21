@@ -98,7 +98,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $emailContentHtml = $this->load->view('landing_page/post_photo_facebook/email_template',$dataSubmit,true);
 
-                        $subjectEmail = 'Xác nhận thông tin dự thi';
+                        $subjectEmail = 'Thông tin đăng ký dự thi Đăng ảnh đón xuân khuân tour miễn phí.';
 
                         $this->send_email_by_marketing('meoconyy123@gmail.com',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
     
@@ -335,9 +335,9 @@ class Post_Photo_Facebook extends CI_Controller{
 	    $this->email->initialize($config);
 
 	    if(ENVIRONMENT == 'production'){
-	    	$this->email->from($from, 'BEST PRICE');
+	    	$this->email->from($from, 'BestPrice');
 	    }else{  // 'testing', 'development'
-	    	$this->email->from($from, 'BEST PRICE');
+	    	$this->email->from($from, 'BestPrice');
 	    }
 
 	    if (!empty($reply_to)) {
