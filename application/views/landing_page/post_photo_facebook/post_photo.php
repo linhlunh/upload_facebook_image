@@ -490,5 +490,32 @@
                 $('#note').attr('data-toggle', ' ');
             }
         });
+     
+        $(function(){
+            firstTop = 120;
+            var width = $(window).width();
+            if(width > 767){
+
+            }else{
+                console.log( (width*(firstTop/320) + 256/(width/320)));
+                
+                
+                $('.insert-information').css('top',(width*(firstTop/320)) + 'px'  );
+
+                $('.choose-img').css({top: (width*(265/320)) + 'px'  });
+
+                $('.describe').css({top: (width*(300/320)) + 'px'  });
+
+                $('.img-prize').css({top: (width*(376/320)) + 'px'  });
+
+                $('.content-prize-mobile').css({top: (width*(465/320)) + 'px'  });
+                
+                $('.img-rules-mobile').css({top: (width*(630/320)) + 'px'  });
+
+                $('.how-to-play-mobile').css({top: (width*(640/320)) + 'px'  });
+
+                $('.scoring-mobile').css({top: (width*(690/320)) + 'px'  });
+            }
+        });
     </script>
 </body>
