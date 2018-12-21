@@ -1,4 +1,4 @@
-/* css langding-page */
+﻿/* css langding-page */
 
 body {
     padding: 0;
@@ -11,230 +11,45 @@ body {
 *Desktop
 */
 
+.body-content {
+    width: 1104px;
+    margin: 0 auto;
+}
+
 .bpt-container {
-    margin: 0 auto;
-    overflow: hidden;
-    background: url('../../../assets/img/img-facebook/BG.png') repeat-y;
-    min-height: 2699px;
-    width: 1100px;
-    margin-top: -20px
-}
-
-.bpt-container .content-bpt {
-    margin-top: 500px;
-}
-
-.bpt-container .content-bpt .container-all {
-    width: 1100px;
-}
-
-.bpt-container .content-bpt .container-all .img-prize {
-    padding-top: 240px;
-    position: relative
-}
-
-.bpt-container .content-bpt .container-all .img-prize img {
-    margin-left: -48px
-}
-
-.bpt-container .content-bpt .container-all .fill-content {
     position: absolute;
-    margin-top: -600px
+    z-index: 10;
+    top: 0;
 }
 
-.bpt-container .content-bpt .container-all .fill-content .field .row .left input {
-    padding-left: 5px;
-    font-size: 17px;
-    width: 495px;
-    margin-left: 50px;
+.detail-content .img-prize {
+    position: absolute;
+    top: 700px;
+}
+
+.detail-content .insert-information {
+    position: absolute;
+    top: 465px;
+    left: 45px;
+}
+
+.detail-content .insert-information .row input {
+    width: 496px;
     height: 43px;
-    -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
-    border: unset
-}
-
-.bpt-container .content-bpt .container-all .fill-content .field .row .right input {
-    padding-left: 5px;
     font-size: 17px;
-    width: 495px;
-    margin-right: 50px;
-    height: 43px;
-    -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
-    border: unset
 }
 
-.bpt-container .content-bpt .container-all .fill-content .field .choose-img input {
-    margin-top: 25px;
-    margin-left: 440px;
+.detail-content .insert-information .down {
+    padding-top: 20px
 }
 
-.bpt-container .content-bpt .container-all .fill-content .title {
-    text-align: center;
-    color: #fff;
+.detail-content .choose-img {
+    position: absolute;
+    top: 620px;
+    left: 395px
 }
 
-.bpt-container .content-bpt .container-all .fill-content .title h2 {
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .title h4 {
-    font-style: italic;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .comment {
-    text-align: center
-}
-
-.bpt-container .content-bpt .container-all .fill-content .comment .description-desktop {
-    resize: none;
-    overflow: hidden;
-    min-height: auto;
-    width: 391px;
-    height: 130px;
-    -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);
-}
-
-.bpt-container .content-bpt .container-all .fill-content .comment .description-mobile {
-    display: none;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .regulations {
-    text-align: center;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .regulations a {
-    color: #fff;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content {
-    background-image: url('../../../assets/img/img-facebook/BGpopup.png');
-    margin: 0 auto;
-    overflow: hidden;
-    width: 1000px;
-    margin-left: -193px
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container {
-    width: 100%
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text a {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text a span {
-    color: #f9d202
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-2 {
-    margin-top: 15px
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-2 a {
-    color: #f9d202;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-3 {
-    margin-top: 15px;
-    padding-bottom: 15px
-}
-
-.bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content .content-regulations .container .content-text-3 a {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .send-img {
-    text-align: center
-}
-
-.bpt-container .content-bpt .container-all .fill-content .send-img .margin-top-10 {
-    text-align: center;
-}
-
-.bpt-container .content-bpt .container-all .fill-content .send-img .upload button {
-    color: #000;
-    border: 1px solid #999;
-    border-radius: 0px;
-    padding: 5px 3px 0px 3px;
-    font-weight: bold;
-    background-color: #fff;
-    width: 221px;
-    height: 49px;
-    font-size: 20px;
-}
-
-.bpt-container .content-bpt .prize {
-    width: 1100px
-}
-
-.bpt-container .content-bpt .prize .container {
-    width: 100%;
-}
-
-.bpt-container .content-bpt .prize .container .row .right h3 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 44px
-}
-
-.bpt-container .content-bpt .prize .container .row .right h4 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 33px
-}
-
-.bpt-container .content-bpt .how-to-play {
-    margin-top: 5px;
-    width: 1100px
-}
-
-.bpt-container .content-bpt .how-to-play .container {
-    width: 100%;
-    color: #fff
-}
-
-.bpt-container .content-bpt .how-to-play .container h3 {
-    font-weight: bold;
-}
-
-.bpt-container .content-bpt .how-to-play .container a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 19px
-}
-
-.bpt-container .content-bpt .scoring {
-    width: 1100px
-}
-
-.bpt-container .content-bpt .scoring .container {
-    width: 100%;
-    color: #fff
-}
-
-.bpt-container .content-bpt .scoring .container h3 {
-    font-weight: bold;
-}
-
-.bpt-container .content-bpt .scoring .container a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 19px
-}
-
-.bpt-container .content-bpt .scoring .container a span {
-    color: #f9d202
-}
-
-.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::before {
+.detail-content .choose-img .custom-file-input::before {
     content: 'CHỌN ẢNH';
     display: inline-block;
     border: 0px solid #999;
@@ -252,16 +67,215 @@ body {
     color: #000000;
 }
 
-.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input:hover::before {
+.detail-content .choose-img .custom-file-input:hover::before {
     border-color: black;
 }
 
-.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input:active::before {
+.detail-content .choose-img .custom-file-input:active::before {
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-.bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::-webkit-file-upload-button {
+.detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
+}
+
+.detail-content .describe {
+    position: absolute;
+    top: 650px;
+    left: 500px
+}
+
+.detail-content .describe h3 {
+    color: #fff;
+    font-weight: bold
+}
+
+.detail-content .describe h4 {
+    color: #fff;
+    font-style: italic;
+    margin-left: 35px;
+}
+
+.detail-content .describe .fill-description {
+    margin-left: -100px;
+}
+
+.detail-content .describe .fill-description textarea {
+    resize: none;
+    overflow: hidden;
+    min-height: auto;
+    width: 391px;
+    height: 130px;
+}
+
+.detail-content .describe .regulations a {
+    color: #fff;
+}
+
+.detail-content .describe .popup-1 .modal-content {
+    background-image: url('../../../assets/img-facebook/BGpopup.png');
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1200px;
+    height: 587px;
+    margin-left: -286px
+}
+
+.detail-content .describe .popup-1 .modal-content .content-regulations img {
+    width: 100%
+}
+
+.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none
+}
+
+.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    color: #f9d202
+}
+
+.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    color: #f9d202;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    margin-top: 15px;
+    padding-bottom: 15px
+}
+
+.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none
+}
+
+.detail-content .describe .send-img {
+    margin-left: -80px;
+}
+
+.detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+    color: #fff;
+}
+
+.detail-content .describe .send-img .margin-top-10 .upload {
+    margin-left: 80px;
+}
+
+.detail-content .describe .send-img .margin-top-10 .upload button {
+    color: #000;
+    border: 1px solid #999;
+    border-radius: 0px;
+    padding: 5px 3px 0px 3px;
+    font-weight: bold;
+    background-color: #fff;
+    width: 60%;
+    height: 49px;
+    font-size: 20px;
+}
+
+.detail-content .content-prize {
+    position: absolute;
+    top: 1040px;
+    width: 100%
+}
+
+.detail-content .ds-desktop .content-prize .row {
+    width: 100%
+}
+
+.detail-content .ds-desktop .content-prize .row .title-1 {
+    margin-top: 190px
+}
+
+.detail-content .ds-desktop .content-prize .row .img-2 {
+    margin-top: -100px
+}
+
+.detail-content .ds-desktop .content-prize .row .title-2 {
+    margin-top: 150px
+}
+
+.detail-content .ds-desktop .content-prize .row .img-3 {
+    margin-top: -50px
+}
+
+.detail-content .ds-desktop .content-prize .row .title-3 {
+    margin-top: 100px
+}
+
+.detail-content .ds-desktop .content-prize .row .title-4 {
+    margin-top: 80px
+}
+
+.detail-content .ds-desktop .img-rules {
+    position: absolute;
+    top: 2300px
+}
+
+.detail-content .ds-desktop .how-to-play {
+    position: absolute;
+    top: 2380px;
+    ;
+    width: 100%;
+    color: #fff
+}
+
+.detail-content .ds-desktop .how-to-play .container h3 {
+    font-weight: bold;
+}
+
+.detail-content .ds-desktop .how-to-play .container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px
+}
+
+.detail-content .ds-desktop .scoring {
+    position: absolute;
+    top: 2495px;
+    ;
+    width: 100%
+}
+
+.detail-content .ds-desktop .scoring .container {
+    width: 100%;
+    color: #fff
+}
+
+.detail-content .ds-desktop .scoring .container h3 {
+    font-weight: bold;
+}
+
+.detail-content .ds-desktop .scoring .container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px
+}
+
+.detail-content .ds-desktop .scoring .container span {
+    color: #f9d202
+}
+
+.detail-content .ds-mobile {
+    display: none;
+}
+
+.detail-content .ds-desktop {
+    display: block;
+}
+
+.detail-content .ds-mobile {
+    display: none;
 }
 
 .error {
@@ -278,68 +292,51 @@ body {
 *Mobile
 */
 
-@media only screen and (max-width: 768px) {
-    .mbsc-fr-w {
-        width: 100% !important;
-    }
-    .bpt-container {
-        margin: 0 auto;
-        overflow: hidden;
-        background: url('../../../assets/img/img-facebook/BG.png');
-        min-height: 2699px;
-        margin-top: -20px;
-    }
-    .bpt-container .content-bpt .container-all .fill-content {
-        margin-left: 300px;
-        margin-top: -750px;
-    }
-    .bpt-container .content-bpt .container-all .fill-content .field {
-        margin-top: -35px
-    }
-    .bpt-container .content-bpt .container-all .fill-content .field .row .left {
-        margin-left: -30px;
+@media ( max-width: 767px) {
+    .body-content {
         width: 100%;
     }
-    .bpt-container .content-bpt .container-all .fill-content .field .row .left input {
-        padding-left: 5px;
-        font-size: 25px;
-        width: 495px;
-        margin-left: 50px;
-        height: 50px;
-        -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
-        border: unset;
+    .content .bgr img,
+    .detail-content .img-prize img {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
-    .bpt-container .content-bpt .container-all .fill-content .field .choose-img {
-        margin-left: -245px;
+    .detail-content .img-prize {
+        position: absolute;
+        top: 376px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .field .choose-img input {
-        margin-top: 15px;
-        margin-left: 440px;
+    .detail-content .insert-information {
+        position: absolute;
+        top: 120px;
+        left: 25px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .field .row .right {
-        margin-left: 10px;
+    .detail-content .insert-information .row {
         width: 100%;
-        margin-top: 30px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .field .row .right input {
-        padding-left: 5px;
-        font-size: 25px;
-        width: 495px;
-        margin-right: 50px;
-        height: 50px;
-        -webkit-box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 1);
-        border: unset;
+    .detail-content .insert-information .down {
+        padding-top: 5px
     }
-    .bpt-container .content-bpt .container-all .fill-content .title {
-        margin-left: -50px
+    .detail-content .insert-information .row .input-left {
+        margin-left: 80px;
+        margin-top: 5px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .comment {
-        margin-left: -20px;
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .send-img {
-        margin-left: -155px
+    .detail-content .insert-information .row input {
+        width: 100%;
+        height: 16px;
+        font-size: 10px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .field .custom-file-input::before {
+    .detail-content .choose-img {
+        position: absolute;
+        top: 265px;
+        left: 60px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
@@ -350,81 +347,111 @@ body {
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 10pt;
-        width: 91px;
+        font-size: 10px;
+        width: 73px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .bpt-container .content-bpt .container-all .fill-content .title h2 {
-        font-weight: bold;
-        font-size: 18px;
+    .detail-content .describe {
+        position: absolute;
+        top: 300px;
+        left: 115px
     }
-    .bpt-container .content-bpt .container-all .fill-content .title h4 {
-        font-style: italic;
-        font-size: 14px;
+    .detail-content .describe h3 {
+        display: none;
     }
-    .bpt-container .content-bpt .container-all .fill-content .comment .description-mobile {
+    .detail-content .describe h4 {
+        display: none;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -55px;
+    }
+    .detail-content .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 391px;
-        height: 130px;
-        -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 10);
-        display: block;
-        margin-left: 95px;
+        width: 85%;
+        height: 45px;
+        font-size: 10px
     }
-    .bpt-container .content-bpt .container-all .img-prize {
-        padding-top: 240px;
-        padding-top: 390px;
-        position: relative
+    .detail-content .describe .regulations {
+        margin-left: -20px;
+        margin-top: -5px;
     }
-    .bpt-container .content-bpt .container-all .fill-content .send-img .upload button {
+    .detail-content .describe .popup-1 .modal-content {
+        width: 88%;
+        height: 1372px;
+        margin-left: 0px;
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 11px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 93px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 221px;
-        height: 49px;
-        font-size: 20px;
-        margin-left: 115px;
-        margin-top: 10px
+        width: 56%;
+        height: 25px;
+        font-size: 10px;
     }
-    .bpt-container .content-bpt .prize .container .row .right h3 {
+    .detail-content .describe .send-img .margin-top-10 .checkbox {
+        position: relative;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .detail-content .describe .regulations a {
         color: #fff;
-        font-weight: bold;
-        font-size: 34px;
+        font-size: 11px;
     }
-    .bpt-container .content-bpt .prize .container .row .img-1 img {
-        height: 270px;
+    .detail-content .ds-desktop {
+        display: none;
     }
-    .bpt-container .content-bpt .prize .container .row .img-2 img {
-        height: 340px;
-        margin-top: -150px;
+    .detail-content .ds-mobile {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        display: block;
     }
-    .bpt-container .content-bpt .prize .container .row .img-3 img {
-        margin-top: -40px;
-        margin-left: 15px;
-        height: 240px;
+    .detail-content .ds-mobile .content-prize-mobile {
+        position: absolute;
+        top: 465px;
+        width: 100%
     }
-    .bpt-container .content-bpt .prize .container .row .img-4 img {
-        height: 240px;
+    .detail-content .insert-information .row .input-left .notification {
+        font-size: 7px;
     }
-    .bpt-container .content-bpt .prize .container .row .right-1 {
-        margin-left: -40px
-    }
-    /*
-    * modal
-    */
-    .bpt-container .content-bpt .container-all .fill-content .modal .modal-dialog .modal-content {
-        margin-left: 40px !important
-    }
-    .bpt-container .content-bpt .container-all .fill-content .regulations {
-        margin-left: -40px
-    }
-    .bpt-container .content-bpt .container-all .fill-content .margin-top-10 .text-highlight .text-price {
-        margin-left: 105px
+    .detail-content .insert-information .row .input-right .notification {
+        font-size: 7px;
     }
 }
