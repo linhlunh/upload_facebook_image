@@ -160,9 +160,12 @@
                     <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="content-regulations">
+                                <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 100%; margin-left: 0px">
                                     <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                     <div class="container">
+                                    <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                    </div>
                                         <div class="content-text">
                                             <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
                                         </div>
@@ -189,6 +192,7 @@
                                             <a>-	Ban tổ chức không chịu trách nhiệm trong trường hợp cuộc thi bị hủy bỏ hoặc hoãn vì những lý do bất khả kháng, khách quan như bị đánh sập mạng, thiên tai, chiến tranh…</a><br/>
                                             <a>-	Ban tổ chức không chịu trách nhiệm khi ảnh gửi tới chương trình bị hỏng, biến dạng hay thay đổi chất lượng do đường truyền hoặc sự cố mạng Internet.</a><br/>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -303,40 +307,40 @@
             <div class="ds-mobile">
                 <div class="content-prize-mobile">
 
-                    <div class="row" style="width: 100%">
+                    <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giai nhat.png" alt="" style="width: 60%">
-                            <div class="title-1" style="margin-left: 5px; font-size: 8px;">
-                                <a style="color: #fff; font-weight: bold; text-decoration: none">Tour Thái Lan 5N4Đ cho 2 người</a><br/>
-                                <a style="color: #fff; font-weight: bold; text-decoration: none">Trị Giá</a>
+                            <img src="../../assets/img/img-facebook/giai nhat.png" alt="">
+                            <div class="title-1" >
+                                <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
+                                <a>Trị Giá</a>
                             </div>
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giai nhi.png" alt="" style="width: 60%; margin-top: -8px">
-                            <div class="title-1" style="margin-left: 5px; font-size: 8px;">
-                                <a style="color: #fff; font-weight: bold;  text-decoration: none">1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</a><br/>
-                                <a style="color: #fff; font-weight: bold;  text-decoration: none">Trị Giá</a>
+                            <img src="../../assets/img/img-facebook/giai nhi.png" alt="" style="margin-top: -8px">
+                            <div class="title-1" >
+                                <a>1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</a><br/>
+                                <a>Trị Giá</a>
                             </div>
                         </div>
 
                     </div>
-                    <div class="row" style="width: 100%">
+                    <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giai ba.png" alt="" style="width: 60%">
-                            <div class="title-1" style="margin-left: 5px; font-size: 8px; ">
-                                <a style="color: #fff; font-weight: bold;  text-decoration: none">Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</a><br/>
-                                <a style="color: #fff; font-weight: bold;  text-decoration: none">Trị Giá</a>
+                            <img src="../../assets/img/img-facebook/giai ba.png" alt="">
+                            <div class="title-1">
+                                <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</a><br/>
+                                <a>Trị Giá</a>
                             </div>
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/khieu khich.png" alt="" style="width: 60%; margin-top: 20px">
-                            <div class="title-3" style="margin-left: 5px; font-size: 8px; margin-top: 3px;">
-                                <a style="color: #fff; font-weight: bold;  text-decoration: none">Voucher đặt vé máy bay</a><br/>
-                                <a style="color: #fff; font-weight: bold;  text-decoration: none">Trị Giá: 500.000 vnđ</a>
+                            <img src="../../assets/img/img-facebook/khieu khich.png" alt="" style="margin-top: 20px">
+                            <div class="title-3">
+                                <a>Voucher đặt vé máy bay</a><br/>
+                                <a>Trị Giá: 500.000 vnđ</a>
                             </div>
                         </div>
 
@@ -344,31 +348,31 @@
 
                 </div>
 
-                <div class="img-rules-mobile" style="position: absolute; top: 630px;">
-                    <img src="../../assets/img/img-facebook/the le.png" alt="" style="width: 100%;">
+                <div class="img-rules-mobile">
+                    <img src="../../assets/img/img-facebook/the le.png" alt="">
                 </div>
 
-                <div class="how-to-play-mobile" style="position: absolute; top: 640px">
+                <div class="how-to-play-mobile">
                     <div class="container">
-                        <h3 style="color: #fff; font-size: 11px;">Cách chơi:</h3>
-                        <div class="content" style="line-height: 6.5px; margin-top: -10px">
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;">Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;">Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 500 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;">Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
+                        <h3>Cách chơi:</h3>
+                        <div class="content">
+                            <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
+                            <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 500 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
+                            <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="scoring-mobile" style="position: absolute; top: 695px">
+                <div class="scoring-mobile">
                     <div class="container">
-                        <h3 style="color: #fff; font-size: 11px;">Cách thức tính điểm:</h3>
-                        <div style="line-height: 6.5px; margin-top: -10px">
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;"><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;"><span>1 share</span> = <span>3 điểm</span></a><br/>
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;">Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
-                            <a style="font-size: 7px; color: #fff; text-decoration: none;">bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
-                            <div><a style=" text-decoration: none; color: #fff; font-size: 7px "><span style="color: #f9d202 ">CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span style="color: #f9d202 ">1 ảnh</span></a><br/></div>
-                            <div><a style="font-style: italic; font-size: 7px; color: #fff">Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
+                        <h3>Cách thức tính điểm:</h3>
+                        <div class="content">
+                            <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
+                            <a><span>1 share</span> = <span>3 điểm</span></a><br/>
+                            <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
+                            <a>bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
+                            <div class="attention"><a><span>CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span>1 ảnh</span></a><br/></div>
+                            <div class="time"><a>Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
                         </div>
                     </div>
                 </div>
