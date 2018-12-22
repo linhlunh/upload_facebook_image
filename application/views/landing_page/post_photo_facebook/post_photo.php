@@ -111,7 +111,7 @@
                                     <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                     <div class="modal-body">
                                         <div class="form-group" style="">
-                                            <textarea class="form-control" id="text" style="color: #000000; font-size: 15px; overflow: scroll; height: 200px" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                            <textarea class="form-control" id="text" style="color: #000000; font-size: 15px; overflow: scroll; height: 200px; margin-left: 21px;" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
                                         
                                             <script>
                                                 function checkWord(element) {
