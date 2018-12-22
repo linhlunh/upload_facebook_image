@@ -141,9 +141,9 @@
                                     </div>
                                     <div class="modal-footer" style="">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="myFunction()" style="background-color: #fff; color: #000000; font-size: 11px">Gửi Mô Tả</button>
+                                        
                                         <script>
-                                            function myFunction() {
+                                            function checkWord() {
                                             var x = document.getElementById("text").value;
                                             document.getElementById("note").innerHTML = x;
                                             }
