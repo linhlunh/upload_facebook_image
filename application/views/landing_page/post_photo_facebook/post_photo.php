@@ -111,12 +111,12 @@
                                     <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                     <div class="modal-body">
                                         <div class="form-group" style="">
-                                            <textarea class="form-control" id="text" style="color: #000000; font-size: 15px; overflow: scroll;" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                            <textarea class="form-control" id="text" style="color: #000000; font-size: 15px; overflow: scroll; height: 200px" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
                                         
                                             <script>
                                                 function checkWord(element) {
-                                                    element.style.height = "50px";
-                                                    element.style.height = (element.scrollHeight) + "px";
+                                                    var x = document.getElementById("text").value;
+                                                    document.getElementById("note").innerHTML = x;
                                                 }
                                                 var word = 150,
                                                     len;
@@ -141,13 +141,6 @@
                                     </div>
                                     <div class="modal-footer" style="">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
-                                        
-                                        <script>
-                                            function checkWord() {
-                                            var x = document.getElementById("text").value;
-                                            document.getElementById("note").innerHTML = x;
-                                            }
-                                        </script>
                                     </div>
                                     </div>
                                 </div>
