@@ -28,7 +28,7 @@
             <div   style='line-height: 30px'>
                 <b>Mã dự thi: </b><?=!empty($event_code) ? $event_code : ''?><br/>
                 <b>Họ tên: </b><?=!empty($full_name) ? $full_name : '' ?><br/>
-                <b>Ngày sinh: </b><?=!empty($birthday) ? date('d-m-Y',strtotime($birthday)) : '' ?><br/>
+                <b>Ngày tháng năm sinh: </b><?=!empty($birthday) ? date('d-m-Y',strtotime($birthday)) : '' ?><br/>
                 <b>Điện thoại: </b><?=!empty($phone) ? $phone : '' ?><br/>
                 <b>Email: </b><?=!empty($email) ? $email : '' ?><br/>
             </div>
