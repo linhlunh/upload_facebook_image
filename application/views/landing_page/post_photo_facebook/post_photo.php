@@ -30,14 +30,14 @@
                     <div class="row up">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
-                            <input class="name" type="text" name="full_name" id="full_name" placeholder="Họ tên">
+                            <input autocomplete="off" class="name" type="text" name="full_name" id="full_name" placeholder="Họ tên">
                             <div class="notification">
                                 <span class='error' id='error_full_name'>Họ tên không được để trống!</span>
                             </div>
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right">
-                            <input class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
+                            <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
                             <div class="notification">
                                 <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
                             </div>
@@ -48,7 +48,7 @@
                     <div class="row down">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
-                            <input class="phone" type="text" name="phone" id="phone" placeholder="Số điện thoại">
+                            <input autocomplete="off" class="phone" type="text" name="phone" id="phone" placeholder="Số điện thoại">
                             <div class="notification">
                                 <span class='error' id='error_phone'>Số điện thoại không được để trống!</span>
                                 <span class='error' id='error_wrong_phone'>Số điện thoại không đúng!</span>
@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
-                            <input class="email" type="text" name="email" id="email" placeholder="Email">
+                            <input autocomplete="off" class="email" type="text" name="email" id="email" placeholder="Email">
                             <div class="notification">
                                 <span class='error' id='error_email'>Email không được để trống!</span>
                                 <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
