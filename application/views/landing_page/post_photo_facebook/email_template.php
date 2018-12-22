@@ -10,6 +10,14 @@
         .mg-top-15 {
             margin-top: 15px;
         }
+        @media ( min-width: 768px) {
+            .image {
+                float: left;
+            }
+            .info-user {
+                margin-top: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -22,13 +30,13 @@
             Cảm ơn bạn đã tham chương trình "Đăng ảnh đón xuân - khuân tour miễn phí" của BestPrice. Đây là những thông tin bạn đã đăng ký với chúng tôi:
         </div>
         <div class='mg-top-15'>
-            <div style='float:left; margin-right: 15px'>
+            <div class='image' style='margin-right: 15px'>
                 <img style='height: 149.5px' src='<?=!empty($urlImage) ? $urlImage : 'https://ci6.googleusercontent.com/proxy/pxZJXLH-vUlePdtLF-vCRHtWAo9nvNKoX2C14qYDufSLi2an1t-tcAYiOFWlPF0z9TouptT4zksgUvj6XfnYbAOmmr-Rsy3DyvTWd54eHtoRGliK8jBTfnhz8P-4k3fQIvIy8ctHtieklqSDiXQU9ICzbqiwAb-aqW1MAg6fbTjv5oTmitfRSwWknzshh01gL8O0qEIeS2gMPhneIdfTr5LYYbaAeQn78ZHJoWcGlZdLeFaHquePkRMcQ1Zp6kjzsU_jil5b=s0-d-e1-ft#https://scontent.xx.fbcdn.net/v/t1.0-0/p130x130/48394510_2242130239154336_5178640698139738112_n.jpg?_nc_cat=108&_nc_ht=scontent.xx&oh=0661636b07f39572f4451fdaafc9a735&oe=5C9E1957' ?>'/><br/>
             </div>
-            <div   style='line-height: 30px'>
+            <div class='info-user' style='line-height: 30px'>
                 <b>Mã dự thi: </b><?=!empty($event_code) ? $event_code : ''?><br/>
                 <b>Họ tên: </b><?=!empty($full_name) ? $full_name : '' ?><br/>
-                <b>Ngày tháng năm sinh: </b><?=!empty($birthday) ? date('d-m-Y',strtotime($birthday)) : '' ?><br/>
+                <b>Ngày sinh: </b><?=!empty($birthday) ? date('d-m-Y',strtotime($birthday)) : '' ?><br/>
                 <b>Điện thoại: </b><?=!empty($phone) ? $phone : '' ?><br/>
                 <b>Email: </b><?=!empty($email) ? $email : '' ?><br/>
             </div>
