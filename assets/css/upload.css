@@ -225,7 +225,6 @@ body {
 .detail-content .ds-desktop .how-to-play {
     position: absolute;
     top: 2380px;
-    ;
     width: 100%;
     color: #fff
 }
@@ -304,7 +303,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 376px;
+        top: 370px;
     }
     .detail-content .insert-information {
         position: absolute;
@@ -355,7 +354,7 @@ body {
     }
     .detail-content .describe {
         position: absolute;
-        top: 300px;
+        top: 272px;
         left: 115px
     }
     .detail-content .describe h3 {
@@ -453,5 +452,1056 @@ body {
     }
     .detail-content .insert-information .row .input-right .notification {
         font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
+        width: 60%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
+        margin-left: 5px;
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 {
+        margin-left: 5px;
+        font-size: 8px;
+        margin-top: 3px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .img-rules-mobile {
+        position: absolute;
+        top: 630px;
+    }
+    .detail-content .ds-mobile .img-rules-mobile img {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile {
+        position: absolute;
+        top: 640px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile {
+        position: absolute;
+        top: 695px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 7px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .time a {
+        font-style: italic;
+        font-size: 7px;
+        color: #fff
+    }
+}
+
+@media ( max-width: 414px) {
+    .body-content {
+        width: 100%;
+    }
+    .content .bgr img,
+    .detail-content .img-prize img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 412px;
+    }
+    .detail-content .insert-information {
+        position: absolute;
+        top: 160px;
+        left: 50px;
+    }
+    .detail-content .insert-information .row {
+        width: 100%;
+    }
+    .detail-content .insert-information .down {
+        padding-top: 5px
+    }
+    .detail-content .insert-information .row .input-left {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row input {
+        width: 100%;
+        height: 16px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img {
+        position: absolute;
+        top: 310px;
+        left: 130px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 18px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10px;
+        width: 73px;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .describe {
+        position: absolute;
+        top: 310px;
+        left: 160px
+    }
+    .detail-content .describe h3 {
+        display: none;
+    }
+    .detail-content .describe h4 {
+        display: none;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -55px;
+        margin-top: 35px;
+    }
+    .detail-content .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 85%;
+        height: 45px;
+        font-size: 10px
+    }
+    .detail-content .describe .regulations {
+        margin-left: -20px;
+    }
+    .detail-content .describe .popup-1 .modal-content {
+        width: 88%;
+        height: 1115px;
+        margin-left: 0px;
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 11px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 120px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 56%;
+        height: 25px;
+        font-size: 10px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox {
+        position: relative;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .detail-content .describe .regulations a {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-desktop {
+        display: none;
+    }
+    .detail-content .ds-mobile {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        display: block;
+    }
+    .detail-content .ds-mobile .content-prize-mobile {
+        position: absolute;
+        top: 540px;
+        width: 100%
+    }
+    .detail-content .insert-information .row .input-left .notification {
+        font-size: 7px;
+    }
+    .detail-content .insert-information .row .input-right .notification {
+        font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
+        width: 60%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
+        margin-left: 5px;
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 {
+        margin-left: 5px;
+        font-size: 8px;
+        margin-top: 3px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .img-rules-mobile {
+        position: absolute;
+        top: 738px;
+    }
+    .detail-content .ds-mobile .img-rules-mobile img {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile {
+        position: absolute;
+        top: 771px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile {
+        position: absolute;
+        top: 840px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 7px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .time a {
+        font-style: italic;
+        font-size: 7px;
+        color: #fff
+    }
+}
+
+@media ( max-width: 375px) {
+    .body-content {
+        width: 100%;
+    }
+    .content .bgr img,
+    .detail-content .img-prize img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 412px;
+    }
+    .detail-content .insert-information {
+        position: absolute;
+        top: 140px;
+        left: 25px;
+    }
+    .detail-content .insert-information .row {
+        width: 100%;
+    }
+    .detail-content .insert-information .down {
+        padding-top: 5px
+    }
+    .detail-content .insert-information .row .input-left {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row input {
+        width: 100%;
+        height: 16px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img {
+        position: absolute;
+        top: 290px;
+        left: 60px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 18px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10px;
+        width: 73px;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .describe {
+        position: absolute;
+        top: 300px;
+        left: 115px
+    }
+    .detail-content .describe h3 {
+        display: none;
+    }
+    .detail-content .describe h4 {
+        display: none;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -55px;
+        margin-top: 35px;
+    }
+    .detail-content .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 85%;
+        height: 45px;
+        font-size: 10px
+    }
+    .detail-content .describe .regulations {
+        margin-left: -20px;
+    }
+    .detail-content .describe .popup-1 .modal-content {
+        width: 88%;
+        height: 1194px;
+        margin-left: 0px;
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 11px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 120px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 56%;
+        height: 25px;
+        font-size: 10px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox {
+        position: relative;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .detail-content .describe .regulations a {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-desktop {
+        display: none;
+    }
+    .detail-content .ds-mobile {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        display: block;
+    }
+    .detail-content .ds-mobile .content-prize-mobile {
+        position: absolute;
+        top: 515px;
+        width: 100%
+    }
+    .detail-content .insert-information .row .input-left .notification {
+        font-size: 7px;
+    }
+    .detail-content .insert-information .row .input-right .notification {
+        font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
+        width: 60%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
+        margin-left: 5px;
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 {
+        margin-left: 5px;
+        font-size: 8px;
+        margin-top: 3px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .img-rules-mobile {
+        position: absolute;
+        top: 695px;
+    }
+    .detail-content .ds-mobile .img-rules-mobile img {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile {
+        position: absolute;
+        top: 715px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile {
+        position: absolute;
+        top: 775px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 7px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .time a {
+        font-style: italic;
+        font-size: 7px;
+        color: #fff
+    }
+}
+
+@media ( max-width: 360px) {
+    .body-content {
+        width: 100%;
+    }
+    .content .bgr img,
+    .detail-content .img-prize img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 412px;
+    }
+    .detail-content .insert-information {
+        position: absolute;
+        top: 140px;
+        left: 25px;
+    }
+    .detail-content .insert-information .row {
+        width: 100%;
+    }
+    .detail-content .insert-information .down {
+        padding-top: 5px
+    }
+    .detail-content .insert-information .row .input-left {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row input {
+        width: 100%;
+        height: 16px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img {
+        position: absolute;
+        top: 290px;
+        left: 60px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 18px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10px;
+        width: 73px;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .describe {
+        position: absolute;
+        top: 300px;
+        left: 115px
+    }
+    .detail-content .describe h3 {
+        display: none;
+    }
+    .detail-content .describe h4 {
+        display: none;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -55px;
+        margin-top: 35px;
+    }
+    .detail-content .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 85%;
+        height: 45px;
+        font-size: 10px
+    }
+    .detail-content .describe .regulations {
+        margin-left: -20px;
+    }
+    .detail-content .describe .popup-1 .modal-content {
+        width: 88%;
+        height: 1271px;
+        margin-left: 0px;
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 11px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 120px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 56%;
+        height: 25px;
+        font-size: 10px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox {
+        position: relative;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .detail-content .describe .regulations a {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-desktop {
+        display: none;
+    }
+    .detail-content .ds-mobile {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        display: block;
+    }
+    .detail-content .ds-mobile .content-prize-mobile {
+        position: absolute;
+        top: 515px;
+        width: 100%
+    }
+    .detail-content .insert-information .row .input-left .notification {
+        font-size: 7px;
+    }
+    .detail-content .insert-information .row .input-right .notification {
+        font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
+        width: 60%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
+        margin-left: 5px;
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 {
+        margin-left: 5px;
+        font-size: 8px;
+        margin-top: 3px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .img-rules-mobile {
+        position: absolute;
+        top: 695px;
+    }
+    .detail-content .ds-mobile .img-rules-mobile img {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile {
+        position: absolute;
+        top: 715px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile {
+        position: absolute;
+        top: 775px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 7px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .time a {
+        font-style: italic;
+        font-size: 7px;
+        color: #fff
+    }
+}
+
+@media ( max-width: 320px) {
+    .body-content {
+        width: 100%;
+    }
+    .content .bgr img,
+    .detail-content .img-prize img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 370px;
+    }
+    .detail-content .insert-information {
+        position: absolute;
+        top: 120px;
+        left: 25px;
+    }
+    .detail-content .insert-information .row {
+        width: 100%;
+    }
+    .detail-content .insert-information .down {
+        padding-top: 5px
+    }
+    .detail-content .insert-information .row .input-left {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+    .detail-content .insert-information .row input {
+        width: 100%;
+        height: 16px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img {
+        position: absolute;
+        top: 265px;
+        left: 60px;
+        font-size: 10px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 18px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10px;
+        width: 73px;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .describe {
+        position: absolute;
+        top: 272px;
+        left: 115px
+    }
+    .detail-content .describe h3 {
+        display: none;
+    }
+    .detail-content .describe h4 {
+        display: none;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -55px;
+    }
+    .detail-content .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 85%;
+        height: 45px;
+        font-size: 10px
+    }
+    .detail-content .describe .regulations {
+        margin-left: -20px;
+        margin-top: -5px;
+    }
+    .detail-content .describe .popup-1 .modal-content {
+        width: 88%;
+        height: 1372px;
+        margin-left: 0px;
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 11px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 11px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 93px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 56%;
+        height: 25px;
+        font-size: 10px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox {
+        position: relative;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .detail-content .describe .regulations a {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-desktop {
+        display: none;
+    }
+    .detail-content .ds-mobile {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        display: block;
+    }
+    .detail-content .ds-mobile .content-prize-mobile {
+        position: absolute;
+        top: 465px;
+        width: 100%
+    }
+    .detail-content .insert-information .row .input-left .notification {
+        font-size: 7px;
+    }
+    .detail-content .insert-information .row .input-right .notification {
+        font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
+        width: 60%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
+        margin-left: 5px;
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 {
+        margin-left: 5px;
+        font-size: 8px;
+        margin-top: 3px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none
+    }
+    .detail-content .ds-mobile .img-rules-mobile {
+        position: absolute;
+        top: 630px;
+    }
+    .detail-content .ds-mobile .img-rules-mobile img {
+        width: 100%;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile {
+        position: absolute;
+        top: 640px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .how-to-play-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile {
+        position: absolute;
+        top: 695px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container h3 {
+        color: #fff;
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content {
+        line-height: 6.5px;
+        margin-top: -10px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content a {
+        font-size: 7px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 7px
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .attention a span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .time a {
+        font-style: italic;
+        font-size: 7px;
+        color: #fff
     }
 }
