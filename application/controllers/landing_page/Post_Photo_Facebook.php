@@ -33,11 +33,13 @@ class Post_Photo_Facebook extends CI_Controller{
         
         $this->form_validation->set_error_delimiters('<span style="color:red">','</span>');
        
-        if ($this->form_validation->run() && !empty($_FILES['picture']['name']))
+        if ($this->form_validation->run() && !empty($_FILES['picture']['name']) && ($_FILES['picture']['type'] == 'image/jpeg' ||$_FILES['picture']['type'] == 'image/png' || $_FILES['picture']['type'] == 'image/jpg') )
         {
             if (!empty($dataSubmit))
             {
                 $urlMoveUploadFile = str_replace('application\controllers\landing_page','',__DIR__).'/images/landing_page/post_photo_facebook';
+
+                $urlMoveUploadFile = str_replace('application/controllers/landing_page','',$urlMoveUploadFile);
 
                 $urlMoveUploadFile = str_replace('\\','/',$urlMoveUploadFile);
 
