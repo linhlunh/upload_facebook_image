@@ -18,7 +18,7 @@
 <body class="body-content">
     <div class="content" style="position: relative; width: 100%;">
         <div class="bgr" style="width: 100%; margin: 0 auto; margin-top: -15px;">
-            <img src="../../../assets/img/img-facebook/BG.jpg">
+            <img src="../../../assets/img/img-facebook/BG.jpg" style="width: 105%">
         </div>
         <div class="detail-content">
 
