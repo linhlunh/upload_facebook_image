@@ -16,6 +16,11 @@ body {
     margin: 0 auto;
 }
 
+.body-content .content {
+    position: relative;
+    width: 96%;
+}
+
 .bpt-container {
     position: absolute;
     z-index: 10;
@@ -27,9 +32,13 @@ body {
     top: 700px;
 }
 
+.detail-content .img-prize img {
+    width: 105%;
+}
+
 .detail-content .insert-information {
     position: absolute;
-    top: 465px;
+    top: 477px;
     left: 45px;
 }
 
@@ -46,7 +55,8 @@ body {
 .detail-content .choose-img {
     position: absolute;
     top: 620px;
-    left: 395px
+    left: 395px;
+    font-size: 20px;
 }
 
 .detail-content .choose-img .custom-file-input::before {
@@ -60,8 +70,8 @@ body {
     cursor: pointer;
     text-shadow: 1px 1px #fff;
     font-weight: 700;
-    font-size: 10pt;
-    width: 91px;
+    font-size: 13pt;
+    width: 114px;
     background-color: #fff;
     margin: 1px 0px 0px -17px;
     color: #000000;
@@ -81,7 +91,7 @@ body {
 
 .detail-content .describe {
     position: absolute;
-    top: 650px;
+    top: 655px;
     left: 500px
 }
 
@@ -222,6 +232,10 @@ body {
     top: 2300px
 }
 
+.detail-content .ds-desktop .img-rules img {
+    width: 105%;
+}
+
 .detail-content .ds-desktop .how-to-play {
     position: absolute;
     top: 2380px;
@@ -291,15 +305,505 @@ body {
 *Mobile
 */
 
+@media ( max-width: 1024px) {
+    .body-content {
+        width: 1104px;
+        margin: 0 auto;
+    }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
+    .bpt-container {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 800px;
+    }
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .insert-information {
+        position: absolute;
+        top: 495px;
+        left: 45px;
+    }
+    .detail-content .insert-information .row input {
+        width: 496px;
+        height: 43px;
+        font-size: 17px;
+    }
+    .detail-content .insert-information .down {
+        padding-top: 20px
+    }
+    .detail-content .choose-img {
+        position: absolute;
+        top: 658px;
+        left: 395px;
+        font-size: 25px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 18px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 15pt;
+        width: 28%;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .choose-img .custom-file-input:hover::before {
+        border-color: black;
+    }
+    .detail-content .choose-img .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    .detail-content .describe {
+        position: absolute;
+        top: 730px;
+        left: 500px
+    }
+    .detail-content .describe h3 {
+        color: #fff;
+        font-weight: bold
+    }
+    .detail-content .describe h4 {
+        color: #fff;
+        font-style: italic;
+        margin-left: 35px;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -100px;
+    }
+    .detail-content .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 391px;
+        height: 130px;
+    }
+    .detail-content .describe .regulations a {
+        color: #fff;
+    }
+    .detail-content .describe .popup-1 .modal-dialog {
+        width: 100%
+    }
+    .detail-content .describe .popup-1 .modal-content {
+        background-image: url('../../../assets/img-facebook/BGpopup.png');
+        margin: 0 auto;
+        overflow: hidden;
+        width: 87%;
+        height: 640px;
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+        width: 100%
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+        color: #f9d202
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 13px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+        margin-top: 15px;
+        padding-bottom: 15px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img {
+        margin-left: -80px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 80px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 60%;
+        height: 49px;
+        font-size: 20px;
+    }
+    .detail-content .content-prize {
+        position: absolute;
+        top: 1115px;
+        width: 100%
+    }
+    .detail-content .ds-desktop .content-prize .row {
+        width: 100%
+    }
+    .detail-content .ds-desktop .content-prize .row .title-1 {
+        margin-top: 190px
+    }
+    .detail-content .ds-desktop .content-prize .row .img-2 {
+        margin-top: -100px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-2 {
+        margin-top: 150px
+    }
+    .detail-content .ds-desktop .content-prize .row .img-3 {
+        margin-top: -50px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-3 {
+        margin-top: 100px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-4 {
+        margin-top: 80px
+    }
+    .detail-content .ds-desktop .img-rules {
+        position: absolute;
+        top: 2335px
+    }
+    .detail-content .ds-desktop .how-to-play {
+        position: absolute;
+        top: 2430px;
+        width: 100%;
+        left: -65px;
+        color: #fff
+    }
+    .detail-content .ds-desktop .how-to-play .container h3 {
+        font-weight: bold;
+    }
+    .detail-content .ds-desktop .how-to-play .container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px
+    }
+    .detail-content .ds-desktop .scoring {
+        position: absolute;
+        top: 2590px;
+        width: 100%
+    }
+    .detail-content .ds-desktop .scoring .container {
+        width: 100%;
+        color: #fff
+    }
+    .detail-content .ds-desktop .scoring .container h3 {
+        font-weight: bold;
+    }
+    .detail-content .ds-desktop .scoring .container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px
+    }
+    .detail-content .ds-desktop .scoring .container span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile {
+        display: none;
+    }
+    .detail-content .ds-desktop {
+        display: block;
+    }
+    .detail-content .ds-mobile {
+        display: none;
+    }
+    .error {
+        color: #fff;
+        display: none;
+    }
+    .mbsc-sc-itm div {
+        color: #fff;
+    }
+}
+
+@media ( max-width: 823px) {
+    .detail-content .describe .fill-description .modal .control-1 {
+        width: 97%;
+        color: #000000;
+        font-size: 15px;
+        overflow: scroll;
+        height: 200px;
+        margin-left: 3px;
+    }
+    .body-content {
+        width: 1104px;
+        margin: 0 auto;
+    }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
+    .bpt-container {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 810px;
+    }
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .insert-information {
+        position: absolute;
+        top: 485px;
+        left: 45px;
+    }
+    .detail-content .insert-information .row input {
+        width: 496px;
+        height: 43px;
+        font-size: 17px;
+    }
+    .detail-content .insert-information .down {
+        padding-top: 20px
+    }
+    .detail-content .choose-img {
+        position: absolute;
+        top: 650px;
+        left: 395px;
+        font-size: 25px;
+    }
+    .detail-content .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 22px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 15pt;
+        width: 29%;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .choose-img .custom-file-input:hover::before {
+        border-color: black;
+    }
+    .detail-content .choose-img .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    .detail-content .describe {
+        position: absolute;
+        top: 720px;
+        left: 500px
+    }
+    .detail-content .describe h3 {
+        color: #fff;
+        font-weight: bold
+    }
+    .detail-content .describe h4 {
+        color: #fff;
+        font-style: italic;
+        margin-left: 35px;
+    }
+    .detail-content .describe .fill-description {
+        margin-left: -100px;
+    }
+    .detail-content .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 391px;
+        height: 130px;
+    }
+    .detail-content .describe .regulations a {
+        color: #fff;
+    }
+    .detail-content .describe .popup-1 .modal-dialog {
+        width: 100%
+    }
+    .detail-content .describe .popup-1 .modal-content {
+        background-image: url('../../../assets/img-facebook/BGpopup.png');
+        margin: 0 auto;
+        overflow: hidden;
+        width: 76%;
+        height: 749px;
+        margin-left: 100px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+        width: 100%
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+        color: #f9d202
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 13px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+        margin-top: 15px;
+        padding-bottom: 15px
+    }
+    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none
+    }
+    .detail-content .describe .send-img {
+        margin-left: -80px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload {
+        margin-left: 80px;
+    }
+    .detail-content .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 60%;
+        height: 49px;
+        font-size: 20px;
+    }
+    .detail-content .content-prize {
+        position: absolute;
+        top: 1135px;
+        width: 100%
+    }
+    .detail-content .ds-desktop .content-prize .row {
+        width: 100%
+    }
+    .detail-content .ds-desktop .content-prize .row .title-1 {
+        margin-top: 190px
+    }
+    .detail-content .ds-desktop .content-prize .row .img-2 {
+        margin-top: -100px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-2 {
+        margin-top: 150px
+    }
+    .detail-content .ds-desktop .content-prize .row .img-3 {
+        margin-top: -50px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-3 {
+        margin-top: 100px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-4 {
+        margin-top: 80px
+    }
+    .detail-content .ds-desktop .img-rules {
+        position: absolute;
+        top: 2340px
+    }
+    .detail-content .ds-desktop .how-to-play {
+        position: absolute;
+        top: 2430px;
+        left: -173px;
+        width: 100%;
+        color: #fff
+    }
+    .detail-content .ds-desktop .how-to-play .container h3 {
+        font-weight: bold;
+    }
+    .detail-content .ds-desktop .how-to-play .container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px
+    }
+    .detail-content .ds-desktop .scoring {
+        position: absolute;
+        top: 2590px;
+        width: 100%
+    }
+    .detail-content .ds-desktop .scoring .container {
+        width: 100%;
+        color: #fff
+    }
+    .detail-content .ds-desktop .scoring .container h3 {
+        font-weight: bold;
+    }
+    .detail-content .ds-desktop .scoring .container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px
+    }
+    .detail-content .ds-desktop .scoring .container span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile {
+        display: none;
+    }
+    .detail-content .ds-desktop {
+        display: block;
+    }
+    .detail-content .ds-mobile {
+        display: none;
+    }
+    .error {
+        color: #fff;
+        display: none;
+    }
+    .mbsc-sc-itm div {
+        color: #fff;
+    }
+}
+
 @media ( max-width: 767px) {
     .body-content {
+        width: 100%;
+    }
+    .body-content .content {
+        position: relative;
         width: 100%;
     }
     .content .bgr img,
     .detail-content .img-prize img {
         display: block;
-        max-width: 100%;
+        max-width: 105%;
         height: auto;
+        width: 105%;
     }
     .detail-content .img-prize {
         position: absolute;
@@ -448,10 +952,10 @@ body {
         width: 100%
     }
     .detail-content .insert-information .row .input-left .notification {
-        font-size: 7px;
+        font-size: 12px;
     }
     .detail-content .insert-information .row .input-right .notification {
-        font-size: 7px;
+        font-size: 12px;
     }
     .detail-content .ds-mobile .content-prize-mobile .row {
         width: 100%;
@@ -539,6 +1043,10 @@ body {
         width: 1104px;
         margin: 0 auto;
     }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
     .bpt-container {
         position: absolute;
         z-index: 10;
@@ -564,21 +1072,22 @@ body {
     .detail-content .choose-img {
         position: absolute;
         top: 710px;
-        left: 395px
+        left: 395px;
+        font-size: 16px;
     }
     .detail-content .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 18px;
+        padding: 2px 0px 0px 22px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
         font-size: 10pt;
-        width: 91px;
+        width: 33%;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
@@ -623,9 +1132,9 @@ body {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 1200px;
-        height: 587px;
-        margin-left: -286px
+        width: 90%;
+        height: 622px;
+        margin-left: 25px
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
@@ -709,10 +1218,14 @@ body {
         position: absolute;
         top: 2300px
     }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%;
+    }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
         top: 2380px;
         width: 100%;
+        left: 0px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -763,9 +1276,26 @@ body {
 }
 
 @media ( max-width: 731px) {
+    .detail-content .describe .fill-description .modal .control-1 {
+        width: 97%;
+        color: #000000;
+        font-size: 15px;
+        overflow: scroll;
+        height: 200px;
+        margin-left: 3px;
+    }
     .body-content {
         width: 1104px;
         margin: 0 auto;
+    }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
+    .content .bgr img {
+        display: block;
+        max-width: 105%;
+        height: auto;
     }
     .bpt-container {
         position: absolute;
@@ -774,11 +1304,11 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 700px;
+        top: 815px;
     }
     .detail-content .insert-information {
         position: absolute;
-        top: 433px;
+        top: 460px;
         left: 260px;
     }
     .detail-content .insert-information .row input {
@@ -791,22 +1321,23 @@ body {
     }
     .detail-content .choose-img {
         position: absolute;
-        top: 710px;
-        left: 395px
+        top: 760px;
+        left: 395px;
+        font-size: 16px;
     }
     .detail-content .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 18px;
+        padding: 2px 0px 0px 22px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
         font-size: 10pt;
-        width: 91px;
+        width: 33%;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
@@ -822,7 +1353,7 @@ body {
     }
     .detail-content .describe {
         position: absolute;
-        top: 755px;
+        top: 840px;
         left: 500px
     }
     .detail-content .describe h3 {
@@ -847,13 +1378,16 @@ body {
     .detail-content .describe .regulations a {
         color: #fff;
     }
+    .detail-content .describe .popup-1 .modal-dialog {
+        width: 91%
+    }
     .detail-content .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 1200px;
-        height: 587px;
-        margin-left: -286px
+        width: 100%;
+        height: 600px;
+        margin-left: 36px
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
@@ -909,7 +1443,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1140px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -935,12 +1469,13 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2355px
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2455px;
         width: 100%;
+        left: 0px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -953,8 +1488,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2495px;
-        ;
+        top: 2590px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -967,7 +1501,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 18px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -995,6 +1529,15 @@ body {
         width: 1104px;
         margin: 0 auto;
     }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
+    .content .bgr img {
+        display: block;
+        max-width: 105%;
+        height: auto;
+    }
     .bpt-container {
         position: absolute;
         z-index: 10;
@@ -1002,11 +1545,11 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 700px;
+        top: 795px;
     }
     .detail-content .insert-information {
         position: absolute;
-        top: 433px;
+        top: 460px;
         left: 260px;
     }
     .detail-content .insert-information .row input {
@@ -1019,7 +1562,7 @@ body {
     }
     .detail-content .choose-img {
         position: absolute;
-        top: 710px;
+        top: 765px;
         left: 395px
     }
     .detail-content .choose-img .custom-file-input::before {
@@ -1050,7 +1593,7 @@ body {
     }
     .detail-content .describe {
         position: absolute;
-        top: 755px;
+        top: 830px;
         left: 500px
     }
     .detail-content .describe h3 {
@@ -1069,8 +1612,16 @@ body {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 391px;
+        width: 397px;
         height: 130px;
+    }
+    .detail-content .describe .fill-description .modal .control-1 {
+        width: 97%;
+        color: #000000;
+        font-size: 15px;
+        overflow: scroll;
+        height: 200px;
+        margin-left: 3px;
     }
     .detail-content .describe .regulations a {
         color: #fff;
@@ -1079,9 +1630,9 @@ body {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 1200px;
-        height: 587px;
-        margin-left: -286px
+        width: 100%;
+        height: 600px;
+        margin-left: 30px
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
@@ -1137,7 +1688,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1115px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1163,12 +1714,16 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2320px
+    }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2415px;
         width: 100%;
+        left: 25px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -1177,12 +1732,12 @@ body {
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 18px
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2495px;
-        ;
+        top: 2550px;
+        left: 25px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1195,7 +1750,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 18px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1223,6 +1778,15 @@ body {
         width: 1104px;
         margin: 0 auto;
     }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
+    .content .bgr img {
+        display: block;
+        max-width: 105%;
+        height: auto;
+    }
     .bpt-container {
         position: absolute;
         z-index: 10;
@@ -1230,11 +1794,11 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 700px;
+        top: 770px;
     }
     .detail-content .insert-information {
         position: absolute;
-        top: 433px;
+        top: 440px;
         left: 260px;
     }
     .detail-content .insert-information .row input {
@@ -1247,7 +1811,7 @@ body {
     }
     .detail-content .choose-img {
         position: absolute;
-        top: 710px;
+        top: 730px;
         left: 395px
     }
     .detail-content .choose-img .custom-file-input::before {
@@ -1278,7 +1842,7 @@ body {
     }
     .detail-content .describe {
         position: absolute;
-        top: 755px;
+        top: 800px;
         left: 500px
     }
     .detail-content .describe h3 {
@@ -1303,13 +1867,16 @@ body {
     .detail-content .describe .regulations a {
         color: #fff;
     }
+    .detail-content .describe .popup-1 .modal-dialog {
+        width: 100%
+    }
     .detail-content .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 1200px;
-        height: 587px;
-        margin-left: -286px
+        width: 91%;
+        height: 600px;
+        margin-left: 20px
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
@@ -1365,7 +1932,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1090px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1391,11 +1958,11 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2319px
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2432px;
         width: 100%;
         color: #fff
     }
@@ -1405,12 +1972,11 @@ body {
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 18px
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2495px;
-        ;
+        top: 2570px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1423,7 +1989,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 18px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1448,6 +2014,10 @@ body {
 
 @media ( max-width: 414px) {
     .body-content {
+        width: 100%;
+    }
+    .body-content .content {
+        position: relative;
         width: 100%;
     }
     .content .bgr img,
@@ -1535,7 +2105,7 @@ body {
     }
     .detail-content .describe .popup-1 .modal-content {
         width: 88%;
-        height: 1115px;
+        overflow: inherit;
         margin-left: 0px;
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
@@ -1694,6 +2264,10 @@ body {
     .body-content {
         width: 100%;
     }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
     .content .bgr img,
     .detail-content .img-prize img {
         display: block;
@@ -1779,7 +2353,7 @@ body {
     }
     .detail-content .describe .popup-1 .modal-content {
         width: 88%;
-        height: 1194px;
+        height: 1120px;
         margin-left: 0px;
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
@@ -1937,6 +2511,10 @@ body {
     .body-content {
         width: 100%;
     }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
     .content .bgr img,
     .detail-content .img-prize img {
         display: block;
@@ -2021,8 +2599,8 @@ body {
     }
     .detail-content .describe .popup-1 .modal-content {
         width: 88%;
-        height: 1271px;
         margin-left: 0px;
+        overflow: inherit;
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
@@ -2086,7 +2664,8 @@ body {
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
         top: 515px;
-        width: 100%
+        width: 100%;
+        padding-left: 10px;
     }
     .detail-content .insert-information .row .input-left .notification {
         font-size: 7px;
@@ -2179,6 +2758,10 @@ body {
     .body-content {
         width: 100%;
     }
+    .body-content .content {
+        position: relative;
+        width: 100%;
+    }
     .content .bgr img,
     .detail-content .img-prize img {
         display: block;
@@ -2264,7 +2847,7 @@ body {
     }
     .detail-content .describe .popup-1 .modal-content {
         width: 88%;
-        height: 1372px;
+        overflow: inherit;
         margin-left: 0px;
     }
     .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
@@ -2329,7 +2912,8 @@ body {
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
         top: 465px;
-        width: 100%
+        width: 100%;
+        padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {
         font-size: 7px;

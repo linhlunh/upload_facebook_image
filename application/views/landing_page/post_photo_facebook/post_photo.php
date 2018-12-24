@@ -16,9 +16,9 @@
 </head>
 
 <body class="body-content">
-    <div class="content" style="position: relative; width: 100%;">
+    <div class="content">
         <div class="bgr" style="width: 100%; margin: 0 auto; margin-top: -15px;">
-            <img src="../../../assets/img/img-facebook/BG.jpg">
+            <img src="../../../assets/img/img-facebook/BG.jpg" style="width: 105%">
         </div>
         <div class="detail-content">
 
@@ -111,7 +111,7 @@
                                     <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                     <div class="modal-body">
                                         <div class="form-group" style="">
-                                            <textarea class="form-control" id="text" style="color: #000000; font-size: 15px; overflow: scroll; height: 200px; margin-left: 21px;" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                            <textarea class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
                                         
                                             <script>
                                                 function checkWord(element) {
