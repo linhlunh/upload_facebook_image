@@ -543,6 +543,14 @@ body {
 }
 
 @media ( max-width: 823px) {
+    .detail-content .describe .fill-description .modal .control-1 {
+        width: 97%;
+        color: #000000;
+        font-size: 15px;
+        overflow: scroll;
+        height: 200px;
+        margin-left: 3px;
+    }
     .body-content {
         width: 1104px;
         margin: 0 auto;
@@ -1267,6 +1275,14 @@ body {
 }
 
 @media ( max-width: 731px) {
+    .detail-content .describe .fill-description .modal .control-1 {
+        width: 97%;
+        color: #000000;
+        font-size: 15px;
+        overflow: scroll;
+        height: 200px;
+        margin-left: 3px;
+    }
     .body-content {
         width: 1104px;
         margin: 0 auto;
@@ -1595,8 +1611,16 @@ body {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 391px;
+        width: 397px;
         height: 130px;
+    }
+    .detail-content .describe .fill-description .modal .control-1 {
+        width: 97%;
+        color: #000000;
+        font-size: 15px;
+        overflow: scroll;
+        height: 200px;
+        margin-left: 3px;
     }
     .detail-content .describe .regulations a {
         color: #fff;
