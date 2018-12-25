@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-    <link rel="stylesheet" href="../../../assets/css/upload-12-24.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-12-25.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -26,185 +26,187 @@
                 <img src="../../../assets/img/img-facebook/giai thuong.png" alt="">
             </div>
             <form action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
-                <div class="insert-information">
-                    <div class="row up">
+                <div class="tquan">
+                    <div class="insert-information">
+                        <div class="row up">
 
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
-                            <input autocomplete="off" class="name" type="text" name="full_name" id="full_name" placeholder="Họ tên">
-                            <div class="notification">
-                                <span class='error' id='error_full_name'>Họ tên không được để trống!</span>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
+                                <input autocomplete="off" class="name" type="text" name="full_name" id="full_name" placeholder="Họ tên">
+                                <div class="notification">
+                                    <span class='error' id='error_full_name'>Họ tên không được để trống!</span>
+                                </div>
                             </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right">
+                                <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
+                                <div class="notification">
+                                    <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right">
-                            <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
-                            <div class="notification">
-                                <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
+                        <div class="row down">
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
+                                <input autocomplete="off" class="phone" type="text" name="phone" id="phone" placeholder="Số điện thoại">
+                                <div class="notification">
+                                    <span class='error' id='error_phone'>Số điện thoại không được để trống!</span>
+                                    <span class='error' id='error_wrong_phone'>Số điện thoại không đúng!</span>
+                                </div>
                             </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
+                                <input autocomplete="off" class="email" type="text" name="email" id="email" placeholder="Email">
+                                <div class="notification">
+                                    <span class='error' id='error_email'>Email không được để trống!</span>
+                                    <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
 
-                    <div class="row down">
-
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
-                            <input autocomplete="off" class="phone" type="text" name="phone" id="phone" placeholder="Số điện thoại">
-                            <div class="notification">
-                                <span class='error' id='error_phone'>Số điện thoại không được để trống!</span>
-                                <span class='error' id='error_wrong_phone'>Số điện thoại không đúng!</span>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-left">
-                            <input autocomplete="off" class="email" type="text" name="email" id="email" placeholder="Email">
-                            <div class="notification">
-                                <span class='error' id='error_email'>Email không được để trống!</span>
-                                <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
-                            </div>
-                        </div>
-
+                    <div class="choose-img">
+                        <input  type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
+                        <p style="color: white">
+                            <span class='error' id='error_picture'>Bạn chưa chọn file ảnh!</span>
+                            <span class='error' id='error_picture_type'>Ảnh bạn chọn chưa đúng định dạng!</span>
+                            <span class='error' id='error_picture_size'>Ảnh bạn chọn vướt quá kích thước cho phép!</span>
+                        </p>
                     </div>
 
-                </div>
-
-                <div class="choose-img">
-                    <input  type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
-                    <p style="color: white">
-                        <span class='error' id='error_picture'>Bạn chưa chọn file ảnh!</span>
-                        <span class='error' id='error_picture_type'>Ảnh bạn chọn chưa đúng định dạng!</span>
-                        <span class='error' id='error_picture_size'>Ảnh bạn chọn vướt quá kích thước cho phép!</span>
-                    </p>
-                </div>
-
-                <div class="describe">
-                    <h3>-MÔ TẢ ẢNH-</h3>
-                    <h4>(Nếu có)</h4>
-                    <div class="fill-description">
-                        <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note" cols="30" rows="10" data-toggle="modal" data-target="#abc"  onkeydown="checkWordLen(this);"></textarea>
-                        <script>
-                            function checkWordLen(element) {
-                                element.style.height = "100px";
-                                element.style.height = (element.scrollHeight) + "px";
-                            }
-                            var wordLen = 150,
-                                len;
-                            $('#note').keydown(function(event) {
-                                len = $('#note').val().split(/[\s]+/);
-                                if (len.length > wordLen) {
-                                    if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
-                                        event.preventDefault();
+                    <div class="describe">
+                        <h3>-MÔ TẢ ẢNH-</h3>
+                        <h4>(Nếu có)</h4>
+                        <div class="fill-description">
+                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note" cols="30" rows="10" data-toggle="modal" data-target="#abc"  onkeydown="checkWordLen(this);"></textarea>
+                            <script>
+                                function checkWordLen(element) {
+                                    element.style.height = "100px";
+                                    element.style.height = (element.scrollHeight) + "px";
+                                }
+                                var wordLen = 150,
+                                    len;
+                                $('#note').keydown(function(event) {
+                                    len = $('#note').val().split(/[\s]+/);
+                                    if (len.length > wordLen) {
+                                        if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
+                                            event.preventDefault();
+                                        }
                                     }
-                                }
-                                console.log(len.length + " words are typed out of an available " + wordLen);
-                                wordsLeft = (wordLen) - len.length;
-                                $('.words-left').html(wordsLeft + ' words left');
-                                if (wordsLeft == 0) {
-                                    $('.words-left').css({
-                                        'background': 'red'
-                                    }).prepend('<i class="fa fa-exclamation-triangle"></i>');
-                                }
-                            });
-                        </script>
-                        <div class="modal fade "  id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content" style="width: 100%;">
-                                    <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
-                                    <div class="modal-body">
-                                        <div class="form-group" style="">
-                                            <textarea class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
-                                        
-                                            <script>
-                                                function checkWord(element) {
-                                                    var x = document.getElementById("text").value;
-                                                    document.getElementById("note").innerHTML = x;
-                                                }
-                                                var word = 150,
-                                                    len;
-                                                $('#text').keydown(function(event) {
-                                                    len = $('#text').val().split(/[\s]+/);
-                                                    if (len.length > word) {
-                                                        if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
-                                                            event.preventDefault();
+                                    console.log(len.length + " words are typed out of an available " + wordLen);
+                                    wordsLeft = (wordLen) - len.length;
+                                    $('.words-left').html(wordsLeft + ' words left');
+                                    if (wordsLeft == 0) {
+                                        $('.words-left').css({
+                                            'background': 'red'
+                                        }).prepend('<i class="fa fa-exclamation-triangle"></i>');
+                                    }
+                                });
+                            </script>
+                            <div class="modal fade "  id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content" style="width: 100%;">
+                                        <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
+                                        <div class="modal-body">
+                                            <div class="form-group" style="">
+                                                <textarea style="width: 100%; height: 180px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                            
+                                                <script>
+                                                    function checkWord(element) {
+                                                        var x = document.getElementById("text").value;
+                                                        document.getElementById("note").innerHTML = x;
+                                                    }
+                                                    var word = 150,
+                                                        len;
+                                                    $('#text').keydown(function(event) {
+                                                        len = $('#text').val().split(/[\s]+/);
+                                                        if (len.length > word) {
+                                                            if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
+                                                                event.preventDefault();
+                                                            }
                                                         }
-                                                    }
-                                                    console.log(len.length + " words are typed out of an available " + word);
-                                                    wordsLeft = (word) - len.length;
-                                                    $('.words-left').html(wordsLeft + ' words left');
-                                                    if (wordsLeft == 0) {
-                                                        $('.words-left').css({
-                                                            'background': 'red'
-                                                        }).prepend('<i class="fa fa-exclamation-triangle"></i>');
-                                                    }
-                                                });
-                                            </script>
+                                                        console.log(len.length + " words are typed out of an available " + word);
+                                                        wordsLeft = (word) - len.length;
+                                                        $('.words-left').html(wordsLeft + ' words left');
+                                                        if (wordsLeft == 0) {
+                                                            $('.words-left').css({
+                                                                'background': 'red'
+                                                            }).prepend('<i class="fa fa-exclamation-triangle"></i>');
+                                                        }
+                                                    });
+                                                </script>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer" style="">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
-                                    </div>
+                                        <div class="modal-footer" style="">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                    </div>
-                    <div class="regulations">
-                        <a href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
-                    </div>
+                        </div>
+                        <div class="regulations">
+                            <a href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
+                        </div>
 
-                    <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 100%; margin-left: 0px">
-                                    <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
-                                    <div class="container">
-                                    <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                    </div>
-                                        <div class="content-text">
-                                            <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
+                        <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 100%; margin-left: 0px">
+                                        <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
+                                        <div class="container">
+                                        <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
                                         </div>
+                                            <div class="content-text">
+                                                <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
+                                            </div>
 
-                                        <div class="content-text-2" style="margin-top: 15px">
-                                            <a class="text-2">Một người chỉ có thể tham gia tối đa 1 ảnh.</a><br/>
-                                        </div>
+                                            <div class="content-text-2" style="margin-top: 15px">
+                                                <a class="text-2">Một người chỉ có thể tham gia tối đa 1 ảnh.</a><br/>
+                                            </div>
 
-                                        <div class="content-text-3">
-                                            <a>-	Ảnh tham gia chương trình do người tham dự tự chụp và gửi tham dự, ban tổ chức không nhận bài dự thi được sưu tầm từ Internet.</a><br/>
-                                            <a>-  Ban tổ chức có quyền từ chối đăng những ảnh không phù hợp với quy chế chương trình hoặc vi phạm thuần phong mỹ tục và các quy định của nhà nước.</a><br/>
-                                            <a>-  Người tham gia hoàn toàn chịu trách nhiệm về bản quyền của ảnh tham dự, nếu có tranh chấp, trong vòng 3 ngày, phải gửi thông tin để chứng minh về bản quyền ảnh dự thi. Ảnh vi phạm bản quyền sẽ bị gỡ khỏi trang.</a><br/>
-                                            <a>-  Quà tặng không được quy đổi thành tiền mặt trong bất cứ trường hợp nào nhưng có thể được chuyển nhượng.</a><br/>
-                                            <a>-	BTC có quyền tạm dừng cuộc thi của những bài dự thi có dấu hiệu bất thường, có số like tăng đột biến hoặc các dấu hiện gian lận khác.</a><br/>
-                                            <a>	Người tham gia dự thi không được dùng phần mềm hay bất kì công cụ nào tác động vào tác phẩm để tăng tim, like, share, nếu phát hiện BTC sẽ huỷ kết quả bài dự thi của thí sinh đó.</a><br/>
-                                            <a>   BTC nghiêm cấm các hành vi gian lận dưới mọi hình thức. Những tấm ảnh dự thi có dấu hiệu gian lận (tạo nick ảo, like ảo, ...) BTC sẽ không trao giải và sẽ loại khỏi kết quả cuối cùng mà không cần báo trước</a><br/>
-                                            <a>	Tham dự cuộc thi là mặc nhiên chấp nhận mọi quyết định của BTC. Trong mọi trường hợp, quyết định của BTC là quyết định cuối cùng.</a><br/>
-                                            <a>	Thời hạn sử dụng giải thưởng sẽ được thông báo cụ thể khi trao giải. Người nhận giải trước khi sử dụng dịch vụ phải đăng ký với BestPrice trước 2 tuần.</a><br/>
-                                            <a>   Trong vòng 72 giờ kể từ khi thông báo người thắng cuộc, nếu BestPrice không liên hệ được với người thắng cuộc, giải thưởng sẽ được trao cho người có số điểm cao kế tiếp.</a><br/>
-                                            <a>	Quyền sử dụng ảnh</a><br/>
-                                            <a>	Ban tổ chức có quyền xuất bản, quảng bá thương mại với ảnh dự thi mà không cần phải báo trước và không cần thêm bất kỳ một chi phí nào, được sử dụng trưng bày, lựa chọn ảnh đăng trên các phương tiện thông tin, ấn phẩm</a><br/>
-                                            <a>	Hạn chế trách nhiệm</a><br/>
-                                            <a>-	Ban tổ chức không chịu trách nhiệm về những thông tin khai không đúng của người tham gia cuộc thi</a><br/>
-                                            <a>-	Ban tổ chức không chịu trách nhiệm trong trường hợp cuộc thi bị hủy bỏ hoặc hoãn vì những lý do bất khả kháng, khách quan như bị đánh sập mạng, thiên tai, chiến tranh…</a><br/>
-                                            <a>-	Ban tổ chức không chịu trách nhiệm khi ảnh gửi tới chương trình bị hỏng, biến dạng hay thay đổi chất lượng do đường truyền hoặc sự cố mạng Internet.</a><br/>
+                                            <div class="content-text-3">
+                                                <a>-	Ảnh tham gia chương trình do người tham dự tự chụp và gửi tham dự, ban tổ chức không nhận bài dự thi được sưu tầm từ Internet.</a><br/>
+                                                <a>-  Ban tổ chức có quyền từ chối đăng những ảnh không phù hợp với quy chế chương trình hoặc vi phạm thuần phong mỹ tục và các quy định của nhà nước.</a><br/>
+                                                <a>-  Người tham gia hoàn toàn chịu trách nhiệm về bản quyền của ảnh tham dự, nếu có tranh chấp, trong vòng 3 ngày, phải gửi thông tin để chứng minh về bản quyền ảnh dự thi. Ảnh vi phạm bản quyền sẽ bị gỡ khỏi trang.</a><br/>
+                                                <a>-  Quà tặng không được quy đổi thành tiền mặt trong bất cứ trường hợp nào nhưng có thể được chuyển nhượng.</a><br/>
+                                                <a>-	BTC có quyền tạm dừng cuộc thi của những bài dự thi có dấu hiệu bất thường, có số like tăng đột biến hoặc các dấu hiện gian lận khác.</a><br/>
+                                                <a>	Người tham gia dự thi không được dùng phần mềm hay bất kì công cụ nào tác động vào tác phẩm để tăng tim, like, share, nếu phát hiện BTC sẽ huỷ kết quả bài dự thi của thí sinh đó.</a><br/>
+                                                <a>   BTC nghiêm cấm các hành vi gian lận dưới mọi hình thức. Những tấm ảnh dự thi có dấu hiệu gian lận (tạo nick ảo, like ảo, ...) BTC sẽ không trao giải và sẽ loại khỏi kết quả cuối cùng mà không cần báo trước</a><br/>
+                                                <a>	Tham dự cuộc thi là mặc nhiên chấp nhận mọi quyết định của BTC. Trong mọi trường hợp, quyết định của BTC là quyết định cuối cùng.</a><br/>
+                                                <a>	Thời hạn sử dụng giải thưởng sẽ được thông báo cụ thể khi trao giải. Người nhận giải trước khi sử dụng dịch vụ phải đăng ký với BestPrice trước 2 tuần.</a><br/>
+                                                <a>   Trong vòng 72 giờ kể từ khi thông báo người thắng cuộc, nếu BestPrice không liên hệ được với người thắng cuộc, giải thưởng sẽ được trao cho người có số điểm cao kế tiếp.</a><br/>
+                                                <a>	Quyền sử dụng ảnh</a><br/>
+                                                <a>	Ban tổ chức có quyền xuất bản, quảng bá thương mại với ảnh dự thi mà không cần phải báo trước và không cần thêm bất kỳ một chi phí nào, được sử dụng trưng bày, lựa chọn ảnh đăng trên các phương tiện thông tin, ấn phẩm</a><br/>
+                                                <a>	Hạn chế trách nhiệm</a><br/>
+                                                <a>-	Ban tổ chức không chịu trách nhiệm về những thông tin khai không đúng của người tham gia cuộc thi</a><br/>
+                                                <a>-	Ban tổ chức không chịu trách nhiệm trong trường hợp cuộc thi bị hủy bỏ hoặc hoãn vì những lý do bất khả kháng, khách quan như bị đánh sập mạng, thiên tai, chiến tranh…</a><br/>
+                                                <a>-	Ban tổ chức không chịu trách nhiệm khi ảnh gửi tới chương trình bị hỏng, biến dạng hay thay đổi chất lượng do đường truyền hoặc sự cố mạng Internet.</a><br/>
+                                            </div>
+                                            
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="send-img">
+                        <div class="send-img">
 
-                        <div class="margin-top-10" id="term_agreement">
-                            <div class="checkbox text-highlight">
-                                <label class="text-price font-size-15">
-                                       Khi gửi ảnh là bạn đã đồng ý quy định của chúng tôi
-                                </label>
-                            </div>
-                            <div class="upload">
-                                <button type="submit" value="" id="id_upload" name="action">
-                                    <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
-                                    <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
-                                </button>
+                            <div class="margin-top-10" id="term_agreement">
+                                <div class="checkbox text-highlight">
+                                    <label class="text-price font-size-15">
+                                        Khi gửi ảnh là bạn đã đồng ý quy định của chúng tôi
+                                    </label>
+                                </div>
+                                <div class="upload">
+                                    <button type="submit" value="" id="id_upload" name="action">
+                                        <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
+                                        <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -29,37 +29,44 @@ body {
 
 .detail-content .img-prize {
     position: absolute;
-    top: 700px;
+    top: 750px;
 }
 
 .detail-content .img-prize img {
     width: 105%;
 }
 
-.detail-content .insert-information {
+.detail-content .tquan {
     position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.detail-content .tquan .insert-information {
+    position: relative;
     top: 477px;
     left: 45px;
 }
 
-.detail-content .insert-information .row input {
+.detail-content .tquan .insert-information .row input {
     width: 496px;
     height: 43px;
     font-size: 17px;
 }
 
-.detail-content .insert-information .down {
+.detail-content .tquan .insert-information .down {
     padding-top: 20px
 }
 
-.detail-content .choose-img {
-    position: absolute;
-    top: 620px;
+.detail-content .tquan .choose-img {
+    position: relative;
+    top: 500px;
     left: 395px;
     font-size: 20px;
+    width: 65%;
 }
 
-.detail-content .choose-img .custom-file-input::before {
+.detail-content .tquan .choose-img .custom-file-input::before {
     content: 'CHỌN ẢNH';
     display: inline-block;
     border: 0px solid #999;
@@ -77,40 +84,41 @@ body {
     color: #000000;
 }
 
-.detail-content .choose-img .custom-file-input:hover::before {
+.detail-content .tquan .choose-img .custom-file-input:hover::before {
     border-color: black;
 }
 
-.detail-content .choose-img .custom-file-input:active::before {
+.detail-content .tquan .choose-img .custom-file-input:active::before {
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-.detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+.detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
 }
 
-.detail-content .describe {
-    position: absolute;
-    top: 655px;
-    left: 500px
+.detail-content .tquan .describe {
+    position: relative;
+    top: 500px;
+    left: 500px;
+    width: 55%;
 }
 
-.detail-content .describe h3 {
+.detail-content .tquan .describe h3 {
     color: #fff;
     font-weight: bold
 }
 
-.detail-content .describe h4 {
+.detail-content .tquan .describe h4 {
     color: #fff;
     font-style: italic;
     margin-left: 35px;
 }
 
-.detail-content .describe .fill-description {
+.detail-content .tquan .describe .fill-description {
     margin-left: -100px;
 }
 
-.detail-content .describe .fill-description textarea {
+.detail-content .tquan .describe .fill-description textarea {
     resize: none;
     overflow: hidden;
     min-height: auto;
@@ -118,11 +126,11 @@ body {
     height: 130px;
 }
 
-.detail-content .describe .regulations a {
+.detail-content .tquan .describe .regulations a {
     color: #fff;
 }
 
-.detail-content .describe .popup-1 .modal-content {
+.detail-content .tquan .describe .popup-1 .modal-content {
     background-image: url('../../../assets/img-facebook/BGpopup.png');
     margin: 0 auto;
     overflow: hidden;
@@ -131,21 +139,21 @@ body {
     margin-left: -286px
 }
 
-.detail-content .describe .popup-1 .modal-content .content-regulations img {
+.detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
     width: 100%
 }
 
-.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+.detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
     color: #fff;
     font-size: 13px;
     text-decoration: none
 }
 
-.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+.detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
     color: #f9d202
 }
 
-.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+.detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
     color: #f9d202;
     font-size: 13px;
     text-decoration: none;
@@ -153,22 +161,22 @@ body {
     margin-top: 10px
 }
 
-.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+.detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
     margin-top: 15px;
     padding-bottom: 15px
 }
 
-.detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+.detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
     color: #fff;
     font-size: 13px;
     text-decoration: none
 }
 
-.detail-content .describe .send-img {
+.detail-content .tquan .describe .send-img {
     margin-left: -80px;
 }
 
-.detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+.detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
     min-height: 20px;
     padding-left: 20px;
     margin-bottom: 0;
@@ -177,18 +185,18 @@ body {
     color: #fff;
 }
 
-.detail-content .describe .send-img .margin-top-10 .upload {
+.detail-content .tquan .describe .send-img .margin-top-10 .upload {
     margin-left: 80px;
 }
 
-.detail-content .describe .send-img .margin-top-10 .upload button {
+.detail-content .tquan .describe .send-img .margin-top-10 .upload button {
     color: #000;
     border: 1px solid #999;
     border-radius: 0px;
     padding: 5px 3px 0px 3px;
     font-weight: bold;
     background-color: #fff;
-    width: 60%;
+    width: 25%;
     height: 49px;
     font-size: 20px;
 }
@@ -312,7 +320,7 @@ body {
     }
     .body-content .content {
         position: relative;
-        width: 100%;
+        width: 96%;
     }
     .bpt-container {
         position: absolute;
@@ -321,31 +329,37 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 800px;
+        top: 750px;
     }
     .detail-content .img-prize img {
         width: 105%;
     }
-    .detail-content .insert-information {
+    .detail-content .tquan {
         position: absolute;
-        top: 495px;
+        top: 0px;
+        width: 99%;
+    }
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
         left: 45px;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information .row input {
         width: 496px;
         height: 43px;
         font-size: 17px;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 658px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
         left: 395px;
-        font-size: 25px;
+        font-size: 20px;
+        width: 65%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
@@ -356,89 +370,88 @@ body {
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 15pt;
-        width: 28%;
+        font-size: 13pt;
+        width: 114px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .choose-img .custom-file-input:hover::before {
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
         border-color: black;
     }
-    .detail-content .choose-img .custom-file-input:active::before {
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
-    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 730px;
-        left: 500px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 500px;
+        width: 55%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         color: #fff;
         font-weight: bold
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         color: #fff;
         font-style: italic;
         margin-left: 35px;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -100px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
         width: 391px;
         height: 130px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
     }
-    .detail-content .describe .popup-1 .modal-dialog {
-        width: 100%
-    }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
-        overflow: hidden;
-        width: 87%;
-        height: 640px;
+        overflow: inherit;
+        width: 1200px;
+        height: 587px;
+        margin-left: -286px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
         color: #f9d202
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 13px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
         margin-top: 15px;
         padding-bottom: 15px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .send-img {
+    .detail-content .tquan .describe .send-img {
         margin-left: -80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -446,23 +459,23 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
         margin-left: 80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 60%;
+        width: 25%;
         height: 49px;
         font-size: 20px;
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1115px;
+        top: 1040px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -488,13 +501,16 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2335px
+        top: 2300px
+    }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2430px;
+        top: 2380px;
+        left: -40px;
         width: 100%;
-        left: -65px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -503,11 +519,11 @@ body {
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2590px;
+        top: 2520px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -520,7 +536,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -544,21 +560,13 @@ body {
 }
 
 @media ( max-width: 823px) {
-    .detail-content .describe .fill-description .modal .control-1 {
-        width: 97%;
-        color: #000000;
-        font-size: 15px;
-        overflow: scroll;
-        height: 200px;
-        margin-left: 3px;
-    }
     .body-content {
         width: 1104px;
         margin: 0 auto;
     }
     .body-content .content {
         position: relative;
-        width: 100%;
+        width: 96%;
     }
     .bpt-container {
         position: absolute;
@@ -567,125 +575,131 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 810px;
+        top: 750px;
     }
     .detail-content .img-prize img {
         width: 105%;
     }
-    .detail-content .insert-information {
+    .detail-content .tquan {
         position: absolute;
-        top: 485px;
+        top: 0px;
+        width: 99%;
+    }
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
         left: 45px;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information .row input {
         width: 496px;
         height: 43px;
         font-size: 17px;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 650px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
         left: 395px;
-        font-size: 25px;
+        font-size: 20px;
+        width: 65%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 22px;
+        padding: 2px 0px 0px 18px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 15pt;
-        width: 29%;
+        font-size: 13pt;
+        width: 114px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .choose-img .custom-file-input:hover::before {
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
         border-color: black;
     }
-    .detail-content .choose-img .custom-file-input:active::before {
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
-    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 720px;
-        left: 500px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 500px;
+        width: 55%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         color: #fff;
         font-weight: bold
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         color: #fff;
         font-style: italic;
         margin-left: 35px;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -100px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
         width: 391px;
         height: 130px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
     }
-    .detail-content .describe .popup-1 .modal-dialog {
-        width: 100%
+    .detail-content .tquan .describe .popup-1 .modal-dialog {
+        width: 69%;
     }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
-        overflow: hidden;
-        width: 76%;
-        height: 749px;
-        margin-left: 100px
+        overflow: inherit;
+        width: 100%;
+        height: 587px;
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
         color: #f9d202
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 13px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
         margin-top: 15px;
         padding-bottom: 15px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .send-img {
+    .detail-content .tquan .describe .send-img {
         margin-left: -80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -693,23 +707,23 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
         margin-left: 80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 60%;
+        width: 25%;
         height: 49px;
         font-size: 20px;
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1135px;
+        top: 1040px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -735,12 +749,15 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2340px
+        top: 2300px
+    }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2430px;
-        left: -173px;
+        top: 2380px;
+        left: -150px;
         width: 100%;
         color: #fff
     }
@@ -750,11 +767,11 @@ body {
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2590px;
+        top: 2520px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -767,7 +784,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1045,7 +1062,7 @@ body {
     }
     .body-content .content {
         position: relative;
-        width: 100%;
+        width: 96%;
     }
     .bpt-container {
         position: absolute;
@@ -1054,119 +1071,130 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 700px;
+        top: 750px;
     }
-    .detail-content .insert-information {
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .tquan {
         position: absolute;
-        top: 433px;
-        left: 260px;
+        top: -38px;
+        width: 99%;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
+        left: 250px;
+        width: 81%;
+    }
+    .detail-content .tquan .insert-information .row input {
         width: 496px;
         height: 43px;
         font-size: 17px;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 710px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
         left: 395px;
-        font-size: 16px;
+        font-size: 20px;
+        width: 65%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 22px;
+        padding: 2px 0px 0px 18px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 10pt;
-        width: 33%;
+        font-size: 13pt;
+        width: 114px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .choose-img .custom-file-input:hover::before {
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
         border-color: black;
     }
-    .detail-content .choose-img .custom-file-input:active::before {
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
-    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 755px;
-        left: 500px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 500px;
+        width: 55%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         color: #fff;
         font-weight: bold
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         color: #fff;
         font-style: italic;
         margin-left: 35px;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -100px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
         width: 391px;
         height: 130px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
     }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 90%;
-        height: 622px;
-        margin-left: 25px
+        width: 1200px;
+        height: 587px;
+        margin-left: -286px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
         color: #f9d202
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 13px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
         margin-top: 15px;
         padding-bottom: 15px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .send-img {
+    .detail-content .tquan .describe .send-img {
         margin-left: -80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -1174,17 +1202,264 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
         margin-left: 80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 60%;
+        width: 25%;
+        height: 49px;
+        font-size: 20px;
+    }
+    .detail-content .content-prize {
+        position: absolute;
+        top: 1040px;
+        width: 100%
+    }
+    .detail-content .ds-desktop .content-prize .row {
+        width: 100%
+    }
+    .detail-content .ds-desktop .content-prize .row .title-1 {
+        margin-top: 190px
+    }
+    .detail-content .ds-desktop .content-prize .row .img-2 {
+        margin-top: -100px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-2 {
+        margin-top: 150px
+    }
+    .detail-content .ds-desktop .content-prize .row .img-3 {
+        margin-top: -50px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-3 {
+        margin-top: 100px
+    }
+    .detail-content .ds-desktop .content-prize .row .title-4 {
+        margin-top: 80px
+    }
+    .detail-content .ds-desktop .img-rules {
+        position: absolute;
+        top: 2300px
+    }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%;
+    }
+    .detail-content .ds-desktop .how-to-play {
+        position: absolute;
+        top: 2380px;
+        left: 0px;
+        width: 100%;
+        color: #fff
+    }
+    .detail-content .ds-desktop .how-to-play .container h3 {
+        font-weight: bold;
+    }
+    .detail-content .ds-desktop .how-to-play .container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px
+    }
+    .detail-content .ds-desktop .scoring {
+        position: absolute;
+        top: 2520px;
+        width: 100%
+    }
+    .detail-content .ds-desktop .scoring .container {
+        width: 100%;
+        color: #fff
+    }
+    .detail-content .ds-desktop .scoring .container h3 {
+        font-weight: bold;
+    }
+    .detail-content .ds-desktop .scoring .container a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px
+    }
+    .detail-content .ds-desktop .scoring .container span {
+        color: #f9d202
+    }
+    .detail-content .ds-mobile {
+        display: none;
+    }
+    .detail-content .ds-desktop {
+        display: block;
+    }
+    .detail-content .ds-mobile {
+        display: none;
+    }
+    .error {
+        color: #fff;
+        display: none;
+    }
+    .mbsc-sc-itm div {
+        color: #fff;
+    }
+}
+
+@media ( max-width: 731px) {
+    .body-content {
+        width: 1104px;
+        margin: 0 auto;
+    }
+    .body-content .content {
+        position: relative;
+        width: 96%;
+    }
+    .bpt-container {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+    }
+    .detail-content .img-prize {
+        position: absolute;
+        top: 750px;
+    }
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .tquan {
+        position: absolute;
+        top: -40px;
+        width: 99%;
+    }
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
+        left: 272px;
+        width: 62%;
+    }
+    .detail-content .tquan .insert-information .row input {
+        width: 496px;
+        height: 43px;
+        font-size: 17px;
+    }
+    .detail-content .tquan .insert-information .down {
+        padding-top: 20px
+    }
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
+        left: 448px;
+        font-size: 20px;
+        width: 62%;
+    }
+    .detail-content .tquan .choose-img .custom-file-input::before {
+        content: 'CHỌN ẢNH';
+        display: inline-block;
+        border: 0px solid #999;
+        border-radius: 0px;
+        padding: 2px 0px 0px 18px;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 13pt;
+        width: 114px;
+        background-color: #fff;
+        margin: 1px 0px 0px -17px;
+        color: #000000;
+    }
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
+        border-color: black;
+    }
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 530px;
+        width: 55%;
+    }
+    .detail-content .tquan .describe h3 {
+        color: #fff;
+        font-weight: bold
+    }
+    .detail-content .tquan .describe h4 {
+        color: #fff;
+        font-style: italic;
+        margin-left: 35px;
+    }
+    .detail-content .tquan .describe .fill-description {
+        margin-left: -100px;
+    }
+    .detail-content .tquan .describe .fill-description textarea {
+        resize: none;
+        overflow: hidden;
+        min-height: auto;
+        width: 391px;
+        height: 130px;
+    }
+    .detail-content .tquan .describe .regulations a {
+        color: #fff;
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content {
+        background-image: url('../../../assets/img-facebook/BGpopup.png');
+        margin: 0 auto;
+        overflow: hidden;
+        width: 100%;
+        height: 587px;
+        margin-left: -16px
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
+        width: 100%
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+        color: #f9d202
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+        color: #f9d202;
+        font-size: 13px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+        margin-top: 15px;
+        padding-bottom: 15px
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none
+    }
+    .detail-content .tquan .describe .send-img {
+        margin-left: -80px;
+    }
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        color: #fff;
+    }
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
+        margin-left: 80px;
+    }
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
+        color: #000;
+        border: 1px solid #999;
+        border-radius: 0px;
+        padding: 5px 3px 0px 3px;
+        font-weight: bold;
+        background-color: #fff;
+        width: 25%;
         height: 49px;
         font-size: 20px;
     }
@@ -1225,7 +1500,6 @@ body {
         position: absolute;
         top: 2380px;
         width: 100%;
-        left: 0px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -1238,8 +1512,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2495px;
-        ;
+        top: 2520px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1275,27 +1548,14 @@ body {
     }
 }
 
-@media ( max-width: 731px) {
-    .detail-content .describe .fill-description .modal .control-1 {
-        width: 97%;
-        color: #000000;
-        font-size: 15px;
-        overflow: scroll;
-        height: 200px;
-        margin-left: 3px;
-    }
+@media ( max-width: 667px) {
     .body-content {
         width: 1104px;
         margin: 0 auto;
     }
     .body-content .content {
         position: relative;
-        width: 100%;
-    }
-    .content .bgr img {
-        display: block;
-        max-width: 105%;
-        height: auto;
+        width: 96%;
     }
     .bpt-container {
         position: absolute;
@@ -1304,122 +1564,130 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 815px;
+        top: 750px;
     }
-    .detail-content .insert-information {
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .tquan {
         position: absolute;
-        top: 460px;
-        left: 260px;
+        top: -40px;
+        width: 99%;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
+        left: 272px;
+        width: 62%;
+    }
+    .detail-content .tquan .insert-information .row input {
         width: 496px;
         height: 43px;
         font-size: 17px;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 760px;
-        left: 395px;
-        font-size: 16px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
+        left: 448px;
+        font-size: 20px;
+        width: 62%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 22px;
+        padding: 2px 0px 0px 18px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 10pt;
-        width: 33%;
+        font-size: 13pt;
+        width: 114px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .choose-img .custom-file-input:hover::before {
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
         border-color: black;
     }
-    .detail-content .choose-img .custom-file-input:active::before {
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
-    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 840px;
-        left: 500px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 530px;
+        width: 55%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         color: #fff;
         font-weight: bold
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         color: #fff;
         font-style: italic;
         margin-left: 35px;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -100px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
         width: 391px;
         height: 130px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
     }
-    .detail-content .describe .popup-1 .modal-dialog {
-        width: 91%
-    }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 100%;
-        height: 600px;
-        margin-left: 36px
+        width: 1200px;
+        height: 587px;
+        margin-left: -286px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
         color: #f9d202
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 13px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
         margin-top: 15px;
         padding-bottom: 15px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .send-img {
+    .detail-content .tquan .describe .send-img {
         margin-left: -80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -1427,23 +1695,23 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
         margin-left: 80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 60%;
+        width: 25%;
         height: 49px;
         font-size: 20px;
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1140px;
+        top: 1040px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1469,13 +1737,15 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2355px
+        top: 2300px
+    }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2455px;
+        top: 2380px;
         width: 100%;
-        left: 0px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -1488,7 +1758,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2590px;
+        top: 2520px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1501,7 +1771,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1531,12 +1801,7 @@ body {
     }
     .body-content .content {
         position: relative;
-        width: 100%;
-    }
-    .content .bgr img {
-        display: block;
-        max-width: 105%;
-        height: auto;
+        width: 96%;
     }
     .bpt-container {
         position: absolute;
@@ -1545,27 +1810,38 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 795px;
+        top: 750px;
     }
-    .detail-content .insert-information {
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .tquan {
         position: absolute;
-        top: 460px;
-        left: 260px;
+        top: 0px;
+        width: 99%;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
+        left: 272px;
+        width: 62%;
+    }
+    .detail-content .tquan .insert-information .row input {
         width: 496px;
         height: 43px;
         font-size: 17px;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 765px;
-        left: 395px
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
+        left: 448px;
+        font-size: 20px;
+        width: 62%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
@@ -1576,95 +1852,88 @@ body {
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 10pt;
-        width: 91px;
+        font-size: 13pt;
+        width: 114px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .choose-img .custom-file-input:hover::before {
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
         border-color: black;
     }
-    .detail-content .choose-img .custom-file-input:active::before {
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
-    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 830px;
-        left: 500px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 530px;
+        width: 55%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         color: #fff;
         font-weight: bold
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         color: #fff;
         font-style: italic;
         margin-left: 35px;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -100px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 397px;
+        width: 391px;
         height: 130px;
     }
-    .detail-content .describe .fill-description .modal .control-1 {
-        width: 97%;
-        color: #000000;
-        font-size: 15px;
-        overflow: scroll;
-        height: 200px;
-        margin-left: 3px;
-    }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
     }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
         width: 100%;
-        height: 600px;
-        margin-left: 30px
+        height: 587px;
+        margin-left: -16px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
         color: #f9d202
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 13px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
         margin-top: 15px;
         padding-bottom: 15px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .send-img {
+    .detail-content .tquan .describe .send-img {
         margin-left: -80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -1672,23 +1941,23 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
         margin-left: 80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 60%;
+        width: 25%;
         height: 49px;
         font-size: 20px;
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1115px;
+        top: 1040px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1714,16 +1983,15 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2320px
+        top: 2300px
     }
     .detail-content .ds-desktop .img-rules img {
-        width: 105%
+        width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2415px;
+        top: 2380px;
         width: 100%;
-        left: 25px;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
@@ -1732,12 +2000,11 @@ body {
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2550px;
-        left: 25px;
+        top: 2520px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1750,7 +2017,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1780,12 +2047,7 @@ body {
     }
     .body-content .content {
         position: relative;
-        width: 100%;
-    }
-    .content .bgr img {
-        display: block;
-        max-width: 105%;
-        height: auto;
+        width: 96%;
     }
     .bpt-container {
         position: absolute;
@@ -1794,27 +2056,38 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 770px;
+        top: 750px;
     }
-    .detail-content .insert-information {
+    .detail-content .img-prize img {
+        width: 105%;
+    }
+    .detail-content .tquan {
         position: absolute;
-        top: 440px;
-        left: 260px;
+        top: -35px;
+        width: 99%;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 477px;
+        left: 272px;
+        width: 62%;
+    }
+    .detail-content .tquan .insert-information .row input {
         width: 496px;
         height: 43px;
         font-size: 17px;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 730px;
-        left: 395px
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 500px;
+        left: 448px;
+        font-size: 20px;
+        width: 62%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
@@ -1825,90 +2098,88 @@ body {
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 10pt;
-        width: 91px;
+        font-size: 13pt;
+        width: 114px;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .choose-img .custom-file-input:hover::before {
+    .detail-content .tquan .choose-img .custom-file-input:hover::before {
         border-color: black;
     }
-    .detail-content .choose-img .custom-file-input:active::before {
+    .detail-content .tquan .choose-img .custom-file-input:active::before {
         background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
     }
-    .detail-content .choose-img .custom-file-input::-webkit-file-upload-button {
+    .detail-content .tquan .choose-img .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 800px;
-        left: 500px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 500px;
+        left: 530px;
+        width: 55%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         color: #fff;
         font-weight: bold
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         color: #fff;
         font-style: italic;
         margin-left: 35px;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -100px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
         width: 391px;
         height: 130px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
     }
-    .detail-content .describe .popup-1 .modal-dialog {
-        width: 100%
-    }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url('../../../assets/img-facebook/BGpopup.png');
         margin: 0 auto;
         overflow: hidden;
-        width: 91%;
-        height: 600px;
-        margin-left: 20px
+        width: 1200px;
+        height: 587px;
+        margin-left: -286px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations img {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
         width: 100%
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
         color: #f9d202
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 13px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 {
         margin-top: 15px;
         padding-bottom: 15px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 13px;
         text-decoration: none
     }
-    .detail-content .describe .send-img {
+    .detail-content .tquan .describe .send-img {
         margin-left: -80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -1916,23 +2187,23 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
         margin-left: 80px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 60%;
+        width: 25%;
         height: 49px;
         font-size: 20px;
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1090px;
+        top: 1040px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1958,11 +2229,14 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2319px
+        top: 2300px
+    }
+    .detail-content .ds-desktop .img-rules img {
+        width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2432px;
+        top: 2380px;
         width: 100%;
         color: #fff
     }
@@ -1972,11 +2246,11 @@ body {
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2570px;
+        top: 2520px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1989,7 +2263,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 18px
+        font-size: 15px
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -2028,104 +2302,116 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 412px;
+        top: 425px;
     }
-    .detail-content .insert-information {
+    .detail-content .tquan {
         position: absolute;
-        top: 160px;
-        left: 50px;
+        top: 60px;
+        left: 45px;
+        width: 88%
     }
-    .detail-content .insert-information .row {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 120px;
+        left: 25px;
+        width: 94%;
+    }
+    .detail-content .tquan .insert-information .row {
         width: 100%;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 5px
     }
-    .detail-content .insert-information .row .input-left {
+    .detail-content .tquan .insert-information .row .input-left {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row .input-right {
+    .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information .row input {
         width: 100%;
         height: 16px;
         font-size: 10px;
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 310px;
-        left: 130px;
-        font-size: 13px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 130px;
+        left: 60px;
+        font-size: 10px;
+        width: 75%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 23px;
+        padding: 2px 0px 0px 18px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
         font-size: 10px;
-        width: 35%;
+        width: 38%;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 310px;
-        left: 160px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 130px;
+        left: 136px;
+        width: 61%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         display: none;
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         display: none;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -55px;
-        margin-top: 35px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 85%;
+        width: 60%;
         height: 45px;
         font-size: 10px
     }
-    .detail-content .describe .regulations {
+    .detail-content .tquan .describe .regulations {
         margin-left: -20px;
+        margin-top: -5px;
     }
-    .detail-content .describe .popup-1 .modal-content {
-        width: 88%;
-        overflow: inherit;
-        margin-left: 0px;
+    .detail-content .tquan .describe .popup-1 .modal-content {
+        background-image: url(../../../assets/img-facebook/BGpopup.png) !important;
+        margin: 0 auto !important;
+        overflow: inherit !important;
+        width: 100% !important;
+        height: 587px !important;
+        margin-left: 70px !important;
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 11px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -2133,30 +2419,30 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
-        margin-left: 86px;
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
+        margin-left: 75px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 56%;
+        width: 39%;
         height: 25px;
         font-size: 10px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox {
         position: relative;
         display: block;
         margin-top: 0px;
         margin-bottom: 10px;
-        font-size: 10px;
+        font-size: 9px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
-        font-size: 11px;
+        font-size: 10px;
     }
     .detail-content .ds-desktop {
         display: none;
@@ -2169,8 +2455,9 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 540px;
-        width: 100%
+        top: 575px;
+        width: 100%;
+        padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {
         font-size: 7px;
@@ -2186,7 +2473,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
         margin-left: 5px;
-        font-size: 9px;
+        font-size: 8px;
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 {
         margin-left: 5px;
@@ -2205,53 +2492,52 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 738px;
+        top: 770px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 763px
+        top: 805px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
-        font-size: 14px;
+        font-size: 11px;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 10.5px;
+        line-height: 6.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
-        font-size: 10px;
+        font-size: 7px;
         color: #fff;
         text-decoration: none;
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 840px
+        top: 875px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
-        font-size: 14px;
+        font-size: 11px;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
-        line-height: 10.5px;
+        line-height: 6.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
-        font-size: 10px;
+        font-size: 7px;
         color: #fff;
         text-decoration: none;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
         text-decoration: none;
         color: #fff;
-        font-size: 10px
+        font-size: 7px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .attention a span {
-        color: #f9d202;
-        font-size: 9px;
+        color: #f9d202
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
@@ -2276,104 +2562,113 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 412px;
+        top: 384px;
     }
-    .detail-content .insert-information {
+    .detail-content .tquan {
         position: absolute;
-        top: 140px;
-        left: 25px;
+        top: 27px;
+        left: 20px;
+        width: 94%
     }
-    .detail-content .insert-information .row {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 120px;
+        left: 25px;
+        width: 94%;
+    }
+    .detail-content .tquan .insert-information .row {
         width: 100%;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 5px
     }
-    .detail-content .insert-information .row .input-left {
+    .detail-content .tquan .insert-information .row .input-left {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row .input-right {
+    .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information .row input {
         width: 100%;
         height: 16px;
         font-size: 10px;
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 290px;
-        left: 85px;
-        font-size: 13px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 130px;
+        left: 60px;
+        font-size: 10px;
+        width: 75%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 23px;
+        padding: 2px 0px 0px 18px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
         font-size: 10px;
-        width: 35%;
+        width: 38%;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 300px;
-        left: 141px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 135px;
+        left: 136px;
+        width: 61%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         display: none;
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         display: none;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -55px;
-        margin-top: 35px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 85%;
+        width: 60%;
         height: 45px;
         font-size: 10px
     }
-    .detail-content .describe .regulations {
+    .detail-content .tquan .describe .regulations {
         margin-left: -20px;
+        margin-top: -5px;
     }
-    .detail-content .describe .popup-1 .modal-content {
-        width: 88%;
-        height: 1120px;
-        margin-left: 0px;
+    .detail-content .tquan .describe .popup-1 .modal-content {
+        width: 155% !important;
+        overflow: inherit !important;
+        margin-left: 0px !important;
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 11px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -2381,30 +2676,30 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
-        margin-left: 86px;
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
+        margin-left: 75px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 56%;
+        width: 39%;
         height: 25px;
         font-size: 10px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox {
         position: relative;
         display: block;
         margin-top: 0px;
         margin-bottom: 10px;
-        font-size: 10px;
+        font-size: 9px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
-        font-size: 11px;
+        font-size: 10px;
     }
     .detail-content .ds-desktop {
         display: none;
@@ -2417,8 +2712,9 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 515px;
-        width: 100%
+        top: 490px;
+        width: 100%;
+        padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {
         font-size: 7px;
@@ -2453,14 +2749,14 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 695px;
+        top: 666px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 715px
+        top: 685px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
@@ -2477,7 +2773,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 775px
+        top: 750px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
@@ -2523,103 +2819,113 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 412px;
+        top: 384px;
     }
-    .detail-content .insert-information {
+    .detail-content .tquan {
         position: absolute;
-        top: 140px;
-        left: 25px;
+        top: 27px;
+        left: 20px;
+        width: 93%
     }
-    .detail-content .insert-information .row {
+    .detail-content .tquan .insert-information {
+        position: relative;
+        top: 120px;
+        left: 25px;
+        width: 94%;
+    }
+    .detail-content .tquan .insert-information .row {
         width: 100%;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 5px
     }
-    .detail-content .insert-information .row .input-left {
+    .detail-content .tquan .insert-information .row .input-left {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row .input-right {
+    .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information .row input {
         width: 100%;
         height: 16px;
         font-size: 10px;
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 290px;
-        left: 90px;
-        font-size: 13px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 135px;
+        left: 60px;
+        font-size: 10px;
+        width: 75%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
         border-radius: 0px;
-        padding: 2px 0px 0px 23px;
+        padding: 2px 0px 0px 18px;
         outline: none;
         white-space: nowrap;
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
         font-size: 10px;
-        width: 35%;
+        width: 38%;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 300px;
-        left: 140px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 135px;
+        left: 136px;
+        width: 61%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         display: none;
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         display: none;
     }
-    .detail-content .describe .fill-description {
-        margin-top: 35px;
+    .detail-content .tquan .describe .fill-description {
+        margin-left: -55px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 85%;
+        width: 60%;
         height: 45px;
         font-size: 10px
     }
-    .detail-content .describe .regulations {
+    .detail-content .tquan .describe .regulations {
         margin-left: -20px;
+        margin-top: -5px;
     }
-    .detail-content .describe .popup-1 .modal-content {
+    .detail-content .tquan .describe .popup-1 .modal-content {
         width: 88%;
-        margin-left: 0px;
         overflow: inherit;
+        margin-left: 0px;
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 11px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -2627,30 +2933,30 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
-        margin-left: 86px;
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
+        margin-left: 75px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
-        padding: 5px 2px 4px 4px;
+        padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 56%;
+        width: 39%;
         height: 25px;
         font-size: 10px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox {
         position: relative;
         display: block;
         margin-top: 0px;
         margin-bottom: 10px;
-        font-size: 10px;
+        font-size: 9px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
-        font-size: 11px;
+        font-size: 10px;
     }
     .detail-content .ds-desktop {
         display: none;
@@ -2663,9 +2969,9 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 515px;
+        top: 490px;
         width: 100%;
-        padding-left: 10px;
+        padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {
         font-size: 7px;
@@ -2700,14 +3006,14 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 695px;
+        top: 666px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 715px
+        top: 685px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
@@ -2724,7 +3030,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 775px
+        top: 750px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
@@ -2772,37 +3078,45 @@ body {
         position: absolute;
         top: 370px;
     }
-    .detail-content .insert-information {
+    .detail-content .tquan {
         position: absolute;
+        top: 5px;
+        width: 94%;
+        left: 0px;
+    }
+    .detail-content .tquan .insert-information {
+        position: relative;
         top: 120px;
         left: 25px;
+        width: 91%;
     }
-    .detail-content .insert-information .row {
+    .detail-content .tquan .insert-information .row {
         width: 100%;
     }
-    .detail-content .insert-information .down {
+    .detail-content .tquan .insert-information .down {
         padding-top: 5px
     }
-    .detail-content .insert-information .row .input-left {
+    .detail-content .tquan .insert-information .row .input-left {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row .input-right {
+    .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
     }
-    .detail-content .insert-information .row input {
+    .detail-content .tquan .insert-information .row input {
         width: 100%;
         height: 16px;
         font-size: 10px;
     }
-    .detail-content .choose-img {
-        position: absolute;
-        top: 265px;
+    .detail-content .tquan .choose-img {
+        position: relative;
+        top: 130px;
         left: 60px;
-        font-size: 13px;
+        font-size: 10px;
+        width: 75%;
     }
-    .detail-content .choose-img .custom-file-input::before {
+    .detail-content .tquan .choose-img .custom-file-input::before {
         content: 'CHỌN ẢNH';
         display: inline-block;
         border: 0px solid #999;
@@ -2813,61 +3127,62 @@ body {
         cursor: pointer;
         text-shadow: 1px 1px #fff;
         font-weight: 700;
-        font-size: 12px;
-        width: 35%;
+        font-size: 10px;
+        width: 38%;
         background-color: #fff;
         margin: 1px 0px 0px -17px;
         color: #000000;
     }
-    .detail-content .describe {
-        position: absolute;
-        top: 272px;
-        left: 115px
+    .detail-content .tquan .describe {
+        position: relative;
+        top: 125px;
+        left: 136px;
+        width: 54%;
     }
-    .detail-content .describe h3 {
+    .detail-content .tquan .describe h3 {
         display: none;
     }
-    .detail-content .describe h4 {
+    .detail-content .tquan .describe h4 {
         display: none;
     }
-    .detail-content .describe .fill-description {
+    .detail-content .tquan .describe .fill-description {
         margin-left: -55px;
     }
-    .detail-content .describe .fill-description textarea {
+    .detail-content .tquan .describe .fill-description textarea {
         resize: none;
         overflow: hidden;
         min-height: auto;
-        width: 85%;
+        width: 70%;
         height: 45px;
         font-size: 10px
     }
-    .detail-content .describe .regulations {
+    .detail-content .tquan .describe .regulations {
         margin-left: -20px;
         margin-top: -5px;
     }
-    .detail-content .describe .popup-1 .modal-content {
-        width: 88%;
-        overflow: inherit;
-        margin-left: 0px;
+    .detail-content .tquan .describe .popup-1 .modal-content {
+        width: 150% !important;
+        overflow: inherit !important;
+        margin-left: 0px !important;
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-2 a {
         color: #f9d202;
         font-size: 11px;
         text-decoration: none;
         font-weight: bold;
         margin-top: 10px
     }
-    .detail-content .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text-3 a {
         color: #fff;
         font-size: 11px;
         text-decoration: none
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox .text-price {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox .text-price {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
@@ -2875,30 +3190,30 @@ body {
         cursor: pointer;
         color: #fff;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload {
-        margin-left: 93px;
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload {
+        margin-left: 75px;
     }
-    .detail-content .describe .send-img .margin-top-10 .upload button {
+    .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
         border: 1px solid #999;
         border-radius: 0px;
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 56%;
+        width: 43%;
         height: 25px;
         font-size: 10px;
     }
-    .detail-content .describe .send-img .margin-top-10 .checkbox {
+    .detail-content .tquan .describe .send-img .margin-top-10 .checkbox {
         position: relative;
         display: block;
         margin-top: 0px;
         margin-bottom: 10px;
-        font-size: 10px;
+        font-size: 9px;
     }
-    .detail-content .describe .regulations a {
+    .detail-content .tquan .describe .regulations a {
         color: #fff;
-        font-size: 11px;
+        font-size: 10px;
     }
     .detail-content .ds-desktop {
         display: none;
