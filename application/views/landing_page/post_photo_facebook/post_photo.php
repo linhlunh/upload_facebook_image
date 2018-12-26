@@ -40,7 +40,6 @@
                             <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
                             <div class="notification">
                                 <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
-                                <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
                             </div>
                         </div>
 
@@ -456,37 +455,16 @@
 
             if (birthday === '' || birthday === null) {
                 $('#error_birthday').show();
-                $('#error_wrong_birthday').hide();
                 check = false;
             } else {
                 $('#error_birthday').hide();
-                birthday = Date.parse(d_m_Y_to_m_d_Y(birthday));
-                time_now = new Date();
-                
-                if(birthday > time_now)
-                {
-                    $('#error_wrong_birthday').show();
-                }else{
-                    $('#error_wrong_birthday').hide();
-                }
             }
-
             if (check == true) {
                 $('#btn_default').hide();
                 $('#btn_loading').show();
             }
             return check;
         }
-
-        function d_m_Y_to_m_d_Y(date)
-	{
-		var from = date.split("/");
-
-		var f = new Date(from[2], from[1] - 1, from[0]);
-
-		return f;
-	}
-
     </script>
 
     <script>
@@ -498,7 +476,7 @@
         $(function() {
             if ($(window).width() < 767) {
                 $('#birthday').mobiscroll().date({
-                    display: 'bubble',
+                    display: 'bubble'
                 });
                 $('#note').attr('data-toggle', 'modal');
             } else {
@@ -509,12 +487,5 @@
                 $('#note').attr('data-toggle', ' ');
             }
         });
-        var inst = $('#birthday').mobiscroll('getInst');
-
-        $('#birthday').focus(function(){
-            $(this).mobiscroll('show');
-        });
-        
-
     </script>
 </body>
