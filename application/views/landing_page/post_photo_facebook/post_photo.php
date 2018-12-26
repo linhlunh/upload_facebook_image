@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-    <link rel="stylesheet" href="../../../assets/css/upload-12-25-5.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-26-12.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -25,7 +25,7 @@
             <div class="img-prize">
                 <img src="../../../assets/img/img-facebook/giaithuong_nen.png" alt="">
             </div>
-            <form action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
+            <form name="frm" action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
                 <div class="tquan">
                     <div class="insert-information">
                         <div class="row up">
@@ -40,6 +40,7 @@
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right">
                                 <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
                                 <div class="notification">
+                                    <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
                                     <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
                                 </div>
                             </div>
@@ -81,30 +82,32 @@
                         <h3>-MÔ TẢ ẢNH-</h3>
                         <h4>(Nếu có)</h4>
                         <div class="fill-description">
-                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note" cols="30" rows="10" data-toggle="modal" data-target="#abc"  onkeydown="checkWordLen(this);"></textarea>
+                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note"  data-toggle="modal" data-target="#abc"  onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
                                     element.style.height = "100px";
                                     element.style.height = (element.scrollHeight) + "px";
-                                }
-                                var wordLen = 150,
+
+                                    var wordLen = 100,
                                     len;
-                                $('#note').keydown(function(event) {
+                                    $('#note').keydown(function(event) {
                                     len = $('#note').val().split(/[\s]+/);
                                     if (len.length > wordLen) {
-                                        if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
+                                        $('#note').val(len.splice(0,100).join(' ')+' ');
+                                        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) 
+                                        {
+
+                                        }else if (event.keyCode < 48 || event.keyCode > 57) {
                                             event.preventDefault();
                                         }
+                                        element.style.height = "100px";
+                                        element.style.height = (element.scrollHeight) + "px";
                                     }
-                                    console.log(len.length + " words are typed out of an available " + wordLen);
-                                    wordsLeft = (wordLen) - len.length;
-                                    $('.words-left').html(wordsLeft + ' words left');
-                                    if (wordsLeft == 0) {
-                                        $('.words-left').css({
-                                            'background': 'red'
-                                        }).prepend('<i class="fa fa-exclamation-triangle"></i>');
-                                    }
-                                });
+                                    
+                                }); 
+                                }
+                                
+                                
                             </script>
                             <div class="modal fade "  id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -119,22 +122,17 @@
                                                         var x = document.getElementById("text").value;
                                                         document.getElementById("note").innerHTML = x;
                                                     }
-                                                    var word = 150,
+                                                    var word = 100,
                                                         len;
                                                     $('#text').keydown(function(event) {
                                                         len = $('#text').val().split(/[\s]+/);
                                                         if (len.length > word) {
-                                                            if (event.keyCode == 46 || event.keyCode == 8) {} else if (event.keyCode < 48 || event.keyCode > 57) {
+                                                            
+                                                            $('#text').val(len.splice(0,100).join(' ')+' ');
+                                                            
+                                                            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {} else if (event.keyCode < 48 || event.keyCode > 57) {
                                                                 event.preventDefault();
                                                             }
-                                                        }
-                                                        console.log(len.length + " words are typed out of an available " + word);
-                                                        wordsLeft = (word) - len.length;
-                                                        $('.words-left').html(wordsLeft + ' words left');
-                                                        if (wordsLeft == 0) {
-                                                            $('.words-left').css({
-                                                                'background': 'red'
-                                                            }).prepend('<i class="fa fa-exclamation-triangle"></i>');
                                                         }
                                                     });
                                                 </script>
@@ -460,13 +458,32 @@
                 check = false;
             } else {
                 $('#error_birthday').hide();
+                $('#error_wrong_birthday').hide();
+
+                birthday = Date.parse(d_m_Y_to_m_d_Y(birthday));
+                time_now = new Date();
+                
+                if(birthday > time_now)
+                {
+                    $('#error_wrong_birthday').show();
+                }else{
+                    $('#error_wrong_birthday').hide();
+                }
             }
             if (check == true) {
                 $('#btn_default').hide();
                 $('#btn_loading').show();
             }
             return check;
-        }
+        } 
+        function d_m_Y_to_m_d_Y(date)
+    {
+        var from = date.split("/");
+
+        var f = new Date(from[2], from[1] - 1, from[0]);
+
+        return f;
+    }
     </script>
 
     <script>
@@ -484,10 +501,15 @@
             } else {
                 $('#birthday').mobiscroll().date({
                     display: 'bubble',
-                    touchUi: false
+                    touchUi: false, 
+                    focusOnClose: false,
                 });
                 $('#note').attr('data-toggle', ' ');
             }
+        });
+
+        $('#birthday').focus(function(){
+            $(this).mobiscroll('show');
         });
     </script>
 </body>
