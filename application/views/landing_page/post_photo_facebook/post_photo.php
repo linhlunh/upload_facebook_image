@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-    <link rel="stylesheet" href="../../../assets/css/upload-27-12.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-27-12-9h29.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -115,7 +115,7 @@
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
                                             <div class="form-group" style="">
-                                                <textarea style="width: 100%; height: 180px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
                                             
                                                 <script>
                                                     function checkWord(element) {
