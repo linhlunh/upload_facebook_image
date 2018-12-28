@@ -10,8 +10,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-    <link rel="stylesheet" href="../../../assets/css/upload-27-12-9h29.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-28-12.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.min.js"></script>
+    
+
 
 </head>
 
@@ -70,7 +73,7 @@
                     </div>
 
                     <div class="choose-img">
-                        <input  type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
+                        <input type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
                         <p style="color: white">
                             <span class='error' id='error_picture'>Bạn chưa chọn file ảnh!</span>
                             <span class='error' id='error_picture_type'>Ảnh bạn chọn chưa đúng định dạng!</span>
@@ -82,41 +85,38 @@
                         <h3>-MÔ TẢ ẢNH-</h3>
                         <h4>(Nếu có)</h4>
                         <div class="fill-description">
-                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note"  data-toggle="modal" data-target="#abc"  onkeydown="checkWordLen(this);"></textarea>
+                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note" data-toggle="modal" data-target="#abc" onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
                                     element.style.height = "100px";
                                     element.style.height = (element.scrollHeight) + "px";
 
                                     var wordLen = 100,
-                                    len;
+                                        len;
                                     $('#note').keydown(function(event) {
-                                    len = $('#note').val().split(/[\s]+/);
-                                    if (len.length > wordLen) {
-                                        $('#note').val(len.splice(0,100).join(' ')+' ');
-                                        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) 
-                                        {
+                                        len = $('#note').val().split(/[\s]+/);
+                                        if (len.length > wordLen) {
+                                            $('#note').val(len.splice(0, 100).join(' ') + ' ');
+                                            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
 
-                                        }else if (event.keyCode < 48 || event.keyCode > 57) {
-                                            event.preventDefault();
+                                            } else if (event.keyCode < 48 || event.keyCode > 57) {
+                                                event.preventDefault();
+                                            }
+                                            element.style.height = "100px";
+                                            element.style.height = (element.scrollHeight) + "px";
                                         }
-                                        element.style.height = "100px";
-                                        element.style.height = (element.scrollHeight) + "px";
-                                    }
-                                    
-                                }); 
+
+                                    });
                                 }
-                                
-                                
                             </script>
-                            <div class="modal fade "  id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content" style="width: 100%;">
+                            <div class="modal fade " id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content" style="width: 100%;">
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
                                             <div class="form-group" style="">
-                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
-                                            
+                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+
                                                 <script>
                                                     function checkWord(element) {
                                                         var x = document.getElementById("text").value;
@@ -127,9 +127,9 @@
                                                     $('#text').keydown(function(event) {
                                                         len = $('#text').val().split(/[\s]+/);
                                                         if (len.length > word) {
-                                                            
-                                                            $('#text').val(len.splice(0,100).join(' ')+' ');
-                                                            
+
+                                                            $('#text').val(len.splice(0, 100).join(' ') + ' ');
+
                                                             if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {} else if (event.keyCode < 48 || event.keyCode > 57) {
                                                                 event.preventDefault();
                                                             }
@@ -141,9 +141,9 @@
                                         <div class="modal-footer" style="">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
                                         </div>
-                                        </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                         <div class="regulations">
                             <a href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
@@ -155,8 +155,8 @@
                                     <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 101%; margin-left: -1px; text-align: justify;">
                                         <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                         <div class="container">
-                                        <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                         </div>
                                             <div class="content-text" style="margin-top: 15px">
                                                 <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
@@ -204,11 +204,11 @@
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
                                         <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
                                     </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
             </form>
 
             <div class="ds-desktop">
@@ -280,7 +280,7 @@
                     <div class="container">
                         <h3>Cách chơi:</h3>
                         <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                        <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 500 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
+                        <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 100 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
                         <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <img src="../../assets/img/img-facebook/giai nhat.png" alt="">
-                            <div class="title-1" >
+                            <div class="title-1">
                                 <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
                                 <a>Trị Giá</a>
                             </div>
@@ -312,7 +312,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <img src="../../assets/img/img-facebook/giai nhi.png" alt="" style="margin-top: -8px">
-                            <div class="title-1" >
+                            <div class="title-1">
                                 <a>1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</a><br/>
                                 <a>Trị Giá</a>
                             </div>
@@ -350,7 +350,7 @@
                         <h3>Cách chơi:</h3>
                         <div class="content">
                             <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                            <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 500 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
+                            <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 100 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
                             <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
                         </div>
                     </div>
@@ -370,147 +370,164 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <script>
-        var fileImg = '';
-        $('input[type="file"]').change(function(e){
-            fileImg = e.target.files[0];
-            
-        });
+            </div>
+            </div>
+            <script>
+                var fileImg = '';
+                $('input[type="file"]').change(function(e) {
+                    fileImg = e.target.files[0];
 
-        $('#birthday').change(function(){
-            var birthday = $(this).val();
-            var result = birthday.split('/');
-            birthday = result[1]+'/'+result[0]+'/'+result[2];
-            $(this).val(birthday);
-            
-        });
-
-        function validateForm() {
-            var full_name = $('#full_name').val();
-            var email = $('#email').val();
-            var phone = $('#phone').val();
-            var birthday = $('#birthday').val();
-            
-            var check = true;
-
-            if(fileImg == ''){
-                $('#error_picture').show();
-                check = false;
-            }else{
-                $('#error_picture').hide();
-
-                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg'){
-                    $('#error_picture_type').hide();
-                }else{
-                    $('#error_picture_type').show();
-                    check = false;
-                }
-                if(fileImg.size >= 2097152 ){
-                    $('#error_picture_size').show();
-                    check = false;
-                }else{
-                    $('#error_picture_size').hide();
-                }
-            }
-           
-
-            if (full_name === '' || full_name === null) {
-                $('#error_full_name').show();
-                check = false;
-
-            } else {
-                $('#error_full_name').hide();
-            }
-
-            if (email === '' || email === null) {
-                $('#error_email').show();
-                $('#error_wrong_email').hide();
-                check = false;
-            } else {
-                if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
-                    $('#error_wrong_email').show();
-                    check = false;
-                } else {
-                    $('#error_wrong_email').hide();
-                }
-                $('#error_email').hide();
-
-            }
-
-            if (phone === '' || phone === null) {
-                $('#error_phone').show();
-                $('#error_wrong_phone').hide();
-                check = false;
-            } else {
-                $('#error_phone').hide();
-                if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
-                    $('#error_wrong_phone').show();
-                    check = false;
-                } else {
-                    $('#error_wrong_phone').hide();
-                }
-            }
-
-            if (birthday === '' || birthday === null) {
-                $('#error_birthday').show();
-                check = false;
-            } else {
-                $('#error_birthday').hide();
-                $('#error_wrong_birthday').hide();
-
-                birthday = Date.parse(d_m_Y_to_m_d_Y(birthday));
-                time_now = new Date();
-                
-                if(birthday > time_now)
-                {
-                    $('#error_wrong_birthday').show();
-                }else{
-                    $('#error_wrong_birthday').hide();
-                }
-            }
-            if (check == true) {
-                $('#btn_default').hide();
-                $('#btn_loading').show();
-            }
-            return check;
-        } 
-        function d_m_Y_to_m_d_Y(date)
-    {
-        var from = date.split("/");
-
-        var f = new Date(from[2], from[1] - 1, from[0]);
-
-        return f;
-    }
-    </script>
-
-    <script>
-        mobiscroll.settings = {
-            lang: 'en',
-            theme: 'ios'
-        };
-
-        $(function() {
-            if ($(window).width() < 767) {
-                $('#birthday').mobiscroll().date({
-                    display: 'bubble'
                 });
-                $('#note').attr('data-toggle', 'modal');
-            } else {
-                $('#birthday').mobiscroll().date({
-                    display: 'bubble',
-                    touchUi: false, 
-                    focusOnClose: false,
-                });
-                $('#note').attr('data-toggle', ' ');
-                $('#birthday').focus(function(){
-            $(this).mobiscroll('show');
-        });
-            }
-        });
 
-       
-    </script>
+                $('#birthday').change(function() {
+                    var birthday = $(this).val();
+                    var result = birthday.split('/');
+                    birthday = result[1] + '/' + result[0] + '/' + result[2];
+                    $(this).val(birthday);
+
+                });
+
+                function validateForm() {
+                    var full_name = $('#full_name').val();
+                    var email = $('#email').val();
+                    var phone = $('#phone').val();
+                    var birthday = $('#birthday').val();
+
+                    var check = true;
+
+                    if (fileImg == '') {
+                        $('#error_picture').show();
+                        check = false;
+                    } else {
+                        $('#error_picture').hide();
+
+                        if (fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg') {
+                            $('#error_picture_type').hide();
+                        } else {
+                            $('#error_picture_type').show();
+                            check = false;
+                        }
+                        if (fileImg.size >= 2097152) {
+                            $('#error_picture_size').show();
+                            check = false;
+                        } else {
+                            $('#error_picture_size').hide();
+                        }
+                    }
+
+
+                    if (full_name === '' || full_name === null) {
+                        $('#error_full_name').show();
+                        check = false;
+
+                    } else {
+                        $('#error_full_name').hide();
+                    }
+
+                    if (email === '' || email === null) {
+                        $('#error_email').show();
+                        $('#error_wrong_email').hide();
+                        check = false;
+                    } else {
+                        if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
+                            $('#error_wrong_email').show();
+                            check = false;
+                        } else {
+                            $('#error_wrong_email').hide();
+                        }
+                        $('#error_email').hide();
+
+                    }
+
+                    if (phone === '' || phone === null) {
+                        $('#error_phone').show();
+                        $('#error_wrong_phone').hide();
+                        check = false;
+                    } else {
+                        $('#error_phone').hide();
+                        if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
+                            $('#error_wrong_phone').show();
+                            check = false;
+                        } else {
+                            $('#error_wrong_phone').hide();
+                        }
+                    }
+
+
+                    if (birthday === '' || birthday === null) {
+                        $('#error_birthday').show();
+                        check = false;
+                    } else {
+                        $('#error_birthday').hide();
+                        $('#error_wrong_birthday').hide();
+
+                        birthday = Date.parse(d_m_Y_to_m_d_Y(birthday));
+                        time_now = new Date();
+
+                        if (birthday > time_now) {
+                            $('#error_wrong_birthday').show();
+                        } else {
+                            $('#error_wrong_birthday').hide();
+                        }
+                    }
+                    if (check == true) {
+                        $('#btn_default').hide();
+                        $('#btn_loading').show();
+                    }
+                    return check;
+                }
+
+                function d_m_Y_to_m_d_Y(date) {
+                    var from = date.split("/");
+
+                    var f = new Date(from[2], from[1] - 1, from[0]);
+
+                    return f;
+                }
+            </script>
+
+            <script>
+               
+                $(function() {
+                    if ($(window).width() < 767) {
+                        
+                        $('#note').attr('data-toggle', 'modal');
+                    } else {
+                       
+                        $('#note').attr('data-toggle', ' ');
+                        
+                    }
+                });
+            </script>
+            <script>
+            $("birthday").dateDropdowns();
+            $("birthday").dateDropdowns({
+                defaultDate: null,
+                defaultDateFormat: "yyyy-mm-dd",
+                displayFormat: "dmy",
+                submitFormat: "yyyy-mm-dd",
+                minAge: 0,
+                maxAge: 120,
+                minYear: null,
+                maxYear: null,
+                submitFieldName: "date",
+                wrapperClass: "date-dropdowns",
+                dropdownClass: null,
+                daySuffixes: true,
+                monthSuffixes: true,
+                monthFormat: "long",
+                required: false,
+                dayLabel: 'Day',
+                monthLabel: 'Month',
+                yearLabel: 'Year',
+                monthLongValues: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                monthShortValues: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                initialDayMonthYearValues: ['Day', 'Month', 'Year'],
+                daySuffixValues: ['st', 'nd', 'rd', 'th']
+            });
+
+
+
+
+</script>
 </body>
