@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
     <link rel="stylesheet" href="../../../assets/css/upload-27-12-9h29.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
 </head>
 
 <body class="body-content">
