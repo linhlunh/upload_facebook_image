@@ -1,23 +1,26 @@
-<html lang="vn">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
-		<meta name="description" content="BestPrice - Đại lý đặt phòng khách sạn, vé máy bay, tour du lịch trực tuyến giá tốt nhất.  Khuyến mại, ưu đãi lớn - Dịch vụ tin cậy, hỗ trợ 24/7." />
-		<meta name="robots" content="noindex,nofollow" />
-		<title>Đăng ảnh đón xuân - Khuân tour miễn phí - BestPrice</title>
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	    <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
-	    <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-	    <link rel="stylesheet" href="../../../assets/css/upload-26-12-1.css">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
-    </head> 
-    <body class="body-content">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+	<meta name="description" content="BestPrice - Đại lý đặt phòng khách sạn, vé máy bay, tour du lịch trực tuyến giá tốt nhất.  Khuyến mại, ưu đãi lớn - Dịch vụ tin cậy, hỗ trợ 24/7." />
+	<meta name="robots" content="noindex,nofollow" />
+	<title>Đăng ảnh đón xuân - Khuân tour miễn phí - BestPrice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-27-12-9h29.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="body-content">
     <div class="content">
         <div class="bgr" style="width: 100%; margin: 0 auto; margin-top: -15px;">
             <img src="../../../assets/img/img-facebook/BG.jpg" style="width: 105%">
@@ -25,7 +28,7 @@
         <div class="detail-content">
 
             <div class="img-prize">
-                <img src="../../../assets/img/img-facebook/giaithuong_nen.png" alt="">
+                <img src="../../../assets/img/img-facebook/giaithuong.png" alt="">
             </div>
             <form name="frm" action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
                 <div class="tquan">
@@ -117,7 +120,7 @@
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
                                             <div class="form-group" style="">
-                                                <textarea style="width: 100%; height: 180px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
                                             
                                                 <script>
                                                     function checkWord(element) {
@@ -154,13 +157,13 @@
                         <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                    <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 100%; margin-left: 0px">
+                                    <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 101%; margin-left: -1px; text-align: justify;">
                                         <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                         <div class="container">
                                         <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                         </div>
-                                            <div class="content-text">
+                                            <div class="content-text" style="margin-top: 15px">
                                                 <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
                                             </div>
 

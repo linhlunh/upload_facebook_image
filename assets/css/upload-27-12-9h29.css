@@ -133,7 +133,7 @@ body {
 .detail-content .tquan .describe .popup-1 .modal-content {
     background-image: url('../../../assets/img-facebook/BGpopup.png');
     margin: 0 auto;
-    overflow: hidden;
+    overflow: inherit;
     width: 1200px;
     height: 577px;
     margin-left: -286px
@@ -2175,7 +2175,7 @@ body {
         height: 587px;
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
-        width: 100%
+        width: 101%
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
