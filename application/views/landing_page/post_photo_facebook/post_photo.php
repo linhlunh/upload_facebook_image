@@ -194,7 +194,7 @@
                                 <div class="upload" style="margin-top: 35px;">
                                     <button type="submit" value="" id="id_upload" name="action">
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
-                                        <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
+                                        <span style='display:none' id='btn_loading'><i style='margin-right: 4px' class="fa fa-spinner fa-spin"></i>ĐANG GỬI...</span>
                                     </button>
                                 </div>
                             </div>
