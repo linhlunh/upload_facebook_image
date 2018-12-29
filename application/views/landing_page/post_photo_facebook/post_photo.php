@@ -13,9 +13,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../../../assets/libs/datepicker-jquery/dist/jquery.date-dropdowns.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
     <link rel="stylesheet" href="../../../assets/css/upload-27-12-9h29.css">
+    <link rel="stylesheet" href="../../../../assets/libs/datepicker-jquery/dist/jquery_date_dropdowns.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
 </head>
@@ -377,7 +379,21 @@
             </div>
         </div>
     </div>
+  <div style='margin-top: 150px' class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div style='background-image: url("../../assets/img/img-facebook/khuan-tour-tet.png"); width:640px; height:354px' class="modal-content">
+        <div style='width: 145px;height:35px; font-size: 18px ;background-color:#FF8000; padding-top: 6px; text-align: center; margin: 300px auto auto auto;'>
+            <a href='https://www.bestprice.vn/' style='color: #000'><b>Về trang chủ >></b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" id='btn_show_popup' class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#myModal">Open Modal</button>
     <script>
+        if(<?=!empty($post_success)? 'true' : 'false' ?>)
+        {
+            $('#btn_show_popup').trigger('click');
+        }
         var fileImg = '';
         $('input[type="file"]').change(function(e){
             fileImg = e.target.files[0];
@@ -400,66 +416,20 @@
             
             var check = true;
 
-            if(fileImg == ''){
-                $('#error_picture').show();
-                check = false;
-            }else{
-                $('#error_picture').hide();
-
-                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg'){
-                    $('#error_picture_type').hide();
-                }else{
-                    $('#error_picture_type').show();
-                    check = false;
-                }
-                if(fileImg.size >= 2097152 ){
-                    $('#error_picture_size').show();
-                    check = false;
-                }else{
-                    $('#error_picture_size').hide();
-                }
-            }
-           
-
             if (full_name === '' || full_name === null) {
                 $('#error_full_name').show();
+                alert('Họ tên không được để trống!');
+                return false;
                 check = false;
 
             } else {
                 $('#error_full_name').hide();
             }
 
-            if (email === '' || email === null) {
-                $('#error_email').show();
-                $('#error_wrong_email').hide();
-                check = false;
-            } else {
-                if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
-                    $('#error_wrong_email').show();
-                    check = false;
-                } else {
-                    $('#error_wrong_email').hide();
-                }
-                $('#error_email').hide();
-
-            }
-
-            if (phone === '' || phone === null) {
-                $('#error_phone').show();
-                $('#error_wrong_phone').hide();
-                check = false;
-            } else {
-                $('#error_phone').hide();
-                if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
-                    $('#error_wrong_phone').show();
-                    check = false;
-                } else {
-                    $('#error_wrong_phone').hide();
-                }
-            }
-
             if (birthday === '' || birthday === null) {
                 $('#error_birthday').show();
+                alert('Ngày sinh không được để trống!');
+                return false;
                 check = false;
             } else {
                 $('#error_birthday').hide();
@@ -471,10 +441,76 @@
                 if(birthday > time_now)
                 {
                     $('#error_wrong_birthday').show();
+                    check = false;
                 }else{
                     $('#error_wrong_birthday').hide();
                 }
             }
+
+            if (phone === '' || phone === null) {
+                $('#error_phone').show();
+                $('#error_wrong_phone').hide();
+                alert('Số điện thoại không được để trống!');
+                return false;
+                check = false;
+            } else {
+                $('#error_phone').hide();
+                if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
+                    $('#error_wrong_phone').show();
+                    alert('Số điện thoại không đúng!');
+                    return false;
+                    check = false;
+                } else {
+                    $('#error_wrong_phone').hide();
+                }
+            }
+
+            if (email === '' || email === null) {
+                $('#error_email').show();
+                $('#error_wrong_email').hide();
+                alert('Email không được để trống!');
+                return false;
+                check = false;
+            } else {
+                if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
+                    $('#error_wrong_email').show();
+                    $('#error_email').hide();
+                    alert('Email không hợp lệ!');
+                    return false;
+                    check = false;
+                } else {
+                    $('#error_wrong_email').hide();
+                }
+                $('#error_email').hide();
+
+            }
+
+            if(fileImg == ''){
+                $('#error_picture').show();
+                alert('Bạn chưa chọn file ảnh!');
+                return false;
+                check = false;
+            }else{
+                $('#error_picture').hide();
+
+                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg'){
+                    $('#error_picture_type').hide();
+                }else{
+                    $('#error_picture_type').show();
+                    alert('Ảnh bạn chọn chưa đúng định dạng!');
+                    return false;
+                    check = false;
+                }
+                if(fileImg.size >= 10485760 ){
+                    $('#error_picture_size').show();
+                    alert('Ảnh bạn chọn vướt quá kích thước cho phép!');
+                    return false;
+                    check = false;
+                }else{
+                    $('#error_picture_size').hide();
+                }
+            }
+
             if (check == true) {
                 $('#btn_default').hide();
                 $('#btn_loading').show();
@@ -482,13 +518,13 @@
             return check;
         } 
         function d_m_Y_to_m_d_Y(date)
-    {
-        var from = date.split("/");
+            {
+                var from = date.split("/");
 
-        var f = new Date(from[2], from[1] - 1, from[0]);
+                var f = new Date(from[2], from[1] - 1, from[0]);
 
-        return f;
-    }
+                return f;
+            }
     </script>
 
     <script>
@@ -516,7 +552,8 @@
             }
         });
 
-       
+   
     </script>
     </body>
+
 </html>

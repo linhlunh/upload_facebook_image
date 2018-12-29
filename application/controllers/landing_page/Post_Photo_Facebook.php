@@ -23,6 +23,8 @@ class Post_Photo_Facebook extends CI_Controller{
 
     public function index()
     { 
+        $time_start = $this->microtime_float();
+
         $dataSubmit = $this->input->post();
 
         $data = array();
@@ -68,13 +70,14 @@ class Post_Photo_Facebook extends CI_Controller{
                 $description .= !empty($dataSubmit['description']) ? "\n------------------------------" : "";
                 $description .= !empty($dataSubmit['description']) ? "\n".$dataSubmit['description'] : "";
 
-                $facebook_picture_id = $this->PostImageUseCurl($description);
-
+                $imgPath = $urlMoveUploadFile .'/'.$dataSubmit['picture'];
+                $time_1 = time();
+                // $this->resizeImage($_FILES['picture']['tmp_name'],$imgPath);
+                $time_2 = time();
+                $facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name']);
+                $time_3 = time();
                 $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
-
-                move_uploaded_file($_FILES['picture']['tmp_name'], $urlMoveUploadFile .'/'.$dataSubmit['picture']);
-
-
+                
                 if(empty($facebook_picture_id['error_code']))
                 {
                     $dataSubmit['facebook_picture_id'] = $facebook_picture_id;
@@ -102,22 +105,27 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $subjectEmail = 'Thông tin đăng ký dự thi Đăng ảnh đón xuân khuân tour miễn phí.';
 
-                        $this->send_email_by_marketing('meoconyy123@gmail.com',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
+                        $this->send_email_by_marketing('phichsama@gmail.com',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
     
-                        $this->send_email_by_marketing('meoconyy123@gmail.com','meoconyy123@gmail.com',$subjectEmail,$emailContentHtml);
+                        $this->send_email_by_marketing('phichsama@gmail.com','phichsama@gmail.com',$subjectEmail,$emailContentHtml);
 
+                        $data['post_success'] = '1';
                     }else
                     {
-                        $this->send_email_by_marketing('meoconyy123@gmail.com','meoconyy123@gmail.com','Error event Tết',$facebook_picture_link['message']);    
+                        $this->send_email_by_marketing('phichsama@gmail.com','phichsama@gmail.com','Error event Tết',$facebook_picture_link['message']);    
                     }
                 }else{
-                    $this->send_email_by_marketing('meoconyy123@gmail.com','meoconyy123@gmail.com','Error event Tết',$facebook_picture_id['message']);  
+                    $this->send_email_by_marketing('phichsama@gmail.com','phichsama@gmail.com','Error event Tết',$facebook_picture_id['message']);  
                 }
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action']))
         {
             $data['errors'] = 'Chua upload file';
         } 
+        $time_end  = $this->microtime_float();
+
+        echo('<pre>');print_r($time_end - $time_start);echo('</pre>');
+
         $this->load->view('landing_page/post_photo_facebook/post_photo',$data);
     }
 
@@ -147,9 +155,9 @@ class Post_Photo_Facebook extends CI_Controller{
         $this->load->view('landing_page/post_photo_facebook/list_img', $img);
     }
 
-    function PostImageUseCurl($message = '')
+    function PostImageUseCurl($fileImage = '',$message = '')
     {
-            $fileImage = $_FILES['picture'];
+            !empty($fileImage) ? $fileImage = $_FILES['picture']['tmp_name'] : '';
 
             $albumId = '2242409652459728';
            
@@ -157,7 +165,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
             $post_array = array(
                 "access_token" => $accessToken,
-                "source"       => new CurlFile($fileImage['tmp_name']),//"@".$fileImage['tmp_name'],
+                "source"       => new CurlFile($fileImage),
                 "message"      => $message,
             );
             //echo('<pre>');print_r($post_array);echo('</pre>');exit();
@@ -178,14 +186,13 @@ class Post_Photo_Facebook extends CI_Controller{
             $info = curl_getinfo($ch);
             
             curl_close($ch);
-
             $result = json_decode($result);
 
             if(!empty($result))
             {
                 if(!empty($result->error))
                 {
-                    $dataReturn['message'] = 'Post image error:<br/>'.$result->error->message;
+                    $dataReturn['message'] = 'Post image error:<br/>'.json_decode($result->error);
 
                     $dataReturn['error_code'] = $result->error->code;
 
@@ -238,14 +245,14 @@ class Post_Photo_Facebook extends CI_Controller{
         $info = curl_getinfo($ch);
         
         curl_close($ch);
-       
+      
          $result = json_decode($result);
 
             if(!empty($result))
             {
                 if(!empty($result->error))
                 {
-                    $dataReturn['message'] = 'Get link picture error:<br/>'.$result->error->message;
+                    $dataReturn['message'] = 'Get link picture error:<br/>'.json_decode($result->error);
 
                     $dataReturn['error_code'] = $result->error->code;
 
@@ -313,8 +320,8 @@ class Post_Photo_Facebook extends CI_Controller{
 	    $config['smtp_host'] = 'ssl://smtp.googlemail.com';
 	    $config['smtp_port'] = '465';
 	    $config['smtp_timeout'] = '30';
-	   	$config['smtp_user'] = 'meoconyy123@gmail.com';
-        $config['smtp_pass'] = 'anhduc123';
+	   	$config['smtp_user'] = 'phichsama@gmail.com';
+        $config['smtp_pass'] = 'cuong210894';
         $config['charset'] = 'utf-8';
 
 	    if($count_user['num'] > 350){
@@ -357,5 +364,45 @@ class Post_Photo_Facebook extends CI_Controller{
             show_error($this->email->print_debugger());
         }
 	    return true;
-	}
+    }
+    function resizeImage($imgPath,$destinationPath){
+        $basePath = str_replace('application\controllers\landing_page','',__DIR__);
+        $basePath = str_replace('\\','/',$basePath);
+        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Exception.php");
+        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/ResultMeta.php");
+        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Result.php");
+        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Source.php");
+        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Client.php");
+        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify.php");
+        \Tinify\setKey("chkW4ljjzYKw5s5KRRtPXYZ37r4RYswN");
+        $source = \Tinify\fromFile($imgPath);
+        $source->toFile($destinationPath);
+    }
+    function convertTypeImage()
+    {
+        $basePath = str_replace('application\controllers\landing_page','',__DIR__);
+        $basePath = str_replace('\\','/',$basePath);
+        require $basePath . '/vendor/autoload.php';
+
+        use \CloudConvert\Api;
+        
+        $api = new \CloudConvert\Api("DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj");
+        
+        $api->convert([
+            "inputformat" => "heic",
+            "outputformat" => "jpg",
+            "input" => "upload",
+            "filename" => "asdasd",
+            "timeout" => 60,
+            "file" => fopen('inputfile.heic', 'r'),
+        ])
+        ->wait()
+        ->download();
+    }
+    function microtime_float()
+    {
+        list($usec, $sec) = explode(" ", microtime());
+        return ((float)$usec + (float)$sec);
+    }
+
 }
