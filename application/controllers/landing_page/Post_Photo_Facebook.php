@@ -75,7 +75,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
                 $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
                 
-                move_uploaded_file($_FILES['picture']['tmp_name'],$urlMoveUploadFile);
+                move_uploaded_file($_FILES['picture']['tmp_name'],$imgPath);
 
                 if(empty($facebook_picture_id['error_code']))
                 {
@@ -122,8 +122,6 @@ class Post_Photo_Facebook extends CI_Controller{
             $data['errors'] = 'Chua upload file';
         } 
         $time_end  = $this->microtime_float();
-
-        echo('<pre>');print_r($time_end - $time_start);echo('</pre>');
 
         $this->load->view('landing_page/post_photo_facebook/post_photo',$data);
     }
