@@ -13,7 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
     <link rel="stylesheet" href="../../../assets/css/upload-29-12-9h20.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
@@ -424,16 +423,15 @@
             </div>
         </div>
     </div>
-  <div style='margin-top: 150px' class="modal fade" id="myModal" role="dialog">
+  <div style='margin-top: 150px' class="modal fade" id="modal_success" role="dialog">
     <div class="modal-dialog">
-      <div style='background-image: url("../../assets/img/img-facebook/khuan-tour-tet.png"); width:640px; height:354px' class="modal-content">
-        <div style='width: 145px;height:35px; font-size: 18px ;background-color:#FF8000; padding-top: 6px; text-align: center; margin: 300px auto auto auto;'>
-            <a href='https://www.bestprice.vn/' style='color: #000'><b>Về trang chủ >></b></a>
+        <img src="../../assets/img/img-facebook/khuan-tour-tet.png" style='position: relative;' alt="">
+        <div class='btn_go_back' style='position: absolute;width: 145px;height:35px; font-size: 18px ;background-color:#FF8000; padding-top: 6px; text-align: center; margin-top:-70px;left:258px'>
+            <a href='https://www.bestprice.vn/' style='color: #000;text-decoration: none;'><b>Về trang chủ >></b></a>
         </div>
-      </div>
     </div>
   </div>
-  <button type="button" id='btn_show_popup' class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  <button type="button" id='btn_show_popup' class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#modal_success">Open Modal</button>
     <script>
         if(<?=!empty($post_success)? 'true' : 'false' ?>)
         {
@@ -444,15 +442,6 @@
             fileImg = e.target.files[0];
             
         });
-
-        /* $('#birthday').change(function(){
-            var birthday = $(this).val();
-            var result = birthday.split('/');
-            birthday = result[1]+'/'+result[0]+'/'+result[2];
-            $(this).val(birthday);
-            
-        }); */
-
         function validateForm() {
             var full_name = $('#full_name').val();
             var email = $('#email').val();
@@ -577,6 +566,16 @@
                     if ($(window).width() < 767) {
 
                         $('#note').attr('data-toggle', 'modal');
+
+                        var witdh_window = $(window).width();
+
+                        $('#modal_success img').css('width',witdh_window-20+'px');
+                        $('.btn_go_back').css('width','27%');
+                        $('.btn_go_back').css('margin-top','-10%');
+                        $('.btn_go_back').css('font-size','10px');
+                        $('.btn_go_back').css('height','13%');
+                        $('.btn_go_back').css('left','38%');
+                        
                     } else {
 
                         $('#note').attr('data-toggle', ' ');

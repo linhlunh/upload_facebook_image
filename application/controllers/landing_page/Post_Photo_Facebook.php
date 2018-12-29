@@ -54,8 +54,7 @@ class Post_Photo_Facebook extends CI_Controller{
                 {
                     $nameImg = $this->_generate_random_code().'.'.str_replace('image/','',$_FILES['picture']['type']);
                 }
-
-              
+                unset($dataSubmit['date_']);
 
                 $InsertedId = $this->Landing_Page_Model->create_img($dataSubmit);
                         
@@ -71,13 +70,13 @@ class Post_Photo_Facebook extends CI_Controller{
                 $description .= !empty($dataSubmit['description']) ? "\n".$dataSubmit['description'] : "";
 
                 $imgPath = $urlMoveUploadFile .'/'.$dataSubmit['picture'];
-                $time_1 = time();
-                // $this->resizeImage($_FILES['picture']['tmp_name'],$imgPath);
-                $time_2 = time();
+
                 $facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name']);
-                $time_3 = time();
+
                 $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
                 
+                move_uploaded_file($_FILES['picture']['tmp_name'],$urlMoveUploadFile);
+
                 if(empty($facebook_picture_id['error_code']))
                 {
                     $dataSubmit['facebook_picture_id'] = $facebook_picture_id;
@@ -365,40 +364,26 @@ class Post_Photo_Facebook extends CI_Controller{
         }
 	    return true;
     }
-    function resizeImage($imgPath,$destinationPath){
-        $basePath = str_replace('application\controllers\landing_page','',__DIR__);
-        $basePath = str_replace('\\','/',$basePath);
-        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Exception.php");
-        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/ResultMeta.php");
-        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Result.php");
-        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Source.php");
-        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify/Client.php");
-        require_once($basePath."assets/libs/tinify-php-master/lib/Tinify.php");
-        \Tinify\setKey("chkW4ljjzYKw5s5KRRtPXYZ37r4RYswN");
-        $source = \Tinify\fromFile($imgPath);
-        $source->toFile($destinationPath);
-    }
-    /* function convertTypeImage()
+    
+    function convertTypeImage($imgPath,$destinationPath)
     {
         $basePath = str_replace('application\controllers\landing_page','',__DIR__);
         $basePath = str_replace('\\','/',$basePath);
-        require $basePath . '/vendor/autoload.php';
+        require $basePath . 'assets/libs/cloudconvert-php-master/src/Api.php';
 
-        use \CloudConvert\Api;
-        
         $api = new \CloudConvert\Api("DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj");
         
         $api->convert([
             "inputformat" => "heic",
             "outputformat" => "jpg",
-            "input" => "upload",
-            "filename" => "asdasd",
+            "input" => $imgPath,
+            "filename" => $destinationPath,
             "timeout" => 60,
             "file" => fopen('inputfile.heic', 'r'),
         ])
         ->wait()
         ->download();
-    } */
+    }
     function microtime_float()
     {
         list($usec, $sec) = explode(" ", microtime());
