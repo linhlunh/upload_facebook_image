@@ -54,6 +54,11 @@ body {
     font-size: 17px;
 }
 
+.detail-content .tquan .insert-information .row .input-right .date-dropdowns select {
+    width: 32%;
+    height: 43px;
+}
+
 .detail-content .tquan .insert-information .down {
     padding-top: 20px
 }
@@ -297,6 +302,74 @@ body {
 
 .detail-content .ds-mobile {
     display: none;
+}
+
+.detail-content .horizontal {
+    position: absolute;
+    top: 2710px;
+}
+
+.detail-content .horizontal img {
+    width: 105%
+}
+
+.detail-content .overview {
+    position: absolute;
+    top: 2710px;
+    width: 100%
+}
+
+.detail-content .overview .row .info-1 .information {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: #fff
+}
+
+.detail-content .overview .row .info-1 .information h3 {
+    font-weight: bold;
+}
+
+.detail-content .overview .row .info-1 .information a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.detail-content .overview .row .info-1 .information a span {
+    font-weight: initial;
+    font-size: 19px
+}
+
+.detail-content .overview .row .info-2 .vertical {
+    position: absolute;
+    left: 100px;
+    top: 13px;
+}
+
+.detail-content .overview .row .info-2 .vertical img {
+    width: 112%
+}
+
+.detail-content .overview .row .info-3 .sponsor {
+    position: absolute;
+    top: 15px;
+    color: #fff
+}
+
+.detail-content .overview .row .info-3 .sponsor h3 {
+    font-weight: bold;
+    margin-left: 150px
+}
+
+.detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+    height: 200px;
+}
+
+.detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+    margin-left: 70px;
+    margin-top: 20px;
 }
 
 .error {
@@ -1343,6 +1416,11 @@ body {
         height: 43px;
         font-size: 17px;
     }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+        width: 84%;
+    }
     .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
@@ -1844,6 +1922,11 @@ body {
         height: 43px;
         font-size: 17px;
     }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+        width: 75%;
+    }
     .detail-content .tquan .insert-information .down {
         padding-top: 20px
     }
@@ -2059,6 +2142,68 @@ body {
     .mbsc-sc-itm div {
         color: #fff;
     }
+    .detail-content .horizontal {
+        position: absolute;
+        top: 2725px;
+    }
+    .detail-content .horizontal img {
+        width: 105%
+    }
+    .detail-content .overview {
+        position: absolute;
+        top: 2727px;
+        width: 100%
+    }
+    .detail-content .overview .row .info-1 .information {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        color: #fff
+    }
+    .detail-content .overview .row .info-1 .information h3 {
+        font-weight: bold;
+    }
+    .detail-content .overview .row .info-1 .information a {
+        font-weight: bold;
+        color: #fff;
+        font-size: 22px;
+        text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information a span {
+        font-weight: initial;
+        font-size: 19px
+    }
+    .detail-content .overview .row .info-2 .vertical {
+        position: absolute;
+        left: 100px;
+        top: 13px;
+    }
+    .detail-content .overview .row .info-2 .vertical img {
+        width: 104%
+    }
+    .detail-content .overview .row .info-3 .sponsor {
+        position: absolute;
+        top: 15px;
+        color: #fff
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        margin-left: 150px
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+        height: 200px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+    .error {
+        color: #fff;
+        display: none;
+    }
+    .mbsc-sc-itm div {
+        color: #fff;
+    }
 }
 
 @media ( max-width: 568px) {
@@ -2097,6 +2242,11 @@ body {
         width: 465px;
         height: 43px;
         font-size: 17px;
+    }
+    .detail-content .insert-information .row .input-right {
+        margin-left: 80px;
+        margin-top: 5px;
+        width: 79%;
     }
     .detail-content .tquan .insert-information .down {
         padding-top: 20px
@@ -2354,6 +2504,11 @@ body {
     .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
+        width: 65%
+    }
+    .detail-content .tquan .insert-information .row .input-right .date-dropdowns select {
+        width: 32%;
+        height: 16px;
     }
     .detail-content .tquan .insert-information .row input {
         width: 130%;
@@ -2413,7 +2568,8 @@ body {
         margin-top: -5px;
     }
     .detail-content .tquan .describe .popup-1 .modal-dialog {
-        width: 95%;
+        width: 65%;
+        margin-left: 60px;
     }
     .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url(../../../assets/img-facebook/BGpopup.png) !important;
@@ -2576,6 +2732,82 @@ body {
         font-size: 7px;
         color: #fff
     }
+    .detail-content .horizontal {
+        position: absolute;
+        top: 1000px;
+    }
+    .detail-content .horizontal img {
+        width: 100%
+    }
+    .detail-content .overview {
+        position: absolute;
+        top: 987px;
+        width: 100%;
+    }
+    .detail-content .overview .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-1 {
+        width: 45.666667%;
+    }
+    .detail-content .overview .row .info-1 .information {
+        line-height: 9px;
+        position: absolute;
+        top: 3px;
+        left: 25px;
+        color: #fff;
+        width: 100%;
+    }
+    .detail-content .overview .row .info-1 .information h3 {
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    .detail-content .overview .row .info-1 .information a {
+        font-weight: bold;
+        color: #fff;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information a span {
+        font-weight: initial;
+        font-size: 10px;
+    }
+    .detail-content .overview .row .info-2 .vertical {
+        position: absolute;
+        left: 31px;
+        top: 25px;
+    }
+    .detail-content .overview .row .info-2 .vertical img {
+        width: 42%;
+    }
+    .detail-content .overview .row .info-3 .sponsor {
+        position: absolute;
+        top: 15px;
+        color: #fff;
+        width: 92%;
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        font-size: 12px;
+        text-align: left;
+        width: 90%;
+        margin-left: 235px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+        width: 250%;
+        margin-left: 200px;
+        margin-top: -8px;
+        height: unset;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+        margin-top: 6px;
+        width: 100%;
+        margin-left: 234px;
+    }
 }
 
 @media ( max-width: 411px) {
@@ -2621,6 +2853,12 @@ body {
     .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
+        width: 65%;
+    }
+    .detail-content .tquan .insert-information .row .input-right .date-dropdowns select {
+        width: 32%;
+        height: 16px;
+        font-size: 10px;
     }
     .detail-content .tquan .insert-information .row input {
         width: 130%;
@@ -2680,7 +2918,8 @@ body {
         margin-top: -5px;
     }
     .detail-content .tquan .describe .popup-1 .modal-dialog {
-        width: 95%;
+        width: 70%;
+        margin-left: 60px;
     }
     .detail-content .tquan .describe .popup-1 .modal-content {
         background-image: url(../../../assets/img-facebook/BGpopup.png) !important;
@@ -2842,6 +3081,82 @@ body {
         font-style: italic;
         font-size: 7px;
         color: #fff
+    }
+    .detail-content .horizontal {
+        position: absolute;
+        top: 990px;
+    }
+    .detail-content .horizontal img {
+        width: 100%
+    }
+    .detail-content .overview {
+        position: absolute;
+        top: 978px;
+        width: 100%;
+    }
+    .detail-content .overview .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-1 {
+        width: 45.666667%;
+    }
+    .detail-content .overview .row .info-1 .information {
+        line-height: 9px;
+        position: absolute;
+        top: 3px;
+        left: 25px;
+        color: #fff;
+        width: 100%;
+    }
+    .detail-content .overview .row .info-1 .information h3 {
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    .detail-content .overview .row .info-1 .information a {
+        font-weight: bold;
+        color: #fff;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information a span {
+        font-weight: initial;
+        font-size: 10px;
+    }
+    .detail-content .overview .row .info-2 .vertical {
+        position: absolute;
+        left: 31px;
+        top: 25px;
+    }
+    .detail-content .overview .row .info-2 .vertical img {
+        width: 42%;
+    }
+    .detail-content .overview .row .info-3 .sponsor {
+        position: absolute;
+        top: 15px;
+        color: #fff;
+        width: 92%;
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        font-size: 12px;
+        text-align: left;
+        width: 90%;
+        margin-left: 235px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+        width: 250%;
+        margin-left: 200px;
+        margin-top: -8px;
+        height: unset;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+        margin-top: 6px;
+        width: 100%;
+        margin-left: 234px;
     }
 }
 
@@ -3101,6 +3416,82 @@ body {
         font-size: 7px;
         color: #fff
     }
+    .detail-content .horizontal {
+        position: absolute;
+        top: 904px;
+    }
+    .detail-content .horizontal img {
+        width: 100%
+    }
+    .detail-content .overview {
+        position: absolute;
+        top: 891px;
+        width: 100%;
+    }
+    .detail-content .overview .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-1 {
+        width: 45.666667%;
+    }
+    .detail-content .overview .row .info-1 .information {
+        line-height: 9px;
+        position: absolute;
+        top: 3px;
+        left: 25px;
+        color: #fff;
+        width: 100%;
+    }
+    .detail-content .overview .row .info-1 .information h3 {
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    .detail-content .overview .row .info-1 .information a {
+        font-weight: bold;
+        color: #fff;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information a span {
+        font-weight: initial;
+        font-size: 10px;
+    }
+    .detail-content .overview .row .info-2 .vertical {
+        position: absolute;
+        left: 31px;
+        top: 25px;
+    }
+    .detail-content .overview .row .info-2 .vertical img {
+        width: 38%;
+    }
+    .detail-content .overview .row .info-3 .sponsor {
+        position: absolute;
+        top: 15px;
+        color: #fff;
+        width: 92%;
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        font-size: 12px;
+        text-align: left;
+        width: 90%;
+        margin-left: 235px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+        width: 250%;
+        margin-left: 200px;
+        margin-top: -8px;
+        height: unset;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+        margin-top: 6px;
+        width: 100%;
+        margin-left: 234px;
+    }
 }
 
 @media ( max-width: 360px) {
@@ -3146,6 +3537,14 @@ body {
     .detail-content .tquan .insert-information .row .input-right {
         margin-left: 80px;
         margin-top: 5px;
+    }
+    .detail-content .tquan .insert-information .row .birthday-1 {
+        width: 65%;
+    }
+    .detail-content .tquan .insert-information .row .input-right .date-dropdowns select {
+        width: 32%;
+        height: 16px;
+        font-size: 10px;
     }
     .detail-content .tquan .insert-information .row input {
         width: 130%;
@@ -3204,7 +3603,7 @@ body {
         margin-top: -5px;
     }
     .detail-content .tquan .describe .popup-1 .modal-dialog {
-        width: 91%;
+        width: 70%;
     }
     .detail-content .tquan .describe .popup-1 .modal-content {
         width: 100% !important;
@@ -3361,7 +3760,83 @@ body {
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
         font-size: 7px;
-        color: #fff
+        color: #fff;
+    }
+    .detail-content .horizontal {
+        position: absolute;
+        top: 864px;
+    }
+    .detail-content .horizontal img {
+        width: 100%
+    }
+    .detail-content .overview {
+        position: absolute;
+        top: 850px;
+        width: 100%;
+    }
+    .detail-content .overview .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-1 {
+        width: 45.666667%;
+    }
+    .detail-content .overview .row .info-1 .information {
+        line-height: 9px;
+        position: absolute;
+        top: 3px;
+        left: 25px;
+        color: #fff;
+        width: 100%;
+    }
+    .detail-content .overview .row .info-1 .information h3 {
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    .detail-content .overview .row .info-1 .information a {
+        font-weight: bold;
+        color: #fff;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information a span {
+        font-weight: initial;
+        font-size: 10px;
+    }
+    .detail-content .overview .row .info-2 .vertical {
+        position: absolute;
+        left: 31px;
+        top: 25px;
+    }
+    .detail-content .overview .row .info-2 .vertical img {
+        width: 38%;
+    }
+    .detail-content .overview .row .info-3 .sponsor {
+        position: absolute;
+        top: 15px;
+        color: #fff;
+        width: 92%;
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        font-size: 12px;
+        text-align: left;
+        width: 90%;
+        margin-left: 235px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+        width: 250%;
+        margin-left: 200px;
+        margin-top: -8px;
+        height: unset;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+        margin-top: 6px;
+        width: 100%;
+        margin-left: 234px;
     }
 }
 
@@ -3543,7 +4018,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 465px;
+        top: 459px;
         width: 100%;
         padding-left: 12px;
     }
@@ -3587,7 +4062,7 @@ body {
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 640px
+        top: 635px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
@@ -3604,7 +4079,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 695px
+        top: 685px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
@@ -3631,5 +4106,81 @@ body {
         font-style: italic;
         font-size: 7px;
         color: #fff
+    }
+    .detail-content .horizontal {
+        position: absolute;
+        top: 765px;
+    }
+    .detail-content .horizontal img {
+        width: 100%
+    }
+    .detail-content .overview {
+        position: absolute;
+        top: 767px;
+        width: 100%;
+    }
+    .detail-content .overview .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-1 {
+        width: 53.666667%;
+    }
+    .detail-content .overview .row .info-1 .information {
+        line-height: 9px;
+        position: absolute;
+        top: -15px;
+        left: 25px;
+        color: #fff;
+        width: 100%;
+    }
+    .detail-content .overview .row .info-1 .information h3 {
+        font-weight: bold;
+        font-size: 10px;
+        padding-top: 7px;
+    }
+    .detail-content .overview .row .info-1 .information a {
+        font-weight: bold;
+        color: #fff;
+        font-size: 10px;
+        text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information a span {
+        font-weight: initial;
+        font-size: 10px;
+    }
+    .detail-content .overview .row .info-2 .vertical {
+        position: absolute;
+        left: 31px;
+        top: 8px;
+    }
+    .detail-content .overview .row .info-2 .vertical img {
+        width: 35%;
+    }
+    .detail-content .overview .row .info-3 .sponsor {
+        position: absolute;
+        top: 0px;
+        color: #fff;
+        width: 92%;
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        font-size: 12px;
+        text-align: left;
+        width: 68%;
+        margin-left: 235px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row {
+        width: 100%
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
+        width: 250%;
+        margin-left: 200px;
+        margin-top: -8px;
+        height: unset;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
+        margin-top: 6px;
+        width: 100%;
+        margin-left: 234px;
     }
 }

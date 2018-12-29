@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="../../../assets/css/upload-28-12.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.min.js"></script>
-    
+    <script src="../../../../assets/libs/datepicker/dist/styles.css"></script>
+
 
 
 </head>
@@ -21,7 +22,7 @@
 <body class="body-content">
     <div class="content">
         <div class="bgr" style="width: 100%; margin: 0 auto; margin-top: -15px;">
-            <img src="../../../assets/img/img-facebook/BG.jpg" style="width: 105%">
+            <img src="../../../assets/img/img-facebook/BG-1.png" style="width: 105%">
         </div>
         <div class="detail-content">
 
@@ -40,8 +41,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right">
-                                <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right birthday-1">
+                                <input autocomplete="off" class="birthday" type="hidden" name="birthday" id="birthday" placeholder="Ngày sinh">
                                 <div class="notification">
                                     <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
                                     <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
@@ -110,7 +111,7 @@
                                 }
                             </script>
                             <div class="modal fade " id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
+                                <div class="modal-dialog" role="document" style="width: 80%; margin-left: 30px">
                                     <div class="modal-content" style="width: 100%;">
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
@@ -155,7 +156,7 @@
                                     <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 101%; margin-left: -1px; text-align: justify;">
                                         <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                         <div class="container">
-                                            <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: #fff;border-radius: 25px;">
                                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                         </div>
                                             <div class="content-text" style="margin-top: 15px">
@@ -196,7 +197,7 @@
                             <div class="margin-top-10" id="term_agreement">
                                 <div class="checkbox text-highlight">
                                     <label class="text-price font-size-15">
-                                        Khi gửi ảnh là bạn đã đồng ý quy định của chúng tôi
+                                        Khi gửi ảnh là bạn đã đồng ý với Thể lệ và Quy định của cuộc thi
                                     </label>
                                 </div>
                                 <div class="upload">
@@ -204,11 +205,11 @@
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
                                         <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
                                     </button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
             </form>
 
             <div class="ds-desktop">
@@ -223,7 +224,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-1">
                             <h1 style="color: #fff; font-weight: bold">Tour Thái Lan 5N4Đ cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá</h3>
+                            <h3 style="color: #fff">Trị Giá: 12.000.000vnđ</h3>
                         </div>
 
                     </div>
@@ -237,7 +238,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2">
                             <h1 style="color: #fff; font-weight: bold">1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá</h3>
+                            <h3 style="color: #fff">Trị Giá: 7.600.000vnđ</h3>
                         </div>
 
                     </div>
@@ -251,7 +252,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-3">
                             <h1 style="color: #fff; font-weight: bold">Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</h1>
-                            <h3 style="color: #fff">Trị Giá</h3>
+                            <h3 style="color: #fff">Trị Giá: 3.470.000vnđ</h3>
                         </div>
 
                     </div>
@@ -279,9 +280,9 @@
                 <div class="how-to-play">
                     <div class="container">
                         <h3>Cách chơi:</h3>
-                        <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                        <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 100 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
-                        <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
+                        <a>Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
+                        <a>Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
+                        <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm. </a>
                     </div>
                 </div>
 
@@ -290,8 +291,8 @@
                         <h3>Cách thức tính điểm:</h3>
                         <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
                         <a><span>1 share</span> = <span>3 điểm</span></a><br/>
-                        <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
-                        <a>bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
+                        <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên </a><br/>
+                        <a>bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi).</a><br/>
                         <div style="margin-top: 5px "><a style=" text-decoration: none; color: #fff; font-size: 15px "><span style="color: #f9d202 ">CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span style="color: #f9d202 ">1 ảnh</span></a><br/></div>
                         <div style="margin-top: 10px "><a style="font-style: italic; text-decoration: none; color: #fff; ">Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
                     </div>
@@ -306,7 +307,7 @@
                             <img src="../../assets/img/img-facebook/giai nhat.png" alt="">
                             <div class="title-1">
                                 <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
-                                <a>Trị Giá</a>
+                                <a>Trị Giá: 12.000.000vnđ</a>
                             </div>
                         </div>
 
@@ -314,7 +315,7 @@
                             <img src="../../assets/img/img-facebook/giai nhi.png" alt="" style="margin-top: -8px">
                             <div class="title-1">
                                 <a>1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</a><br/>
-                                <a>Trị Giá</a>
+                                <a>Trị Giá: 7.600.000vnđ</a>
                             </div>
                         </div>
 
@@ -325,7 +326,7 @@
                             <img src="../../assets/img/img-facebook/giai ba.png" alt="">
                             <div class="title-1">
                                 <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</a><br/>
-                                <a>Trị Giá</a>
+                                <a>Trị Giá: 3.470.000vnđ</a>
                             </div>
                         </div>
 
@@ -349,9 +350,9 @@
                     <div class="container">
                         <h3>Cách chơi:</h3>
                         <div class="content">
-                            <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                            <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 100 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
-                            <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
+                            <a>Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
+                            <a>Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
+                            <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm. </a>
                         </div>
                     </div>
                 </div>
@@ -370,8 +371,56 @@
                     </div>
                 </div>
             </div>
+
+            <div class="horizontal">
+                <img src="../../../assets/img/img-facebook/Asset 10.png" alt="">
             </div>
+
+            <div class="overview">
+                
+                <div class="row">
+                    
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-1">
+                        <div class="information">
+                            <h3>Thông tin công ty:</h3>
+                            <a class="address">VP Hà Nội: <span class="detail">12A ngõ Bà Triệu, phố Bà Triệu, Q.Hai Bà Trưng.</span></a><br/>
+                            <a class="address">VP HCM: <span class="detail">95 Trần Quang Khải, Tân, Q.1</span></a><br/>
+                            <a class="address">Hotline: <span class="detail">1900 6505(Nhấn phím 0)</span></a><br/>
+                            <a class="address">Email: <span class="detail">marketing@bestprice.vn</span></a><br/>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 info-2">
+                        <div class="vertical">
+                            <img src="../../../assets/img/img-facebook/Asset 11.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-3">
+                        <div class="sponsor">
+                            <h3>Nhà tài trợ:</h3>
+                            
+                            <div class="row">
+                                
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-1">
+                                    <img src="../../../assets/img/img-facebook/Asset 13.png" alt="">
+                                </div>
+
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
+                                    <img src="../../../assets/img/img-facebook/Asset 12.png" alt="">
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
+        </div>
+    </div>
+
             <script>
                 var fileImg = '';
                 $('input[type="file"]').change(function(e) {
@@ -391,7 +440,9 @@
                     var full_name = $('#full_name').val();
                     var email = $('#email').val();
                     var phone = $('#phone').val();
-                    var birthday = $('#birthday').val();
+                    var birthday = $('.day').val() + "/" + $('.month').val()+ "/" + $('.year').val();
+console.log(birthday);
+
 
                     var check = true;
 
@@ -487,47 +538,52 @@
             </script>
 
             <script>
-               
                 $(function() {
                     if ($(window).width() < 767) {
-                        
+
                         $('#note').attr('data-toggle', 'modal');
                     } else {
-                       
+
                         $('#note').attr('data-toggle', ' ');
-                        
+
                     }
                 });
+                $(function() {
+                    $(".birthday").dateDropdowns();
+                });
             </script>
+            <div class="wrapper">
+
+            </div>
+
+
+
             <script>
-            $("birthday").dateDropdowns();
-            $("birthday").dateDropdowns({
-                defaultDate: null,
-                defaultDateFormat: "yyyy-mm-dd",
-                displayFormat: "dmy",
-                submitFormat: "yyyy-mm-dd",
-                minAge: 0,
-                maxAge: 120,
-                minYear: null,
-                maxYear: null,
-                submitFieldName: "date",
-                wrapperClass: "date-dropdowns",
-                dropdownClass: null,
-                daySuffixes: true,
-                monthSuffixes: true,
-                monthFormat: "long",
-                required: false,
-                dayLabel: 'Day',
-                monthLabel: 'Month',
-                yearLabel: 'Year',
-                monthLongValues: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                monthShortValues: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                initialDayMonthYearValues: ['Day', 'Month', 'Year'],
-                daySuffixValues: ['st', 'nd', 'rd', 'th']
-            });
+                $("birthday").dateDropdowns();
+                $("birthday").dateDropdowns({
+                    defaultDate: null,
+                    defaultDateFormat: "yyyy-mm-dd",
+                    displayFormat: "dmy",
+                    submitFormat: "yyyy-mm-dd",
+                    minAge: 1,
+                    maxAge: 120,
+                    minYear: null,
+                    maxYear: null,
+                    submitFieldName: "date",
+                    wrapperClass: "date-dropdowns",
+                    dropdownClass: null,
+                    daySuffixes: true,
+                    monthSuffixes: true,
+                    monthFormat: "long",
+                    required: false,
+                    dayLabel: 'Day',
+                    monthLabel: 'Month',
+                    yearLabel: 'Year',
+                    monthLongValues: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    monthShortValues: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    initialDayMonthYearValues: ['Day', 'Month', 'Year'],
+                    daySuffixValues: ['st', 'nd', 'rd', 'th']
+                });
+            </script>
 
-
-
-
-</script>
 </body>
