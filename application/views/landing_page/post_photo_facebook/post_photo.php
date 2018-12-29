@@ -16,8 +16,7 @@
     <script src="../../../../assets/libs/datepicker-jquery/dist/jquery.date-dropdowns.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-    <link rel="stylesheet" href="../../../assets/css/upload-27-12-9h29.css">
-    <link rel="stylesheet" href="../../../../assets/libs/datepicker-jquery/dist/jquery_date_dropdowns.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-29-12-9h20.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
 </head>
@@ -25,7 +24,7 @@
 <body class="body-content">
     <div class="content">
         <div class="bgr" style="width: 100%; margin: 0 auto; margin-top: -15px;">
-            <img src="../../../assets/img/img-facebook/BG.jpg" style="width: 105%">
+            <img src="../../../assets/img/img-facebook/BG-1.png" style="width: 105%">
         </div>
         <div class="detail-content">
 
@@ -44,11 +43,11 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right">
-                                <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right birthday-1">
+                                <input autocomplete="off" class="birthday" type="hidden" name="birthday" id="birthday" placeholder="Ngày sinh">
                                 <div class="notification">
                                     <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
-                                    <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
+                                    <span class='error' id='error_birthday'>Vui lòng chọn ngày sinh!</span>
                                 </div>
                             </div>
 
@@ -68,7 +67,7 @@
                                 <input autocomplete="off" class="email" type="text" name="email" id="email" placeholder="Email">
                                 <div class="notification">
                                     <span class='error' id='error_email'>Email không được để trống!</span>
-                                    <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
+                                    <span class='error' id='error_wrong_email'>Email không đúng định dạng</span>
                                 </div>
                             </div>
 
@@ -77,7 +76,7 @@
                     </div>
 
                     <div class="choose-img">
-                        <input  type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
+                        <input type="file" name="picture" id="file_info" class="custom-file-input" style="color: #fff">
                         <p style="color: white">
                             <span class='error' id='error_picture'>Bạn chưa chọn file ảnh!</span>
                             <span class='error' id='error_picture_type'>Ảnh bạn chọn chưa đúng định dạng!</span>
@@ -89,41 +88,38 @@
                         <h3>-MÔ TẢ ẢNH-</h3>
                         <h4>(Nếu có)</h4>
                         <div class="fill-description">
-                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note"  data-toggle="modal" data-target="#abc"  onkeydown="checkWordLen(this);"></textarea>
+                            <textarea placeholder="Nhập Mô Tả Ảnh" class="description-desktop" name="description" id="note" data-toggle="modal" data-target="#abc" onkeydown="checkWordLen(this);"></textarea>
                             <script>
                                 function checkWordLen(element) {
                                     element.style.height = "100px";
                                     element.style.height = (element.scrollHeight) + "px";
 
                                     var wordLen = 100,
-                                    len;
+                                        len;
                                     $('#note').keydown(function(event) {
-                                    len = $('#note').val().split(/[\s]+/);
-                                    if (len.length > wordLen) {
-                                        $('#note').val(len.splice(0,100).join(' ')+' ');
-                                        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) 
-                                        {
+                                        len = $('#note').val().split(/[\s]+/);
+                                        if (len.length > wordLen) {
+                                            $('#note').val(len.splice(0, 100).join(' ') + ' ');
+                                            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
 
-                                        }else if (event.keyCode < 48 || event.keyCode > 57) {
-                                            event.preventDefault();
+                                            } else if (event.keyCode < 48 || event.keyCode > 57) {
+                                                event.preventDefault();
+                                            }
+                                            element.style.height = "100px";
+                                            element.style.height = (element.scrollHeight) + "px";
                                         }
-                                        element.style.height = "100px";
-                                        element.style.height = (element.scrollHeight) + "px";
-                                    }
-                                    
-                                }); 
+
+                                    });
                                 }
-                                
-                                
                             </script>
-                            <div class="modal fade "  id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content" style="width: 100%;">
+                            <div class="modal fade " id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
+                                <div class="modal-dialog" role="document" style="width: 80%; margin-left: 30px">
+                                    <div class="modal-content" style="width: 100%;">
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
                                             <div class="form-group" style="">
-                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text"  onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
-                                            
+                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+
                                                 <script>
                                                     function checkWord(element) {
                                                         var x = document.getElementById("text").value;
@@ -134,9 +130,9 @@
                                                     $('#text').keydown(function(event) {
                                                         len = $('#text').val().split(/[\s]+/);
                                                         if (len.length > word) {
-                                                            
-                                                            $('#text').val(len.splice(0,100).join(' ')+' ');
-                                                            
+
+                                                            $('#text').val(len.splice(0, 100).join(' ') + ' ');
+
                                                             if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {} else if (event.keyCode < 48 || event.keyCode > 57) {
                                                                 event.preventDefault();
                                                             }
@@ -148,12 +144,12 @@
                                         <div class="modal-footer" style="">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
                                         </div>
-                                        </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                        <div class="regulations">
-                            <a href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
+                        <div class="regulations" style="color: #fff; margin-top: 10px;">
+                            Khi gửi ảnh là bạn đã đồng ý với <a style="text-decoration: underline;" href="" data-toggle="modal" data-target="#exampleModalLong">Thể lệ và Quy định của chương trình</a>
                         </div>
 
                         <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -162,8 +158,8 @@
                                     <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 101%; margin-left: -1px; text-align: justify;">
                                         <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                         <div class="container">
-                                        <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: #fff;border-radius: 25px;">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                         </div>
                                             <div class="content-text" style="margin-top: 15px">
                                                 <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
@@ -201,15 +197,10 @@
                         <div class="send-img">
 
                             <div class="margin-top-10" id="term_agreement">
-                                <div class="checkbox text-highlight">
-                                    <label class="text-price font-size-15">
-                                        Khi gửi ảnh là bạn đã đồng ý quy định của chúng tôi
-                                    </label>
-                                </div>
-                                <div class="upload">
+                                <div class="upload" style="margin-top: 35px;">
                                     <button type="submit" value="" id="id_upload" name="action">
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
-                                        <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
+                                        <span style='display:none' id='btn_loading'><i style='margin-right: 4px' class="fa fa-spinner fa-spin"></i>ĐANG GỬI...</span>
                                     </button>
                                 </div>
                             </div>
@@ -230,7 +221,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-1">
                             <h1 style="color: #fff; font-weight: bold">Tour Thái Lan 5N4Đ cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá</h3>
+                            <h3 style="color: #fff">Trị Giá: 12.000.000vnđ</h3>
                         </div>
 
                     </div>
@@ -244,7 +235,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2">
                             <h1 style="color: #fff; font-weight: bold">1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá</h3>
+                            <h3 style="color: #fff">Trị Giá: 7.600.000vnđ</h3>
                         </div>
 
                     </div>
@@ -258,7 +249,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-3">
                             <h1 style="color: #fff; font-weight: bold">Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</h1>
-                            <h3 style="color: #fff">Trị Giá</h3>
+                            <h3 style="color: #fff">Trị Giá: 3.470.000vnđ</h3>
                         </div>
 
                     </div>
@@ -286,9 +277,9 @@
                 <div class="how-to-play">
                     <div class="container">
                         <h3>Cách chơi:</h3>
-                        <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                        <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 500 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
-                        <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
+                        <a>Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
+                        <a>Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
+                        <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm. </a>
                     </div>
                 </div>
 
@@ -297,9 +288,13 @@
                         <h3>Cách thức tính điểm:</h3>
                         <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
                         <a><span>1 share</span> = <span>3 điểm</span></a><br/>
-                        <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
-                        <a>bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
+                        <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên </a><br/>
+                        <a>bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi).</a><br/>
                         <div style="margin-top: 5px "><a style=" text-decoration: none; color: #fff; font-size: 15px "><span style="color: #f9d202 ">CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span style="color: #f9d202 ">1 ảnh</span></a><br/></div>
+                        <div class="more" style="margin-top: 10px">
+                            <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
+                            <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
+                        </div>
                         <div style="margin-top: 10px "><a style="font-style: italic; text-decoration: none; color: #fff; ">Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
                     </div>
                 </div>
@@ -311,17 +306,17 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <img src="../../assets/img/img-facebook/giai nhat.png" alt="">
-                            <div class="title-1" >
+                            <div class="title-1">
                                 <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
-                                <a>Trị Giá</a>
+                                <a>Trị Giá: 12.000.000vnđ</a>
                             </div>
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <img src="../../assets/img/img-facebook/giai nhi.png" alt="" style="margin-top: -8px">
-                            <div class="title-1" >
+                            <div class="title-1">
                                 <a>1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</a><br/>
-                                <a>Trị Giá</a>
+                                <a>Trị Giá: 7.600.000vnđ</a>
                             </div>
                         </div>
 
@@ -332,7 +327,7 @@
                             <img src="../../assets/img/img-facebook/giai ba.png" alt="">
                             <div class="title-1">
                                 <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</a><br/>
-                                <a>Trị Giá</a>
+                                <a>Trị Giá: 3.470.000vnđ</a>
                             </div>
                         </div>
 
@@ -356,9 +351,9 @@
                     <div class="container">
                         <h3>Cách chơi:</h3>
                         <div class="content">
-                            <a>Bước 1: Điền thông tin cá nhân người chơi.</a><br/>
-                            <a>Bước 2: Chọn ảnh dự thi và viết mô tả(nếu có) giới hạn tối đa 500 từ và gửi ảnh. BestPrice sẽ gửi mail thông báo cho bạn qua email.</a><br/>
-                            <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm.</a>
+                            <a>Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
+                            <a>Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
+                            <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm. </a>
                         </div>
                     </div>
                 </div>
@@ -372,10 +367,61 @@
                             <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
                             <a>bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
                             <div class="attention"><a><span>CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span>1 ảnh</span></a><br/></div>
+                            <div class="more" style="margin-top: 10px">
+                                <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
+                                <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
+                            </div>
                             <div class="time"><a>Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="horizontal">
+                <img src="../../../assets/img/img-facebook/Asset 10.png" alt="">
+            </div>
+
+            <div class="overview">
+                
+                <div class="row">
+                    
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-1">
+                        <div class="information">
+                            <h3>Thông tin công ty:</h3>
+                            <a class="address">VP Hà Nội: <span class="detail">12A ngõ Bà Triệu, phố Bà Triệu, Q.Hai Bà Trưng.</span></a><br/>
+                            <a class="address">VP HCM: <span class="detail">95 Trần Quang Khải, Tân, Q.1</span></a><br/>
+                            <a class="address">Hotline: <span class="detail">1900 6505(Nhấn phím 0)</span></a><br/>
+                            <a class="address">Email: <span class="detail">marketing@bestprice.vn</span></a><br/>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 info-2">
+                        <div class="vertical">
+                            <img src="../../../assets/img/img-facebook/Asset 11.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-3">
+                        <div class="sponsor">
+                            <h3>Nhà tài trợ:</h3>
+                            
+                            <div class="row">
+                                
+                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-1">
+                                    <img src="../../../assets/img/img-facebook/Asset 13.png" alt="">
+                                </div>
+
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
+                                    <img src="../../../assets/img/img-facebook/Asset 12.png" alt="">
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
         </div>
     </div>
@@ -527,33 +573,23 @@
             }
     </script>
 
-    <script>
-        mobiscroll.settings = {
-            lang: 'en',
-            theme: 'ios'
-        };
+            <script>
+                $(function() {
+                    if ($(window).width() < 767) {
 
-        $(function() {
-            if ($(window).width() < 767) {
-                $('#birthday').mobiscroll().date({
-                    display: 'bubble'
+                        $('#note').attr('data-toggle', 'modal');
+                    } else {
+
+                        $('#note').attr('data-toggle', ' ');
+
+                    }
                 });
-                $('#note').attr('data-toggle', 'modal');
-            } else {
-                $('#birthday').mobiscroll().date({
-                    display: 'bubble',
-                    touchUi: false, 
-                    focusOnClose: false,
+                
+                $(function() {
+                    $(".birthday").dateDropdowns();
                 });
-                $('#note').attr('data-toggle', ' ');
-                $('#birthday').focus(function(){
-            $(this).mobiscroll('show');
-        });
-            }
-        });
+                
+                
+            </script>
 
-   
-    </script>
-    </body>
-
-</html>
+</body>
