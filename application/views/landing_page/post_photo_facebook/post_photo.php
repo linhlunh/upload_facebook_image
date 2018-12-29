@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
-    <link rel="stylesheet" href="../../../assets/css/upload-28-12.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-29-12.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.min.js"></script>
     <script src="../../../../assets/libs/datepicker/dist/styles.css"></script>
@@ -366,6 +366,10 @@
                             <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
                             <a>bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
                             <div class="attention"><a><span>CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span>1 ảnh</span></a><br/></div>
+                            <div class="more" style="margin-top: 10px">
+                                <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
+                                <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
+                            </div>
                             <div class="time"><a>Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
                         </div>
                     </div>
@@ -441,7 +445,7 @@
                     var email = $('#email').val();
                     var phone = $('#phone').val();
                     var birthday = $('.day').val() + "/" + $('.month').val()+ "/" + $('.year').val();
-console.log(birthday);
+
 
 
                     var check = true;
