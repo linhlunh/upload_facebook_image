@@ -12,11 +12,7 @@
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
     <link rel="stylesheet" href="../../../assets/css/upload-29-12-9h20.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.min.js"></script>
-    <script src="../../../../assets/libs/datepicker/dist/styles.css"></script>
-
-
-
+    <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.js"></script>
 </head>
 
 <body class="body-content">
@@ -45,7 +41,7 @@
                                 <input autocomplete="off" class="birthday" type="hidden" name="birthday" id="birthday" placeholder="Ngày sinh">
                                 <div class="notification">
                                     <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
-                                    <span class='error' id='error_birthday'>Ngày sinh không được để trống!</span>
+                                    <span class='error' id='error_birthday'>Vui lòng chọn ngày sinh!</span>
                                 </div>
                             </div>
 
@@ -65,7 +61,7 @@
                                 <input autocomplete="off" class="email" type="text" name="email" id="email" placeholder="Email">
                                 <div class="notification">
                                     <span class='error' id='error_email'>Email không được để trống!</span>
-                                    <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
+                                    <span class='error' id='error_wrong_email'>Email không đúng định dạng</span>
                                 </div>
                             </div>
 
@@ -146,8 +142,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="regulations">
-                            <a href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
+                        <div class="regulations" style="color: #fff; margin-top: 10px;">
+                            Khi gửi ảnh là bạn đã đồng ý với <a style="text-decoration: underline;" href="" data-toggle="modal" data-target="#exampleModalLong">Thể lệ và Quy định của chương trình</a>
                         </div>
 
                         <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -195,12 +191,7 @@
                         <div class="send-img">
 
                             <div class="margin-top-10" id="term_agreement">
-                                <div class="checkbox text-highlight">
-                                    <label class="text-price font-size-15">
-                                        Khi gửi ảnh là bạn đã đồng ý với Thể lệ và Quy định của cuộc thi
-                                    </label>
-                                </div>
-                                <div class="upload">
+                                <div class="upload" style="margin-top: 35px;">
                                     <button type="submit" value="" id="id_upload" name="action">
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
                                         <span style='display:none' id='btn_loading'>ĐANG GỬI...<i style='margin-left: 5px' class="fa fa-spinner fa-spin"></i></span>
@@ -436,24 +427,21 @@
 
                 });
 
-                $('#birthday').change(function() {
+                /* $('#birthday').change(function() {
                     var birthday = $(this).val();
                     var result = birthday.split('/');
                     birthday = result[1] + '/' + result[0] + '/' + result[2];
                     $(this).val(birthday);
 
-                });
+                }); */
 
                 function validateForm() {
                     var full_name = $('#full_name').val();
                     var email = $('#email').val();
                     var phone = $('#phone').val();
-                    var birthday = $('.day').val() + "/" + $('.month').val()+ "/" + $('.year').val();
-
-
-
+                    var birthday = $('#birthday').val();;//$('.day').val() + "/" + $('.month').val()+ "/" + $('.year').val();
+                    
                     var check = true;
-
                     if (fileImg == '') {
                         $('#error_picture').show();
                         check = false;
@@ -556,42 +544,12 @@
 
                     }
                 });
+                
                 $(function() {
                     $(".birthday").dateDropdowns();
                 });
-            </script>
-            <div class="wrapper">
-
-            </div>
-
-
-
-            <script>
-                $("birthday").dateDropdowns();
-                $("birthday").dateDropdowns({
-                    defaultDate: null,
-                    defaultDateFormat: "yyyy-mm-dd",
-                    displayFormat: "dmy",
-                    submitFormat: "yyyy-mm-dd",
-                    minAge: 1,
-                    maxAge: 120,
-                    minYear: null,
-                    maxYear: null,
-                    submitFieldName: "date",
-                    wrapperClass: "date-dropdowns",
-                    dropdownClass: null,
-                    daySuffixes: true,
-                    monthSuffixes: true,
-                    monthFormat: "long",
-                    required: false,
-                    dayLabel: 'Day',
-                    monthLabel: 'Month',
-                    yearLabel: 'Year',
-                    monthLongValues: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                    monthShortValues: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    initialDayMonthYearValues: ['Day', 'Month', 'Year'],
-                    daySuffixValues: ['st', 'nd', 'rd', 'th']
-                });
+                
+                
             </script>
 
 </body>
