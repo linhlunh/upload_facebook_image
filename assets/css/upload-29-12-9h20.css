@@ -581,7 +581,7 @@ body {
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2425px;
         left: -40px;
         width: 100%;
         color: #fff
@@ -596,7 +596,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
+        top: 2600px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -830,7 +830,7 @@ body {
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2415px;
         left: -150px;
         width: 100%;
         color: #fff
@@ -845,7 +845,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
+        top: 2620px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1553,7 +1553,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1100px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1579,14 +1579,14 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2350px
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2470px;
         width: 100%;
         color: #fff
     }
@@ -1600,7 +1600,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
+        top: 2620px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -1833,7 +1833,7 @@ body {
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2450px;
         width: 100%;
         color: #fff
     }
@@ -1847,7 +1847,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
+        top: 2625px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -2093,7 +2093,7 @@ body {
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2435px;
         width: 100%;
         color: #fff
     }
@@ -2107,7 +2107,7 @@ body {
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
+        top: 2580px;
         width: 100%
     }
     .detail-content .ds-desktop .scoring .container {
@@ -2143,14 +2143,14 @@ body {
     }
     .detail-content .horizontal {
         position: absolute;
-        top: 2725px;
+        top: 2840px;
     }
     .detail-content .horizontal img {
         width: 105%
     }
     .detail-content .overview {
         position: absolute;
-        top: 2727px;
+        top: 2840px;
         width: 100%
     }
     .detail-content .overview .row .info-1 .information {
@@ -2178,7 +2178,7 @@ body {
         top: 13px;
     }
     .detail-content .overview .row .info-2 .vertical img {
-        width: 104%
+        width: 143%
     }
     .detail-content .overview .row .info-3 .sponsor {
         position: absolute;
@@ -2703,7 +2703,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 910px
+        top: 920px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
@@ -2733,14 +2733,14 @@ body {
     }
     .detail-content .horizontal {
         position: absolute;
-        top: 1000px;
+        top: 1077px;
     }
     .detail-content .horizontal img {
         width: 100%
     }
     .detail-content .overview {
         position: absolute;
-        top: 987px;
+        top: 1065px;
         width: 100%;
     }
     .detail-content .overview .row {
@@ -2791,13 +2791,14 @@ body {
         font-size: 12px;
         text-align: left;
         width: 90%;
-        margin-left: 235px;
+        margin-left: 269px;
     }
     .detail-content .overview .row .info-3 .sponsor .row {
-        width: 100%
+        width: 100%;
+        margin-left: 5px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 250%;
+        width: 225%;
         margin-left: 200px;
         margin-top: -8px;
         height: unset;
@@ -3417,14 +3418,14 @@ body {
     }
     .detail-content .horizontal {
         position: absolute;
-        top: 904px;
+        top: 975px;
     }
     .detail-content .horizontal img {
         width: 100%
     }
     .detail-content .overview {
         position: absolute;
-        top: 891px;
+        top: 962px;
         width: 100%;
     }
     .detail-content .overview .row {
@@ -3449,12 +3450,12 @@ body {
     .detail-content .overview .row .info-1 .information a {
         font-weight: bold;
         color: #fff;
-        font-size: 10px;
+        font-size: 9px;
         text-decoration: none;
     }
     .detail-content .overview .row .info-1 .information a span {
         font-weight: initial;
-        font-size: 10px;
+        font-size: 8px;
     }
     .detail-content .overview .row .info-2 .vertical {
         position: absolute;
@@ -4175,13 +4176,13 @@ body {
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
         width: 276%;
-        margin-left: 200px;
+        margin-left: 176px;
         margin-top: -8px;
         height: unset;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
         margin-top: 6px;
-        width: 104%;
-        margin-left: 234px;
+        width: 96%;
+        margin-left: 204px;
     }
 }
