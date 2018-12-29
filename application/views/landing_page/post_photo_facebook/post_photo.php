@@ -13,12 +13,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="../../../../assets/libs/datepicker-jquery/dist/jquery.date-dropdowns.min.js"></script>
-    <script src="../../../../assets/libs/usage_datetime/js/mobiscroll.jquery.min.js"></script>
     <link rel="stylesheet" href="../../../../assets/libs/usage_datetime/css/mobiscroll.jquery.min.css">
     <link rel="stylesheet" href="../../../assets/css/upload-29-12-9h20.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
+     <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.js"></script>
 </head>
 
 <body class="body-content">
@@ -446,13 +445,13 @@
             
         });
 
-        $('#birthday').change(function(){
+        /* $('#birthday').change(function(){
             var birthday = $(this).val();
             var result = birthday.split('/');
             birthday = result[1]+'/'+result[0]+'/'+result[2];
             $(this).val(birthday);
             
-        });
+        }); */
 
         function validateForm() {
             var full_name = $('#full_name').val();

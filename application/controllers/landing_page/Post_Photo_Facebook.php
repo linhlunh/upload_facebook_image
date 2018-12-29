@@ -378,7 +378,7 @@ class Post_Photo_Facebook extends CI_Controller{
         $source = \Tinify\fromFile($imgPath);
         $source->toFile($destinationPath);
     }
-    function convertTypeImage()
+    /* function convertTypeImage()
     {
         $basePath = str_replace('application\controllers\landing_page','',__DIR__);
         $basePath = str_replace('\\','/',$basePath);
@@ -398,7 +398,7 @@ class Post_Photo_Facebook extends CI_Controller{
         ])
         ->wait()
         ->download();
-    }
+    } */
     function microtime_float()
     {
         list($usec, $sec) = explode(" ", microtime());
