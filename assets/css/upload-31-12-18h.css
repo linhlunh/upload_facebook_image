@@ -210,7 +210,7 @@ body {
 }
 
 .detail-content .tquan .describe .send-img .margin-top-10 .upload {
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
@@ -2683,7 +2683,7 @@ body {
         margin-left: -32px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload {
-        margin-left: 80px;
+        margin-left: 65px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
@@ -2734,6 +2734,12 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
         width: 80%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi {
+        top: -5px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi .img-6 {
+        width: 80%;
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
         margin-left: 5px;
@@ -3101,7 +3107,7 @@ body {
         margin-left: -32px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload {
-        margin-left: 80px;
+        margin-left: 65px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
@@ -3139,7 +3145,8 @@ body {
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
         top: 545px;
-        width: 100%;
+        left: 25px;
+        width: 93%;
         padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {
@@ -3153,6 +3160,12 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
         width: 75%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi {
+        top: -5px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi .img-6 {
+        width: 80%;
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
         margin-left: 5px;
@@ -3306,7 +3319,7 @@ body {
         margin-left: 220px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-        margin-left: 167px;
+        margin-left: 155px;
         font-size: 9px;
         font-weight: bold;
         width: 285%;
@@ -3461,7 +3474,7 @@ body {
         color: #fff;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload {
-        margin-left: 95px;
+        margin-left: 80px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
@@ -3504,7 +3517,8 @@ body {
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
         top: 490px;
-        width: 100%;
+        left: 25px;
+        width: 93%;
         padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {
@@ -3518,6 +3532,12 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
         width: 75%
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi {
+        top: -5px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi .img-6 {
+        width: 80%;
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
         margin-left: 5px;
@@ -3847,7 +3867,7 @@ body {
         margin-left: 0px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload {
-        margin-left: 95px;
+        margin-left: 80px;
     }
     .detail-content .tquan .describe .send-img .margin-top-10 .upload button {
         color: #000;
@@ -3885,8 +3905,9 @@ body {
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
         top: 465px;
-        width: 100%;
-        padding-left: 12px;
+        margin-left: 5px;
+        width: 88%;
+        padding-left: 11px;
     }
     .detail-content .insert-information .row .input-left .notification {
         font-size: 7px;
@@ -3900,6 +3921,12 @@ body {
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 img {
         width: 75%;
         margin-left: 0px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi {
+        top: -5px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .giainhi .img-6 {
+        width: 80%;
     }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 {
         margin-left: 5px;
@@ -4251,7 +4278,8 @@ body {
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
         top: 459px;
-        width: 100%;
+        left: 3px;
+        width: 93%;
         padding-left: 12px;
     }
     .detail-content .insert-information .row .input-left .notification {

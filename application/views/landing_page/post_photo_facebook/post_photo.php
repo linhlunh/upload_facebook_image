@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload-31-12-16h.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-31-12-18h.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -168,7 +168,7 @@
                                                 <span class="glyphicon glyphicon-remove" aria-hidden="true" style="position: sticky;"></span>
                                         </div>
                                             <div class="content-text" style="margin-top: 15px">
-                                                <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>10MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
+                                                <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>10MB</span>, Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
                                             </div>
 
                                             <div class="content-text-2" style="margin-top: 15px">
@@ -314,15 +314,15 @@
                             <img src="../../assets/img/img-facebook/giainhat.png" alt="">
                             <div class="title-1">
                                 <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
-                                <a>Trị Giá: 12.000.000vnđ</a>
+                                <a style="font-weight: 100;">Trị Giá:</a> <a style="font-weight: bold; color: #fff">12.000.000vnđ</a>
                             </div>
                         </div>
 
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giainhi.png" alt="" style="">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 giainhi">
+                            <img class="img-6" src="../../assets/img/img-facebook/giainhi.png" alt="" style="">
                             <div class="title-1" style="margin-top: 2px">
                                 <a>Tour du thuyền Starlight 5* 2N1Đ cho 2 người</a><br/>
-                                <a>Trị Giá: 7.600.000vnđ</a>
+                                <a style="font-weight: 100;">Trị Giá:</a> <a style="font-weight: bold; color: #fff">7.600.000vnđ</a>
                             </div>
                         </div>
 
@@ -333,7 +333,7 @@
                             <img src="../../assets/img/img-facebook/giaiba.png" alt="">
                             <div class="title-1">
                                 <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc 5* cho 2 người</a><br/>
-                                <a>Trị Giá: 3.470.000vnđ</a>
+                                <a style="font-weight: 100;">Trị Giá:</a> <a style="font-weight: bold; color: #fff">3.470.000vnđ</a>
                             </div>
                         </div>
 
@@ -341,7 +341,7 @@
                             <img src="../../assets/img/img-facebook/khieukhich.png" alt="" style="margin-top: 22px">
                             <div class="title-3">
                                 <a>Voucher đặt vé máy bay</a><br/>
-                                <a>Trị giá: 500.000vnđ/voucher</a>
+                                <a style="font-weight: 100;">Trị giá:</a> <a style="font-weight: bold; color: #fff">500.000vnđ/voucher</a>
                             </div>
                         </div>
 
