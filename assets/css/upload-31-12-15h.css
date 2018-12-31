@@ -67,8 +67,8 @@ body {
 .detail-content .tquan .choose-img {
     position: relative;
     top: 500px;
-    left: 395px;
-    font-size: 20px;
+    left: 415px;
+    font-size: 15px;
     width: 65%;
 }
 
@@ -77,14 +77,14 @@ body {
     display: inline-block;
     border: 0px solid #999;
     border-radius: 0px;
-    padding: 2px 0px 0px 18px;
+    padding: 2px 1px 0px 19px;
     outline: none;
     white-space: nowrap;
     cursor: pointer;
     text-shadow: 1px 1px #fff;
     font-weight: 700;
-    font-size: 13pt;
-    width: 114px;
+    font-size: 10pt;
+    width: 93px;
     background-color: #fff;
     margin: 1px 0px 0px -17px;
     color: #000000;
@@ -105,7 +105,7 @@ body {
 .detail-content .tquan .describe {
     position: relative;
     top: 500px;
-    left: 504px;
+    left: 470px;
     width: 55%;
 }
 
@@ -219,7 +219,7 @@ body {
     padding: 5px 3px 0px 3px;
     font-weight: bold;
     background-color: #fff;
-    width: 25%;
+    width: 30%;
     height: 49px;
     font-size: 20px;
 }
@@ -247,19 +247,20 @@ body {
 }
 
 .detail-content .ds-desktop .content-prize .row .img-3 {
-    margin-top: 10px
+    margin-top: 0px
 }
 
 .detail-content .ds-desktop .content-prize .row .title-3 {
-    margin-top: 125px
+    margin-top: 116px
 }
 
 .detail-content .ds-desktop .content-prize .row .img-4 {
-    top: 40px
+    top: 0px;
+    left: 21px;
 }
 
 .detail-content .ds-desktop .content-prize .row .title-4 {
-    margin-top: 119px
+    margin-top: 78px
 }
 
 .detail-content .ds-desktop .img-rules {
@@ -273,9 +274,13 @@ body {
 
 .detail-content .ds-desktop .how-to-play {
     position: absolute;
-    top: 2435px;
+    top: 2412px;
     width: 100%;
     color: #fff
+}
+
+.detail-content .ds-desktop .how-to-play .container {
+    width: 1125px;
 }
 
 .detail-content .ds-desktop .how-to-play .container h3 {
@@ -286,12 +291,12 @@ body {
 .detail-content .ds-desktop .how-to-play .container a {
     text-decoration: none;
     color: #fff;
-    font-size: 17px
+    font-size: 20px
 }
 
 .detail-content .ds-desktop .scoring {
     position: absolute;
-    top: 2600px;
+    top: 2625px;
     width: 100%
 }
 
@@ -308,7 +313,7 @@ body {
 .detail-content .ds-desktop .scoring .container a {
     text-decoration: none;
     color: #fff;
-    font-size: 17px
+    font-size: 20px
 }
 
 .detail-content .ds-desktop .scoring .container span {
@@ -1535,7 +1540,7 @@ body {
         font-size: 13px;
     }
     .detail-content .tquan .describe .regulations {
-        margin-left: -180px;
+        margin-left: -85px;
         margin-top: -5px;
     }
     .detail-content .tquan .describe .regulations a {
@@ -2046,7 +2051,7 @@ body {
         font-size: 13px;
     }
     .detail-content .tquan .describe .regulations {
-        margin-left: -232px;
+        margin-left: -147px;
         margin-top: -5px;
     }
     .detail-content .tquan .describe .regulations a {
@@ -2385,7 +2390,7 @@ body {
         height: 587px;
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations img {
-        width: 101%
+        width: 100%
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
@@ -2644,9 +2649,10 @@ body {
         margin-left: -147px !important;
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .abc .close {
-        margin-top: 10px;
+        margin-top: -18px;
         opacity: 1;
         font-size: 12px;
+        color: #fff;
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a {
         color: #fff;
@@ -2685,7 +2691,7 @@ body {
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 39%;
+        width: 45%;
         height: 25px;
         font-size: 10px;
         margin-left: 8px;
@@ -2767,7 +2773,7 @@ body {
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #fff;
         text-decoration: none;
     }
@@ -2784,7 +2790,7 @@ body {
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #fff;
         text-decoration: none;
     }
@@ -2798,7 +2804,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
-        font-size: 7px;
+        font-size: 9.5px;
         color: #fff
     }
     .detail-content .horizontal {
@@ -3046,9 +3052,10 @@ body {
         margin-left: 35px;
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .abc .close {
-        margin-top: 5px;
+        margin-top: -20px;
         opacity: 1;
         font-size: 12px;
+        color: #fff;
     }
     .detail-content .tquan .describe .popup-1 .modal-dialog {
         width: 70%;
@@ -3099,7 +3106,7 @@ body {
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 39%;
+        width: 45%;
         height: 25px;
         font-size: 10px;
         margin-left: 8px;
@@ -3171,14 +3178,14 @@ body {
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 835px
+        top: 829px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
         font-size: 11px;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
@@ -3188,14 +3195,14 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 900px
+        top: 910px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
         font-size: 11px;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
@@ -3213,7 +3220,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
-        font-size: 7px;
+        font-size: 10px;
         color: #fff
     }
     .detail-content .horizontal {
@@ -3456,7 +3463,7 @@ body {
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 39%;
+        width: 45%;
         height: 25px;
         font-size: 10px;
         margin-left: -8px;
@@ -3472,6 +3479,11 @@ body {
         color: #fff;
         font-size: 10px;
         padding-left: 5px;
+    }
+    .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .abc .close {
+        margin-top: -19px;
+        color: #fff;
+        font-size: 12px;
     }
     .detail-content .ds-desktop {
         display: none;
@@ -3528,18 +3540,18 @@ body {
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 750px
+        top: 740px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
         font-size: 11px;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #fff;
         text-decoration: none;
     }
@@ -3552,11 +3564,11 @@ body {
         font-size: 11px;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #fff;
         text-decoration: none;
     }
@@ -3570,7 +3582,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
-        font-size: 7px;
+        font-size: 9.5px;
         color: #fff
     }
     .detail-content .horizontal {
@@ -3796,7 +3808,7 @@ body {
         margin-left: 30px
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .abc .close {
-        margin-top: 10px;
+        margin-top: -20px;
         opacity: 1;
         font-size: 12px;
     }
@@ -3837,7 +3849,7 @@ body {
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 39%;
+        width: 45%;
         height: 25px;
         font-size: 10px;
         margin-left: -12px;
@@ -3910,35 +3922,37 @@ body {
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 715px
+        top: 710px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
         font-size: 11px;
+        font-weight: bold;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 9.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #fff;
         text-decoration: none;
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 793px
+        top: 786px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
         font-size: 11px;
+        font-weight: bold;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
         line-height: 8.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #fff;
         text-decoration: none;
     }
@@ -3952,7 +3966,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
-        font-size: 7px;
+        font-size: 9.5px;
         color: #fff;
     }
     .detail-content .horizontal {
@@ -4157,7 +4171,7 @@ body {
         overflow: inherit !important;
     }
     .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .abc .close {
-        margin-top: 7px;
+        margin-top: -14px;
         opacity: 1;
         font-size: 10px;
     }
@@ -4198,7 +4212,7 @@ body {
         padding: 5px 3px 0px 3px;
         font-weight: bold;
         background-color: #fff;
-        width: 43%;
+        width: 45%;
         height: 25px;
         font-size: 10px;
         margin-left: 5px;
@@ -4312,7 +4326,7 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .time a {
         font-style: italic;
-        font-size: 7px;
+        font-size: 8px;
         color: #fff
     }
     .detail-content .horizontal {
