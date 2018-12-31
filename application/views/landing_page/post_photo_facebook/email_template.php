@@ -52,6 +52,8 @@
             Mong rằng bạn sẽ là người giành giải nhất của BestPrice!
         </div>
     </div>
+    <br/>
+    <br/>
     <footer>
         <div class="mail-footer">
             <div style="position: relative; height: 55px; margin: 15px 0px;">

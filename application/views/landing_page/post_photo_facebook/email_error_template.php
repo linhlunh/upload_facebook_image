@@ -32,9 +32,11 @@
     <div>
         <div>Chi tiết lỗi: </div>
         <table>
-            <?php foreach ($variable as $key => $value) : ?>
+            <?php foreach ($erros_mesage as $key => $value) : ?>
+            <tr>
                 <td><?= $key ?>: </td>
-                <td><?= $value ?></td>
+                <td><?=$value ?></td>
+            </tr>
             <?php endforeach ?>
         </table>
     </div>

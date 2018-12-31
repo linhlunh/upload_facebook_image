@@ -100,8 +100,7 @@ class Post_Photo_Facebook extends CI_Controller{
                 
                // echo('<pre>');print_r($tmp_name);echo('</pre>');
                 //$tmp_name = tempnam(sys_get_temp_dir(), 'prefix');
-             	
-                $facebook_picture_id = $this->PostImageUseCurl($tmp_name, $dataSubmit['description'], $InsertedId);//$_FILES['picture']['tmp_name']
+                $facebook_picture_id = $this->PostImageUseCurl($tmp_name, $description, $InsertedId);//$_FILES['picture']['tmp_name']
                 
                 $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
                 
@@ -134,20 +133,22 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $this->send_email_by_marketing('marketing@bestprice.vn', $dataSubmit['email'], $subjectEmail, $emailContentHtml, 'marketing@bestprice.vn');
     
-                        //$this->send_email_by_marketing('marketing@bestprice.vn','phichsama@gmail.com',$subjectEmail,$emailContentHtml);
+                        //$this->send_email_by_marketing('marketing@bestprice.vn','marketing@bestprice.vn',$subjectEmail,$emailContentHtml);
 
                         $data['post_success'] = '1';
                     }else{
-                        $error['erros_mesage'] = json_decode($facebook_picture_link['message']);
-                        $error['oauth_users'] = json_decode($facebook_picture_link['oauth_users']);
+                        $error['erros_mesage'] = json_decode($facebook_picture_link['message'],true);
+                        $error['oauth_users'] = json_decode($facebook_picture_link['oauth_users'],true);
                         $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
                         $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html, 'huudt@bestprice.vn');    
+                        $data['post_success'] = '1';
                     }
                 }else{
-                    $error['erros_mesage'] = json_decode($facebook_picture_id['message']);
-                    $error['oauth_users'] = json_decode($facebook_picture_id['oauth_users']);
+                    $error['erros_mesage'] = json_decode($facebook_picture_id['message'],true);
+                    $error['oauth_users'] = json_decode($facebook_picture_id['oauth_users'],true);
                     $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
                     $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html, 'huudt@bestprice.vn');  
+                    $data['post_success'] = '1';
                 }
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action']))
@@ -217,12 +218,12 @@ class Post_Photo_Facebook extends CI_Controller{
             
             curl_close($ch);
             $result = json_decode($result);
-            
+
             if(!empty($result))
             {
                 if(!empty($result->error))
                 {
-                    $dataReturn['message'] = 'Post image error:<br/>'.json_encode($result->error);
+                    $dataReturn['message'] = json_encode($result->error);
 
                     $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
@@ -235,7 +236,7 @@ class Post_Photo_Facebook extends CI_Controller{
                 }
             }else
             {
-                $dataReturn['message'] = 'Post image error:<br/>Undifine error';
+                $dataReturn['message'] = json_encode(array('Post_image' => 'Undifine error'));
 
                 $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
@@ -281,12 +282,12 @@ class Post_Photo_Facebook extends CI_Controller{
         curl_close($ch);
       
          $result = json_decode($result);
-         
+
          	if(!empty($result))
             {
                 if(!empty($result->error))
                 {
-                    $dataReturn['message'] = 'Get link picture error:<br/>'.json_encode($result->error);
+                    $dataReturn['message'] = json_encode($result->error);
 
                     $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
@@ -299,7 +300,7 @@ class Post_Photo_Facebook extends CI_Controller{
                 }
             }else
             {
-                $dataReturn['message'] = 'Get link picture error:<br/>Undifine error';
+                $dataReturn['message'] = json_encode(array('Get_link_picture_error' => 'Undifine error'));
 
                 $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
