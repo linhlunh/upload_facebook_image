@@ -10,13 +10,20 @@
 	<title>Đăng ảnh đón xuân - Khuân tour miễn phí - BestPrice</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
     <link rel="stylesheet" href="../../../assets/css/upload-29-12-9h20.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
-     <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body class="body-content">
@@ -42,7 +49,7 @@
                             </div>
 
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right birthday-1">
-                                <input autocomplete="off" class="birthday" type="hidden" name="birthday" id="birthday" placeholder="Ngày sinh">
+                                <input autocomplete="off" class="birthday bpv-date-input" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
                                 <div class="notification">
                                     <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
                                     <span class='error' id='error_birthday'>Vui lòng chọn ngày sinh!</span>
@@ -452,6 +459,7 @@
 
             if (full_name === '' || full_name === null) {
                 $('#error_full_name').show();
+                $("html, body").animate({scrollTop: ($('#full_name').offset().top-100)}, 'slow');
                 alert('Họ tên không được để trống!');
                 return false;
                 check = false;
@@ -462,6 +470,7 @@
 
             if (birthday === '' || birthday === null) {
                 $('#error_birthday').show();
+                $("html, body").animate({scrollTop: ($('#birthday').offset().top-100)}, 'slow');
                 alert('Ngày sinh không được để trống!');
                 return false;
                 check = false;
@@ -475,6 +484,7 @@
                 if(birthday > time_now)
                 {
                     $('#error_wrong_birthday').show();
+                    $("html, body").animate({scrollTop: ($('#birthday').offset().top-100)}, 'slow');
                     check = false;
                 }else{
                     $('#error_wrong_birthday').hide();
@@ -484,6 +494,7 @@
             if (phone === '' || phone === null) {
                 $('#error_phone').show();
                 $('#error_wrong_phone').hide();
+                $("html, body").animate({scrollTop: ($('#phone').offset().top-100)}, 'slow');
                 alert('Số điện thoại không được để trống!');
                 return false;
                 check = false;
@@ -491,6 +502,7 @@
                 $('#error_phone').hide();
                 if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
                     $('#error_wrong_phone').show();
+                    $("html, body").animate({scrollTop: ($('#phone').offset().top-100)}, 'slow');
                     alert('Số điện thoại không đúng!');
                     return false;
                     check = false;
@@ -502,6 +514,7 @@
             if (email === '' || email === null) {
                 $('#error_email').show();
                 $('#error_wrong_email').hide();
+                $("html, body").animate({scrollTop: ($('#email').offset().top-100)}, 'slow');
                 alert('Email không được để trống!');
                 return false;
                 check = false;
@@ -509,6 +522,7 @@
                 if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
                     $('#error_wrong_email').show();
                     $('#error_email').hide();
+                    $("html, body").animate({scrollTop: ($('#email').offset().top -100)}, 'slow');
                     alert('Email không hợp lệ!');
                     return false;
                     check = false;
@@ -559,35 +573,33 @@
 
                 return f;
             }
+
+
+        $(function() {
+            if ($(window).width() < 767) {
+
+                $('#note').attr('data-toggle', 'modal');
+
+                var witdh_window = $(window).width();
+
+                $('#modal_success img').css('width',witdh_window-20+'px');
+                $('.btn_go_back').css('width','27%');
+                $('.btn_go_back').css('margin-top','-10%');
+                $('.btn_go_back').css('font-size','10px');
+                $('.btn_go_back').css('height','13%');
+                $('.btn_go_back').css('left','38%');
+                
+            } else {
+                $('#note').attr('data-toggle', ' ');
+            }
+
+            $( "#birthday" ).datepicker({
+                dateFormat: "dd-mm-yy",
+                monthNames: [ "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 8", "Tháng 10", "Tháng 11", "Tháng 12" ],
+                maxDate: new Date(),
+                dayNames: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
+    			dayNamesMin: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
+            });
+        });
     </script>
-
-            <script>
-                $(function() {
-                    if ($(window).width() < 767) {
-
-                        $('#note').attr('data-toggle', 'modal');
-
-                        var witdh_window = $(window).width();
-
-                        $('#modal_success img').css('width',witdh_window-20+'px');
-                        $('.btn_go_back').css('width','27%');
-                        $('.btn_go_back').css('margin-top','-10%');
-                        $('.btn_go_back').css('font-size','10px');
-                        $('.btn_go_back').css('height','13%');
-                        $('.btn_go_back').css('left','38%');
-                        
-                    } else {
-
-                        $('#note').attr('data-toggle', ' ');
-
-                    }
-                });
-                
-                $(function() {
-                    $(".birthday").dateDropdowns();
-                });
-                
-                
-            </script>
-
 </body>
