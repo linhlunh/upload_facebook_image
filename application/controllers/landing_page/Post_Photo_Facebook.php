@@ -47,17 +47,26 @@ class Post_Photo_Facebook extends CI_Controller{
 
                 $urlMoveUploadFile = str_replace('//','/',$urlMoveUploadFile);
                 
+                $urlMoveUploadFileConvert = str_replace('application\controllers\landing_page','',__DIR__).'/images/landing_page/post_photo_facebook_convert';
+                
+                $urlMoveUploadFileConvert = str_replace('application/controllers/landing_page','',$urlMoveUploadFileConvert);
+                
+                $urlMoveUploadFileConvert = str_replace('\\','/',$urlMoveUploadFileConvert);
+                
+                $urlMoveUploadFileConvert = str_replace('//','/',$urlMoveUploadFileConvert);
+                
                 unset($dataSubmit['action']);
 
                 $dataSubmit['created'] = date("Y-m-d H:i:s");
                 $dataSubmit['link'] = "share-photo";
                 
                 $name_arr = explode('.', $_FILES['picture']['name']);
-                $type_img = $name_arr[count($name_arr)-1];
-                
+                $type_img = '.'.$name_arr[count($name_arr)-1];
+                $new_name = '';
                 while(empty($nameImg) || $this->Landing_Page_Model->isSetImageName($nameImg))
                 {
-                    $nameImg = $this->_generate_random_code().'.'.$type_img;
+                    $new_name = $this->_generate_random_code();//.'.'.$type_img
+                    $nameImg = $new_name.$type_img;
                 }
                 unset($dataSubmit['date_']);
                 
@@ -76,14 +85,21 @@ class Post_Photo_Facebook extends CI_Controller{
 
                 $imgPath = $urlMoveUploadFile .'/'.$dataSubmit['picture'];
                 
-                //$this->convertTypeImage($_FILES['picture']['tmp_name'], $nameImg);
+                move_uploaded_file($_FILES['picture']['tmp_name'], $imgPath);
                 
-                //$facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name'],$dataSubmit['description']);
-
-                //$this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
+                if (strtolower($type_img) == '.heic'){
+                	$time_convert_1 = time(true);                	
+                	$this->convertTypeImage($imgPath, $new_name);
+                	$imgPath = $urlMoveUploadFileConvert .'/'.$new_name;                	
+                	$time_convert_2 = time(true);
+                	log_message('error', 'Time Convert Photo => '.($time_convert_2-$time_convert_1));
+                }
                 
-                move_uploaded_file($_FILES['picture']['tmp_name'],$imgPath);
-                echo('<pre>');print_r('huu');echo('</pre>');exit();
+                
+                $facebook_picture_id = $this->PostImageUseCurl($imgPath, $dataSubmit['description']);//$_FILES['picture']['tmp_name']
+                
+                $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
+                
                 if(empty($facebook_picture_id['error_code']))
                 {
                     $dataSubmit['facebook_picture_id'] = $facebook_picture_id;
@@ -111,17 +127,16 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $subjectEmail = 'Thông tin đăng ký dự thi Đăng ảnh đón xuân khuân tour miễn phí.';
 
-                        $this->send_email_by_marketing('phichsama@gmail.com',$dataSubmit['email'],$subjectEmail,$emailContentHtml);
+                        $this->send_email_by_marketing('marketing@bestprice.vn', $dataSubmit['email'], $subjectEmail, $emailContentHtml, 'marketing@bestprice.vn');
     
-                        $this->send_email_by_marketing('phichsama@gmail.com','phichsama@gmail.com',$subjectEmail,$emailContentHtml);
+                        //$this->send_email_by_marketing('marketing@bestprice.vn','phichsama@gmail.com',$subjectEmail,$emailContentHtml);
 
                         $data['post_success'] = '1';
-                    }else
-                    {
-                        $this->send_email_by_marketing('phichsama@gmail.com','phichsama@gmail.com','Error event Tết',$facebook_picture_link['message']);    
+                    }else{
+                        $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $facebook_picture_link['message'], 'huudt@bestprice.vn');    
                     }
                 }else{
-                    $this->send_email_by_marketing('phichsama@gmail.com','phichsama@gmail.com','Error event Tết',$facebook_picture_id['message']);  
+                    $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $facebook_picture_id['message'], 'huudt@bestprice.vn');  
                 }
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action']))
@@ -324,10 +339,10 @@ class Post_Photo_Facebook extends CI_Controller{
 	    $config['smtp_host'] = 'ssl://smtp.googlemail.com';
 	    $config['smtp_port'] = '465';
 	    $config['smtp_timeout'] = '30';
-	   	$config['smtp_user'] = 'phichsama@gmail.com';
-        $config['smtp_pass'] = 'cuong210894';
+	   	$config['smtp_user'] = 'marketing@bestprice.vn';
+        $config['smtp_pass'] = 'Bpt052010$';
         $config['charset'] = 'utf-8';
-
+        
 	    if($count_user['num'] > 350){
 	    	$config['smtp_user'] = 'marketing2@bestprice.vn';
 	    	$config['smtp_pass'] = 'Bpt052010';
@@ -347,12 +362,8 @@ class Post_Photo_Facebook extends CI_Controller{
 	    // send to customer
 	    $this->email->initialize($config);
 
-	    if(ENVIRONMENT == 'production'){
-	    	$this->email->from($from, 'BestPrice');
-	    }else{  // 'testing', 'development'
-	    	$this->email->from($from, 'BestPrice');
-	    }
-
+	    $this->email->from($from, 'BestPrice Travel');
+	    
 	    if (!empty($reply_to)) {
 	        $this->email->to($to);
 	        $this->email->reply_to($reply_to);
@@ -373,59 +384,66 @@ class Post_Photo_Facebook extends CI_Controller{
     function convertTypeImage($imgPath, $file_name = '')
     {
         $url = "https://api.cloudconvert.com/convert";
-
+        
+        $list_key = array(
+        	0 => 'cRiCmpSDlR3lr8Zz5TRdDukWM8xmpzkWwSDmhwx9aeUDhwPYBXUsuB5U8sVawCbr',
+        	1 => 'cVLN60rnU1JnEHAAPrlL4qwlI0vARVtURaFdz63jhPTD6qvRplQMa5GIjAvg0g2m',
+        	2 => 'kdtr0dkhHoo4Ik0z4CVBa78By7yu5JpyH54uvPzxw9BwQMuenYx3djdVuhxm9FFu',
+        	3 => '8HB4jrV1fRxVNeUdCXsySsjKKtxKrP3VSEgBBwA2qsvtpkfMwQ61zKfh9tokUyDC',
+        	4 => '81bH3rDFKee7L8JgjFT0kE8DdWKRhSg5YEfnXnT42CqZxIohqqTI3O237R4DbhBJ',
+        	5 => 'znyuA3rr3UA5aZG5p48I29HXq1WrUdpCTXTZ1Qi5kXYZsUxirqx3MDAGNQIL5zqU',
+        	6 => 'DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj',
+        	//7 => 'HbP19sDgx1EI4bOYFexLqvhxssPAQMFCZVMSVVx3cVF9v8xZNSUHgbXUmxpiKbwU'
+        );
+        
+        array_rand($list_key);
+        
         $post_array = array(
             'file' => new CurlFile($imgPath),
-            'apikey' => 'DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj',
+            'apikey' => $list_key[0],
             'inputformat' => 'heic',
-            "outputformat=jpg", 
-            "input=upload", 
-            "wait=true",
-            "download=true",
-            "outputfile.jpg", 
+            "outputformat" => "jpg", 
+            "input" => "upload", 
+            "wait" => "true",
+            "download" => "false",
+            "filename=".$file_name.".jpg", 
         );
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        
         curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post_array);
-
-            
+        
         $result = curl_exec($ch);
         
         $info = curl_getinfo($ch);
         
         curl_close($ch);
         
-        $save_path = str_replace('application\\', 'images\landing_page\post_photo_facebook_convert', APPPATH);
+        $save_path = str_replace('application/', 'images/landing_page/post_photo_facebook_convert', APPPATH);
         
+        $result = json_decode($result, true);
         
-        if($info['http_code'] == 303){
-        	
-        	$link = $info['redirect_url'];
-        	$chr = curl_init();
-        	
-        	curl_setopt($chr, CURLOPT_POST, false);
-        	
-        	curl_setopt($chr, CURLOPT_URL, $link);
-        	
-        	curl_setopt($chr, CURLOPT_RETURNTRANSFER, 1);
-        	
-        	$result = curl_exec($chr);
-        	$info_chr = curl_getinfo($chr);
-        	curl_close($chr);
-        	
-        	$savefile = fopen($save_path .'/'. $file_name, 'w');
-        	fwrite($savefile, $result);
-        	fclose($savefile);
-        	echo('<pre>');print_r($info_chr);echo('</pre>');
-        	echo('<pre>');print_r($result);echo('</pre>');
+        $link = !empty($result['output']['url']) ? 'https:'.$result['output']['url'] : '';
+        
+        if (isset($result['code']) && $result['code'] == 402){
+        	$this->convertTypeImage($imgPath, $file_name);
         }
+        
+        if(!empty($link)){        	
+        	$file = $save_path .'/'. $file_name.'.jpg';
+        	$savefile = fopen($file, 'w+');
+        	fwrite($savefile, file_get_contents($link));
+        	fclose($savefile);        	
+        }
+        
+        return true;
         
     }
     
