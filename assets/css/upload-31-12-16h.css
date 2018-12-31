@@ -170,6 +170,7 @@ body {
 .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .abc .close {
     margin-top: -120px;
     opacity: 1;
+    color: #fff;
 }
 
 .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
@@ -2769,7 +2770,7 @@ body {
         font-size: 11px;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
@@ -2779,20 +2780,23 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 920px
+        top: 930px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
         font-size: 11px;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
         font-size: 9.5px;
         color: #fff;
         text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .more {
+        margin-top: 10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
         text-decoration: none;
@@ -2826,7 +2830,7 @@ body {
         width: 45.666667%;
     }
     .detail-content .overview .row .info-1 .information {
-        line-height: 9px;
+        line-height: 12px;
         position: absolute;
         top: 3px;
         left: 25px;
@@ -3210,6 +3214,9 @@ body {
         color: #fff;
         text-decoration: none;
     }
+    .detail-content .ds-mobile .scoring-mobile .container .content .more {
+        margin-top: 10px
+    }
     .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
         text-decoration: none;
         color: #fff;
@@ -3242,7 +3249,7 @@ body {
         width: 45.666667%;
     }
     .detail-content .overview .row .info-1 .information {
-        line-height: 9px;
+        line-height: 11px;
         position: absolute;
         top: 3px;
         left: 25px;
@@ -3604,7 +3611,7 @@ body {
         width: 45.666667%;
     }
     .detail-content .overview .row .info-1 .information {
-        line-height: 9px;
+        line-height: 10px;
         position: absolute;
         top: 3px;
         left: 25px;
@@ -3930,7 +3937,7 @@ body {
         font-weight: bold;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 9.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
@@ -3948,13 +3955,16 @@ body {
         font-weight: bold;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
-        line-height: 8.5px;
+        line-height: 10.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
         font-size: 9.5px;
         color: #fff;
         text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .more {
+        margin-top: 0px;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
         text-decoration: none;
@@ -4291,7 +4301,7 @@ body {
         font-size: 11px;
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content {
-        line-height: 6.5px;
+        line-height: 8.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container .content a {
@@ -4301,20 +4311,23 @@ body {
     }
     .detail-content .ds-mobile .scoring-mobile {
         position: absolute;
-        top: 700px
+        top: 708px
     }
     .detail-content .ds-mobile .scoring-mobile .container h3 {
         color: #fff;
         font-size: 11px;
     }
     .detail-content .ds-mobile .scoring-mobile .container .content {
-        line-height: 6.5px;
+        line-height: 8.5px;
         margin-top: -10px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content a {
         font-size: 7px;
         color: #fff;
         text-decoration: none;
+    }
+    .detail-content .ds-mobile .scoring-mobile .container .content .more {
+        margin-top: 0px
     }
     .detail-content .ds-mobile .scoring-mobile .container .content .attention a {
         text-decoration: none;

@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload-31-12-15h.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-31-12-16h.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -123,7 +123,7 @@
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
                                             <div class="form-group" style="">
-                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text" onkeyup="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
 
                                                 <script>
                                                     function checkWord(element) {
@@ -373,7 +373,7 @@
                             <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi)</a><br/>
                             
                             
-                            <div class="more" style="margin-top: 10px">
+                            <div class="more" style="">
                                 <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
                                 <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
                             </div>
