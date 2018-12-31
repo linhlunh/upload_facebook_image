@@ -24,9 +24,7 @@ class Post_Photo_Facebook extends CI_Controller{
     public function index()
     { 
         $time_start = $this->microtime_float();
-
-        $this->convertTypeImage('D:/test/IMG_0112.HEIC','D:/test/IMG_0112.jpg');
-
+        
         $dataSubmit = $this->input->post();
 
         $data = array();
@@ -37,7 +35,7 @@ class Post_Photo_Facebook extends CI_Controller{
         
         $this->form_validation->set_error_delimiters('<span style="color:red">','</span>');
        
-        if ($this->form_validation->run() && !empty($_FILES['picture']['name']) && ($_FILES['picture']['type'] == 'image/jpeg' ||$_FILES['picture']['type'] == 'image/png' || $_FILES['picture']['type'] == 'image/jpg') )
+        if ($this->form_validation->run() && !empty($_FILES['picture']['name']))// && ($_FILES['picture']['type'] == 'image/jpeg' ||$_FILES['picture']['type'] == 'image/png' || $_FILES['picture']['type'] == 'image/jpg') 
         {
             if (!empty($dataSubmit))
             {
@@ -47,21 +45,26 @@ class Post_Photo_Facebook extends CI_Controller{
 
                 $urlMoveUploadFile = str_replace('\\','/',$urlMoveUploadFile);
 
+                $urlMoveUploadFile = str_replace('//','/',$urlMoveUploadFile);
+                
                 unset($dataSubmit['action']);
 
                 $dataSubmit['created'] = date("Y-m-d H:i:s");
                 $dataSubmit['link'] = "share-photo";
-
+                
+                $name_arr = explode('.', $_FILES['picture']['name']);
+                $type_img = $name_arr[count($name_arr)-1];
+                
                 while(empty($nameImg) || $this->Landing_Page_Model->isSetImageName($nameImg))
                 {
-                    $nameImg = $this->_generate_random_code().'.'.str_replace('image/','',$_FILES['picture']['type']);
+                    $nameImg = $this->_generate_random_code().'.'.$type_img;
                 }
                 unset($dataSubmit['date_']);
-
+                
                 $InsertedId = $this->Landing_Page_Model->create_img($dataSubmit);
-                        
+                
                 $dataSubmit['event_code'] = 'BP'.str_pad($InsertedId,4,'0',STR_PAD_LEFT);
-
+                
                 $nameImg = $dataSubmit['event_code'].'_'.$nameImg;
 
                 $dataSubmit['picture'] = $nameImg;
@@ -72,13 +75,15 @@ class Post_Photo_Facebook extends CI_Controller{
                 $description .= !empty($dataSubmit['description']) ? "\n".$dataSubmit['description'] : "";
 
                 $imgPath = $urlMoveUploadFile .'/'.$dataSubmit['picture'];
+                
+                //$this->convertTypeImage($_FILES['picture']['tmp_name'], $nameImg);
+                
+                //$facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name'],$dataSubmit['description']);
 
-                $facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name'],$dataSubmit['description']);
-
-                $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
-
+                //$this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
+                
                 move_uploaded_file($_FILES['picture']['tmp_name'],$imgPath);
-
+                echo('<pre>');print_r('huu');echo('</pre>');exit();
                 if(empty($facebook_picture_id['error_code']))
                 {
                     $dataSubmit['facebook_picture_id'] = $facebook_picture_id;
@@ -365,7 +370,7 @@ class Post_Photo_Facebook extends CI_Controller{
 	    return true;
     }
     
-    function convertTypeImage($imgPath,$destinationPath = '')
+    function convertTypeImage($imgPath, $file_name = '')
     {
         $url = "https://api.cloudconvert.com/convert";
 
@@ -376,7 +381,7 @@ class Post_Photo_Facebook extends CI_Controller{
             "outputformat=jpg", 
             "input=upload", 
             "wait=true",
-            "download=false",
+            "download=true",
             "outputfile.jpg", 
         );
 
@@ -396,8 +401,34 @@ class Post_Photo_Facebook extends CI_Controller{
         $info = curl_getinfo($ch);
         
         curl_close($ch);
-        echo('<pre>');print_r($info);echo('</pre>');exit();
+        
+        $save_path = str_replace('application\\', 'images\landing_page\post_photo_facebook_convert', APPPATH);
+        
+        
+        if($info['http_code'] == 303){
+        	
+        	$link = $info['redirect_url'];
+        	$chr = curl_init();
+        	
+        	curl_setopt($chr, CURLOPT_POST, false);
+        	
+        	curl_setopt($chr, CURLOPT_URL, $link);
+        	
+        	curl_setopt($chr, CURLOPT_RETURNTRANSFER, 1);
+        	
+        	$result = curl_exec($chr);
+        	$info_chr = curl_getinfo($chr);
+        	curl_close($chr);
+        	
+        	$savefile = fopen($save_path .'/'. $file_name, 'w');
+        	fwrite($savefile, $result);
+        	fclose($savefile);
+        	echo('<pre>');print_r($info_chr);echo('</pre>');
+        	echo('<pre>');print_r($result);echo('</pre>');
+        }
+        
     }
+    
     function microtime_float()
     {
         list($usec, $sec) = explode(" ", microtime());

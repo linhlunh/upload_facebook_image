@@ -449,7 +449,6 @@
         var fileImg = '';
         $('input[type="file"]').change(function(e){
             fileImg = e.target.files[0];
-            
         });
         function validateForm() {
             var full_name = $('#full_name').val();
@@ -542,14 +541,13 @@
                 check = false;
             }else{
                 $('#error_picture').hide();
-
-                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg'){
+                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg' || fileImg.type == 'image/heic'){
                     $('#error_picture_type').hide();
                 }else{
-                    $('#error_picture_type').show();
-                    alert('Ảnh bạn chọn chưa đúng định dạng!');
-                    return false;
-                    check = false;
+                    //$('#error_picture_type').show();
+                   // alert('Ảnh bạn chọn chưa đúng định dạng!');
+                    //return false;
+                    //check = false;
                 }
                 if(fileImg.size >= 10485760 ){
                     $('#error_picture_size').show();
