@@ -143,6 +143,24 @@
                                                             }
                                                         }
                                                     });
+                                                    $('body').click(function(){
+                                                        if($('#abc').hasClass('in')){
+                                                            
+                                                            
+                                                            len = $('#text').val().split(/[\s]+/);
+                                                            if (len.length > word) {
+
+                                                                $('#text').val(len.splice(0, 100).join(' ') + ' ');
+
+                                                                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {} else if (event.keyCode < 48 || event.keyCode > 57) {
+                                                                    event.preventDefault();
+                                                                }
+                                                            }else{
+                                                                var x = document.getElementById("text").value;
+                                                                document.getElementById("note").innerHTML = x;
+                                                            }
+                                                        }
+                                                    });
                                                 </script>
                                             </div>
                                         </div>
@@ -203,7 +221,7 @@
                         <div class="send-img">
 
                             <div class="margin-top-10" id="term_agreement">
-                                <div class="upload" style="margin-top: 35px;">
+                                <div class="upload" style="margin-top: 15px;">
                                     <button type="submit" value="" id="id_upload" name="action">
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
                                         <span style='display:none' id='btn_loading'><i style='margin-right: 4px' class="fa fa-spinner fa-spin"></i>ĐANG GỬI...</span>
@@ -277,7 +295,7 @@
                 </div>
 
                 <div class="img-rules">
-                    <img src="../../assets/img/img-facebook/thele.png" alt="">
+                    <img src="../../assets/img/img-facebook/thelecuocthi-3.png" alt="">
                 </div>
 
                 <div class="how-to-play">
@@ -314,7 +332,7 @@
                             <img src="../../assets/img/img-facebook/giainhat.png" alt="">
                             <div class="title-1">
                                 <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
-                                <a style="font-weight: 100;">Trị Giá:</a> <a style="font-weight: bold; color: #fff">12.000.000vnđ</a>
+                                <a style="font-weight: bold;">Trị Giá:</a> <a style="font-weight: 900; color: #fff">12.000.000vnđ</a>
                             </div>
                         </div>
 
@@ -322,7 +340,7 @@
                             <img class="img-6" src="../../assets/img/img-facebook/giainhi.png" alt="" style="">
                             <div class="title-1" style="margin-top: 2px">
                                 <a>Tour du thuyền Starlight 5* 2N1Đ cho 2 người</a><br/>
-                                <a style="font-weight: 100;">Trị Giá:</a> <a style="font-weight: bold; color: #fff">7.600.000vnđ</a>
+                                <a style="font-weight: bold;">Trị Giá:</a> <a style="font-weight: 900; color: #fff">7.600.000vnđ</a>
                             </div>
                         </div>
 
@@ -333,7 +351,7 @@
                             <img src="../../assets/img/img-facebook/giaiba.png" alt="">
                             <div class="title-1">
                                 <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc 5* cho 2 người</a><br/>
-                                <a style="font-weight: 100;">Trị Giá:</a> <a style="font-weight: bold; color: #fff">3.470.000vnđ</a>
+                                <a style="font-weight: bold;">Trị Giá:</a> <a style="font-weight: 900; color: #fff">3.470.000vnđ</a>
                             </div>
                         </div>
 
@@ -341,7 +359,7 @@
                             <img src="../../assets/img/img-facebook/khieukhich.png" alt="" style="margin-top: 22px">
                             <div class="title-3">
                                 <a>Voucher đặt vé máy bay</a><br/>
-                                <a style="font-weight: 100;">Trị giá:</a> <a style="font-weight: bold; color: #fff">500.000vnđ/voucher</a>
+                                <a style="font-weight: bold;">Trị giá:</a> <a style="font-weight: 900; color: #fff">500.000vnđ/voucher</a>
                             </div>
                         </div>
 
@@ -350,7 +368,7 @@
                 </div>
 
                 <div class="img-rules-mobile">
-                    <img src="../../assets/img/img-facebook/thele.png" alt="">
+                    <img src="../../assets/img/img-facebook/thelecuocthi-3.png" alt="">
                 </div>
 
                 <div class="how-to-play-mobile">

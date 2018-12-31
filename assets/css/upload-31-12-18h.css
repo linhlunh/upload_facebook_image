@@ -281,7 +281,7 @@ body {
 }
 
 .detail-content .ds-desktop .how-to-play .container {
-    width: 1125px;
+    width: 1111px;
 }
 
 .detail-content .ds-desktop .how-to-play .container h3 {
@@ -628,30 +628,30 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2265px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2425px;
-        left: -40px;
+        top: 2374px;
         width: 100%;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 45px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 21px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
         top: 2600px;
-        width: 100%
+        width: 100%;
     }
     .detail-content .ds-desktop .scoring .container {
         width: 100%;
@@ -659,11 +659,12 @@ body {
     }
     .detail-content .ds-desktop .scoring .container h3 {
         font-weight: bold;
+        font-size: 45px;
     }
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -870,37 +871,38 @@ body {
         margin-top: -50px
     }
     .detail-content .ds-desktop .content-prize .row .title-3 {
-        margin-top: 100px
+        margin-top: 65px;
     }
     .detail-content .ds-desktop .content-prize .row .title-4 {
-        margin-top: 80px
+        margin-top: 117px;
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2265px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2415px;
-        left: -150px;
+        top: 2370px;
+        left: 0px;
         width: 100%;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 22px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2620px;
-        width: 100%
+        top: 2580px;
+        width: 100%;
     }
     .detail-content .ds-desktop .scoring .container {
         width: 100%;
@@ -908,11 +910,12 @@ body {
     }
     .detail-content .ds-desktop .scoring .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 22px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1370,14 +1373,14 @@ body {
         margin-top: -50px
     }
     .detail-content .ds-desktop .content-prize .row .title-3 {
-        margin-top: 100px
+        margin-top: 65px
     }
     .detail-content .ds-desktop .content-prize .row .title-4 {
-        margin-top: 80px
+        margin-top: 117px
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2285px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -1387,20 +1390,21 @@ body {
         top: 2380px;
         left: 0px;
         width: 100%;
-        color: #fff
+        color: #fff;
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 40px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 21px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
-        width: 100%
+        top: 2588px;
+        width: 100%;
     }
     .detail-content .ds-desktop .scoring .container {
         width: 100%;
@@ -1408,11 +1412,12 @@ body {
     }
     .detail-content .ds-desktop .scoring .container h3 {
         font-weight: bold;
+        font-size: 40px;
     }
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 21px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1635,31 +1640,32 @@ body {
         margin-top: -50px
     }
     .detail-content .ds-desktop .content-prize .row .title-3 {
-        margin-top: 100px
+        margin-top: 65px;
     }
     .detail-content .ds-desktop .content-prize .row .title-4 {
-        margin-top: 80px
+        margin-top: 116px;
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2350px
+        top: 2325px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2470px;
+        top: 2422px;
         width: 100%;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
@@ -1672,11 +1678,12 @@ body {
     }
     .detail-content .ds-desktop .scoring .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -1882,36 +1889,37 @@ body {
         margin-top: -50px
     }
     .detail-content .ds-desktop .content-prize .row .title-3 {
-        margin-top: 100px
+        margin-top: 65px
     }
     .detail-content .ds-desktop .content-prize .row .title-4 {
-        margin-top: 80px
+        margin-top: 117px
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2285px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2450px;
+        top: 2380px;
         width: 100%;
-        color: #fff
+        color: #fff;
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 21px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2625px;
-        width: 100%
+        top: 2590px;
+        width: 100%;
     }
     .detail-content .ds-desktop .scoring .container {
         width: 100%;
@@ -1923,7 +1931,7 @@ body {
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 21px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -2146,36 +2154,37 @@ body {
         margin-top: -50px
     }
     .detail-content .ds-desktop .content-prize .row .title-3 {
-        margin-top: 100px
+        margin-top: 65px;
     }
     .detail-content .ds-desktop .content-prize .row .title-4 {
-        margin-top: 80px
+        margin-top: 111px;
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2290px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2435px;
+        top: 2376px;
         width: 100%;
         color: #fff
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 30px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2580px;
-        width: 100%
+        top: 2566px;
+        width: 100%;
     }
     .detail-content .ds-desktop .scoring .container {
         width: 100%;
@@ -2183,11 +2192,12 @@ body {
     }
     .detail-content .ds-desktop .scoring .container h3 {
         font-weight: bold;
+        font-size: 30px;
     }
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -2228,11 +2238,12 @@ body {
     }
     .detail-content .overview .row .info-1 .information h3 {
         font-weight: bold;
+        font-size: 30px;
     }
     .detail-content .overview .row .info-1 .information a {
         font-weight: bold;
         color: #fff;
-        font-size: 22px;
+        font-size: 25px;
         text-decoration: none;
     }
     .detail-content .overview .row .info-1 .information a span {
@@ -2251,6 +2262,15 @@ body {
         position: absolute;
         top: 15px;
         color: #fff
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
+        margin-left: 14px;
+        font-size: 25px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
+        margin-left: -82px;
+        font-size: 25px;
+        font-weight: bold;
     }
     .detail-content .overview .row .info-3 .sponsor h3 {
         font-weight: bold;
@@ -2463,36 +2483,37 @@ body {
         margin-top: -50px
     }
     .detail-content .ds-desktop .content-prize .row .title-3 {
-        margin-top: 100px
+        margin-top: 65px;
     }
     .detail-content .ds-desktop .content-prize .row .title-4 {
-        margin-top: 80px
+        margin-top: 117px
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2300px
+        top: 2260px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
     }
     .detail-content .ds-desktop .how-to-play {
         position: absolute;
-        top: 2380px;
+        top: 2350px;
         width: 100%;
-        color: #fff
+        color: #fff;
     }
     .detail-content .ds-desktop .how-to-play .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .how-to-play .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring {
         position: absolute;
-        top: 2520px;
-        width: 100%
+        top: 2551px;
+        width: 100%;
     }
     .detail-content .ds-desktop .scoring .container {
         width: 100%;
@@ -2500,11 +2521,12 @@ body {
     }
     .detail-content .ds-desktop .scoring .container h3 {
         font-weight: bold;
+        font-size: 35px;
     }
     .detail-content .ds-desktop .scoring .container a {
         text-decoration: none;
         color: #fff;
-        font-size: 15px
+        font-size: 20px;
     }
     .detail-content .ds-desktop .scoring .container span {
         color: #f9d202
@@ -2966,7 +2988,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 425px;
+        top: 405px;
     }
     .detail-content .tquan {
         position: absolute;
@@ -3188,14 +3210,14 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 810px;
+        top: 805px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
     }
     .detail-content .ds-mobile .how-to-play-mobile {
         position: absolute;
-        top: 829px
+        top: 830px
     }
     .detail-content .ds-mobile .how-to-play-mobile .container h3 {
         color: #fff;
@@ -3560,7 +3582,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 725px;
+        top: 720px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -3949,7 +3971,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 700px;
+        top: 690px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -4315,7 +4337,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 630px;
+        top: 624px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
