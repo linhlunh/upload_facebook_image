@@ -25,6 +25,8 @@ class Post_Photo_Facebook extends CI_Controller{
     { 
         $time_start = $this->microtime_float();
 
+        $this->convertTypeImage('D:/test/IMG_0112.HEIC','D:/test/IMG_0112.jpg');
+
         $dataSubmit = $this->input->post();
 
         $data = array();
@@ -71,10 +73,10 @@ class Post_Photo_Facebook extends CI_Controller{
 
                 $imgPath = $urlMoveUploadFile .'/'.$dataSubmit['picture'];
 
-                $facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name']);
+                $facebook_picture_id = $this->PostImageUseCurl($_FILES['picture']['tmp_name'],$dataSubmit['description']);
 
                 $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
-                
+
                 move_uploaded_file($_FILES['picture']['tmp_name'],$imgPath);
 
                 if(empty($facebook_picture_id['error_code']))
@@ -363,24 +365,38 @@ class Post_Photo_Facebook extends CI_Controller{
 	    return true;
     }
     
-    function convertTypeImage($imgPath,$destinationPath)
+    function convertTypeImage($imgPath,$destinationPath = '')
     {
-        $basePath = str_replace('application\controllers\landing_page','',__DIR__);
-        $basePath = str_replace('\\','/',$basePath);
-        require $basePath . 'assets/libs/cloudconvert-php-master/src/Api.php';
+        $url = "https://api.cloudconvert.com/convert";
 
-        $api = new \CloudConvert\Api("DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj");
+        $post_array = array(
+            'file' => new CurlFile($imgPath),
+            'apikey' => 'DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj',
+            'inputformat' => 'heic',
+            "outputformat=jpg", 
+            "input=upload", 
+            "wait=true",
+            "download=false",
+            "outputfile.jpg", 
+        );
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
         
-        $api->convert([
-            "inputformat" => "heic",
-            "outputformat" => "jpg",
-            "input" => $imgPath,
-            "filename" => $destinationPath,
-            "timeout" => 60,
-            "file" => fopen('inputfile.heic', 'r'),
-        ])
-        ->wait()
-        ->download();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_array);
+
+            
+        $result = curl_exec($ch);
+        
+        $info = curl_getinfo($ch);
+        
+        curl_close($ch);
+        echo('<pre>');print_r($info);echo('</pre>');exit();
     }
     function microtime_float()
     {

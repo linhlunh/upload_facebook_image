@@ -27,7 +27,7 @@
             Chào <?=!empty($full_name) ? $full_name : '' ?>
         </div>
         <div class='mg-top-15'>
-            Cảm ơn bạn đã tham chương trình "Đăng ảnh đón xuân - khuân tour miễn phí" của BestPrice. Đây là những thông tin bạn đã đăng ký với chúng tôi:
+            Cảm ơn bạn đã tham chương trình <b>Đăng ảnh đón xuân - khuân tour miễn phí</b> của BestPrice. Đây là những thông tin bạn đã đăng ký với chúng tôi:
         </div>
         <div class='mg-top-15'>
             <div class='image' style='margin-right: 15px'>
