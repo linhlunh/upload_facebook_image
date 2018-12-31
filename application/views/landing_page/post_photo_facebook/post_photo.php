@@ -10,13 +10,20 @@
 	<title>Đăng ảnh đón xuân - Khuân tour miễn phí - BestPrice</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <link rel="stylesheet" href="../../../assets/css/upload-29-12-9h20.css">
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+    <link rel="stylesheet" href="../../../assets/css/upload-31-12.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
-     <script src="../../../../assets/libs/datepicker/dist/jquery.date-dropdowns.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body class="body-content">
@@ -27,7 +34,7 @@
         <div class="detail-content">
 
             <div class="img-prize">
-                <img src="../../../assets/img/img-facebook/giaithuong.png" alt="">
+                <img src="../../../assets/img/img-facebook/giai-thuong.png" alt="">
             </div>
             <form name="frm" action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
                 <div class="tquan">
@@ -42,7 +49,7 @@
                             </div>
 
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 input-right birthday-1">
-                                <input autocomplete="off" class="birthday" type="hidden" name="birthday" id="birthday" placeholder="Ngày sinh">
+                                <input autocomplete="off" class="birthday" type="text" name="birthday" id="birthday" placeholder="Ngày sinh">
                                 <div class="notification">
                                     <span class='error' id='error_wrong_birthday'>Ngày sinh không hợp lệ!</span>
                                     <span class='error' id='error_birthday'>Vui lòng chọn ngày sinh!</span>
@@ -156,11 +163,11 @@
                                     <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 101%; margin-left: -1px; text-align: justify;">
                                         <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                         <div class="container">
-                                            <div style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: #fff;border-radius: 25px;">
+                                            <div class="abc" style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: #fff;border-radius: 25px;">
                                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                         </div>
                                             <div class="content-text" style="margin-top: 15px">
-                                                <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>2MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
+                                                <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>10MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
                                             </div>
 
                                             <div class="content-text-2" style="margin-top: 15px">
@@ -213,7 +220,7 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-1">
-                            <img src="../../assets/img/img-facebook/giai nhat.png" alt="">
+                            <img src="../../assets/img/img-facebook/giainhat.png" alt="">
                         </div>
 
 
@@ -227,12 +234,12 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
-                            <img src="../../assets/img/img-facebook/giai nhi.png" alt="">
+                            <img src="../../assets/img/img-facebook/giainhi.png" alt="" style="width: 123%">
                         </div>
 
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2">
-                            <h1 style="color: #fff; font-weight: bold">1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</h1>
+                            <h1 style="color: #fff; font-weight: bold">Tour du thuyền Starlight 5* 2N1Đ cho 2 người</h1>
                             <h3 style="color: #fff">Trị Giá: 7.600.000vnđ</h3>
                         </div>
 
@@ -241,12 +248,12 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-3">
-                            <img src="../../assets/img/img-facebook/giai ba.png" alt="">
+                            <img src="../../assets/img/img-facebook/giaiba.png" alt="">
                         </div>
 
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-3">
-                            <h1 style="color: #fff; font-weight: bold">Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</h1>
+                            <h1 style="color: #fff; font-weight: bold">Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc 5* cho 2 người</h1>
                             <h3 style="color: #fff">Trị Giá: 3.470.000vnđ</h3>
                         </div>
 
@@ -255,13 +262,13 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-4">
-                            <img src="../../assets/img/img-facebook/khieu khich.png">
+                            <img src="../../assets/img/img-facebook/khieukhich.png">
                         </div>
 
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-4">
                             <h1 style="color: #fff; font-weight: bold">Voucher đặt vé máy bay</h1>
-                            <h3 style="color: #fff">Trị Giá: 500.000 vnđ</h3>
+                            <h3 style="color: #fff">Trị Giá: 500.000 vnđ/voucher</h3>
                         </div>
 
                     </div>
@@ -269,7 +276,7 @@
                 </div>
 
                 <div class="img-rules">
-                    <img src="../../assets/img/img-facebook/the le.png" alt="">
+                    <img src="../../assets/img/img-facebook/thele.png" alt="">
                 </div>
 
                 <div class="how-to-play">
@@ -286,9 +293,9 @@
                         <h3>Cách thức tính điểm:</h3>
                         <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
                         <a><span>1 share</span> = <span>3 điểm</span></a><br/>
-                        <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên </a><br/>
-                        <a>bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi).</a><br/>
-                        <div style="margin-top: 5px "><a style=" text-decoration: none; color: #fff; font-size: 15px "><span style="color: #f9d202 ">CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span style="color: #f9d202 ">1 ảnh</span></a><br/></div>
+                        <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi).</a><br/>
+                        
+                        
                         <div class="more" style="margin-top: 10px">
                             <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
                             <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
@@ -303,7 +310,7 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giai nhat.png" alt="">
+                            <img src="../../assets/img/img-facebook/giainhat.png" alt="">
                             <div class="title-1">
                                 <a>Tour Thái Lan 5N4Đ cho 2 người</a><br/>
                                 <a>Trị Giá: 12.000.000vnđ</a>
@@ -311,9 +318,9 @@
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giai nhi.png" alt="" style="margin-top: -8px">
-                            <div class="title-1">
-                                <a>1 Chuyến du lịch 2N1Đ tại du thuyền cho 2 người</a><br/>
+                            <img src="../../assets/img/img-facebook/giainhi.png" alt="" style="">
+                            <div class="title-1" style="margin-top: 2px">
+                                <a>Tour du thuyền Starlight 5* 2N1Đ cho 2 người</a><br/>
                                 <a>Trị Giá: 7.600.000vnđ</a>
                             </div>
                         </div>
@@ -322,18 +329,18 @@
                     <div class="row">
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/giai ba.png" alt="">
+                            <img src="../../assets/img/img-facebook/giaiba.png" alt="">
                             <div class="title-1">
-                                <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc</a><br/>
+                                <a>Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc 5* cho 2 người</a><br/>
                                 <a>Trị Giá: 3.470.000vnđ</a>
                             </div>
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="../../assets/img/img-facebook/khieu khich.png" alt="" style="margin-top: 20px">
+                            <img src="../../assets/img/img-facebook/khieukhich.png" alt="" style="margin-top: 22px">
                             <div class="title-3">
                                 <a>Voucher đặt vé máy bay</a><br/>
-                                <a>Trị Giá: 500.000 vnđ</a>
+                                <a>Trị giá 500.000vnđ/voucher</a>
                             </div>
                         </div>
 
@@ -342,16 +349,16 @@
                 </div>
 
                 <div class="img-rules-mobile">
-                    <img src="../../assets/img/img-facebook/the le.png" alt="">
+                    <img src="../../assets/img/img-facebook/thele.png" alt="">
                 </div>
 
                 <div class="how-to-play-mobile">
                     <div class="container">
                         <h3>Cách chơi:</h3>
                         <div class="content">
-                            <a>Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
-                            <a>Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
-                            <a>Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm. </a>
+                            <a>- Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
+                            <a>- Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
+                            <a>- Bước 3: Kêu gọi 500 anh em vào thả tim, like, share để cày điểm. </a>
                         </div>
                     </div>
                 </div>
@@ -362,9 +369,9 @@
                         <div class="content">
                             <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
                             <a><span>1 share</span> = <span>3 điểm</span></a><br/>
-                            <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên</a><br/>
-                            <a>bức ảnh của bạn sẽ nằm ở album dự thi chính thức của chương trình.</a><br/>
-                            <div class="attention"><a><span>CHÚ Ý:</span> Mỗi người chơi chỉ gửi <span>1 ảnh</span></a><br/></div>
+                            <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi)</a><br/>
+                            
+                            
                             <div class="more" style="margin-top: 10px">
                                 <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
                                 <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
@@ -376,7 +383,7 @@
             </div>
 
             <div class="horizontal">
-                <img src="../../../assets/img/img-facebook/Asset 10.png" alt="">
+                <img src="../../../assets/img/img-facebook/Asset10.png" alt="">
             </div>
 
             <div class="overview">
@@ -388,29 +395,31 @@
                             <h3>Thông tin công ty:</h3>
                             <a class="address">VP Hà Nội: <span class="detail">12A ngõ Bà Triệu, phố Bà Triệu, Q.Hai Bà Trưng.</span></a><br/>
                             <a class="address">VP HCM: <span class="detail">95 Trần Quang Khải, Tân, Q.1</span></a><br/>
-                            <a class="address">Hotline: <span class="detail">1900 6505(Nhấn phím 0)</span></a><br/>
+                            <a class="address">Hotline: <span class="detail">1900 6505 (Nhấn phím 0)</span></a><br/>
                             <a class="address">Email: <span class="detail">marketing@bestprice.vn</span></a><br/>
                         </div>
                     </div>
 
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 info-2">
                         <div class="vertical">
-                            <img src="../../../assets/img/img-facebook/Asset 11.png" alt="">
+                            <img src="../../../assets/img/img-facebook/Asset11.png" alt="">
                         </div>
                     </div>
                     
                     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-3">
                         <div class="sponsor">
-                            <h3>Nhà tài trợ:</h3>
+                            
                             
                             <div class="row">
                                 
                                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-1">
-                                    <img src="../../../assets/img/img-facebook/Asset 13.png" alt="">
+                                    <h3>Nhà bảo trợ truyền thông</h3>
+                                    <img src="../../../assets/img/img-facebook/Asset13.png" alt="">
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
-                                    <img src="../../../assets/img/img-facebook/Asset 12.png" alt="">
+                                    <h3>Nhà tài trợ giải thưởng</h3>
+                                    <img src="../../../assets/img/img-facebook/Asset12.png" alt="">
                                 </div>
                                 
                             </div>
@@ -452,6 +461,7 @@
 
             if (full_name === '' || full_name === null) {
                 $('#error_full_name').show();
+                $("html, body").animate({scrollTop: ($('#full_name').offset().top-100)}, 'slow');
                 alert('Họ tên không được để trống!');
                 return false;
                 check = false;
@@ -462,6 +472,7 @@
 
             if (birthday === '' || birthday === null) {
                 $('#error_birthday').show();
+                $("html, body").animate({scrollTop: ($('#birthday').offset().top-100)}, 'slow');
                 alert('Ngày sinh không được để trống!');
                 return false;
                 check = false;
@@ -475,6 +486,7 @@
                 if(birthday > time_now)
                 {
                     $('#error_wrong_birthday').show();
+                    $("html, body").animate({scrollTop: ($('#birthday').offset().top-100)}, 'slow');
                     check = false;
                 }else{
                     $('#error_wrong_birthday').hide();
@@ -484,6 +496,7 @@
             if (phone === '' || phone === null) {
                 $('#error_phone').show();
                 $('#error_wrong_phone').hide();
+                $("html, body").animate({scrollTop: ($('#phone').offset().top-100)}, 'slow');
                 alert('Số điện thoại không được để trống!');
                 return false;
                 check = false;
@@ -491,6 +504,7 @@
                 $('#error_phone').hide();
                 if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
                     $('#error_wrong_phone').show();
+                    $("html, body").animate({scrollTop: ($('#phone').offset().top-100)}, 'slow');
                     alert('Số điện thoại không đúng!');
                     return false;
                     check = false;
@@ -502,6 +516,7 @@
             if (email === '' || email === null) {
                 $('#error_email').show();
                 $('#error_wrong_email').hide();
+                $("html, body").animate({scrollTop: ($('#email').offset().top-100)}, 'slow');
                 alert('Email không được để trống!');
                 return false;
                 check = false;
@@ -509,6 +524,7 @@
                 if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email))) {
                     $('#error_wrong_email').show();
                     $('#error_email').hide();
+                    $("html, body").animate({scrollTop: ($('#email').offset().top -100)}, 'slow');
                     alert('Email không hợp lệ!');
                     return false;
                     check = false;
@@ -559,35 +575,33 @@
 
                 return f;
             }
+
+
+        $(function() {
+            if ($(window).width() < 767) {
+
+                $('#note').attr('data-toggle', 'modal');
+
+                var witdh_window = $(window).width();
+
+                $('#modal_success img').css('width',witdh_window-20+'px');
+                $('.btn_go_back').css('width','27%');
+                $('.btn_go_back').css('margin-top','-10%');
+                $('.btn_go_back').css('font-size','10px');
+                $('.btn_go_back').css('height','13%');
+                $('.btn_go_back').css('left','38%');
+                
+            } else {
+                $('#note').attr('data-toggle', ' ');
+            }
+
+            $( "#birthday" ).datepicker({
+                dateFormat: "dd-mm-yy",
+                monthNames: [ "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 8", "Tháng 10", "Tháng 11", "Tháng 12" ],
+                maxDate: new Date(),
+                dayNames: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
+    			dayNamesMin: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
+            });
+        });
     </script>
-
-            <script>
-                $(function() {
-                    if ($(window).width() < 767) {
-
-                        $('#note').attr('data-toggle', 'modal');
-
-                        var witdh_window = $(window).width();
-
-                        $('#modal_success img').css('width',witdh_window-20+'px');
-                        $('.btn_go_back').css('width','27%');
-                        $('.btn_go_back').css('margin-top','-10%');
-                        $('.btn_go_back').css('font-size','10px');
-                        $('.btn_go_back').css('height','13%');
-                        $('.btn_go_back').css('left','38%');
-                        
-                    } else {
-
-                        $('#note').attr('data-toggle', ' ');
-
-                    }
-                });
-                
-                $(function() {
-                    $(".birthday").dateDropdowns();
-                });
-                
-                
-            </script>
-
 </body>
