@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload-31-12.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-31-12-16h.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -34,7 +34,7 @@
         <div class="detail-content">
 
             <div class="img-prize">
-                <img src="../../../assets/img/img-facebook/giai-thuong.png" alt="">
+                <img src="../../../assets/img/img-facebook/giaithuong.png" alt="">
             </div>
             <form name="frm" action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
                 <div class="tquan">
@@ -85,7 +85,7 @@
                         <p style="color: white">
                             <span class='error' id='error_picture'>Bạn chưa chọn file ảnh!</span>
                             <span class='error' id='error_picture_type'>Ảnh bạn chọn chưa đúng định dạng!</span>
-                            <span class='error' id='error_picture_size'>Ảnh bạn chọn vướt quá kích thước cho phép!</span>
+                            <span class='error' id='error_picture_size'>Ảnh bạn chọn vượt quá kích thước và dung lượng cho phép. Vui lòng chọn ảnh định dạng JPG, PNG và không quá 10MB</span>
                         </p>
                     </div>
 
@@ -118,12 +118,12 @@
                                 }
                             </script>
                             <div class="modal fade " id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
-                                <div class="modal-dialog" role="document" style="width: 80%; margin-left: 30px">
+                                <div class="modal-dialog" role="document" style="width: 80%; margin-left: 30px; margin-top: 170px;">
                                     <div class="modal-content" style="width: 100%;">
                                         <h3 style="color: #000000; text-align: center;">MÔ TẢ</h3>
                                         <div class="modal-body">
                                             <div class="form-group" style="">
-                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text" onkeydown="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
+                                                <textarea style="width: 100%; height: 180px; margin-left: 0px" class="form-control control-1" id="text" onkeyup="checkWord(this);" placeholder="Nhập Mô Tả Ảnh"></textarea>
 
                                                 <script>
                                                     function checkWord(element) {
@@ -146,7 +146,7 @@
                                                 </script>
                                             </div>
                                         </div>
-                                        <div class="modal-footer" style="">
+                                        <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #fff; color: #000000; font-size: 11px; border: 1px solid;">Đóng</button>
                                         </div>
                                     </div>
@@ -154,7 +154,8 @@
                             </div>
                         </div>
                         <div class="regulations" style="color: #fff; margin-top: 10px;">
-                            Khi gửi ảnh là bạn đã đồng ý với <a style="text-decoration: underline;" href="" data-toggle="modal" data-target="#exampleModalLong">Thể lệ và Quy định của chương trình</a>
+                            <a style="text-decoration: none;" class="condition">Khi gửi ảnh là bạn đã đồng ý với thể lệ và</a><br/>
+                            <a style="text-decoration: underline;" class="agree" href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
                         </div>
 
                         <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -163,8 +164,8 @@
                                     <div class="content-regulations" style="background-image: url('../../../assets/img/img-facebook/BGpopup.png'); margin: 0 auto; overflow: hidden; width: 101%; margin-left: -1px; text-align: justify;">
                                         <img src="../../../assets/img/img-facebook/quydinh.png" alt="">
                                         <div class="container">
-                                            <div class="abc" style="margin-top: -10px"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: #fff;border-radius: 25px;">
-                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            <div class="abc" style="margin-top: -10px;width: 100%; margin-left: 15px;"><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border-radius: 25px;">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true" style="position: sticky;"></span>
                                         </div>
                                             <div class="content-text" style="margin-top: 15px">
                                                 <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>10MB</span>, có chiều ngang dưới 1.000 pixel Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
@@ -175,22 +176,22 @@
                                             </div>
 
                                             <div class="content-text-3">
-                                                <a>-	Ảnh tham gia chương trình do người tham dự tự chụp và gửi tham dự, ban tổ chức không nhận bài dự thi được sưu tầm từ Internet.</a><br/>
+                                                <a>-  Ảnh tham gia chương trình do người tham dự tự chụp và gửi tham dự, ban tổ chức không nhận bài dự thi được sưu tầm từ Internet.</a><br/>
                                                 <a>-  Ban tổ chức có quyền từ chối đăng những ảnh không phù hợp với quy chế chương trình hoặc vi phạm thuần phong mỹ tục và các quy định của nhà nước.</a><br/>
                                                 <a>-  Người tham gia hoàn toàn chịu trách nhiệm về bản quyền của ảnh tham dự, nếu có tranh chấp, trong vòng 3 ngày, phải gửi thông tin để chứng minh về bản quyền ảnh dự thi. Ảnh vi phạm bản quyền sẽ bị gỡ khỏi trang.</a><br/>
                                                 <a>-  Quà tặng không được quy đổi thành tiền mặt trong bất cứ trường hợp nào nhưng có thể được chuyển nhượng.</a><br/>
-                                                <a>-	BTC có quyền tạm dừng cuộc thi của những bài dự thi có dấu hiệu bất thường, có số like tăng đột biến hoặc các dấu hiện gian lận khác.</a><br/>
-                                                <a>	Người tham gia dự thi không được dùng phần mềm hay bất kì công cụ nào tác động vào tác phẩm để tăng tim, like, share, nếu phát hiện BTC sẽ huỷ kết quả bài dự thi của thí sinh đó.</a><br/>
-                                                <a>   BTC nghiêm cấm các hành vi gian lận dưới mọi hình thức. Những tấm ảnh dự thi có dấu hiệu gian lận (tạo nick ảo, like ảo, ...) BTC sẽ không trao giải và sẽ loại khỏi kết quả cuối cùng mà không cần báo trước</a><br/>
-                                                <a>	Tham dự cuộc thi là mặc nhiên chấp nhận mọi quyết định của BTC. Trong mọi trường hợp, quyết định của BTC là quyết định cuối cùng.</a><br/>
-                                                <a>	Thời hạn sử dụng giải thưởng sẽ được thông báo cụ thể khi trao giải. Người nhận giải trước khi sử dụng dịch vụ phải đăng ký với BestPrice trước 2 tuần.</a><br/>
-                                                <a>   Trong vòng 72 giờ kể từ khi thông báo người thắng cuộc, nếu BestPrice không liên hệ được với người thắng cuộc, giải thưởng sẽ được trao cho người có số điểm cao kế tiếp.</a><br/>
-                                                <a>	Quyền sử dụng ảnh</a><br/>
-                                                <a>	Ban tổ chức có quyền xuất bản, quảng bá thương mại với ảnh dự thi mà không cần phải báo trước và không cần thêm bất kỳ một chi phí nào, được sử dụng trưng bày, lựa chọn ảnh đăng trên các phương tiện thông tin, ấn phẩm</a><br/>
-                                                <a>	Hạn chế trách nhiệm</a><br/>
-                                                <a>-	Ban tổ chức không chịu trách nhiệm về những thông tin khai không đúng của người tham gia cuộc thi</a><br/>
-                                                <a>-	Ban tổ chức không chịu trách nhiệm trong trường hợp cuộc thi bị hủy bỏ hoặc hoãn vì những lý do bất khả kháng, khách quan như bị đánh sập mạng, thiên tai, chiến tranh…</a><br/>
-                                                <a>-	Ban tổ chức không chịu trách nhiệm khi ảnh gửi tới chương trình bị hỏng, biến dạng hay thay đổi chất lượng do đường truyền hoặc sự cố mạng Internet.</a><br/>
+                                                <a>-  BTC có quyền tạm dừng cuộc thi của những bài dự thi có dấu hiệu bất thường, có số like tăng đột biến hoặc các dấu hiện gian lận khác.</a><br/>
+                                                <a>-  Người tham gia dự thi không được dùng phần mềm hay bất kì công cụ nào tác động vào tác phẩm để tăng tim, like, share, nếu phát hiện BTC sẽ huỷ kết quả bài dự thi của thí sinh đó.</a><br/>
+                                                <a>- BTC nghiêm cấm các hành vi gian lận dưới mọi hình thức. Những tấm ảnh dự thi có dấu hiệu gian lận (tạo nick ảo, like ảo, ...) BTC sẽ không trao giải và sẽ loại khỏi kết quả cuối cùng mà không cần báo trước</a><br/>
+                                                <a>- Tham dự cuộc thi là mặc nhiên chấp nhận mọi quyết định của BTC. Trong mọi trường hợp, quyết định của BTC là quyết định cuối cùng.</a><br/>
+                                                <a>- Thời hạn sử dụng giải thưởng sẽ được thông báo cụ thể khi trao giải. Người nhận giải trước khi sử dụng dịch vụ phải đăng ký với BestPrice trước 2 tuần.</a><br/>
+                                                <a>- Trong vòng 72 giờ kể từ khi thông báo người thắng cuộc, nếu BestPrice không liên hệ được với người thắng cuộc, giải thưởng sẽ được trao cho người có số điểm cao kế tiếp.</a><br/>
+                                                <a style="color: #f9d202">	*Quyền sử dụng ảnh</a><br/>
+                                                <a>-Ban tổ chức có quyền xuất bản, quảng bá thương mại với ảnh dự thi mà không cần phải báo trước và không cần thêm bất kỳ một chi phí nào, được sử dụng trưng bày, lựa chọn ảnh đăng trên các phương tiện thông tin, ấn phẩm</a><br/>
+                                                <a style="color: #f9d202">	*Hạn chế trách nhiệm</a><br/>
+                                                <a>- Ban tổ chức không chịu trách nhiệm về những thông tin khai không đúng của người tham gia cuộc thi</a><br/>
+                                                <a>- Ban tổ chức không chịu trách nhiệm trong trường hợp cuộc thi bị hủy bỏ hoặc hoãn vì những lý do bất khả kháng, khách quan như bị đánh sập mạng, thiên tai, chiến tranh…</a><br/>
+                                                <a>- Ban tổ chức không chịu trách nhiệm khi ảnh gửi tới chương trình bị hỏng, biến dạng hay thay đổi chất lượng do đường truyền hoặc sự cố mạng Internet.</a><br/>
                                             </div>
                                             
                                         </div>
@@ -226,7 +227,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-1">
                             <h1 style="color: #fff; font-weight: bold">Tour Thái Lan 5N4Đ cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá: 12.000.000vnđ</h3>
+                            <h3 style="color: #fff">Trị Giá:<a style="font-weight: bold; color: #fff"> 12.000.000vnđ</a></h3>
                         </div>
 
                     </div>
@@ -238,9 +239,9 @@
                         </div>
 
 
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2 giai-nhi">
                             <h1 style="color: #fff; font-weight: bold">Tour du thuyền Starlight 5* 2N1Đ cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá: 7.600.000vnđ</h3>
+                            <h3 style="color: #fff">Trị Giá:<a style="font-weight: bold; color: #fff"> 7.600.000vnđ</a></h3>
                         </div>
 
                     </div>
@@ -254,7 +255,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-3">
                             <h1 style="color: #fff; font-weight: bold">Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc 5* cho 2 người</h1>
-                            <h3 style="color: #fff">Trị Giá: 3.470.000vnđ</h3>
+                            <h3 style="color: #fff">Trị Giá: <a style="font-weight: bold; color: #fff"> 3.470.000vnđ</a></h3>
                         </div>
 
                     </div>
@@ -268,7 +269,7 @@
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-4">
                             <h1 style="color: #fff; font-weight: bold">Voucher đặt vé máy bay</h1>
-                            <h3 style="color: #fff">Trị Giá: 500.000 vnđ/voucher</h3>
+                            <h3 style="color: #fff">Trị Giá:<a style="font-weight: bold; color: #fff"> 500.000vnđ/voucher</a></h3>
                         </div>
 
                     </div>
@@ -291,7 +292,7 @@
                 <div class="scoring">
                     <div class="container">
                         <h3>Cách thức tính điểm:</h3>
-                        <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
+                        <a><span>1 like</span> hoặc <span style="color: #yellow">1 tim</span> = <span>1 điểm</span></a><br/>
                         <a><span>1 share</span> = <span>3 điểm</span></a><br/>
                         <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi).</a><br/>
                         
@@ -340,7 +341,7 @@
                             <img src="../../assets/img/img-facebook/khieukhich.png" alt="" style="margin-top: 22px">
                             <div class="title-3">
                                 <a>Voucher đặt vé máy bay</a><br/>
-                                <a>Trị giá 500.000vnđ/voucher</a>
+                                <a>Trị giá: 500.000vnđ/voucher</a>
                             </div>
                         </div>
 
@@ -354,7 +355,7 @@
 
                 <div class="how-to-play-mobile">
                     <div class="container">
-                        <h3>Cách chơi:</h3>
+                        <h3 style="font-weight: bold;">Cách chơi:</h3>
                         <div class="content">
                             <a>- Bước 1: Điền thông tin cá nhân, sau đó chọn ảnh dự thi và viết mô tả (nếu có) giới hạn tối đa 100 từ. Sau đó ấn nút “Gửi ảnh”.</a><br/>
                             <a>- Bước 2: Sau khi ảnh dự thi của bạn được đăng trên album cuộc thi tại Fanpage BestPrice, BestPrice sẽ thông báo về link ảnh của bạn qua email.</a><br/>
@@ -365,14 +366,14 @@
 
                 <div class="scoring-mobile">
                     <div class="container">
-                        <h3>Cách thức tính điểm:</h3>
+                        <h3 style="font-weight: bold;">Cách thức tính điểm:</h3>
                         <div class="content">
-                            <a><span>1 like</span> hoặc <span>1 tim</span> = <span>1 điểm</span></a><br/>
-                            <a><span>1 share</span> = <span>3 điểm</span></a><br/>
+                            <a><span  style="color: #f9d202">1 like</span> hoặc <span  style="color: #f9d202">1 tim</span> = <span  style="color: #f9d202">1 điểm</span></a><br/>
+                            <a><span  style="color: #f9d202">1 share</span> = <span  style="color: #f9d202">3 điểm</span></a><br/>
                             <a>Điểm sẽ là tổng số tim, like và share hợp lệ trên bức ảnh của bạn- bức ảnh nằm ở album dự thi chính thức của chương trình (Mỗi người chơi chỉ tham gia với  1 ảnh dự thi)</a><br/>
                             
                             
-                            <div class="more" style="margin-top: 10px">
+                            <div class="more" style="">
                                 <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
                                 <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
                             </div>
@@ -414,12 +415,12 @@
                                 
                                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-1">
                                     <h3>Nhà bảo trợ truyền thông</h3>
-                                    <img src="../../../assets/img/img-facebook/Asset13.png" alt="">
+                                    <img src="../../../assets/img/img-facebook/check-in-vn.png" alt="">
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
                                     <h3>Nhà tài trợ giải thưởng</h3>
-                                    <img src="../../../assets/img/img-facebook/Asset12.png" alt="">
+                                    <img src="../../../assets/img/img-facebook/oriental.png" alt="">
                                 </div>
                                 
                             </div>
