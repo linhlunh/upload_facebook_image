@@ -133,10 +133,16 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $data['post_success'] = '1';
                     }else{
-                        $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $facebook_picture_link['message'], 'huudt@bestprice.vn');    
+                        $error['erros_mesage'] = json_decode($facebook_picture_link['message']);
+                        $error['oauth_users'] = json_decode($facebook_picture_link['oauth_users']);
+                        $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
+                        $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html, 'huudt@bestprice.vn');    
                     }
                 }else{
-                    $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $facebook_picture_id['message'], 'huudt@bestprice.vn');  
+                    $error['erros_mesage'] = json_decode($facebook_picture_id['message']);
+                    $error['oauth_users'] = json_decode($facebook_picture_id['oauth_users']);
+                    $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
+                    $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html, 'huudt@bestprice.vn');  
                 }
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action']))
@@ -174,7 +180,7 @@ class Post_Photo_Facebook extends CI_Controller{
         $this->load->view('landing_page/post_photo_facebook/list_img', $img);
     }
 
-    function PostImageUseCurl($fileImage = '',$message = '')
+    function PostImageUseCurl($fileImage = '',$message = '',$oauth_users_id)
     {
             !empty($fileImage) ? $fileImage = $_FILES['picture']['tmp_name'] : '';
 
@@ -211,7 +217,9 @@ class Post_Photo_Facebook extends CI_Controller{
             {
                 if(!empty($result->error))
                 {
-                    $dataReturn['message'] = 'Post image error:<br/>'.json_decode($result->error);
+                    $dataReturn['message'] = 'Post image error:<br/>'.json_encode($result->error);
+
+                    $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
                     $dataReturn['error_code'] = $result->error->code;
 
@@ -223,6 +231,8 @@ class Post_Photo_Facebook extends CI_Controller{
             }else
             {
                 $dataReturn['message'] = 'Post image error:<br/>Undifine error';
+
+                $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
                 $dataReturn['error_code'] = 'BP';
 
@@ -271,7 +281,9 @@ class Post_Photo_Facebook extends CI_Controller{
             {
                 if(!empty($result->error))
                 {
-                    $dataReturn['message'] = 'Get link picture error:<br/>'.json_decode($result->error);
+                    $dataReturn['message'] = 'Get link picture error:<br/>'.json_encode($result->error);
+
+                    $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
                     $dataReturn['error_code'] = $result->error->code;
 
@@ -283,6 +295,8 @@ class Post_Photo_Facebook extends CI_Controller{
             }else
             {
                 $dataReturn['message'] = 'Get link picture error:<br/>Undifine error';
+
+                $dataReturn['oauth_users'] = json_encode($this->Landing_Page_Model->getOauthUsers($oauth_users_id));
 
                 $dataReturn['error_code'] = 'BP';
 

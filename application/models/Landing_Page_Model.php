@@ -85,4 +85,12 @@ class Landing_Page_Model extends CI_Model {
 
         return $query->result_array();
     }
+
+    function getOauthUsers($id){
+        $this->db->select('*');
+        $this->db->where('id',$id);
+        $query = $this->db->get('oauth_users');
+        $result = $query->result_array();
+        return !empty($result) ? $result : '';
+    }
 }
