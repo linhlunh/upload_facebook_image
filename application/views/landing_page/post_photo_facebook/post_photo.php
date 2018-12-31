@@ -36,7 +36,7 @@
             <div class="img-prize">
                 <img src="../../../assets/img/img-facebook/giaithuong.png" alt="">
             </div>
-            <form name="frm" action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
+            <form name="frm" id="form_submit_data" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
                 <div class="tquan">
                     <div class="insert-information">
                         <div class="row up">
@@ -204,7 +204,7 @@
 
                             <div class="margin-top-10" id="term_agreement">
                                 <div class="upload" style="margin-top: 35px;">
-                                    <button type="submit" value="" id="id_upload" name="action">
+                                    <button type="submit" value="submit" id="id_upload" name="action">
                                         <span id='btn_default'>GỬI ẢNH<span style='margin-left: 5px' class='glyphicon glyphicon-open'></span></span>
                                         <span style='display:none' id='btn_loading'><i style='margin-right: 4px' class="fa fa-spinner fa-spin"></i>ĐANG GỬI...</span>
                                     </button>
@@ -542,13 +542,14 @@
                 check = false;
             }else{
                 $('#error_picture').hide();
-                if(fileImg.type == 'image/jpeg' || fileImg.type == 'image/png' || fileImg.type == 'image/jpg' || fileImg.type == 'image/heic'){
+                var img_name = fileImg.name.toLowerCase();
+                if(img_name.indexOf('.png') != -1 || img_name.indexOf('.jpeg') != -1 || img_name.indexOf('.jpg') != -1 || img_name.indexOf('.heic') != -1){
                     $('#error_picture_type').hide();
                 }else{
-                    //$('#error_picture_type').show();
-                   // alert('Ảnh bạn chọn chưa đúng định dạng!');
-                    //return false;
-                    //check = false;
+                	$('#error_picture_type').show();
+                	alert('Ảnh bạn chọn chưa đúng định dạng. Định dạng được chấp nhận JPEG, JPG, PNG.');
+                	return false;
+               		check = false;
                 }
                 if(fileImg.size >= 10485760 ){
                     $('#error_picture_size').show();
@@ -575,8 +576,16 @@
                 return f;
             }
 
+        $( document ).ready(function() {
+        	<?php if (!empty($action)):?>
+	        	//$('#form_submit_data').reset;
+	        <?php endif;?>
+        });
+        
 
         $(function() {
+            
+            
             if ($(window).width() < 767) {
 
                 $('#note').attr('data-toggle', 'modal');
@@ -603,6 +612,7 @@
     			dayNamesMin: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
     			changeMonth: true,
     		  	changeYear: true,
+    		  	yearRange : 'c-118:c+10'
             });
         });
     </script>

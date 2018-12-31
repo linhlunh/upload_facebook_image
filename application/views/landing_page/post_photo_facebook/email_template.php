@@ -26,8 +26,9 @@
         <div class='mg-top-15'>
             Chào <b><?=!empty($full_name) ? $full_name : '' ?></b>
         </div>
-        <div class='mg-top-15'>
-            Cảm ơn bạn đã tham chương trình <b>Đăng ảnh đón xuân - khuân tour miễn phí</b> của BestPrice. Đây là những thông tin bạn đã đăng ký với chúng tôi:
+        <div class='mg-top-15' style='line-height: 25px;'>
+            Cảm ơn bạn đã tham chương trình <b>Đăng ảnh đón xuân - khuân tour miễn phí</b> của BestPrice.<br>
+            Đây là những thông tin bạn đã đăng ký với chúng tôi:
         </div>
         <div class='mg-top-15'>
             <div class='image' style='margin-right: 15px'>
@@ -57,7 +58,7 @@
     <footer>
         <div class="mail-footer">
             <div style="position: relative; height: 55px; margin: 15px 0px;">
-                <img style="position: absolute; left: 0;" alt="BestPrice Travel" src="<?=get_static_resources('/img/icon/bestpricevn-logo.png')?>">
+                <img style="position: absolute; left: 0;" alt="BestPrice Travel" src="https://www.bestprice.vn/assets/img/icon/bestpricevn-logo.png">
             </div>
 
             <div style="color: #15c; font-size: 14px;">BestPrice - Đặt vé máy bay, tour du lịch và phòng khách sạn giá tốt nhất</div>
@@ -101,7 +102,7 @@
             </div>
             <div class="banner" style="position: relative; margin: 5px 0px 0px 0px;">
                 <a target="_blank" href="https://www.bestprice.vn/tour/chu-de-chum-tour-tet-2019-1.html?utm_source=email&utm_medium=signature&utm_campaign=signature121218">
-                    <img style="position: absolute; left: 0;" alt="Banner Email BestPrice Travel" src="<?=get_static_resources('/img/email/chukiMailTet.png')?>">
+                    <img style="position: absolute; left: 0;" alt="Banner Email BestPrice Travel" src="https://www.bestprice.vn/assets/img/email/chukiMailTet.png">
                 </a>
             </div>
             <div class="social-links">
@@ -110,28 +111,28 @@
                         <tr>
                             <td valign="middle">Cập nhật thông tin mới nhất tại:</td>
                             <td style="padding-left: 10px;">
-                                <a target="_blank" href="<?=LINK_FACE_BOOK?>">
-                                    <img alt="Logo Facebook" src="<?=get_static_resources('/img/email/fb.png')?>">
+                                <a target="_blank" href="https://www.facebook.com/BestPricevn">
+                                    <img alt="Logo Facebook" src="https://www.bestprice.vn/assets/img/email/fb.png">
                                 </a>
                             </td>
                             <td>
-                                <a style="text-decoration: none; color: #333;" target="_blank" href="<?=LINK_FACE_BOOK?>">
+                                <a style="text-decoration: none; color: #333;" target="_blank" href="https://www.facebook.com/BestPricevn">
                                     Facebook
                                 </a>
                             </td>
                             <td style="padding-left: 10px;">
-                                <a target="_blank" href="<?=LINK_ZALO?>">
-                                    <img alt="Logo Zalo" src="<?=get_static_resources('/img/email/zalo.png')?>">
+                                <a target="_blank" href="http://shop.zalo.me/store?pageId=2792353866366483577">
+                                    <img alt="Logo Zalo" src="https://www.bestprice.vn/assets/img/email/zalo.png">
                                 </a>
                             </td>
                             <td>
-                                <a style="text-decoration: none; color: #333;" target="_blank" href="<?=LINK_ZALO?>">
+                                <a style="text-decoration: none; color: #333;" target="_blank" href="http://shop.zalo.me/store?pageId=2792353866366483577">
                                     Zalo
                                 </a>
                             </td>
                             <td style="padding-left: 10px;">
                                 <a style="text-decoration: none; color: #333;" target="_blank" href="https://www.bestprice.vn/blog/">
-                                    <img alt="Logo Blog" src="<?=get_static_resources('/img/email/blog.png')?>">
+                                    <img alt="Logo Blog" src="https://www.bestprice.vn/assets/img/email/blog.png">
                                 </a>
                             </td>
                             <td>

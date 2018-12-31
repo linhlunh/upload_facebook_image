@@ -26,7 +26,7 @@ class Post_Photo_Facebook extends CI_Controller{
         $time_start = $this->microtime_float();
         
         $dataSubmit = $this->input->post();
-
+        
         $data = array();
      
         $oauth_users_rules = $this->config->item('oauth_users');
@@ -34,10 +34,10 @@ class Post_Photo_Facebook extends CI_Controller{
         $this->form_validation->set_rules($oauth_users_rules);
         
         $this->form_validation->set_error_delimiters('<span style="color:red">','</span>');
-       
-        if ($this->form_validation->run() && !empty($_FILES['picture']['name']))// && ($_FILES['picture']['type'] == 'image/jpeg' ||$_FILES['picture']['type'] == 'image/png' || $_FILES['picture']['type'] == 'image/jpg') 
+        
+        if ($this->form_validation->run() && !empty($_FILES['picture']['name']) && (strpos($_FILES['picture']['name'], 'jpeg') !== false || stripos($_FILES['picture']['type'], '.png') !== false || stripos($_FILES['picture']['type'], '.jpg') !== false || stripos($_FILES['picture']['type'], '.heic') !== false) )
         {
-            if (!empty($dataSubmit))
+            if (!empty($dataSubmit['action']) && $dataSubmit['action'] == 'submit')
             {
                 $urlMoveUploadFile = str_replace('application\controllers\landing_page','',__DIR__).'/images/landing_page/post_photo_facebook';
 
@@ -89,17 +89,15 @@ class Post_Photo_Facebook extends CI_Controller{
                 
                	//move_uploaded_file($_FILES['picture']['tmp_name'], $imgPath);
                	copy($_FILES['picture']['tmp_name'], $imgPath);
-               	//echo('<pre>');print_r(new makeCurlFile($imgPath));echo('</pre>');exit();
-                /* if (strtolower($type_img) == '.heic'){
+               	
+               	if (strtolower($type_img) == '.heic'){
                 	$time_convert_1 = time(true);                	
-                	$tmp_name = $this->convertTypeImage($imgPath, $new_name);
-                	$imgPath = $urlMoveUploadFileConvert .'/'.$new_name;                	
+                	$tmp_name = $this->convertTypeImage($imgPath, $new_name, $urlMoveUploadFileConvert);
+                	//$imgPath = $urlMoveUploadFileConvert .'/'.$new_name.'.jpg';                	
                 	$time_convert_2 = time(true);
                 	log_message('error', 'Time Convert Photo => '.($time_convert_2-$time_convert_1));
-                } */
+                }
                 
-               // echo('<pre>');print_r($tmp_name);echo('</pre>');
-                //$tmp_name = tempnam(sys_get_temp_dir(), 'prefix');
                 $facebook_picture_id = $this->PostImageUseCurl($tmp_name, $description, $InsertedId);//$_FILES['picture']['tmp_name']
                 
                 $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
@@ -140,23 +138,27 @@ class Post_Photo_Facebook extends CI_Controller{
                         $error['erros_mesage'] = json_decode($facebook_picture_link['message'],true);
                         $error['oauth_users'] = json_decode($facebook_picture_link['oauth_users'],true);
                         $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
-                        $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html, 'huudt@bestprice.vn');    
+                        $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html);
+                        $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html);
                         $data['post_success'] = '1';
                     }
                 }else{
                     $error['erros_mesage'] = json_decode($facebook_picture_id['message'],true);
                     $error['oauth_users'] = json_decode($facebook_picture_id['oauth_users'],true);
                     $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
-                    $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html, 'huudt@bestprice.vn');  
+                    $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
+                    $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
                     $data['post_success'] = '1';
                 }
             }
-        }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action']))
-        {
+        }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action'])) {
             $data['errors'] = 'Chua upload file';
-        } 
+        }
+        
         $time_end  = $this->microtime_float();
-
+        
+        $data['action'] = $this->input->post('action');;
+        
         $this->load->view('landing_page/post_photo_facebook/post_photo',$data);
     }
 
@@ -186,31 +188,27 @@ class Post_Photo_Facebook extends CI_Controller{
         $this->load->view('landing_page/post_photo_facebook/list_img', $img);
     }
 
-    function PostImageUseCurl($fileImage = '',$message = '',$oauth_users_id)
-    {
-            !empty($fileImage) ? $fileImage = $_FILES['picture']['tmp_name'] : '';
-
+    function PostImageUseCurl($fileImage = '',$message = '',$oauth_users_id) {
+    	
             $albumId = '2242409652459728';
-           
+            
             $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
-
+            
             $post_array = array(
                 "access_token" => $accessToken,
-                "source"       => new CurlFile($fileImage),
+                "source"       => new CurlFile($fileImage),//'@'.realpath($fileImage),//$fileImage,//new CurlFile()
                 "message"      => $message,
             );
-            //echo('<pre>');print_r($post_array);echo('</pre>');exit();
+            
             $url = "https://graph.facebook.com/".$albumId."/photos";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
             
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $post_array);
-            
             
             $result = curl_exec($ch);
             
@@ -218,7 +216,7 @@ class Post_Photo_Facebook extends CI_Controller{
             
             curl_close($ch);
             $result = json_decode($result);
-
+            
             if(!empty($result))
             {
                 if(!empty($result->error))
@@ -396,24 +394,24 @@ class Post_Photo_Facebook extends CI_Controller{
 	    $this->email->message($content);
 
 	    if (!$this->email->send()) {
-            show_error($this->email->print_debugger());
+            log_message('error', 'Email Debug => '.$this->email->print_debugger());
         }
 	    return true;
     }
     
-    function convertTypeImage($imgPath, $file_name = '')
+    function convertTypeImage($imgPath, $file_name = '', $save_path = '')
     {
         $url = "https://api.cloudconvert.com/convert";
         
         $list_key = array(
-        	/* 0 => 'cRiCmpSDlR3lr8Zz5TRdDukWM8xmpzkWwSDmhwx9aeUDhwPYBXUsuB5U8sVawCbr',
+        	0 => 'cRiCmpSDlR3lr8Zz5TRdDukWM8xmpzkWwSDmhwx9aeUDhwPYBXUsuB5U8sVawCbr',
         	1 => 'cVLN60rnU1JnEHAAPrlL4qwlI0vARVtURaFdz63jhPTD6qvRplQMa5GIjAvg0g2m',
         	2 => 'kdtr0dkhHoo4Ik0z4CVBa78By7yu5JpyH54uvPzxw9BwQMuenYx3djdVuhxm9FFu',
         	3 => '8HB4jrV1fRxVNeUdCXsySsjKKtxKrP3VSEgBBwA2qsvtpkfMwQ61zKfh9tokUyDC',
-        	4 => '81bH3rDFKee7L8JgjFT0kE8DdWKRhSg5YEfnXnT42CqZxIohqqTI3O237R4DbhBJ',*/
-        	0 => 'znyuA3rr3UA5aZG5p48I29HXq1WrUdpCTXTZ1Qi5kXYZsUxirqx3MDAGNQIL5zqU',
-        	//6 => 'DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj',
-        	//0 => 'HbP19sDgx1EI4bOYFexLqvhxssPAQMFCZVMSVVx3cVF9v8xZNSUHgbXUmxpiKbwU'
+        	4 => '81bH3rDFKee7L8JgjFT0kE8DdWKRhSg5YEfnXnT42CqZxIohqqTI3O237R4DbhBJ',
+        	5 => 'znyuA3rr3UA5aZG5p48I29HXq1WrUdpCTXTZ1Qi5kXYZsUxirqx3MDAGNQIL5zqU',
+        	6 => 'DEtsKZqMBSrbrAwqzWhumVN1JlNbFPtXu9dWwpBRtFLT9jFef7fbrpoWvhijPSbj',
+        	7 => 'HbP19sDgx1EI4bOYFexLqvhxssPAQMFCZVMSVVx3cVF9v8xZNSUHgbXUmxpiKbwU'
         );
         
         array_rand($list_key);
@@ -446,8 +444,6 @@ class Post_Photo_Facebook extends CI_Controller{
         
         curl_close($ch);
         
-        $save_path = str_replace('application/', 'images/landing_page/post_photo_facebook_convert', APPPATH);
-        
         $result = json_decode($result, true);
         
         $link = !empty($result['output']['url']) ? 'https:'.$result['output']['url'] : '';
@@ -465,14 +461,17 @@ class Post_Photo_Facebook extends CI_Controller{
         	fwrite($savefile, $data_image);
         	fclose($savefile);
 
-        	$temp = tmpfile();
-        	fwrite($temp, $data_image);
+        	//$temp = tmpfile();
+        	$tempnam = tempnam(sys_get_temp_dir(), 'VUI');
+        	$temp = fopen($tempnam, 'w+');
         	fseek($temp, 0);
+        	fwrite($temp, $data_image);
         	fclose($temp);
-        	$tempnam = tempnam(sys_get_temp_dir(), 'prefix');
+        	
+        	return $tempnam;
         }
         
-        return $tempnam;
+        return false;
         
     }
     
