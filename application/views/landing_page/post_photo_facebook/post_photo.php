@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload-31-12.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-31-12-11h.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -34,7 +34,7 @@
         <div class="detail-content">
 
             <div class="img-prize">
-                <img src="../../../assets/img/img-facebook/giai-thuong.png" alt="">
+                <img src="../../../assets/img/img-facebook/giaithuong.png" alt="">
             </div>
             <form name="frm" action="" method="POST" enctype="multipart/form-data" onsubmit='return validateForm()'>
                 <div class="tquan">
@@ -154,7 +154,8 @@
                             </div>
                         </div>
                         <div class="regulations" style="color: #fff; margin-top: 10px;">
-                            Khi gửi ảnh là bạn đã đồng ý với <a style="text-decoration: underline;" href="" data-toggle="modal" data-target="#exampleModalLong">Thể lệ và Quy định của chương trình</a>
+                            <a style="text-decoration: none;" class="condition">Khi gửi ảnh là bạn đã đồng ý với thể lệ và</a><br/>
+                            <a style="text-decoration: underline;" class="agree" href="" data-toggle="modal" data-target="#exampleModalLong">Quy định của chương trình</a>
                         </div>
 
                         <div class="modal fade popup-1" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -238,7 +239,7 @@
                         </div>
 
 
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 title-2 giai-nhi">
                             <h1 style="color: #fff; font-weight: bold">Tour du thuyền Starlight 5* 2N1Đ cho 2 người</h1>
                             <h3 style="color: #fff">Trị Giá: 7.600.000vnđ</h3>
                         </div>
@@ -414,12 +415,12 @@
                                 
                                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-1">
                                     <h3>Nhà bảo trợ truyền thông</h3>
-                                    <img src="../../../assets/img/img-facebook/Asset13.png" alt="">
+                                    <img src="../../../assets/img/img-facebook/check-in-vn.png" alt="">
                                 </div>
 
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
                                     <h3>Nhà tài trợ giải thưởng</h3>
-                                    <img src="../../../assets/img/img-facebook/Asset12.png" alt="">
+                                    <img src="../../../assets/img/img-facebook/oriental.png" alt="">
                                 </div>
                                 
                             </div>
