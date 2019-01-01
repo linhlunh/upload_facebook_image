@@ -35,7 +35,7 @@ class Post_Photo_Facebook extends CI_Controller{
         
         $this->form_validation->set_error_delimiters('<span style="color:red">','</span>');
         
-        if ($this->form_validation->run() && !empty($_FILES['picture']['name']) && (strpos($_FILES['picture']['name'], 'jpeg') !== false || stripos($_FILES['picture']['type'], '.png') !== false || stripos($_FILES['picture']['type'], '.jpg') !== false || stripos($_FILES['picture']['type'], '.heic') !== false) )
+        if ($this->form_validation->run() && !empty($_FILES['picture']['name']) && (stripos($_FILES['picture']['name'], 'jpeg') !== false || stripos($_FILES['picture']['name'], '.png') !== false || stripos($_FILES['picture']['name'], '.jpg') !== false || stripos($_FILES['picture']['name'], '.heic') !== false) )
         {
             if (!empty($dataSubmit['action']) && $dataSubmit['action'] == 'submit')
             {
