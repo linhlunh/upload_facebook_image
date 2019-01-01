@@ -2782,6 +2782,18 @@ body {
         font-weight: bold;
         text-decoration: none
     }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .text {
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .price {
+        font-size: 12px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .text {
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .price {
+        font-size: 12px;
+    }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
         top: 820px;
@@ -3207,6 +3219,18 @@ body {
         color: #fff;
         font-weight: bold;
         text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .text {
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .price {
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .text {
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .price {
+        font-size: 11px;
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
@@ -3964,6 +3988,18 @@ body {
         font-weight: bold;
         text-decoration: none
     }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .text {
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .price {
+        font-size: 11px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .text {
+        font-size: 8px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .price {
+        font-size: 11px;
+    }
     .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 a {
         color: #fff;
         font-weight: bold;
@@ -4334,6 +4370,18 @@ body {
         color: #fff;
         font-weight: bold;
         text-decoration: none
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .text {
+        font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-1 .price {
+        font-size: 9px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .text {
+        font-size: 7px;
+    }
+    .detail-content .ds-mobile .content-prize-mobile .row .col-lg-6 .title-3 .price {
+        font-size: 9px;
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
