@@ -97,10 +97,9 @@ class Post_Photo_Facebook extends CI_Controller{
                 	$time_convert_2 = time(true);
                 	log_message('error', 'Time Convert Photo => '.($time_convert_2-$time_convert_1));
                 }
+                $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
                 
                 $facebook_picture_id = $this->PostImageUseCurl($tmp_name, $description, $InsertedId);//$_FILES['picture']['tmp_name']
-                
-                $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
                 
                 if(empty($facebook_picture_id['error_code']))
                 {
