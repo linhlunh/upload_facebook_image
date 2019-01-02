@@ -330,7 +330,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
     private function is_phone($phone)
     {
-		return preg_match('/^0(1\d{9}|9\d{8}|8\d{8})$/', $phone) ? true : false;
+		return preg_match('/^0(9\d{8}|8\d{8}|7\d{8}|3\d{8}|5\d{8})$/', $phone) ? true : false;
     }
 
     function phone_check($str)
