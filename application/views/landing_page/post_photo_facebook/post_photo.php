@@ -520,7 +520,7 @@
                 check = false;
             } else {
                 $('#error_phone').hide();
-                if (!(/^0(1\d{9}|9\d{8}|8\d{8})$/.test(phone))) {
+                if (!(/^0(9\d{8}|8\d{8}|7\d{8}|3\d{8}|5\d{8})$/.test(phone))) {
                     $('#error_wrong_phone').show();
                     $("html, body").animate({scrollTop: ($('#phone').offset().top-100)}, 'slow');
                     alert('Số điện thoại không đúng!');
