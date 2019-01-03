@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload-1-1.css">
+    <link rel="stylesheet" href="../../../assets/css/upload-3-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -116,6 +116,7 @@
 
                                     });
                                 }
+                                
                             </script>
                             <div class="modal fade " id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
                                 <div class="modal-dialog" role="document" style="width: 80%; margin-left: 30px; margin-top: 170px;">
@@ -161,6 +162,7 @@
                                                             }
                                                         }
                                                     });
+                                                    
                                                 </script>
                                             </div>
                                         </div>
@@ -189,11 +191,11 @@
                                                 <a class="text">Sản phẩm dự thi thể hiện dưới dạng file ảnh định dạng <span>JPG, PNG</span> và không quá <span>10MB</span>, Ảnh có thể chỉnh <span>photoshop, sửa ánh sáng, màu sắc</span> nhưng <span style="font-weight: bold;">không được thay đổi về nội dung ảnh</span>, không gắn chữ liên quan tới bất kỳ nhãn hiệu nào, không gắn logo của bất cứ nhãn hiệu nào trong ảnh.</a><br/>
                                             </div>
 
-                                            <div class="content-text-2" style="margin-top: 15px">
+                                            <div class="content-text-2" style="margin-top: 5px">
                                                 <a class="text-2">Một người chỉ có thể tham gia tối đa 1 ảnh.</a><br/>
                                             </div>
 
-                                            <div class="content-text-3">
+                                            <div class="content-text-3" style="margin-top: 5px">
                                                 <a>-  Ảnh tham gia chương trình do người tham dự tự chụp và gửi tham dự, ban tổ chức không nhận bài dự thi được sưu tầm từ Internet.</a><br/>
                                                 <a>-  Ban tổ chức có quyền từ chối đăng những ảnh không phù hợp với quy chế chương trình hoặc vi phạm thuần phong mỹ tục và các quy định của nhà nước.</a><br/>
                                                 <a>-  Người tham gia hoàn toàn chịu trách nhiệm về bản quyền của ảnh tham dự, nếu có tranh chấp, trong vòng 3 ngày, phải gửi thông tin để chứng minh về bản quyền ảnh dự thi. Ảnh vi phạm bản quyền sẽ bị gỡ khỏi trang.</a><br/>
@@ -337,7 +339,7 @@
                         </div>
 
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 giainhi">
-                            <img class="img-6" src="../../assets/img/img-facebook/giainhi.png" alt="" style="width: 80%; margin-top: -4px;">
+                            <img class="img-6" src="../../assets/img/img-facebook/giainhi.png" alt="" style="width: 90%; margin-top: -15px;">
                             <div class="title-1" style="margin-top: 2px">
                                 <a>Tour du thuyền Starlight 5* 2N1Đ cho 2 người</a><br/>
                                 <a class="text" style="font-weight: bold;">Trị Giá:</a> <a class="price" style="font-weight: 900; color: #fff">7.600.000vnđ</a>

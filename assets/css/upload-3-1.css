@@ -171,6 +171,7 @@ body {
     margin-top: -120px;
     opacity: 1;
     color: #fff;
+    font-size: 26px;
 }
 
 .detail-content .tquan .describe .popup-1 .modal-content .content-regulations .container .content-text a span {
@@ -395,8 +396,9 @@ body {
 }
 
 .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-    height: 200px;
+    height: 244px;
     margin-left: -55px;
+    margin-top: -32px;
 }
 
 .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
