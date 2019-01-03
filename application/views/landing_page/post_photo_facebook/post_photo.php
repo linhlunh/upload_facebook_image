@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload-3-1.css">
+    <link rel="stylesheet" href="../../../assets/css/upload.min.031220190924.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -461,10 +461,14 @@
         </div>
     </div>
   </div>
+  <input type="hidden" id="is_show_popup" value="">
   <button type="button" id='btn_show_popup' class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#modal_success">Open Modal</button>
     <script>
     	<?php if (!empty($is_post)):?>
-			$('#btn_show_popup').trigger('click');
+    		$('#btn_show_popup').trigger('click');
+			var url = window.location.href;
+			var newUrl = url.replace('?is_post=true', '');
+			window.history.pushState("", "", newUrl);
 		<?php endif;?>
         var fileImg = '';
         $('input[type="file"]').change(function(e){

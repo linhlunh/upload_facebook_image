@@ -187,7 +187,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
     function PostImageUseCurl($fileImage = '',$message = '',$oauth_users_id) {
     	
-            $albumId = '2242409652459728';//2234079673479908
+           	$albumId = '2242409652459728';//2234079673479908
             
             $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
             //$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
