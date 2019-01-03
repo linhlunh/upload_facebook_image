@@ -39,21 +39,13 @@ class Post_Photo_Facebook extends CI_Controller{
         {
             if (!empty($dataSubmit['action']) && $dataSubmit['action'] == 'submit')
             {
-                $urlMoveUploadFile = str_replace('application\controllers\landing_page','',__DIR__).'/images/landing_page/post_photo_facebook';
+                $urlMoveUploadFile = str_replace('application\controllers\landing_page','',__DIR__).'images/landing_page/post_photo_facebook';
 
                 $urlMoveUploadFile = str_replace('application/controllers/landing_page','',$urlMoveUploadFile);
 
-                $urlMoveUploadFile = str_replace('\\','/',$urlMoveUploadFile);
-
-                $urlMoveUploadFile = str_replace('//','/',$urlMoveUploadFile);
-                
-                $urlMoveUploadFileConvert = str_replace('application\controllers\landing_page','',__DIR__).'/images/landing_page/post_photo_facebook_convert';
+                $urlMoveUploadFileConvert = str_replace('application\controllers\landing_page','',__DIR__).'images/landing_page/post_photo_facebook_convert';
                 
                 $urlMoveUploadFileConvert = str_replace('application/controllers/landing_page','',$urlMoveUploadFileConvert);
-                
-                $urlMoveUploadFileConvert = str_replace('\\','/',$urlMoveUploadFileConvert);
-                
-                $urlMoveUploadFileConvert = str_replace('//','/',$urlMoveUploadFileConvert);
                 
                 unset($dataSubmit['action']);
 
@@ -112,9 +104,12 @@ class Post_Photo_Facebook extends CI_Controller{
                         $dataSubmit['facebook_picture_link'] =  $facebook_picture_link;
 
                         $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
-
+                        
+                        $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+                        //$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
+                        
                         $post_array = array(
-                            "access_token" => 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD',
+                            "access_token" => $accessToken,
                             "id" => $dataSubmit['facebook_picture_id'],
                             "fields" => "images",
                         );
@@ -149,6 +144,7 @@ class Post_Photo_Facebook extends CI_Controller{
                     $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
                     $data['post_success'] = '1';
                 }
+                redirect(site_url('vui-xuan?is_post=true'));
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action'])) {
             $data['errors'] = 'Chua upload file';
@@ -156,7 +152,9 @@ class Post_Photo_Facebook extends CI_Controller{
         
         $time_end  = $this->microtime_float();
         
-        $data['action'] = $this->input->post('action');;
+        $data['action'] = $this->input->post('action');
+        
+        $data['is_post'] = $this->input->get('is_post');
         
         $this->load->view('landing_page/post_photo_facebook/post_photo',$data);
     }
@@ -189,9 +187,10 @@ class Post_Photo_Facebook extends CI_Controller{
 
     function PostImageUseCurl($fileImage = '',$message = '',$oauth_users_id) {
     	
-            $albumId = '2242409652459728';
+            $albumId = '2242409652459728';//2234079673479908
             
             $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+            //$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
             
             $post_array = array(
                 "access_token" => $accessToken,
@@ -245,8 +244,9 @@ class Post_Photo_Facebook extends CI_Controller{
     
     function GetLinkImage($pictureId, $oauth_users_id, $post_array = '', $url = '')
     {
-        $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
-
+    	$accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+    	//$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
+        
         if(empty($post_array))
         {
             $post_array = array(

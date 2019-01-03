@@ -40,7 +40,9 @@
                 <b>Ngày sinh: </b><?=!empty($birthday) ? date('d-m-Y',strtotime($birthday)) : '' ?><br/>
                 <b>Điện thoại: </b><?=!empty($phone) ? $phone : '' ?><br/>
                 <b>Email: </b><?=!empty($email) ? $email : '' ?><br/>
+                <?php if (!empty($description)):?>
                 <b>Mô tả: </b><?=!empty($description) ? $description : '' ?>
+                <?php endif;?>
             </div>
             <div style='clear:both'></div>
         </div>

@@ -461,10 +461,9 @@
   </div>
   <button type="button" id='btn_show_popup' class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#modal_success">Open Modal</button>
     <script>
-        if(<?=!empty($post_success)? 'true' : 'false' ?>)
-        {
-            $('#btn_show_popup').trigger('click');
-        }
+    	<?php if (!empty($is_post)):?>
+			$('#btn_show_popup').trigger('click');
+		<?php endif;?>
         var fileImg = '';
         $('input[type="file"]').change(function(e){
             fileImg = e.target.files[0];
@@ -594,13 +593,7 @@
                 return f;
             }
 
-        $( document ).ready(function() {
-        	<?php if (!empty($action)):?>
-	        	//$('#form_submit_data').reset;
-	        <?php endif;?>
-        });
         
-
         $(function() {
             
             
@@ -625,12 +618,12 @@
                 dateFormat: "dd-mm-yy",
                 monthNames: [ "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12" ],
                 monthNamesShort: [ "Th 1", "Th2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7", "Th 8", "Th 9", "Th 10", "Th 11", "Th 12" ],
-                maxDate: new Date(),
+                //maxDate: new Date(),
                 dayNames: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
     			dayNamesMin: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
     			changeMonth: true,
     		  	changeYear: true,
-    		  	yearRange : 'c-118:c+10'
+    		  	yearRange : 'c-118:c+1'
             });
         });
     </script>
