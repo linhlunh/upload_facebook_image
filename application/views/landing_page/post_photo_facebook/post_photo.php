@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload.min.031220190924.css">
+    <link rel="stylesheet" href="../../../assets/css/upload.min.04010942.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -414,6 +414,7 @@
                     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-1">
                         <div class="information">
                             <h3>Thông tin công ty:</h3>
+                            <p>Công ty Du Lịch BestPrice</p>
                             <a class="address">VP Hà Nội: <span class="detail">12A ngõ Bà Triệu, phố Bà Triệu, Q.Hai Bà Trưng.</span></a><br/>
                             <a class="address">VP HCM: <span class="detail">95 Trần Quang Khải, Tân, Q.1</span></a><br/>
                             <a class="address">Hotline: <span class="detail">1900 6505 (Nhấn phím 0)</span></a><br/>
