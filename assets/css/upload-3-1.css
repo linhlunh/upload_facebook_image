@@ -368,6 +368,12 @@ body {
     text-decoration: none;
 }
 
+.detail-content .overview .row .info-1 .information p {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 1px;
+}
+
 .detail-content .overview .row .info-1 .information a span {
     font-weight: initial;
     font-size: 19px
@@ -2890,6 +2896,11 @@ body {
         font-size: 10px;
         text-decoration: none;
     }
+    .detail-content .overview .row .info-1 .information p {
+        font-size: 10px;
+        font-weight: bold;
+        margin: 0 0 0px;
+    }
     .detail-content .overview .row .info-1 .information a span {
         font-weight: initial;
         font-size: 10px;
@@ -3328,6 +3339,11 @@ body {
         font-size: 10px;
         text-decoration: none;
     }
+    .detail-content .overview .row .info-1 .information p {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0 0px 2px;
+    }
     .detail-content .overview .row .info-1 .information a span {
         font-weight: initial;
         font-size: 10px;
@@ -3685,6 +3701,11 @@ body {
         left: 25px;
         color: #fff;
         width: 100%;
+    }
+    .detail-content .overview .row .info-1 .information p {
+        font-size: 9px;
+        font-weight: bold;
+        margin-top: -7px;
     }
     .detail-content .overview .row .info-1 .information h3 {
         font-weight: bold;
@@ -4103,6 +4124,11 @@ body {
         font-size: 9px;
         text-decoration: none;
     }
+    .detail-content .overview .row .info-1 .information p {
+        font-size: 9px;
+        font-weight: bold;
+        margin: 0 0px 2px;
+    }
     .detail-content .overview .row .info-1 .information a span {
         font-weight: initial;
         font-size: 8px;
@@ -4478,6 +4504,11 @@ body {
         color: #fff;
         font-size: 9px;
         text-decoration: none;
+    }
+    .detail-content .overview .row .info-1 .information p {
+        font-size: 9px;
+        font-weight: bold;
+        margin-top: -5px;
     }
     .detail-content .overview .row .info-1 .information a span {
         font-weight: initial;
