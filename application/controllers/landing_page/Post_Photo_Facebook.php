@@ -23,7 +23,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
     public function index()
     { 
-        $time_start = $this->microtime_float();
+        
         
         $dataSubmit = $this->input->post();
         
@@ -39,6 +39,8 @@ class Post_Photo_Facebook extends CI_Controller{
         {
             if (!empty($dataSubmit['action']) && $dataSubmit['action'] == 'submit')
             {
+            	$time_start = $this->microtime_float();
+            	
                 $urlMoveUploadFile = str_replace('application\controllers\landing_page','',__DIR__).'images/landing_page/post_photo_facebook';
 
                 $urlMoveUploadFile = str_replace('application/controllers/landing_page','',$urlMoveUploadFile);
@@ -74,6 +76,25 @@ class Post_Photo_Facebook extends CI_Controller{
                 $description .= $dataSubmit['event_code'].'-'.$dataSubmit['full_name'];
                 $description .= !empty($dataSubmit['description']) ? "\n------------------------------" : "";
                 $description .= !empty($dataSubmit['description']) ? "\n".$dataSubmit['description'] : "";
+                
+                $description .= "\n\n".'------------------------------
+								Bạn cũng muốn có cơ hội rinh CHUYẾN DU LỊCH 0 ĐỒNG? Tham gia ngay cuộc thi ảnh cùng BestPrice để trúng ngay một trong những giải thưởng hấp dẫn:
+								
+								🎁 1 GIẢI NHẤT: Tour Thái Lan trọn gói 5N4Đ dành cho 2 người . Trị giá 12.000.000đ
+								🎁 1 GIẢI NHÌ: Tour du thuyền Starlight 5 sao 2N1Đ cho 2 người. Trị giá 7.600.000đ
+								🎁 1 GIẢI BA: Nghỉ dưỡng 2N1Đ tại VinOasis Phú Quốc 5* cho 2 người. Trị giá 3.470.000đ
+								🎁 3 Giải khuyến khích: Voucher đặt vé máy bay. Trị giá 500.000đ/ voucher
+								
+								➡️➡️➡️ Đừng chần chừ, tham gia ngay tại đây nhé https://www.bestprice.vn/vui-xuan/
+								
+								💟 Cuộc thi có sự tài trợ từ Công ty du lịch BestPrice, Oriental Sails, Vinpearl, và nhà bảo trợ truyền thông Check in Vietnam.
+								
+								💟 Ban tổ chức: Công ty Du Lịch BestPrice
+								📲 Hotline: 1900 6505 (ấn phím 0)
+								VP HCM: 95 Trần Quang Khải, Q.1
+								VP Hà Nội: 12A ngõ Bà Triệu, phố Bà Triệu, Q. Hai Bà Trưng.
+                				
+                				#Dulich0dong #Tết #BestPrice #ĐăngảnhđónXuânKhuântourmiễnphí';
 
                 $imgPath = $urlMoveUploadFile .'/'.$dataSubmit['picture'];
                 
@@ -137,6 +158,9 @@ class Post_Photo_Facebook extends CI_Controller{
                         $data['post_success'] = '1';
                     }
                 }else{
+                	
+                	log_message('error', 'Data Submit: ID => '.$InsertedId .' Data => '.json_encode($dataSubmit));
+                	log_message('error', 'Data Submit Photo: ID => '.$InsertedId .' Photo => '.json_encode($_FILES));
                     $error['erros_mesage'] = json_decode($facebook_picture_id['message'],true);
                     $error['oauth_users'] = json_decode($facebook_picture_id['oauth_users'],true);
                     $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
@@ -144,13 +168,16 @@ class Post_Photo_Facebook extends CI_Controller{
                     $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
                     $data['post_success'] = '1';
                 }
+                
+                $time_end  = $this->microtime_float();
+                
+                log_message('error', 'Time Submit Photo: ID => '.$InsertedId .' Time => '.($time_end-$time_start));
+                
                 redirect(site_url('vui-xuan?is_post=true'));
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action'])) {
             $data['errors'] = 'Chua upload file';
         }
-        
-        $time_end  = $this->microtime_float();
         
         $data['action'] = $this->input->post('action');
         
