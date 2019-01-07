@@ -166,14 +166,21 @@ class Post_Photo_Facebook extends CI_Controller{
                     $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
                     $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
                     $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
-                    $data['post_success'] = '1';
+                    if($facebook_picture_id['error_code'] == '324'){
+                        $data['post_success'] = '-1';
+                    }else{
+                        $data['post_success'] = '1';
+                    }
                 }
                 
                 $time_end  = $this->microtime_float();
                 
                 log_message('error', 'Time Submit Photo: ID => '.$InsertedId .' Time => '.($time_end-$time_start));
-                
-                redirect(site_url('vui-xuan?is_post=true'));
+                if($data['post_success'] == '1'){
+                    redirect(site_url('vui-xuan?is_post=true&post_success=1'));
+                }else{
+                    redirect(site_url('vui-xuan?is_post=true'));
+                }
             }
         }elseif(empty($_FILES['picture']['name']) && !empty($dataSubmit['action'])) {
             $data['errors'] = 'Chua upload file';
@@ -182,6 +189,8 @@ class Post_Photo_Facebook extends CI_Controller{
         $data['action'] = $this->input->post('action');
         
         $data['is_post'] = $this->input->get('is_post');
+
+        $data['post_success'] = $this->input->get('post_success');
         
         $this->load->view('landing_page/post_photo_facebook/post_photo',$data);
     }

@@ -466,9 +466,14 @@
   <button type="button" id='btn_show_popup' class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#modal_success">Open Modal</button>
     <script>
     	<?php if (!empty($is_post)):?>
-    		$('#btn_show_popup').trigger('click');
-			var url = window.location.href;
-			var newUrl = url.replace('?is_post=true', '');
+            var url = window.location.href;
+            <?php if (!empty($post_success) && $post_success == '1'):?>
+                $('#btn_show_popup').trigger('click');
+                var newUrl = url.replace('?is_post=true&post_success=1', '');
+            <?php else :?>
+                alert('Upload that bai');
+                var newUrl = url.replace('?is_post=true', '');
+            <?php endif; ?>
 			window.history.pushState("", "", newUrl);
 		<?php endif;?>
         var fileImg = '';
