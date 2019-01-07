@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload.min.04010942.css">
+    <link rel="stylesheet" href="../../../assets/css/upload.min.070120191740.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -197,6 +197,7 @@
 
                                             <div class="content-text-3" style="margin-top: 5px">
                                                 <a>-  Ảnh tham gia chương trình do người tham dự tự chụp và gửi tham dự, ban tổ chức không nhận bài dự thi được sưu tầm từ Internet.</a><br/>
+                                                <a>-  Mỗi tài khoản facebook chỉ được tính điểm share lên trang cá nhân 1 lần, nhưng vẫn được tính điểm khi share nhiều lần trên các group khác nhau (nếu share nhiều lần trên một facebook cá nhân cũng chỉ tính một lần là 3 điểm)</a><br/>
                                                 <a>-  Ban tổ chức có quyền từ chối đăng những ảnh không phù hợp với quy chế chương trình hoặc vi phạm thuần phong mỹ tục và các quy định của nhà nước.</a><br/>
                                                 <a>-  Người tham gia hoàn toàn chịu trách nhiệm về bản quyền của ảnh tham dự, nếu có tranh chấp, trong vòng 3 ngày, phải gửi thông tin để chứng minh về bản quyền ảnh dự thi. Ảnh vi phạm bản quyền sẽ bị gỡ khỏi trang.</a><br/>
                                                 <a>-  Quà tặng không được quy đổi thành tiền mặt trong bất cứ trường hợp nào nhưng có thể được chuyển nhượng.</a><br/>
@@ -294,6 +295,10 @@
 
                     </div>
 
+                    <div class="title" style="margin-top: 20px; margin-left: 20px;">
+                        <a href="https://www.bestprice.vn/blog/tin-tuc-bestprice-7/dang-anh-don-xuan-khuan-tour-mien-phi_17-2004.html?utm_source=Thi%20anh&utm_medium=Landing%20page&utm_campaign=thianh012019" style="text-decoration: underline; color: #fff; font-size: 20px; font-style: italic;">Chi tiết giải thưởng tại đây.</a>
+                    </div>
+
                 </div>
 
                 <div class="img-rules">
@@ -367,6 +372,10 @@
 
                     </div>
 
+                    <div class="title" style="margin-top: 5px">
+                        <a href="https://www.bestprice.vn/blog/tin-tuc-bestprice-7/dang-anh-don-xuan-khuan-tour-mien-phi_17-2004.html?utm_source=Thi%20anh&utm_medium=Landing%20page&utm_campaign=thianh012019" style="text-decoration: underline; color: #fff; font-size: 10px; font-style: italic;">Chi tiết giải thưởng tại đây.</a>
+                    </div>
+
                 </div>
 
                 <div class="img-rules-mobile">
@@ -430,21 +439,33 @@
                     
                     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 info-3">
                         <div class="sponsor">
+                            <h3>Nhà tài trợ:</h3>
                             
-                            
-                            <div class="row">
+                            <div class="row space-1">
                                 
-                                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-1">
-                                    <h3>Nhà bảo trợ truyền thông</h3>
-                                    <img src="../../../assets/img/img-facebook/check-in-vn.png" alt="">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <img class="img-1" src="../../../assets/img/img-facebook/BP.png" alt=""> 
                                 </div>
-
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 img-2">
-                                    <h3>Nhà tài trợ giải thưởng</h3>
-                                    <img src="../../../assets/img/img-facebook/oriental.png" alt="">
+                                
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <img class="img-2" src="../../../assets/img/img-facebook/oriental.png" alt="">
                                 </div>
                                 
                             </div>
+
+                            
+                            <div class="row space-2">
+                                
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <img class="img-3" src="../../../assets/img/img-facebook/VinP.png" alt=""> 
+                                </div>
+                                
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <img class="img-4" src="../../../assets/img/img-facebook/check-in-vn.png" alt=""> 
+                                </div>
+                                
+                            </div>
+                            
                             
                         </div>
                     </div>

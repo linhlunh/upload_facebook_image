@@ -267,7 +267,7 @@ body {
 
 .detail-content .ds-desktop .img-rules {
     position: absolute;
-    top: 2320px
+    top: 2345px
 }
 
 .detail-content .ds-desktop .img-rules img {
@@ -397,34 +397,34 @@ body {
     width: 100%;
 }
 
+.detail-content .overview .row .info-3 .sponsor h3 {
+    font-weight: bold;
+    text-align: center;
+    margin-left: -94px;
+    font-size: 27px;
+}
+
 .detail-content .overview .row .info-3 .sponsor .row {
     width: 100%
 }
 
-.detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-    height: 244px;
-    margin-left: -55px;
-    margin-top: -32px;
-}
-
-.detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-    margin-left: -82px;
-    font-size: 20px;
-    font-weight: bold;
+.detail-content .overview .row .info-3 .sponsor .row .space-1 {
+    margin-top: 10px
 }
 
 .detail-content .overview .row .info-3 .sponsor .row .img-2 {
-    width: 58%;
+    width: 45%;
+    margin-left: 20px;
+    margin-top: -10px;
 }
 
-.detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
-    margin-left: 14px;
-    font-size: 20px;
+.detail-content .overview .row .info-3 .sponsor .row .img-3 {
+    margin-top: 13px;
 }
 
-.detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-    margin-left: 70px;
-    margin-top: 20px;
+.detail-content .overview .row .info-3 .sponsor .row .img-4 {
+    width: 82%;
+    margin-top: -20px;
 }
 
 .error {
@@ -457,7 +457,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 750px;
+        top: 725px;
     }
     .detail-content .img-prize img {
         width: 105%;
@@ -607,7 +607,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1020px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -636,7 +636,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2265px;
+        top: 2300px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -711,7 +711,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 750px;
+        top: 725px;
     }
     .detail-content .img-prize img {
         width: 105%;
@@ -860,7 +860,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1010px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -886,7 +886,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2265px;
+        top: 2305px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -1388,7 +1388,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2285px;
+        top: 2340px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -1464,7 +1464,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 750px;
+        top: 725px;
     }
     .detail-content .img-prize img {
         width: 105%;
@@ -1629,7 +1629,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1100px;
+        top: 1065px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1655,7 +1655,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2325px;
+        top: 2355px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -1730,7 +1730,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 750px;
+        top: 720px;
     }
     .detail-content .img-prize img {
         width: 105%;
@@ -1878,7 +1878,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1013px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -1904,7 +1904,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2285px;
+        top: 2300px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -2169,7 +2169,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2290px;
+        top: 2320px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -2282,7 +2282,6 @@ body {
     }
     .detail-content .overview .row .info-3 .sponsor h3 {
         font-weight: bold;
-        margin-left: 150px
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
         height: 200px;
@@ -2316,7 +2315,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 750px;
+        top: 720px;
     }
     .detail-content .img-prize img {
         width: 105%;
@@ -2472,7 +2471,7 @@ body {
     }
     .detail-content .content-prize {
         position: absolute;
-        top: 1040px;
+        top: 1001px;
         width: 100%
     }
     .detail-content .ds-desktop .content-prize .row {
@@ -2498,7 +2497,7 @@ body {
     }
     .detail-content .ds-desktop .img-rules {
         position: absolute;
-        top: 2260px;
+        top: 2290px;
     }
     .detail-content .ds-desktop .img-rules img {
         width: 105%;
@@ -2573,7 +2572,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 425px;
+        top: 400px;
     }
     .detail-content .tquan {
         position: absolute;
@@ -2749,7 +2748,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 545px;
+        top: 527px;
         width: 100%;
         padding-left: 12px;
     }
@@ -2804,7 +2803,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 820px;
+        top: 835px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -2966,34 +2965,33 @@ body {
         width: 92%;
         margin-left: 54px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-        margin-left: 148px;
-        font-size: 9px;
+    .detail-content .overview .row .info-3 .sponsor .space-1 {
+        margin-top: 0px
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
         font-weight: bold;
-        width: 285%;
+        text-align: center;
+        margin-left: 194px;
+        font-size: 12px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row {
-        width: 100%;
-        margin-top: 0px;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 280%;
-        margin-left: 155px;
-        margin-top: -21px;
-        height: unset;
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 {
+        width: 140%;
+        margin-left: 175px;
+        margin-top: -13px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-2 {
-        width: 58%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
-        margin-left: 180px;
-        font-size: 9px;
-        width: 145%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: -4px;
-        width: 93%;
+        width: 80%;
         margin-left: 190px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-3 {
+        width: 100%;
+        margin-left: 180px;
+        margin-top: 0px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-4 {
+        width: 122%;
+        margin-top: -8px;
+        margin-left: 181px;
     }
 }
 
@@ -3013,7 +3011,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 405px;
+        top: 390px;
     }
     .detail-content .tquan {
         position: absolute;
@@ -3191,7 +3189,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 545px;
+        top: 519px;
         left: 25px;
         width: 93%;
         padding-left: 12px;
@@ -3247,7 +3245,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 805px;
+        top: 820px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -3364,47 +3362,37 @@ body {
         width: 84%;
         margin-left: 30px;
     }
-    .detail-content .overview .row .info-3 .sponsor h3 {
-        font-weight: bold;
-        font-size: 12px;
-        text-align: left;
-        width: 90%;
-        margin-left: 235px;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 226%;
-        margin-left: 200px;
-        margin-top: -8px;
-        height: unset;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: -7px;
-        width: 100%;
-        margin-left: 220px;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-        margin-left: 155px;
-        font-size: 9px;
-        font-weight: bold;
-        width: 285%;
-    }
     .detail-content .overview .row .info-3 .sponsor .row {
         width: 100%;
         margin-top: 00px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 290%;
-        margin-left: 155px;
-        margin-top: -18px;
-        height: unset;
+    .detail-content .overview .row .info-3 .sponsor .space-1 {
+        margin-top: 18px
+    }
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-left: 194px;
+        font-size: 12px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 {
+        width: 140%;
+        margin-left: 175px;
+        margin-top: -13px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-2 {
-        width: 58%;
+        width: 80%;
+        margin-left: 190px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
-        margin-left: 209px;
-        font-size: 9px;
-        width: 145%;
+    .detail-content .overview .row .info-3 .sponsor .row .img-3 {
+        width: 100%;
+        margin-left: 180px;
+        margin-top: 0px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-4 {
+        width: 137%;
+        margin-top: -10px;
+        margin-left: 181px;
     }
 }
 
@@ -3424,7 +3412,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 384px;
+        top: 360px;
     }
     .detail-content .tquan {
         position: absolute;
@@ -3580,7 +3568,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 490px;
+        top: 468px;
         left: 25px;
         width: 93%;
         padding-left: 12px;
@@ -3624,7 +3612,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 720px;
+        top: 737px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -3737,51 +3725,33 @@ body {
         color: #fff;
         width: 92%;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 250%;
-        margin-left: 200px;
-        margin-top: -8px;
-        height: unset;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: 6px;
-        width: 100%;
-        margin-left: 234px;
-    }
-    .detail-content .overview .row .info-3 .sponsor {
-        position: absolute;
-        top: 9px;
-        color: #fff;
-        width: 92%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-        margin-left: 148px;
-        font-size: 9px;
-        font-weight: bold;
-        width: 285%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row {
-        width: 100%;
+    .detail-content .overview .row .info-3 .sponsor .space-1 {
         margin-top: 0px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 290%;
-        margin-left: 145px;
-        margin-top: -18px;
-        height: unset;
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-left: 194px;
+        font-size: 12px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 {
+        width: 140%;
+        margin-left: 175px;
+        margin-top: -13px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-2 {
-        width: 58%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
-        margin-left: 180px;
-        font-size: 9px;
-        width: 145%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: -4px;
-        width: 93%;
+        width: 80%;
         margin-left: 190px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-3 {
+        width: 100%;
+        margin-left: 180px;
+        margin-top: 0px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-4 {
+        width: 134%;
+        margin-top: -10px;
+        margin-left: 181px;
     }
 }
 
@@ -3801,7 +3771,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 370px;
+        top: 360px;
     }
     .detail-content .tquan {
         position: absolute;
@@ -3973,7 +3943,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 465px;
+        top: 457px;
         margin-left: 5px;
         width: 88%;
         padding-left: 11px;
@@ -4030,7 +4000,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 690px;
+        top: 710px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -4148,34 +4118,34 @@ body {
         color: #fff;
         width: 92%;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-        margin-left: 167px;
-        font-size: 9px;
-        font-weight: bold;
-        width: 285%;
-    }
     .detail-content .overview .row .info-3 .sponsor .row {
         width: 100%;
         margin-top: 3px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 280%;
-        margin-left: 157px;
-        margin-top: -18px;
-        height: unset;
+    .detail-content .overview .row .info-3 .sponsor h3 {
+        font-weight: bold;
+        text-align: center;
+        margin-left: 194px;
+        font-size: 12px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 {
+        width: 140%;
+        margin-left: 175px;
+        margin-top: -13px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-2 {
-        width: 58%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
-        margin-left: 180px;
-        font-size: 9px;
-        width: 145%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: -4px;
-        width: 93%;
+        width: 80%;
         margin-left: 190px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-3 {
+        width: 100%;
+        margin-left: 180px;
+        margin-top: 0px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-4 {
+        width: 137%;
+        margin-top: -10px;
+        margin-left: 181px;
     }
 }
 
@@ -4195,7 +4165,7 @@ body {
     }
     .detail-content .img-prize {
         position: absolute;
-        top: 370px;
+        top: 345px;
     }
     .detail-content .tquan {
         position: absolute;
@@ -4363,7 +4333,7 @@ body {
     }
     .detail-content .ds-mobile .content-prize-mobile {
         position: absolute;
-        top: 459px;
+        top: 433px;
         left: 3px;
         width: 93%;
         padding-left: 12px;
@@ -4413,7 +4383,7 @@ body {
     }
     .detail-content .ds-mobile .img-rules-mobile {
         position: absolute;
-        top: 624px;
+        top: 640px;
     }
     .detail-content .ds-mobile .img-rules-mobile img {
         width: 100%;
@@ -4532,49 +4502,27 @@ body {
     }
     .detail-content .overview .row .info-3 .sponsor h3 {
         font-weight: bold;
+        text-align: center;
+        margin-left: 194px;
         font-size: 12px;
-        text-align: left;
-        width: 68%;
-        margin-left: 235px;
     }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 276%;
-        margin-left: 176px;
-        margin-top: -8px;
-        height: unset;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: 6px;
-        width: 96%;
-        margin-left: 204px;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 h3 {
-        margin-left: 167px;
-        font-size: 9px;
-        font-weight: bold;
-        width: 285%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row {
-        width: 100%;
-        margin-top: 0px;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-1 img {
-        width: 290%;
-        margin-left: 160px;
-        margin-top: -12px;
-        height: unset;
+    .detail-content .overview .row .info-3 .sponsor .row .img-1 {
+        width: 140%;
+        margin-left: 175px;
+        margin-top: -13px;
     }
     .detail-content .overview .row .info-3 .sponsor .row .img-2 {
-        width: 58%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 h3 {
-        margin-left: 180px;
-        font-size: 9px;
-        width: 140%;
-    }
-    .detail-content .overview .row .info-3 .sponsor .row .img-2 img {
-        margin-top: -4px;
-        width: 93%;
+        width: 80%;
         margin-left: 190px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-3 {
+        width: 100%;
+        margin-left: 180px;
+        margin-top: 0px;
+    }
+    .detail-content .overview .row .info-3 .sponsor .row .img-4 {
+        width: 137%;
+        margin-top: -10px;
+        margin-left: 181px;
     }
 }
