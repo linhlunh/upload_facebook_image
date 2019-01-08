@@ -296,13 +296,13 @@
                     </div>
 
                     <div class="title" style="margin-top: 20px; margin-left: 20px;">
-                        <a href="https://www.bestprice.vn/blog/tin-tuc-bestprice-7/dang-anh-don-xuan-khuan-tour-mien-phi_17-2004.html?utm_source=Thi%20anh&utm_medium=Landing%20page&utm_campaign=thianh012019" style="text-decoration: underline; color: #fff; font-size: 20px; font-style: italic;">Chi tiết giải thưởng tại đây.</a>
+                        <a href="https://www.bestprice.vn/blog/tin-tuc-bestprice-7/dang-anh-don-xuan-khuan-tour-mien-phi_17-2004.html?utm_source=Thi%20anh&utm_medium=Landing%20page&utm_campaign=thianh012019" style="text-decoration: underline; color: #fff; font-size: 20px; font-style: italic;">Chi tiết giải thưởng xem tại đây.</a>
                     </div>
 
                 </div>
 
                 <div class="img-rules">
-                    <img src="../../assets/img/img-facebook/thelecuocthi-3.png" alt="">
+                    <img src="../../assets/img/img-facebook/the_le.png" alt="">
                 </div>
 
                 <div class="how-to-play">
@@ -373,13 +373,13 @@
                     </div>
 
                     <div class="title" style="margin-top: 5px">
-                        <a href="https://www.bestprice.vn/blog/tin-tuc-bestprice-7/dang-anh-don-xuan-khuan-tour-mien-phi_17-2004.html?utm_source=Thi%20anh&utm_medium=Landing%20page&utm_campaign=thianh012019" style="text-decoration: underline; color: #fff; font-size: 10px; font-style: italic;">Chi tiết giải thưởng tại đây.</a>
+                        <a href="https://www.bestprice.vn/blog/tin-tuc-bestprice-7/dang-anh-don-xuan-khuan-tour-mien-phi_17-2004.html?utm_source=Thi%20anh&utm_medium=Landing%20page&utm_campaign=thianh012019" style="text-decoration: underline; color: #fff; font-size: 10px; font-style: italic;">Chi tiết giải thưởng xem tại đây.</a>
                     </div>
 
                 </div>
 
                 <div class="img-rules-mobile">
-                    <img src="../../assets/img/img-facebook/thelecuocthi-3.png" alt="">
+                    <img src="../../assets/img/img-facebook/the_le.png" alt="">
                 </div>
 
                 <div class="how-to-play-mobile">
