@@ -326,7 +326,7 @@
                             <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
                             <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
                         </div>
-                        <div style="margin-top: 10px "><a style="font-style: italic; text-decoration: none; color: #fff; ">Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
+                        <div style="margin-top: 10px "><a style="font-style: italic; text-decoration: none; color: #fff; ">Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 31/01/2019.</a></div>
                     </div>
                 </div>
             </div>
@@ -406,7 +406,7 @@
                                 <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
                                 <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
                             </div>
-                            <div class="time"><a>Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 18/01/2019.</a></div>
+                            <div class="time"><a>Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 31/01/2019.</a></div>
                         </div>
                     </div>
                 </div>
