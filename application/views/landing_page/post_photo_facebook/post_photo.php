@@ -19,7 +19,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     
-    <link rel="stylesheet" href="../../../assets/css/upload.min.070120191740.css">
+    <link rel="stylesheet" href="../../../assets/css/upload.min.090120191530.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://owa.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -324,7 +324,7 @@
                         
                         <div class="more" style="margin-top: 10px">
                             <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
-                            <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
+                            <a>3 Giải khuyến khích sẽ được lựa chọn bằng việc QUAY SỐ MAY MẮN theo mã dự thi ảnh của mỗi người chơi. </a><br/>
                         </div>
                         <div style="margin-top: 10px "><a style="font-style: italic; text-decoration: none; color: #fff; ">Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 31/01/2019.</a></div>
                     </div>
@@ -404,7 +404,7 @@
                             
                             <div class="more" style="">
                                 <a>Những người chơi sở hữu bức ảnh dự thi có số điểm hợp lệ cao nhất, nhì, ba sẽ được trao giải thưởng tương ứng. </a><br/>
-                                <a>3 Giải khuyến khích sẽ do nhà tài trợ truyền thông Check-in Vietnam lựa chọn. </a><br/>
+                                <a>3 Giải khuyến khích sẽ được lựa chọn bằng việc QUAY SỐ MAY MẮN theo mã dự thi ảnh của mỗi người chơi.</a><br/>
                             </div>
                             <div class="time"><a>Thời gian diễn ra chương trình từ ngày 03/01/2019 đến 12h ngày 31/01/2019.</a></div>
                         </div>
@@ -443,30 +443,19 @@
                             
                             <div class="row space-1">
                                 
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <img class="img-1" src="../../../assets/img/img-facebook/BP.png" alt=""> 
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <img class="img-1" src="../../../assets/img/img-facebook/BP.png" alt="" style=""> 
                                 </div>
                                 
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <img class="img-2" src="../../../assets/img/img-facebook/oriental.png" alt="">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <img class="img-2" src="../../../assets/img/img-facebook/oriental.png" alt="" style="">
                                 </div>
                                 
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <img class="img-3" src="../../../assets/img/img-facebook/VinP.png" alt="" style=""> 
+                                </div>
                             </div>
 
-                            
-                            <div class="row space-2">
-                                
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <img class="img-3" src="../../../assets/img/img-facebook/VinP.png" alt=""> 
-                                </div>
-                                
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <img class="img-4" src="../../../assets/img/img-facebook/check-in-vn.png" alt=""> 
-                                </div>
-                                
-                            </div>
-                            
-                            
                         </div>
                     </div>
                     
