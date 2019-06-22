@@ -93,4 +93,13 @@ class Landing_Page_Model extends CI_Model {
         $result = $query->result_array()[0];
         return !empty($result) ? $result : '';
     }
+
+    function insert_oauth_user($oauth_user) {
+        
+        $this->db->insert('oauth_users', $oauth_user);
+        
+        $id = $this->db->insert_id();
+        
+        return $id;
+    }
 }
