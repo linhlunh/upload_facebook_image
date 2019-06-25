@@ -55,4 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['vui-xuan'] = 'landing_page/Post_Photo_Facebook';
 $route['show'] = 'landing_page/Post_Photo_Facebook/show';
 $route['img'] = 'upload_facebook';
-$route['landing-page-vna'] = 'landing_page_vna/landing_page';
+$route['bong-sen-vang'] = 'landing_page/Landing_Page_Vna';

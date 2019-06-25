@@ -102,4 +102,34 @@ class Landing_Page_Model extends CI_Model {
         
         return $id;
     }
+
+    function isset_email($email) {
+
+        $this->db->select('id');
+
+        $this->db->where('email', $email);
+
+        $this->db->where('deleted !=', DELETE);
+
+        $query = $this->db->get('oauth_users');
+
+        $result = $query->result_array();
+
+        return !empty($result);
+    }
+
+    function isset_phone($phone) {
+
+        $this->db->select('id');
+
+        $this->db->where('phone', $phone);
+
+        $this->db->where('deleted !=', DELETE);
+
+        $query = $this->db->get('oauth_users');
+
+        $result = $query->result_array();
+
+        return !empty($result);
+    }
 }

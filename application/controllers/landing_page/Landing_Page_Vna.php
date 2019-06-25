@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class Landing_Page extends CI_Controller
+class Landing_Page_Vna extends CI_Controller
 {
 
     public function __construct()
@@ -13,7 +13,7 @@ class Landing_Page extends CI_Controller
 
         $this->load->helper('url');
 
-        $this->load->model('Landing_Page_Model');
+        $this->load->helper('form');
 
         $this->load->model('Landing_Page_Model');
     }
@@ -257,53 +257,53 @@ class Landing_Page extends CI_Controller
         $rules = array(
             array(
                 'field' => 'sexual_title',
-                'label' => lang("sexual_title"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'first_name',
-                'label' => lang("first_name"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'last_name',
-                'label' => lang("last_name"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'phone_number',
-                'label' => lang("phone_number"),
+                'label' => '',
                 'rules' => 'required|callback_phone_check'
             ),
             array(
                 'field' => 'phone_code',
-                'label' => lang("phone_code"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'email',
-                'label' => lang("email"),
+                'label' => '',
                 'rules' => 'required|callback_email_check'
             ),
             array(
                 'field' => 'day',
-                'label' => lang("day"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'month',
-                'label' => lang("month"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'year',
-                'label' => lang("year"),
+                'label' => '',
                 'rules' => 'required'
             ),
             array(
                 'field' => 'country',
-                'label' => lang("country"),
-                'rules' => 'required'
+                'label' => '',
+                'rules' => ''
             ),
         );
         $this->form_validation->set_rules($rules);
@@ -316,7 +316,7 @@ class Landing_Page extends CI_Controller
   
             if ($this->form_validation->run()) {
                 $data_submit = $this->input->post();
-
+                echo('<pre>');print_r($data_submit);echo('</pre>');exit();
                 $oauth_user = array(
                     'first_name' => $data_submit['first_name'],
                     'last_name' => $data_submit['last_name'],
@@ -326,18 +326,19 @@ class Landing_Page extends CI_Controller
                     'gender' => $data_submit['sexual_title'],
                     'phone' => '0'.$data_submit['phone_number'],
                     'birthday' => $data_submit['year'] . '-' . $data_submit['month'] . '-' . $data_submit['day'],
-                    'link' => 'landing-page-vna',
+                    'country' => $data_submit['country'],
+                    'link' => 'bong-sen-vang',
                     'created' => date('Y-m-d H:i:s'),
                     'modified' => date('Y-m-d H:i:s'),
                 );
 
                 $id = $this->Landing_Page_Model->insert_oauth_user($oauth_user);
 
-                redirect('landing-page-vna');
+                redirect('bong-sen-vang');
             }
 
         }
-        $this->load->view('landing_page_vna/landing_page_vna', $data);
+        $this->load->view('landing_page/landing_page_vna/registration_form', $data);
     }
 
     private function is_email($email) 
@@ -354,10 +355,15 @@ class Landing_Page extends CI_Controller
     {
         if($this->is_email($str))
         {
-            return TRUE;
-        }else
-        {
-            $this->form_validation->set_message('phone_check',lang('error_phone_format'));
+            if($this->Landing_Page_Model->isset_email($str)) {
+
+                $this->form_validation->set_message('email_check', 'Email của quý khách đã tồn tại');
+
+                return FALSE; 
+            }else{
+                return TRUE;
+            }
+        }else{
             return FALSE;
         }
     }
@@ -366,10 +372,15 @@ class Landing_Page extends CI_Controller
     {
         if($this->is_phone($str))
         {
-            return TRUE;
-        }else
-        {
-            $this->form_validation->set_message('phone_check',lang('error_phone_format'));
+            if($this->Landing_Page_Model->isset_phone('0'.$str)) {
+
+                $this->form_validation->set_message('phone_check', 'Phone của quý khách đã tồn tại');
+
+                return FALSE; 
+            }else{
+                return TRUE;
+            }
+        }else{
             return FALSE;
         }
     }

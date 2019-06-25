@@ -237,8 +237,12 @@ select{
 }
 
 .error-message{
-    color: #b20000;
+    color: #b20000 !important;
     float: left;
+}
+
+.error-message *{
+    color: #b20000 !important;
 }
 
 @media (min-width: 1200px){

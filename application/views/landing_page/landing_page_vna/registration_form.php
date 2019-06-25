@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+	<meta name="description" content="BestPrice - Đại lý đặt phòng khách sạn, vé máy bay, tour du lịch trực tuyến giá tốt nhất.  Khuyến mại, ưu đãi lớn - Dịch vụ tin cậy, hỗ trợ 24/7." />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta property="og:image" content="http://test.bestprice.vn/assets/img/bestpricevn-logo.13092017.png">
+	<title>Bong sen vang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <link rel="shortcut icon" href="http://test.bestprice.vn/assets/img/favicon.27042017.ico">
     <link rel="stylesheet" href="../assets/libs/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/landing_page_vna.min.css">
-    <script src="../assets/libs/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/landing_page_vna.min.250620191702.css">
+    <script src="../assets/libs/jquery-1.11.2.min.js"></script>
     <script src="../assets/libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="../assets/js/landing_page_vna.min.js"></script>
 </head>
@@ -60,9 +66,8 @@
                                 <div class="col-xs-8 col-sm-6 col-md-7">
                                     <div class="select_box">
                                         <select class="landing-page-input" name="sexual_title" id="sexual_title">
-                                            <option value="male">Mr.</option>
-                                            <option value="female">Ms.</option>
-                                            <option value="female">Mrs.</option>
+                                            <option value="male" <?=set_select('male', 'sexual_title')?>>Mr.</option>
+                                            <option value="female" <?=set_select('male', 'sexual_title')?>>Mrs.</option>
                                         </select>
                                     </div>
                                 </div>
@@ -73,7 +78,7 @@
                                     <span class="float-right label-input">Họ</span>
                                 </div>
                                 <div class="col-xs-8 col-sm-6 col-md-7">
-                                    <input class="margin-bottom-5 landing-page-input" type="text" name="first_name" id="first_name">
+                                    <input class="margin-bottom-5 landing-page-input" type="text" name="first_name" id="first_name" value="<?=set_value('first_name')?>">
                                     <span class="clearfix"></span>
                                     <span class="note-name">Theo CMND/Hộ Chiếu. Ví dụ: NGUYEN</span>
                                 </div>
@@ -83,7 +88,7 @@
                                     <span class="float-right label-input">Đệm và Tên</span>
                                 </div>
                                 <div class="col-xs-8 col-sm-6 col-md-7">
-                                    <input class="margin-bottom-5 landing-page-input" type="text" name="last_name" id="last_name">
+                                    <input class="margin-bottom-5 landing-page-input" type="text" name="last_name" id="last_name" value="<?=set_value('last_name')?>">
                                     <span class="clearfix"></span>
                                     <span class="note-name">Theo CMND/Hộ chiếu. Ví dụ: THI THU HUONG</span>
                              
@@ -95,13 +100,14 @@
                                     <span class="float-right label-input">Số điện thoại</span>
                                 </div>
                                 <div class="col-xs-8 col-sm-6 col-md-7">
-                                    <input class="landing-page-input float-right phone" type="text" name="phone_number" id="phone_number">
+                                    <input class="landing-page-input float-right phone" type="text" name="phone_number" id="phone_number" value="<?=set_value('phone_number')?>">
                                     <select class="landing-page-input float-right phone-code" name="phone_code" id="phone_code">
                                         <?php foreach($country_array as $key => $country): $country_name = ucwords(strtolower($country["name"])); ?>
 
                                             <option value="<?=$country['code']?>" <?=set_select('phone_code', $country['code'], $key == 'VN')?>><?=$country_name . ' (+' . $country['code'] . ')'?></option>
                                         <?php endforeach;?>
                                     </select>
+                                    <span class="error-message"><?=form_error('phone_number')?></span>
                                 </div>
                             </div>
                             <div class="row margin-top-15">
@@ -109,7 +115,8 @@
                                     <span class="float-right label-input label-input">Email</span>
                                 </div>
                                 <div class="col-xs-8 col-sm-6 col-md-7">
-                                    <input class="landing-page-input" type="text" name="email" id="email">
+                                    <input class="landing-page-input" type="text" name="email" id="email" value="<?=set_value('email')?>">
+                                    <span class="error-message"><?=form_error('email')?></span>
                                 </div>
                             </div>
                         </div>
@@ -124,19 +131,19 @@
                                     <select class="landing-page-input day" name="day" id="day" onchange="validation_date()">
                                         <option value="">Ngày</option>
                                         <?php for($i = 1; $i <= 31; $i++): ?>
-                                            <option class="day-value" value="<?=$i?>"><?=sprintf('%02d',$i)?></option>
+                                            <option class="day-value" value="<?=$i?>" <?=set_select('day', $i)?>><?=sprintf('%02d',$i)?></option>
                                         <?php endfor;?>
                                     </select>
                                     <select class="landing-page-input month" name="month" id="month" onchange="validation_date()">
                                         <option value="">Tháng</option>
                                         <?php for($i = 1; $i <= 12; $i++): ?>
-                                            <option class="moth-value" value="<?=$i?>"><?=sprintf('%02d',$i)?></option>
+                                            <option class="moth-value" value="<?=$i?>" <?=set_select('month', $i)?>><?=sprintf('%02d',$i)?></option>
                                         <?php endfor;?>
                                     </select>
                                     <select class="landing-page-input year" name="year" id="year" onchange="validation_date()">
                                         <option value="">Năm</option>
                                         <?php for($i = 2019; $i >= 1900; $i--): ?>
-                                            <option class="year-value" value="<?=$i?>"><?=$i?></option>
+                                            <option class="year-value" value="<?=$i?>" <?=set_select('year', $i)?>><?=$i?></option>
                                         <?php endfor;?>
                                     </select>
                                     <div class="clearfix"></div>
@@ -147,7 +154,13 @@
                                     <span class="float-right label-input">Quốc tịch</span>
                                 </div>
                                 <div class="col-xs-8 col-sm-6 col-md-7">
-                                    <input class="landing-page-input" type="text" name="country" id="country">
+                                    <div class="select_box">
+                                        <select class="landing-page-input" name="country" id="country">
+                                            <?php foreach($country_array as $key => $country): $country_name = ucwords(strtolower($country["name"])); ?>
+                                                <option value="<?=$key?>" <?=set_select('country', $key, $key == 'VN')?>><?=$country_name?></option>
+                                            <?php endforeach;?>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row margin-top-15">
