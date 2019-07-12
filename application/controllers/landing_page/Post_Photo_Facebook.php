@@ -126,7 +126,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $this->Landing_Page_Model->UpdateEventCodeOauthUsers($InsertedId,$dataSubmit);
                         
-                        $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+                        $accessToken = 'EAAgZCCZAfTPeYBANCeL7qlskrCbZC91Imc95ZCnXTAvCQFYAHxAX3drWTbEkfhffgAXo5nJFBCuLIZAfRXE2OEedYfTn5ZARRQ5C2ZASMY32KTxeyMcIiblvnWPTk6ePv080aCmI8I26Q5N1qB29vtxQnqsfdg9Nhx2swxWJ5psi36cHjMBsYWLINP6MpyHYLirk4MTeqO5kgZDZD';
                         //$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
                         
                         $post_array = array(
@@ -144,7 +144,7 @@ class Post_Photo_Facebook extends CI_Controller{
 
                         $subjectEmail = 'Thông tin đăng ký dự thi Đăng ảnh đón xuân khuân tour miễn phí.';
 
-                        $this->send_email_by_marketing('marketing@bestprice.vn', $dataSubmit['email'], $subjectEmail, $emailContentHtml, 'marketing@bestprice.vn');
+                        //$this->send_email_by_marketing('marketing@bestprice.vn', $dataSubmit['email'], $subjectEmail, $emailContentHtml, 'marketing@bestprice.vn');
     
                         //$this->send_email_by_marketing('marketing@bestprice.vn','marketing@bestprice.vn',$subjectEmail,$emailContentHtml);
 
@@ -153,8 +153,8 @@ class Post_Photo_Facebook extends CI_Controller{
                         $error['erros_mesage'] = json_decode($facebook_picture_link['message'],true);
                         $error['oauth_users'] = json_decode($facebook_picture_link['oauth_users'],true);
                         $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
-                        $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html);
-                        $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html);
+                        // $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html);
+                        // $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Get link photo facebook error', $email_error_html);
                         $data['post_success'] = '1';
                     }
                 }else{
@@ -164,8 +164,8 @@ class Post_Photo_Facebook extends CI_Controller{
                     $error['erros_mesage'] = json_decode($facebook_picture_id['message'],true);
                     $error['oauth_users'] = json_decode($facebook_picture_id['oauth_users'],true);
                     $email_error_html = $this->load->view('landing_page/post_photo_facebook/email_error_template',$error,true);
-                    $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
-                    $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
+                    // $this->send_email_by_marketing('marketing@bestprice.vn', 'giangdo@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
+                    // $this->send_email_by_marketing('marketing@bestprice.vn', 'huudt@bestprice.vn', 'Event Tết: Submit photo facebook error', $email_error_html);
                     $data['post_success'] = '1';
                 }
                 
@@ -214,9 +214,9 @@ class Post_Photo_Facebook extends CI_Controller{
 
     function PostImageUseCurl($fileImage = '',$message = '',$oauth_users_id) {
     	
-           	$albumId = '2242409652459728';//2234079673479908
+           	$albumId = '1459223034190904';//2234079673479908
             
-            $accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+            $accessToken = 'EAAgZCCZAfTPeYBANCeL7qlskrCbZC91Imc95ZCnXTAvCQFYAHxAX3drWTbEkfhffgAXo5nJFBCuLIZAfRXE2OEedYfTn5ZARRQ5C2ZASMY32KTxeyMcIiblvnWPTk6ePv080aCmI8I26Q5N1qB29vtxQnqsfdg9Nhx2swxWJ5psi36cHjMBsYWLINP6MpyHYLirk4MTeqO5kgZDZD';
             //$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
             
             $post_array = array(
@@ -271,7 +271,7 @@ class Post_Photo_Facebook extends CI_Controller{
     
     function GetLinkImage($pictureId, $oauth_users_id, $post_array = '', $url = '')
     {
-    	$accessToken = 'EAAF65xLU4I0BAN1jFoKZAKXy2ZA7ZBwsLUfbpCla5kQyHPVkkr4zF2CnPUHZAHFNWx3KZCEb6xwVnZAMSxCN6wUEdaI0JiZBHZBzI24FjNmIZAexkNG7UR1mkw86UkqeOSyh9gajGZAAjzjiKzzZB7li6GODbYrrkb9xPIJFAExXDiDkwZDZD';
+    	$accessToken = 'EAAgZCCZAfTPeYBANCeL7qlskrCbZC91Imc95ZCnXTAvCQFYAHxAX3drWTbEkfhffgAXo5nJFBCuLIZAfRXE2OEedYfTn5ZARRQ5C2ZASMY32KTxeyMcIiblvnWPTk6ePv080aCmI8I26Q5N1qB29vtxQnqsfdg9Nhx2swxWJ5psi36cHjMBsYWLINP6MpyHYLirk4MTeqO5kgZDZD';
     	//$accessToken = 'EAACB1msX7F0BAGwH9vkq7PMUVBQZCF198YBUaBkaNcZAmebNJQIO6fRd8eYonsGraAxSnYMBLZByRIhJ1dxd3cZAvGrkJ4nZBi6KqbrYRkPj4RxiCy09bXQXi3NZBhqKIKAOMuQPk0f20hFdE4wW0Riy50TxfR96PbFXNcZBjN1AAZDZD';
         
         if(empty($post_array))
